@@ -11,12 +11,30 @@ from gensim.models import Word2Vec, KeyedVectors
 
 verbose = 0
 maxlength = 10
+
+# Define hyperparameters
+input_size = 300
+hidden_size = 64
+output_size = 1
+num_layers = 1
+# Define hyperparameters
+learning_rate = 0.001
+num_epochs = 15
+batch_size = 32
+
+# Define the loss function
+criterion = nn.BCELoss()
+
+def debug(verbose_level, str):
+    if verbose >= verbose_level:
+        print(str)
+
 def load_model():
     word2vecPath = "./models/GoogleNews-vectors-negative300.bin"
     warnings.filterwarnings(action='ignore', category=UserWarning, module='gensim')
     if not os.path.exists(word2vecPath):
         raise Exception("word2vec model doesn't exist at the path:" + str(word2vecPath))
-    print(f"Model at {word2vecPath}")
+    debug(0,"Model at " + str(word2vecPath))
 
     if (verbose==2):
         process = psutil.Process(os.getpid())
@@ -55,10 +73,10 @@ def test_model(w2v_model):
     # print(array_for_hash)
     if not(word):
         raise Exception("w2v Model not loaded properly!")
-    print ("w2v Model loading tested Successfully!")
+    debug (0, "w2v Model loading tested Successfully!")
 
 def genSpecialNegExample(num_examples):
-    # TODO: create examples without '#' as well
+    # TODO: create examples without '#' as well : Already added due to length selection
     wordL = []
     while num_examples > 0:
         k = random.randint(1, maxlength-2)
@@ -84,13 +102,17 @@ def generateTypeExamples(num_examples, pos):
         k = random.randint(1, maxlength)
         if pos:
             word = random.choices(w2v_model.index_to_key)
+            if k%2!=0: #To add '# at the end of positive examples if k is -ve
+                k +=1
             wordL.append([word[0] if i % 2 ==0  else '#' for i in range(k)])
         else:
             x = []
             for i in range(k):
-                word = random.choices(w2v_model.index_to_key)
-                x.append(word[0])
-                x.append("#")
+                if i%2==0:
+                    word = random.choices(w2v_model.index_to_key)
+                    x.append(word[0])
+                else:
+                    x.append("#")
             wordL.append(x)
         num_examples -= 1
     return wordL
@@ -104,29 +126,138 @@ def generateExamples(num_examples):
         posL = generateTypeExamples(posL_count, pos=True)
     if negL_count != 0:
         negL = negL + generateTypeExamples(negL_count, pos=False)
-    print("positive examples:", posL)
-    print("negative examples:", negL)
+    debug(2, "positive examples:" + str(posL))
+    debug(2,"negative examples:" + str(negL))
     return posL, negL
 
-def create_datasets(num_examples, train=False):
+def encode_sequence(sequence, w2v_model):
+    debug(1, "sequence:" + str(sequence))
+    x = torch.tensor(np.array([w2v_model[word] for word in sequence]))
+    debug(1, "size of x:" + str(x.size()))
+    target_seq = torch.zeros(maxlength,300)
+    target_seq[0:x.size(0),:] = x
+    debug(1, "size of target:" + str(target_seq.size()))
+    debug(2, "target:" + str(target_seq))
+    return target_seq
+
+def create_datasets(num_examples, w2v_model, train=False):
     X = []
     y = []
     posL, negL = generateExamples(num_examples)
-    result = np.random.choice(np.concatenate([posL, negL]), num_examples, replace=False)
-    for word in result:
-        X.append(encode_word(word))
-        y.append(1 if word in posL else 0)
+    result = posL + negL
+    random.shuffle(result)
+    for sequence in result:
+        X.append(encode_sequence(sequence, w2v_model))
+        y.append(1 if sequence in posL else 0)
+    debug(2, "X =" + str(X))
+    debug(2, "y=" + str(y))
     print("Total number of samples generated:", num_examples)
     if train:
-        print("Number or positive examples in training:", y.count(1))
-        print("Number or negative examples in training:", y.count(0))
+        print("Number of positive examples in training:", y.count(1))
+        print("Number of negative examples in training:", y.count(0))
     else:
-        print("Number or positive examples in test:", y.count(1))
-        print("Number or negative examples in test:", y.count(0))
+        print("Number of positive examples in test:", y.count(1))
+        print("Number of negative examples in test:", y.count(0))
     return X, torch.tensor(y, dtype=torch.float)
+
+
+def checkAccuracy(predicted, actual):
+    pos, neg = 0, 0
+    #print(predicted)
+    for i,x in enumerate(actual):
+        for j,y in enumerate(x):
+            if predicted[i,j] == y:
+                if y == 1:
+                    pos += 1
+                else:
+                    neg += 1
+
+    print("Number of +ve samples identified correctly:", pos)
+    print("Number of -ve samples identified correctly:", neg)
+
+
+def createRNNModel():
+    # Define the RNN model
+    class RNN(nn.Module):
+        def __init__(self, input_size, hidden_size, output_size, num_layers):
+            super(RNN, self).__init__()
+            self.hidden_size = hidden_size
+            self.rnn = nn.LSTM(input_size=input_size, hidden_size=hidden_size,
+                               batch_first=True, num_layers=num_layers)
+            self.fc = nn.Linear(hidden_size, output_size)
+            self.sigmoid = nn.Sigmoid()
+
+        def forward(self, input):
+            hidden_features, (h_n, c_n) = self.rnn(input)  # (h_0, c_0) default to zeros
+            hidden_features = hidden_features[:, -1, :]  # index only the features produced by the last LSTM cell
+            out = self.fc(hidden_features)
+            out = self.sigmoid(out)
+            return out
+
+    # Create the RNN model
+    model = RNN(input_size, hidden_size, output_size, num_layers).to(device)
+    return model
+
+def train_RNN(model, X_train, y_train, device):
+    # Define the optimizer
+    optimizer = optim.Adam(model.parameters(), lr=learning_rate)
+
+    # Training loop
+    for epoch in range(num_epochs):
+        total_loss = 0
+        for i in range(0, len(X_train), batch_size):
+            inputs = torch.stack(X_train[i:i+batch_size]).to(device)
+            labels = y_train[i:i+batch_size].unsqueeze(1).to(device)
+
+            optimizer.zero_grad()
+
+            outputs = model(inputs)
+            # print("inputs:", inputs)
+            # print("outputs:",outputs)
+            # print("labels:", labels)
+
+            loss = criterion(outputs, labels)
+            loss.backward()
+            optimizer.step()
+
+            total_loss += loss.item()
+
+        avg_loss = total_loss / (len(X_train) / batch_size)
+        print(f"Epoch {epoch+1}/{num_epochs}, Loss: {avg_loss:.4f}")
+
+def test_RNN(model, X_test, y_test, device):
+# Evaluation
+    with torch.no_grad():
+        model.eval()
+        # X_test_padded = pad_sequences(X_test)
+        # X_test_padded = torch.stack(X_test_padded).to(device)
+        X_test = torch.stack(X_test).to(device)
+        y_test = torch.tensor(y_test, dtype=torch.float).unsqueeze(1).to(device)
+        outputs = model(X_test)
+        loss = criterion(outputs, y_test)
+        predicted_labels = torch.round(outputs)
+        accuracy = (predicted_labels == y_test).sum().item() / len(y_test)
+        # print("actual_label:", y_test)
+        # print("predicted_labels:", predicted_labels)
+        # print("=:", predicted_labels==y_test)
+        # print("sum:", (predicted_labels==y_test).sum())
+        # print("item:", (predicted_labels == y_test).sum().item())
+        checkAccuracy(predicted_labels.numpy(),y_test.numpy())
+        print(f"Test Loss: {loss.item():.4f}, Test Accuracy: {accuracy:.4f}")
+
 
 if __name__ == "__main__":
     w2v_model = load_model()
     test_model(w2v_model)
-    X_train, y_train = create_datasets(10, train=True)
-    #X_test, y_test = generate_examples(1000)
+    X_train, y_train = create_datasets(10000, w2v_model=w2v_model, train=True)
+    X_test, y_test = create_datasets(1000, w2v_model=w2v_model, train=False)
+    print("Length of X(input) for training:", len(X_train))
+    print("Size of y(label) tensor for training:", y_train.size())
+    print("Length of X(input) for testing:", len(X_test))
+    print("Size of y(label) tensor for testing:", y_test.size())
+
+    # Set the device for training
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    RNN_model = createRNNModel()
+    train_RNN(RNN_model, X_train, y_train, device)
+    test_RNN(RNN_model, X_test, y_test, device)
