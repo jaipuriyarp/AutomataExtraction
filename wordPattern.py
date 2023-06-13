@@ -34,8 +34,8 @@ def debug(verbose_level, str):
         print(str)
 
 # W2V Model:
-def load_model():
-    word2vecPath = "./models/GoogleNews-vectors-negative300.bin"
+def load_model(word2vecPath, limit=None):
+
     warnings.filterwarnings(action='ignore', category=UserWarning, module='gensim')
     if not os.path.exists(word2vecPath):
         raise Exception("Error: word2vec model doesn't exist at the path:" + str(word2vecPath))
@@ -51,7 +51,7 @@ def load_model():
         # mem= psutil.virtual_memory()
         # ttl = mem.total  # Toal memory available
 
-    w2v_model = KeyedVectors.load_word2vec_format(word2vecPath, binary=True)#, limit=20000)  # load the model
+    w2v_model = KeyedVectors.load_word2vec_format(word2vecPath, binary=True, limit=limit)  # load the model
     if (verbose==2):
         print("%0.2f seconds taken to load" % float(time.time() - start_time))  # Calculate the total time elapsed since starting the timer
         print('-' * 10)
@@ -173,6 +173,7 @@ def generateExamples(num_examples):
     negL_count = num_examples - posL_count
     negL = genSpecialNegExample(int(negL_count / 2))
     negL_count = negL_count - int(negL_count / 2)
+    posL = []
     if posL_count != 0:
         posL = generateTypeExamples(posL_count, pos=True)
     if negL_count != 0:
@@ -186,7 +187,8 @@ def encode_sequence(sequence, w2v_model):
     x = torch.tensor(np.array([w2v_model[word] for word in sequence]))
     debug(1, "size of x:" + str(x.size()))
     target_seq = torch.zeros(maxlength,300)
-    target_seq[0:x.size(0),:] = x
+    if x.size()[0] > 0:
+        target_seq[0:x.size(0),:] = x
     debug(1, "size of target:" + str(target_seq.size()))
     debug(2, "target:" + str(target_seq))
     return target_seq
@@ -202,6 +204,7 @@ def create_datasets(num_examples, w2v_model, train=False):
     posL, negL = generateExamples(num_examples)
     result = posL + negL
     random.shuffle(result)
+    debug(2, f"result: {result}")
     for sequence in result:
         X.append(encode_sequence(sequence, w2v_model))
         y.append(1 if sequence in posL else 0)
@@ -235,7 +238,7 @@ def checkAccuracy(predicted, actual):
     print(f"Info: Number of -ve samples identified correctly: {neg}")
 
 
-def createRNNModel():
+def createRNNModel(device):
     # Define the RNN model
     class RNN(nn.Module):
         def __init__(self, input_size, hidden_size, output_size, num_layers):
@@ -257,8 +260,8 @@ def createRNNModel():
     model = RNN(input_size, hidden_size, output_size, num_layers).to(device)
     return model
 
-def load_RNN_model(model):
-    model_path = "./models/" + modelName
+def load_RNN_model(model, model_path):
+
     needTraining = False
     if not os.path.exists(model_path):
         # raise Exception (f"No model exists at {model_path}, "
@@ -312,7 +315,7 @@ def train_RNN(model, X_train, y_train, device):
 
         print(f'Info: Epoch {epoch+1}/{num_epochs}, Loss: {avg_loss:.4f}')
 
-def test_RNN(model, X_test, y_test, device):
+def test_RNN(model, X_test, y_test, device, groundTruthKnown=False):
 # Evaluation
     with torch.no_grad():
         model.eval()
@@ -320,29 +323,37 @@ def test_RNN(model, X_test, y_test, device):
         # X_test_padded = torch.stack(X_test_padded).to(device)
         X_test = torch.stack(X_test).to(device)
         # y_test = torch.tensor(y_test, dtype=torch.float).unsqueeze(1).to(device)
-        y_test = torch.as_tensor(y_test, dtype=torch.float).clone().detach().unsqueeze(1).to(device)
         outputs = model(X_test)
-        loss = criterion(outputs, y_test)
+        debug(1, f"X_test size is: {X_test.size()} and outputs size is: {outputs.size()}")
         predicted_labels = torch.round(outputs)
-        accuracy = (predicted_labels == y_test).sum().item() / len(y_test)
+
+        if groundTruthKnown:
+            debug(1, f" y_test.size is:{y_test.size()}")
+            y_test = torch.as_tensor(y_test, dtype=torch.float).clone().detach().unsqueeze(1).to(device)
+            loss = criterion(outputs, y_test)
+            accuracy = (predicted_labels == y_test).sum().item() / len(y_test)
+            print(f"Info: Test Loss: {loss.item():.4f}, Test Accuracy: {accuracy:.4f}")
+            checkAccuracy(predicted_labels.numpy(), y_test.numpy())
         # print("actual_label:", y_test)
         # print("predicted_labels:", predicted_labels)
         # print("=:", predicted_labels==y_test)
         # print("sum:", (predicted_labels==y_test).sum())
         # print("item:", (predicted_labels == y_test).sum().item())
         # print(predicted_labels[-1])
-        checkAccuracy(predicted_labels.numpy(),y_test.numpy())
-        print(f"Info: Test Loss: {loss.item():.4f}, Test Accuracy: {accuracy:.4f}")
+    return predicted_labels
+
 
 
 if __name__ == "__main__":
-    w2v_model = load_model()
+    word2vecPath = "./models/GoogleNews-vectors-negative300.bin"
+    w2v_model = load_model(word2vecPath)
     test_model(w2v_model)
     # Set the device for training
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    RNN_model = createRNNModel()
+    RNN_model = createRNNModel(device)
     # Load the model saved already in the models folder
-    RNN_model, needTraining = load_RNN_model(RNN_model)
+    RNNModelPath = "./models/" + modelName
+    RNN_model, needTraining = load_RNN_model(RNN_model, RNNModelPath)
 
     if needTraining:
         X_train, y_train = create_datasets(10000, w2v_model=w2v_model, train=True)
@@ -352,7 +363,7 @@ if __name__ == "__main__":
     else:
         print(f"Info: Training is skipped!")
 
-    X_test, y_test = create_datasets(1000, w2v_model=w2v_model, train=False)
+    X_test, y_test = create_datasets(1, w2v_model=w2v_model, train=False)
     print(f"Info: Length of X(input) for testing: {len(X_test)}")
     print(f"Info: Size of y(label) tensor for testing: {y_test.size()}")
-    test_RNN(RNN_model, X_test, y_test, device)
+    predicted_labels = test_RNN(RNN_model, X_test, y_test, device, True)
