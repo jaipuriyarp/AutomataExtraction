@@ -1,3 +1,4 @@
+# Language accepted is: (ab)^n, where n is a Natural number excluding 0.
 import sys
 import os
 import random
@@ -9,16 +10,15 @@ for path in pathsToInclude:
     sys.path.append(path)
 
 from vLStar import RationalNumber, RationalNominalAutomata, learn
+from wordPattern import load_model, createRNNModel, load_RNN_model, encode_sequence, test_RNN
 
 RNNModelName = "modelRNN.pt"
 RNNModelPath =  os.path.join(modelDir, "models", RNNModelName)
 word2vecModelPath = os.path.join(modelDir, "models", "GoogleNews-vectors-negative300.bin")
 
-
 UpperBound = 3000000 #number of words in Google's word2vec
 debug = True
 
-from wordPattern import load_model, createRNNModel, load_RNN_model, encode_sequence, test_RNN
 
 samples = [[RationalNumber(0,1)],
            [RationalNumber(0,1),RationalNumber(0,1)],
