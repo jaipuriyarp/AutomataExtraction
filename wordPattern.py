@@ -24,7 +24,7 @@ num_layers = 2
 learning_rate = 0.001
 num_epochs = 100
 batch_size = 32
-modelName = "modelRNN.pt"
+modelName = "modelRNN_abSeq.pt"
 
 # Define the loss function
 criterion = nn.BCELoss()
@@ -126,58 +126,78 @@ def special_word():
     special_sentence = [word if i%2 == 0 else "#" for i in range(k)]
     return special_sentence
 
-def genSpecialNegExample(num_examples):
+def genSpecialNegExample(num_examples, w2v_model, lang):
     # TODO: create examples without '#' as well : Already added due to length selection
     wordL = []
     while num_examples > 0:
         k = random.randint(1, maxlength-2)
-        word = random.choices(w2v_model.index_to_key)
-        x = [word[0] if i % 2 == 0 else '#' for i in range(k)]
-        if x[-1] != '#':
-            x.append('#')
-        word = random.choices(w2v_model.index_to_key)
-        while word == x[0]:
-            word = random.choices(w2v_model.index_to_key)
+        if k % 2 == 1:
+            k += 1
+        word = random.choices(w2v_model.index_to_key, k=2)
+        if lang == 1:
+            b  = '#'
+        else:
+            b = word[1]
+        x = [word[0] if i % 2 == 0 else b for i in range(k)]
+
+        word = random.choices(w2v_model.index_to_key, k=2)
+        while word[0] == x[0]:
+            word = random.choices(w2v_model.index_to_key, k=2)
         x.append(word[0])
-        x.append('#')
+        if lang == 2:
+            b = random.choices([x[1], word[1]])
+        x.append(b[0])
         k = random.randint(0, maxlength-len(x))
-        y = [x[0] if i%2 ==0 else '#' for i in range(k)]
+        y = [x[0] if i%2 ==0 else b[0] for i in range(k)]
         x = x + y
         wordL.append(x)
         num_examples -= 1
-    # print("special Negatives:", wordL)
+    debug(2, f"special Negatives:{wordL}")
     return wordL
-def generateTypeExamples(num_examples, pos):
+def generateTypeExamples(num_examples, w2v_model, lang, pos):
     wordL = []
+    # lang = 1: L1 = (a#)^n
+    # lang = 2: L2 = (ab)^n
+    if lang > 2 and lang < 1:
+        raise Exception("No lang defined!")
+
     while num_examples > 0:
         k = random.randint(1, maxlength)
         if pos:
-            word = random.choices(w2v_model.index_to_key)
+            word = random.choices(w2v_model.index_to_key, k=2)
             if k%2 != 0: #To add '# at the end of positive examples if k is -ve
                 k += 1
-            wordL.append([word[0] if i%2 == 0  else '#' for i in range(k)])
+            if lang == 1: # L = (a#)^n
+                b = '#'
+            elif lang == 2: # L = (ab)^n
+                b = word[1]
+            wordL.append([word[0] if i%2 == 0  else b for i in range(k)])
         else:
-            x = []
-            for i in range(k):
-                if i%2 == 0:
-                    word = random.choices(w2v_model.index_to_key)
-                    x.append(word[0])
-                else:
-                    x.append("#")
-            wordL.append(x)
+            if lang == 1:
+                x = [w2v_model.index_to_key[random.randint(0, len(w2v_model.index_to_key))] if i % 2 == 0 else '#'
+                     for i in range(k)]
+                validCheck = (k%2 == 1) or (k > 2 and len(set(x)) > 2) or (k==2 and x[0] == '#')
+            elif lang == 2:
+                x = [w2v_model.index_to_key[random.randint(0, len(w2v_model.index_to_key))] if i % 2 == 0 else
+                     w2v_model.index_to_key[random.randint(0, len(w2v_model.index_to_key))] for i in range(k)]
+                validCheck = (k%2 == 1) or (k > 2 and len(set(x)) > 2) or (k==2 and x[0]==x[1])
+            if validCheck:
+                wordL.append(x)
+            else:
+                num_examples += 1 # since x is not added in the wordL
         num_examples -= 1
     return wordL
 
-def generateExamples(num_examples):
+def generateExamples(num_examples, w2v_model, lang):
     posL_count = int(num_examples / 2)
     negL_count = num_examples - posL_count
-    negL = genSpecialNegExample(int(negL_count / 2))
+    negL = genSpecialNegExample(int(negL_count / 2), w2v_model, lang)
     negL_count = negL_count - int(negL_count / 2)
     posL = []
     if posL_count != 0:
-        posL = generateTypeExamples(posL_count, pos=True)
+        posL = generateTypeExamples(posL_count, w2v_model, lang, pos=True)
     if negL_count != 0:
-        negL = negL + generateTypeExamples(negL_count, pos=False)
+        negL = negL + generateTypeExamples(negL_count, w2v_model, lang, pos=False)
     debug(2, "positive examples:" + str(posL))
     debug(2, "negative examples:" + str(negL))
     return posL, negL
@@ -193,7 +213,7 @@ def encode_sequence(sequence, w2v_model):
     debug(2, "target:" + str(target_seq))
     return target_seq
 
-def create_datasets(num_examples, w2v_model, train=False):
+def create_datasets(num_examples, w2v_model, lang=1, train=False):
     X = []
     y = []
     # update the w2v_model with new words, if we want to test RNN model on words outside the default vocab of w2v model.
@@ -201,15 +221,15 @@ def create_datasets(num_examples, w2v_model, train=False):
     if newWordList != []:
         w2v_model = update_w2vModelVocab(newWordList, w2v_model)
 
-    posL, negL = generateExamples(num_examples)
+    posL, negL = generateExamples(num_examples, w2v_model, lang=lang)
     result = posL + negL
     random.shuffle(result)
-    debug(2, f"result: {result}")
+    debug(3, f"result: {result}")
     for sequence in result:
         X.append(encode_sequence(sequence, w2v_model))
         y.append(1 if sequence in posL else 0)
-    debug(2, "X =" + str(X))
-    debug(2, "y=" + str(y))
+    debug(3, "X =" + str(X))
+    debug(3, "y=" + str(y))
     print(f"Info: Total number of samples generated: {num_examples}")
     if train:
         print(f"Info: Number of positive examples in training: {y.count(1)}")
@@ -315,7 +335,7 @@ def train_RNN(model, X_train, y_train, device):
 
         print(f'Info: Epoch {epoch+1}/{num_epochs}, Loss: {avg_loss:.4f}')
 
-def test_RNN(model, X_test, y_test, device, groundTruthKnown=False):
+def test_RNN(model, X_test, y_test, device):
 # Evaluation
     with torch.no_grad():
         model.eval()
@@ -327,7 +347,7 @@ def test_RNN(model, X_test, y_test, device, groundTruthKnown=False):
         debug(1, f"X_test size is: {X_test.size()} and outputs size is: {outputs.size()}")
         predicted_labels = torch.round(outputs)
 
-        if groundTruthKnown:
+        if y_test is not None:
             debug(1, f" y_test.size is:{y_test.size()}")
             y_test = torch.as_tensor(y_test, dtype=torch.float).clone().detach().unsqueeze(1).to(device)
             loss = criterion(outputs, y_test)
@@ -355,15 +375,16 @@ if __name__ == "__main__":
     RNNModelPath = "./models/" + modelName
     RNN_model, needTraining = load_RNN_model(RNN_model, RNNModelPath)
 
+    lang = 2
     if needTraining:
-        X_train, y_train = create_datasets(10000, w2v_model=w2v_model, train=True)
+        X_train, y_train = create_datasets(100000, w2v_model=w2v_model, lang=lang, train=True)
         print(f"Info: Length of X(input) for training: {len(X_train)}")
         print(f"Info: Size of y(label) tensor for training: {y_train.size()}")
         train_RNN(RNN_model, X_train, y_train, device)
     else:
         print(f"Info: Training is skipped!")
 
-    X_test, y_test = create_datasets(1, w2v_model=w2v_model, train=False)
+    X_test, y_test = create_datasets(3000, w2v_model=w2v_model, lang=lang, train=False)
     print(f"Info: Length of X(input) for testing: {len(X_test)}")
     print(f"Info: Size of y(label) tensor for testing: {y_test.size()}")
-    predicted_labels = test_RNN(RNN_model, X_test, y_test, device, True)
+    predicted_labels = test_RNN(RNN_model, X_test, y_test, device)

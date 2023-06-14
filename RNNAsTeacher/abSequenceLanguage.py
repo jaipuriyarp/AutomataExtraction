@@ -67,7 +67,7 @@ class RNNInterface:
 
         else:
             X = [self.self.w2v_model[x.getNumerator()] for x in NumList]
-        RNN_reply =  test_RNN(self.RNN_model, X, None, self.device, False)
+        RNN_reply =  test_RNN(self.RNN_model, X, None, self.device)
         if len(RNN_reply) != 1:
             raise Exception(f"Since, the student asks teacher one query at a time, "
                             "the length of answer from Teacher i.e. RNN should be exactly One")
