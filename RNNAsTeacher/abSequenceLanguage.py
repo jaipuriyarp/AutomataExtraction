@@ -5,12 +5,12 @@ import random
 import torch
 
 modelDir = "../"
-pathsToInclude = ["../../TheoryOfEquality/vLStarForRationalAutomata/", modelDir, "."]
+pathsToInclude = ["../../TheoryOfEquality/vLStarForRationalAutomata/", modelDir, "../RNNLanguageModels"]
 for path in pathsToInclude:
     sys.path.append(path)
 
 from vLStar import RationalNumber, RationalNominalAutomata, learn
-from wordPattern import load_model, encode_sequence
+from languageGenerator import load_model, encode_sequence
 from rnnModel import RNNModel
 from GTComparison import GTComparison
 from groundTruthFunctions import Lang_is_abSeq
