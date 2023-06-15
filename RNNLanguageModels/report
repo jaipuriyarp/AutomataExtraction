@@ -1,0 +1,17 @@
+----------------------------------------------------------
+Name: modelRNN_abSeq.pt:
+
+input_size=300, hidden_size=64, output_size=1, num_layers=1
+
+learning_rate = 0.001
+num_epochs = 800
+batch_size = 32
+
+Result: Accuracy : 0.9969888888888889
+Result: Precision: 0.9970017596391492
+Result: Recall   : 0.9969888888888889
+Result: F1 Score : 0.9969888693942346
+
+----------------------------------------------------------
+
+Name: modelRNN_abSeqTRY1.pt

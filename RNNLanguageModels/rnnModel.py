@@ -3,6 +3,7 @@ import torch.nn as nn
 import torch.optim as optim
 import numpy as np
 from pathlib import Path
+from sklearn.metrics import precision_recall_fscore_support
 import os
 
 learning_rate = 0.001
@@ -56,10 +57,10 @@ class RNNModel:
             print(f"Warning: Model doesn't exist at path {model_path}, So training is needed for a new RNN model")
             needTraining = True
         else:
-            # print(f"Info for the model present at {model_path}: {model_path}")
+            print(f"Info: The model exists at {os.path.exists(model_path)}")
             self.model.load_state_dict(torch.load(model_path))
             print(f"Info: RNN Model loaded Successfully!")
-            print(f'Info: Model {self.model}')
+            # print(f'Info: Model {self.model}')
         return needTraining
 
     def train_RNN(self, X_train, y_train, num_epochs, batch_size, learning_rate):
@@ -130,7 +131,7 @@ class RNNModel:
                 loss = criterion(outputs, y_test)
                 accuracy = (predicted_labels == y_test).sum().item() / len(y_test)
                 print(f"Info: Test Loss: {loss.item():.4f}, Test Accuracy: {accuracy:.4f}")
-                self.checkAccuracy(predicted_labels.numpy(), y_test.numpy())
+                # self.checkAccuracy(predicted_labels.numpy(), y_test.numpy())
             # print("actual_label:", y_test)
             # print("predicted_labels:", predicted_labels)
             # print("=:", predicted_labels==y_test)
@@ -157,3 +158,23 @@ class RNNModel:
         self.debug(1, f"Info: Total number of -ve data points identified correctly : {neg}")
 
         return pos, neg
+
+    def getScores(self, predicted, actual):
+        if not (isinstance(predicted, np.ndarray) and isinstance(actual, np.ndarray)):
+            raise Exception(f"Please ensure that the type of predicted: {type(predicted)} "
+                            f"and ground truth:{type(actual)} are of np.ndarray type")
+        predicted_flat = predicted.flatten()
+        actual_flat = actual.flatten()
+
+        # Calculate accuracy
+        accuracy = np.mean(predicted_flat == actual_flat)
+
+        # Calculate precision, recall, and F1 score
+        precision, recall, f1, _ = precision_recall_fscore_support(actual_flat, predicted_flat,
+                                                                   average='weighted')
+
+        # Print the evaluation metrics
+        print("Result: Accuracy :", accuracy)
+        print("Result: Precision:", precision) # Higher precision means fewer false positives.
+        print("Result: Recall   :", recall) # Higher recall means fewer false negatives. #imp to not miss true positive
+        print("Result: F1 Score :", f1)

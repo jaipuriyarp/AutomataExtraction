@@ -24,7 +24,7 @@ num_layers = 2
 learning_rate = 0.001
 num_epochs = 800
 batch_size = 32
-modelName = "modelRNN_abSeq_new.pt"
+modelName = "modelRNN_abSeq.pt"
 
 def debug(verbose_level, str):
     if verbose >= verbose_level:
@@ -282,6 +282,8 @@ if __name__ == "__main__":
     print(f"Info: Length of X(input) for testing: {len(X_test)}")
     print(f"Info: Size of y(label) tensor for testing: {y_test.size()}")
     predicted = RNN_model.test_RNN(X_test, y_test)
-    y_test = RNN_model.convertTensor1DTo2D(y_test)
+    y_test = RNN_model.convertTensor1DTo2D(y_test).numpy()
+    # print(f"{y_test} and {predicted}")
     pos, neg = RNN_model.checkAccuracy(predicted=predicted, actual=y_test)
     statistics(numSamples, pos, neg)
+    RNN_model.getScores(predicted, y_test)
