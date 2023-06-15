@@ -95,7 +95,7 @@ class RNNModel:
             if avg_loss < best_avg_loss:
                 best_avg_loss = avg_loss
                 patience_counter = 0
-                torch.save(self.model.state_dict(), Path("models/", self.model_name))
+                torch.save(self.model.state_dict(), Path("../models/", self.model_name))
                 print(f'Info: Epoch {epoch} best Model saved with the loss {best_avg_loss}')
 
             else:

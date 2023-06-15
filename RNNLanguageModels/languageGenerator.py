@@ -24,7 +24,7 @@ num_layers = 2
 learning_rate = 0.001
 num_epochs = 800
 batch_size = 32
-modelName = "modelRNN_abSeqXX.pt"
+modelName = "modelRNN_abSeq_new.pt"
 
 def debug(verbose_level, str):
     if verbose >= verbose_level:
@@ -256,27 +256,27 @@ def statistics(numSamples, pos, neg):
 
 
 if __name__ == "__main__":
-    word2vecPath = "./models/GoogleNews-vectors-negative300.bin"
-    w2v_model = load_model(word2vecPath, 1000)
+    word2vecPath = "../models/GoogleNews-vectors-negative300.bin"
+    w2v_model = load_model(word2vecPath)
     test_model(w2v_model)
 
     RNN_model = RNNModel(input_size=input_size, hidden_size=hidden_size,
                          output_size=output_size, num_layers=num_layers, model_name=modelName)
 
     # Load the model saved already in the models folder
-    RNNModelPath = "./models/" + modelName
+    RNNModelPath = "../models/" + modelName
     needTraining = RNN_model.load_RNN_model(RNNModelPath)
 
     lang = 2
     if needTraining:
-        X_train, y_train = create_datasets(200, w2v_model=w2v_model, lang=lang, train=True)
+        X_train, y_train = create_datasets(300000, w2v_model=w2v_model, lang=lang, train=True)
         print(f"Info: Length of X(input) for training: {len(X_train)}")
         print(f"Info: Size of y(label) tensor for training: {y_train.size()}")
         RNN_model.train_RNN(X_train, y_train, num_epochs, batch_size, learning_rate)
     else:
         print(f"Info: Training is skipped!")
 
-    numSamples = 100
+    numSamples = 90000
 
     X_test, y_test = create_datasets(numSamples, w2v_model=w2v_model, lang=lang, train=False)
     print(f"Info: Length of X(input) for testing: {len(X_test)}")
