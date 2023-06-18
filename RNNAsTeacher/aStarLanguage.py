@@ -14,7 +14,7 @@ from vLStar import RationalNumber, RationalNominalAutomata, learn
 
 from rnnInterface import RNNInterface
 from GTComparison import GTComparison
-from groundTruthFunctions import Lang_is_abSeq, Lang_is_aStar
+from groundTruthFunctions import Lang_is_aStar
 
 RNNModelName = "modelRNN_lang1_aStar.pt"
 RNNModelPath = os.path.join(modelDir, "models", RNNModelName)
