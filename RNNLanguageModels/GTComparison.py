@@ -59,7 +59,7 @@ class GTComparison:
                 else:
                     self.false_negative += 1
                     self.false_negative_EquivQ += 1
-                    self.queries_incorrectlyAnswered.add(currKey)
+                    # self.queries_incorrectlyAnswered.add(currKey)
 
         else: # case: negative
             if memQ: # case: membership Queries
@@ -77,7 +77,7 @@ class GTComparison:
                 if RNN_ans:
                     self.false_positive += 1
                     self.false_positive_EquivQ +=1
-                    self.queries_incorrectlyAnswered.add(currKey)
+                    # self.queries_incorrectlyAnswered.add(currKey)
                 else:
                     self.true_negative += 1
                     self.true_negative_EquivQ += 1
