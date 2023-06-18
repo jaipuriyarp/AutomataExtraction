@@ -27,7 +27,7 @@ num_layers = 2
 learning_rate = 0.001
 num_epochs = 500
 batch_size = 32
-modelName = "modelRNN_lang3_aOdd_must_followed_by_bEven.pt"
+modelName = "modelRNN_lang4_stringWithoutTrigram.pt"
 
 def debug(verbose_level, str):
     if verbose >= verbose_level:
@@ -126,10 +126,37 @@ def special_word():
     special_sentence = [word if i%2 == 0 else "#" for i in range(k)]
     return special_sentence
 
-def genSpecialNegExample(num_examples, w2v_model, lang):
-    # TODO: create examples without '#' as well : Already added due to length selection
+def genSpecialPosExample(num_examples, w2v_model, lang):
+    if lang != 4:
+        return []
     wordL = []
+    while num_examples > 0:
+        k = random.randint(2, maxlength)
+        word = random.choices(w2v_model.index_to_key, k=1)
+        validCheck = True
+        if lang == 4:
+            x = [w2v_model.index_to_key[random.randint(0, len(w2v_model.index_to_key) - 1)] for _ in range(k - 2)]
+            index_to_insert_at = random.randint(0, len(x) - 1)
+            for i in range(2):
+                x.insert(index_to_insert_at + i, word[0])
+            for i in range(len(x)):
+                if i > 2 and x[i-1] == x[i-2] and x[i] == x[i-1]:
+                    validCheck = False
+                    break
+        if validCheck:
+            wordL.append(x)
+        else:
+            num_examples += 1 # since the current word is not added
+        num_examples -= 1
+    debug(1, f"Special Positive Examples : {wordL}")
+    return wordL
 
+
+def genSpecialNegExample(num_examples, w2v_model, lang):
+    if lang > 3 :
+        return []
+
+    wordL = []
     while num_examples > 0:
         k = random.randint(1, maxlength-1)
         word = random.choices(w2v_model.index_to_key, k=2)
@@ -165,7 +192,7 @@ def genSpecialNegExample(num_examples, w2v_model, lang):
 
         wordL.append(x)
         num_examples -= 1
-    debug(2, f"special Negatives:{wordL}")
+    debug(1, f"special Negatives:{wordL}")
     return wordL
 def generateTypeExamples(num_examples, w2v_model, lang, pos):
     wordL = []
@@ -196,6 +223,24 @@ def generateTypeExamples(num_examples, w2v_model, lang, pos):
                     k2 = k2 - 1
                 x +=  [word[1] for _ in range(k2)]
                 wordL.append(x)
+            elif lang == 4: # L = any string not containing aaa (3a's consecutively)
+                x = []
+                for i in range(k):
+                    p = w2v_model.index_to_key[random.randint(0, len(w2v_model.index_to_key)-1)]
+                    if i > 1 and x[i-1] == x[i-2]:
+                        while x[i-2] == p:
+                            p = w2v_model.index_to_key[random.randint(0, len(w2v_model.index_to_key)-1)]
+                    x.append(p)
+                wordL.append(x)
+            elif lang == 5: # L = number of a and number of b in string are even.
+                if k % 2 == 1:
+                    k -= 1
+                x = [word[random.randint(0,1)] for _ in range(k-2)]
+                if x.count(word[0]) % 2 == 1:
+                    x.append(word[0])
+                if x.count(word[1]) % 2 == 1:
+                    x.append(word[1])
+                wordL.append(x)
 
         else:
             if lang == 1:
@@ -217,6 +262,25 @@ def generateTypeExamples(num_examples, w2v_model, lang, pos):
                 x = [word[0] for _ in range(k)]
                 x += [word[1] for _ in range(random.randint(0,maxlength-len(x)))]
                 validCheck = x.count(word[0]) %2 == 0
+            elif lang == 4:
+                # neg case: a word whose length is > 2 and at least contain trigram once.
+                if k < 3:
+                    validCheck = False
+                    break
+                else:
+                    x = [w2v_model.index_to_key[random.randint(0, len(w2v_model.index_to_key)-1)] for _ in range(k-3)]
+                    index_to_insert_at= random.randint(0, len(x)-1)
+                    repeated_word = w2v_model.index_to_key[random.randint(0, len(w2v_model.index_to_key)-1)]
+                    for i in range(3):
+                        x.insert(index_to_insert_at + i, repeated_word)
+                    validCheck = True
+            elif lang == 5:
+                # neg case: either number of a/b is odd or both a and b are odd.
+                word = random.choices(w2v_model.index_to_key, k=2)
+                x = [word[random.randint(0,1)] for _ in range(k)]
+                if x.count(word[0]) % 2 == 0 and x.count(word[1]) % 2 == 1:
+                    del x[0]
+                validCheck = not (x.count(word[0]) % 2 == 0 and x.count(word[1]) % 2 == 0)
 
             if validCheck:
                 wordL.append(x)
@@ -230,8 +294,9 @@ def generateExamples(num_examples, w2v_model, lang):
     posL_count = int(num_examples / 2)
     negL_count = num_examples - posL_count
     negL = genSpecialNegExample(int(negL_count / 2), w2v_model, lang)
+    posL = genSpecialPosExample(posL_count/2, w2v_model, lang)
     negL_count = negL_count - len(negL)
-    posL = []
+    posL_count = posL_count - len(posL)
     if posL_count != 0:
         posL = generateTypeExamples(posL_count, w2v_model, lang, pos=True)
     if negL_count != 0:
@@ -306,7 +371,7 @@ if __name__ == "__main__":
     RNNModelPath = "../models/" + modelName
     needTraining = RNN_model.load_RNN_model(RNNModelPath)
 
-    lang = 3
+    lang = 4
     if needTraining:
         numSamples = 300000
         X_train, y_train = create_datasets(numSamples, w2v_model=w2v_model, lang=lang, train=True)
