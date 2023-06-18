@@ -9,6 +9,9 @@ import numpy as np
 from gensim.models import Word2Vec, KeyedVectors
 from rnnModel import  RNNModel
 
+
+# changing the languages according to Tomita languages
+
 #gensim.__version__ = 4.3.1
 
 verbose = 0
@@ -22,9 +25,9 @@ num_layers = 2
 
 # Define hyperparameters
 learning_rate = 0.001
-num_epochs = 800
+num_epochs = 500
 batch_size = 32
-modelName = "modelRNN_abSeq.pt"
+modelName = "modelRNN_lang3_aOdd_must_followed_by_bEven.pt"
 
 def debug(verbose_level, str):
     if verbose >= verbose_level:
@@ -126,36 +129,49 @@ def special_word():
 def genSpecialNegExample(num_examples, w2v_model, lang):
     # TODO: create examples without '#' as well : Already added due to length selection
     wordL = []
-    while num_examples > 0:
-        k = random.randint(1, maxlength-2)
-        if k % 2 == 1:
-            k += 1
-        word = random.choices(w2v_model.index_to_key, k=2)
-        if lang == 1:
-            b  = '#'
-        else:
-            b = word[1]
-        x = [word[0] if i % 2 == 0 else b for i in range(k)]
 
+    while num_examples > 0:
+        k = random.randint(1, maxlength-1)
         word = random.choices(w2v_model.index_to_key, k=2)
-        while word[0] == x[0]:
-            word = random.choices(w2v_model.index_to_key, k=2)
-        x.append(word[0])
-        if lang == 2:
-            b = random.choices([x[1], word[1]])
-        x.append(b[0])
-        k = random.randint(0, maxlength-len(x))
-        y = [x[0] if i%2 ==0 else b[0] for i in range(k)]
-        x = x + y
+
+        if lang == 1:
+            x = [word[0] for _ in range(k)]
+            x.append(word[1])
+            k = random.randint(0, maxlength- len(x))
+            x += [word[0] for _ in range(k)]
+
+        elif lang == 2:
+            x = [word[0] if i%2 == 0 else word[1] for i in range(k)]
+            if k > 1:
+                newWord = random.choices(w2v_model.index_to_key, k=1)
+                while newWord == x[-2]:
+                    newWord = random.choices(w2v_model.index_to_key, k=1)
+                x.append(newWord[0])
+                k = random.randint(0, maxlength - len(x))
+                if len(x) % 2 == 0:
+                    x += [x[0] if i % 2 == 0 else x[1] for i in range(k)]
+                else:
+                    x += [x[1] if i % 2 == 0 else x[0] for i in range(k)]
+
+        elif lang == 3:
+            # odd # of a followed by 0 or odd number of b's.
+            if k%2 == 0:
+                k += 1
+            x = [word[0] for _ in range(k)]
+            k = random.randint(0, maxlength-len(x))
+            if k % 2 == 0:
+                k -= 1
+            x += [word[1] for _ in range(k)]
+
         wordL.append(x)
         num_examples -= 1
     debug(2, f"special Negatives:{wordL}")
     return wordL
 def generateTypeExamples(num_examples, w2v_model, lang, pos):
     wordL = []
-    # lang = 1: L1 = (a#)^n
+    # lang = 1: L1 = (a)^n
     # lang = 2: L2 = (ab)^n
-    if lang > 2 and lang < 1:
+    if lang > 3 and lang < 1:
         raise Exception("No lang defined!")
 
     while num_examples > 0:
@@ -164,21 +180,44 @@ def generateTypeExamples(num_examples, w2v_model, lang, pos):
             word = random.choices(w2v_model.index_to_key, k=2)
             if k%2 != 0: #To add '# at the end of positive examples if k is -ve
                 k += 1
-            if lang == 1: # L = (a#)^n
-                b = '#'
+            if lang == 1: # L = (a)^n
+                #b = '#'
+                b = word[0]
+                wordL.append([word[0] if i % 2 == 0 else b for i in range(k)])
             elif lang == 2: # L = (ab)^n
                 b = word[1]
-            wordL.append([word[0] if i%2 == 0  else b for i in range(k)])
+                wordL.append([word[0] if i % 2 == 0 else b for i in range(k)])
+            elif lang == 3: # L = odd numbers of a must be followed by even numbers of b
+                if k == maxlength:
+                    k = k-2
+                x = [word[0] for _ in range(k)]
+                k2 = random.randint(2, maxlength -len(x))
+                if k2 % 2 == 0:
+                    k2 = k2 - 1
+                x +=  [word[1] for _ in range(k2)]
+                wordL.append(x)
+
         else:
             if lang == 1:
-                x = [w2v_model.index_to_key[random.randint(0, len(w2v_model.index_to_key))] if i % 2 == 0 else '#'
+                x = [w2v_model.index_to_key[random.randint(0, len(w2v_model.index_to_key)-1)] if i % 2 == 0 else '#'
                      for i in range(k)]
-                validCheck = (k%2 == 1) or (k > 2 and len(set(x)) > 2) or (k==2 and x[0] == '#')
+                # validCheck = (k%2 == 1) or (k > 2 and len(set(x)) > 2) or (k==2 and x[0] == '#')
+                validCheck = (k > 1 and len(set(x)) > 1)
             elif lang == 2:
                 # print (f"j1: {j1}, j2: {j2}")
                 x = [w2v_model.index_to_key[random.randint(0, len(w2v_model.index_to_key)-1)] if i % 2 == 0 else
                      w2v_model.index_to_key[random.randint(0, len(w2v_model.index_to_key)-1)] for i in range(k)]
                 validCheck = (k%2 == 1) or (k > 2 and len(set(x)) > 2) or (k==2 and x[0]==x[1])
+            elif lang == 3:
+                # neg case 1: even # of a followed by even # of b (includes number of b to be zero)
+                # neg case 2: even # of a followed by odd  # of b
+                word = random.choices(w2v_model.index_to_key, k=2)
+                if k % 2 == 1 :
+                    k -= 1
+                x = [word[0] for _ in range(k)]
+                x += [word[1] for _ in range(random.randint(0,maxlength-len(x)))]
+                validCheck = x.count(word[0]) %2 == 0
+
             if validCheck:
                 wordL.append(x)
             else:
@@ -191,24 +230,24 @@ def generateExamples(num_examples, w2v_model, lang):
     posL_count = int(num_examples / 2)
     negL_count = num_examples - posL_count
     negL = genSpecialNegExample(int(negL_count / 2), w2v_model, lang)
-    negL_count = negL_count - int(negL_count / 2)
+    negL_count = negL_count - len(negL)
     posL = []
     if posL_count != 0:
         posL = generateTypeExamples(posL_count, w2v_model, lang, pos=True)
     if negL_count != 0:
         negL = negL + generateTypeExamples(negL_count, w2v_model, lang, pos=False)
-    debug(2, "positive examples:" + str(posL))
-    debug(2, "negative examples:" + str(negL))
+    debug(1, "positive examples:" + str(posL))
+    debug(1, "negative examples:" + str(negL))
     return posL, negL
 
 def encode_sequence(sequence, w2v_model):
-    debug(1, "sequence:" + str(sequence))
+    debug(2, "sequence:" + str(sequence))
     x = torch.tensor(np.array([w2v_model[word] for word in sequence]))
-    debug(1, "size of x:" + str(x.size()))
+    debug(2, "size of x:" + str(x.size()))
     target_seq = torch.zeros(maxlength,300)
     if x.size()[0] > 0:
         target_seq[0:x.size(0),:] = x
-    debug(1, "size of target:" + str(target_seq.size()))
+    debug(2, "size of target:" + str(target_seq.size()))
     debug(2, "target:" + str(target_seq))
     return target_seq
 
@@ -247,8 +286,8 @@ def statistics(numSamples, pos, neg):
     print(
         f"Statistics: Inaccuracy %                                         : {(numSamples - (pos + neg)) / numSamples}")
     print(f"Statistics: Total number of data points                          : {numSamples}")
-    print(f"Statistics: Total number of data points classisified correctly   : {pos + neg}")
-    print(f"Statistics: Total number of data points misclassisified          : {numSamples - (pos + neg)}")
+    print(f"Statistics: Total number of data points classified correctly     : {pos + neg}")
+    print(f"Statistics: Total number of data points misclassified            : {numSamples - (pos + neg)}")
     print(f"Statistics: Total number of +ve data points identified correctly : {pos}")
     print(f"Statistics: Total number of -ve data points identified correctly : {neg}")
     print(f"Statistics: Total +ve Accuracy %                                 : {pos / int(numSamples / 2)}")
@@ -267,9 +306,10 @@ if __name__ == "__main__":
     RNNModelPath = "../models/" + modelName
     needTraining = RNN_model.load_RNN_model(RNNModelPath)
 
-    lang = 2
+    lang = 3
     if needTraining:
-        X_train, y_train = create_datasets(300000, w2v_model=w2v_model, lang=lang, train=True)
+        numSamples = 300000
+        X_train, y_train = create_datasets(numSamples, w2v_model=w2v_model, lang=lang, train=True)
         print(f"Info: Length of X(input) for training: {len(X_train)}")
         print(f"Info: Size of y(label) tensor for training: {y_train.size()}")
         RNN_model.train_RNN(X_train, y_train, num_epochs, batch_size, learning_rate)

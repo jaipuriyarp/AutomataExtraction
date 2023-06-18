@@ -6,9 +6,9 @@ from pathlib import Path
 from sklearn.metrics import precision_recall_fscore_support
 import os
 
-learning_rate = 0.001
-num_epochs = 800
-batch_size = 32
+# learning_rate = 0.001
+# num_epochs = 800
+# batch_size = 64
 
 class RNNModel:
 
@@ -69,7 +69,7 @@ class RNNModel:
 
         optimizer = optim.Adam(self.model.parameters(),lr=learning_rate)
 
-        patience, patience_counter = 200, 0
+        patience, patience_counter = 100, 0
         best_avg_loss = 1
         # Training loop
         for epoch in range(num_epochs):

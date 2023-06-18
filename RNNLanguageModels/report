@@ -1,4 +1,6 @@
-----------------------------------------------------------
+-------------------------------------------------------------------------------------------
+IGNORE THIS BLOCK:
+
 Name: modelRNN_abSeq.pt:
 
 input_size=300, hidden_size=64, output_size=1, num_layers=1
@@ -12,6 +14,106 @@ Result: Precision: 0.9970017596391492
 Result: Recall   : 0.9969888888888889
 Result: F1 Score : 0.9969888693942346
 
-----------------------------------------------------------
+-------------------------------------------------------------------------------------------
 
-Name: modelRNN_abSeqTRY1.pt
+Name: modelRNN_lang1_aStar.pt
+
+Ran till 200 epochs (max. epoch)
+
+Info: Test Loss: 0.0052, Test Accuracy: 0.9993
+Statistics: Accuracy %                                           : 0.9993222222222222
+Statistics: Inaccuracy %                                         : 0.0006777777777777778
+Statistics: Total number of data points                          : 90000
+Statistics: Total number of data points classified correctly     : 89939
+Statistics: Total number of data points misclassified            : 61
+Statistics: Total number of +ve data points identified correctly : 44996
+Statistics: Total number of -ve data points identified correctly : 44943
+Statistics: Total +ve Accuracy %                                 : 0.9999111111111111
+Statistics: Total -ve Accuracy %                                 : 0.9987333333333334
+Result: Accuracy : 0.9993222222222222
+Result: Precision: 0.9993229148632434
+Result: Recall   : 0.9993222222222222
+Result: F1 Score : 0.9993222219871755
+
+# Define hyperparameters
+input_size = 300
+hidden_size = 64
+output_size = 1
+num_layers = 2
+
+# Define hyperparameters
+learning_rate = 0.001
+num_epochs = 500
+batch_size = 32
+modelName = "modelRNN_lang1_aStar.pt"
+
+-------------------------------------------------------------------------------------------
+
+Name: modelRNN_lang2_abSeq.pt
+
+stopped at epoch 167 out of 500.
+
+Statistics: Accuracy %                                           : 0.9985222222222222
+Statistics: Inaccuracy %                                         : 0.0014777777777777777
+Statistics: Total number of data points                          : 90000
+Statistics: Total number of data points classisified correctly   : 89867
+Statistics: Total number of data points misclassisified          : 133
+Statistics: Total number of +ve data points identified correctly : 44979
+Statistics: Total number of -ve data points identified correctly : 44888
+Statistics: Total +ve Accuracy %                                 : 0.9995333333333334
+Statistics: Total -ve Accuracy %                                 : 0.9975111111111111
+Result: Accuracy : 0.9985222222222222
+Result: Precision: 0.9985242608787182
+Result: Recall   : 0.9985222222222222
+Result: F1 Score : 0.998522220711421
+
+# Define hyperparameters
+input_size = 300
+hidden_size = 64
+output_size = 1
+num_layers = 2
+
+# Define hyperparameters
+learning_rate = 0.001
+num_epochs = 500
+batch_size = 32
+modelName = "modelRNN_lang2_abSeq.pt"
+
+-------------------------------------------------------------------------------------------
+
+
+Name: modelRNN_lang2_abSeq.pt
+
+Early stopping on epoch 323.
+
+
+Statistics: Accuracy %                                           : 0.8568777777777777
+Statistics: Inaccuracy %                                         : 0.14312222222222223
+Statistics: Total number of data points                          : 90000
+Statistics: Total number of data points classified correctly     : 77119
+Statistics: Total number of data points misclassified            : 12881
+Statistics: Total number of +ve data points identified correctly : 41346
+Statistics: Total number of -ve data points identified correctly : 35773
+Statistics: Total +ve Accuracy %                                 : 0.9188
+Statistics: Total -ve Accuracy %                                 : 0.7949555555555555
+Result: Accuracy : 0.8568777777777777
+Result: Precision: 0.8624366301736216
+Result: Recall   : 0.8568777777777777
+Result: F1 Score : 0.856326883094654
+
+
+# Define hyperparameters
+input_size = 300
+hidden_size = 64
+output_size = 1
+num_layers = 2
+
+# Define hyperparameters
+learning_rate = 0.001
+num_epochs = 500
+batch_size = 32
+modelName = "modelRNN_lang3_aOdd_must_followed_by_bEven.pt"
+
+-------------------------------------------------------------------------------------------
+
+
