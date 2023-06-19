@@ -27,7 +27,7 @@ num_layers = 2
 learning_rate = 0.001
 num_epochs = 500
 batch_size = 32
-modelName = "modelRNN_lang4_stringWithoutTrigram.pt"
+modelName = "modelRNN_lang5_abNumbothEven.pt"
 
 def debug(verbose_level, str):
     if verbose >= verbose_level:
@@ -136,7 +136,10 @@ def genSpecialPosExample(num_examples, w2v_model, lang):
         validCheck = True
         if lang == 4:
             x = [w2v_model.index_to_key[random.randint(0, len(w2v_model.index_to_key) - 1)] for _ in range(k - 2)]
-            index_to_insert_at = random.randint(0, len(x) - 1)
+            if len(x) > 1:
+                index_to_insert_at = random.randint(0, len(x) - 1)
+            else:
+                index_to_insert_at = 0
             for i in range(2):
                 x.insert(index_to_insert_at + i, word[0])
             for i in range(len(x)):
@@ -163,27 +166,19 @@ def genSpecialNegExample(num_examples, w2v_model, lang):
 
         if lang == 1:
             x = [word[0] for _ in range(k)]
-            x.append(word[1])
-            k = random.randint(0, maxlength- len(x))
-            x += [word[0] for _ in range(k)]
+            x.insert(random.randint(0,len(x)), word[1])
 
         elif lang == 2:
             x = [word[0] if i%2 == 0 else word[1] for i in range(k)]
-            if k > 1:
+            if k > 1 and k % 2 == 0:
                 newWord = random.choices(w2v_model.index_to_key, k=1)
-                while newWord == x[-2]:
-                    newWord = random.choices(w2v_model.index_to_key, k=1)
-                x.append(newWord[0])
-                k = random.randint(0, maxlength - len(x))
-                if len(x) % 2 == 0:
-                    x += [x[0] if i % 2 == 0 else x[1] for i in range(k)]
-                else:
-                    x += [x[1] if i % 2 == 0 else x[0] for i in range(k)]
+                word.append(newWord[0])
+                x.insert(random.randint(0, len(x)-1), word[random.randint(0,len(word))])
 
         elif lang == 3:
             # odd # of a followed by 0 or odd number of b's.
             if k%2 == 0:
-                k += 1
+                k += 1 #odd
             x = [word[0] for _ in range(k)]
             k = random.randint(0, maxlength-len(x))
             if k % 2 == 0:
@@ -195,6 +190,7 @@ def genSpecialNegExample(num_examples, w2v_model, lang):
     debug(1, f"special Negatives:{wordL}")
     return wordL
 def generateTypeExamples(num_examples, w2v_model, lang, pos):
+    #run again lang. 1, 3, 4
     wordL = []
     # lang = 1: L1 = (a)^n
     # lang = 2: L2 = (ab)^n
@@ -205,22 +201,23 @@ def generateTypeExamples(num_examples, w2v_model, lang, pos):
         k = random.randint(1, maxlength)
         if pos:
             word = random.choices(w2v_model.index_to_key, k=2)
-            if k%2 != 0: #To add '# at the end of positive examples if k is -ve
-                k += 1
             if lang == 1: # L = (a)^n
-                #b = '#'
-                b = word[0]
-                wordL.append([word[0] if i % 2 == 0 else b for i in range(k)])
+                wordL.append([word[0] if i % 2 == 0 else word[1] for i in range(k)])
             elif lang == 2: # L = (ab)^n
-                b = word[1]
-                wordL.append([word[0] if i % 2 == 0 else b for i in range(k)])
+                if k%2 != 0:
+                    k -= 1 # even
+                wordL.append([word[0] if i % 2 == 0 else word[1] for i in range(k)])
             elif lang == 3: # L = odd numbers of a must be followed by even numbers of b
                 if k == maxlength:
                     k = k-2
+                if k%2 == 0:
+                    k -= 1 # odd k
                 x = [word[0] for _ in range(k)]
                 k2 = random.randint(2, maxlength -len(x))
-                if k2 % 2 == 0:
+                if k2 % 2 != 0:
                     k2 = k2 - 1
+                if k2 == 0:
+                    k2 += 2 # even
                 x +=  [word[1] for _ in range(k2)]
                 wordL.append(x)
             elif lang == 4: # L = any string not containing aaa (3a's consecutively)
@@ -234,24 +231,43 @@ def generateTypeExamples(num_examples, w2v_model, lang, pos):
                 wordL.append(x)
             elif lang == 5: # L = number of a and number of b in string are even.
                 if k % 2 == 1:
-                    k -= 1
+                    k -= 1 # even
                 x = [word[random.randint(0,1)] for _ in range(k-2)]
                 if x.count(word[0]) % 2 == 1:
                     x.append(word[0])
                 if x.count(word[1]) % 2 == 1:
                     x.append(word[1])
                 wordL.append(x)
+            elif lang == 6: L = #a equivalent #b mod 3. i.e. 3|(#a - #b) where
+             # #x=: number of x in string a|b := a divides b.
+                if maxlength - k > 0:
+                    k2 = random.randint(0, maxlength-k)
+                else
+                    k2 = 0
+                while k - k2 % 3 != 0:
+                    if k - 1 >= 0:
+                        k -= 1
+                    else:
+                        k2 -= 1
+                x = [word[0] for x in range(k)]
+                for _ in range(k2):
+                    x.insert(random.randint(0,len(x)), word[1])
+                validCheck = x.count(word[0]) - x.count(word[1]) % 3 == 0
+                if validCheck:
+                    wordL.append(x)
+                else:
+                    num_examples += 1
+            elif lang == 7:
 
-        else:
+
+        else: # neg case
             if lang == 1:
                 x = [w2v_model.index_to_key[random.randint(0, len(w2v_model.index_to_key)-1)] if i % 2 == 0 else '#'
                      for i in range(k)]
                 # validCheck = (k%2 == 1) or (k > 2 and len(set(x)) > 2) or (k==2 and x[0] == '#')
                 validCheck = (k > 1 and len(set(x)) > 1)
             elif lang == 2:
-                # print (f"j1: {j1}, j2: {j2}")
-                x = [w2v_model.index_to_key[random.randint(0, len(w2v_model.index_to_key)-1)] if i % 2 == 0 else
-                     w2v_model.index_to_key[random.randint(0, len(w2v_model.index_to_key)-1)] for i in range(k)]
+                x = [w2v_model.index_to_key[random.randint(0, len(w2v_model.index_to_key)-1)] for _ in range(k)]
                 validCheck = (k%2 == 1) or (k > 2 and len(set(x)) > 2) or (k==2 and x[0]==x[1])
             elif lang == 3:
                 # neg case 1: even # of a followed by even # of b (includes number of b to be zero)
@@ -278,9 +294,24 @@ def generateTypeExamples(num_examples, w2v_model, lang, pos):
                 # neg case: either number of a/b is odd or both a and b are odd.
                 word = random.choices(w2v_model.index_to_key, k=2)
                 x = [word[random.randint(0,1)] for _ in range(k)]
-                if x.count(word[0]) % 2 == 0 and x.count(word[1]) % 2 == 1:
+                if x.count(word[0]) % 2 == 0 and x.count(word[1]) % 2 == 0:
                     del x[0]
                 validCheck = not (x.count(word[0]) % 2 == 0 and x.count(word[1]) % 2 == 0)
+            elif lang == 6:
+                word = random.choices(w2v_model.index_to_key, k=2)
+                if maxlength - k > 0:
+                    k2 = random.randint(0, maxlength - k)
+                else
+                    k2 = 0
+                while k - k2 % 3 == 0:
+                    if k - 1 >= 0:
+                        k -= 1
+                    else:
+                        k2 -= 1
+                x = [word[0] for _ in range(k)]
+                for _ in range(k2):
+                    x.insert(random.randint(0, len(x)), word[1])
+                validCheck = not(x.count(word[0]) - x.count(word[1]) % 3 == 0)
 
             if validCheck:
                 wordL.append(x)
@@ -371,7 +402,7 @@ if __name__ == "__main__":
     RNNModelPath = "../models/" + modelName
     needTraining = RNN_model.load_RNN_model(RNNModelPath)
 
-    lang = 4
+    lang = 5
     if needTraining:
         numSamples = 300000
         X_train, y_train = create_datasets(numSamples, w2v_model=w2v_model, lang=lang, train=True)

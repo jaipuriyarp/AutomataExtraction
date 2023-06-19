@@ -115,5 +115,67 @@ batch_size = 32
 modelName = "modelRNN_lang3_aOdd_must_followed_by_bEven.pt"
 
 -------------------------------------------------------------------------------------------
+NOT GOOD
 
+Name: modelRNN_lang4_stringWithoutTrigram.pt
+
+
+Statistics: Accuracy %                                           : 0.25
+Statistics: Inaccuracy %                                         : 0.75
+Statistics: Total number of data points                          : 90000
+Statistics: Total number of data points classified correctly     : 22500
+Statistics: Total number of data points misclassified            : 67500
+Statistics: Total number of +ve data points identified correctly : 22500
+Statistics: Total number of -ve data points identified correctly : 0
+Statistics: Total +ve Accuracy %                                 : 0.5
+Statistics: Total -ve Accuracy %                                 : 0.0
+/opt/homebrew/Caskroom/miniforge/base/envs/myPython3.9/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Result: Accuracy : 0.9996445708192643
+Result: Precision: 0.999289267968431
+Result: Recall   : 0.9996445708192643
+Result: F1 Score : 0.9994668878169857
+
+
+# Define hyperparameters
+input_size = 300
+hidden_size = 64
+output_size = 1
+num_layers = 2
+
+# Define hyperparameters
+learning_rate = 0.001
+num_epochs = 500
+batch_size = 32
+
+-------------------------------------------------------------------------------------------
+
+modelName = "modelRNN_lang5_abNumbothEven.pt"
+
+Early stopping on epoch 252
+
+Statistics: Accuracy %                                           : 0.9926666666666667
+Statistics: Inaccuracy %                                         : 0.007333333333333333
+Statistics: Total number of data points                          : 90000
+Statistics: Total number of data points classified correctly     : 89340
+Statistics: Total number of data points misclassified            : 660
+Statistics: Total number of +ve data points identified correctly : 44809
+Statistics: Total number of -ve data points identified correctly : 44531
+Statistics: Total +ve Accuracy %                                 : 0.9957555555555555
+Statistics: Total -ve Accuracy %                                 : 0.9895777777777778
+Result: Accuracy : 0.9926666666666667
+Result: Precision: 0.9926854699772157
+Result: Recall   : 0.9926666666666667
+Result: F1 Score : 0.9926665966969456
+
+# Define hyperparameters
+input_size = 300
+hidden_size = 64
+output_size = 1
+num_layers = 2
+
+# Define hyperparameters
+learning_rate = 0.001
+num_epochs = 500
+batch_size = 32
 
