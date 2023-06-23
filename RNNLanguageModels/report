@@ -1,39 +1,33 @@
 -------------------------------------------------------------------------------------------
-IGNORE THIS BLOCK:
-
-Name: modelRNN_abSeq.pt:
-
-input_size=300, hidden_size=64, output_size=1, num_layers=1
-
-learning_rate = 0.001
-num_epochs = 800
-batch_size = 32
-
-Result: Accuracy : 0.9969888888888889
-Result: Precision: 0.9970017596391492
-Result: Recall   : 0.9969888888888889
-Result: F1 Score : 0.9969888693942346
-
--------------------------------------------------------------------------------------------
 
 Name: modelRNN_lang1_aStar.pt
 
-Ran till 200 epochs (max. epoch)
-
-Info: Test Loss: 0.0052, Test Accuracy: 0.9993
-Statistics: Accuracy %                                           : 0.9993222222222222
-Statistics: Inaccuracy %                                         : 0.0006777777777777778
+Early stop at 285
+Info: The model exists at True
+Info: RNN Model loaded Successfully!
+Info: Training is skipped!
+Info: Total number of samples generated: 90000
+Info: Number of positive examples in test: 45000
+Info: Number of negative examples in test: 45000
+Info: Length of X(input) for testing: 90000
+Info: Size of y(label) tensor for testing: torch.Size([90000])
+<class 'torch.Tensor'> and torch.Size([90000])
+<class 'torch.Tensor'> and torch.Size([90000, 1])
+Info: Test Loss: 0.0977, Test Accuracy: 0.9860
+Statistics: Accuracy %                                           : 0.986
+Statistics: Inaccuracy %                                         : 0.014
 Statistics: Total number of data points                          : 90000
-Statistics: Total number of data points classified correctly     : 89939
-Statistics: Total number of data points misclassified            : 61
-Statistics: Total number of +ve data points identified correctly : 44996
-Statistics: Total number of -ve data points identified correctly : 44943
-Statistics: Total +ve Accuracy %                                 : 0.9999111111111111
-Statistics: Total -ve Accuracy %                                 : 0.9987333333333334
-Result: Accuracy : 0.9993222222222222
-Result: Precision: 0.9993229148632434
-Result: Recall   : 0.9993222222222222
-Result: F1 Score : 0.9993222219871755
+Statistics: Total number of data points classified correctly     : 88740
+Statistics: Total number of data points misclassified            : 1260
+Statistics: Total number of +ve data points identified correctly : 44475
+Statistics: Total number of -ve data points identified correctly : 44265
+Statistics: Total +ve Accuracy %                                 : 0.9883333333333333
+Statistics: Total -ve Accuracy %                                 : 0.9836666666666667
+Result: Accuracy : 0.986
+Result: Precision: 0.9860105842305011
+Result: Recall   : 0.986
+Result: F1 Score : 0.9859999237773628
+
 
 # Define hyperparameters
 input_size = 300
@@ -82,25 +76,34 @@ modelName = "modelRNN_lang2_abSeq.pt"
 -------------------------------------------------------------------------------------------
 
 
-Name: modelRNN_lang2_abSeq.pt
+Name: modelRNN_lang3_OddaMustFollowedByEvenb.pt
 
-Early stopping on epoch 323.
+Early stopping on epoch 205.
 
-
-Statistics: Accuracy %                                           : 0.8568777777777777
-Statistics: Inaccuracy %                                         : 0.14312222222222223
+Info: The model exists at True
+Info: RNN Model loaded Successfully!
+Info: Training is skipped!
+Info: Total number of samples generated: 90000
+Info: Number of positive examples in test: 45000
+Info: Number of negative examples in test: 45000
+Info: Length of X(input) for testing: 90000
+Info: Size of y(label) tensor for testing: torch.Size([90000])
+<class 'torch.Tensor'> and torch.Size([90000])
+<class 'torch.Tensor'> and torch.Size([90000, 1])
+Info: Test Loss: 0.0151, Test Accuracy: 0.9966
+Statistics: Accuracy %                                           : 0.9965666666666667
+Statistics: Inaccuracy %                                         : 0.0034333333333333334
 Statistics: Total number of data points                          : 90000
-Statistics: Total number of data points classified correctly     : 77119
-Statistics: Total number of data points misclassified            : 12881
-Statistics: Total number of +ve data points identified correctly : 41346
-Statistics: Total number of -ve data points identified correctly : 35773
-Statistics: Total +ve Accuracy %                                 : 0.9188
-Statistics: Total -ve Accuracy %                                 : 0.7949555555555555
-Result: Accuracy : 0.8568777777777777
-Result: Precision: 0.8624366301736216
-Result: Recall   : 0.8568777777777777
-Result: F1 Score : 0.856326883094654
-
+Statistics: Total number of data points classified correctly     : 89691
+Statistics: Total number of data points misclassified            : 309
+Statistics: Total number of +ve data points identified correctly : 44844
+Statistics: Total number of -ve data points identified correctly : 44847
+Statistics: Total +ve Accuracy %                                 : 0.9965333333333334
+Statistics: Total -ve Accuracy %                                 : 0.9966
+Result: Accuracy : 0.9965666666666667
+Result: Precision: 0.9965666688736295
+Result: Recall   : 0.9965666666666667
+Result: F1 Score : 0.996566666662852
 
 # Define hyperparameters
 input_size = 300
@@ -112,14 +115,17 @@ num_layers = 2
 learning_rate = 0.001
 num_epochs = 500
 batch_size = 32
-modelName = "modelRNN_lang3_aOdd_must_followed_by_bEven.pt"
+modelName = "modelRNN_lang3_OddaMustFollowedByEvenb.pt"
+
 
 -------------------------------------------------------------------------------------------
 NOT GOOD
 
 Name: modelRNN_lang4_stringWithoutTrigram.pt
 
+Early stopping on epoch 446
 
+Info: Test Loss: 0.0220, Test Accuracy: 0.9973
 Statistics: Accuracy %                                           : 0.25
 Statistics: Inaccuracy %                                         : 0.75
 Statistics: Total number of data points                          : 90000
@@ -131,10 +137,10 @@ Statistics: Total +ve Accuracy %                                 : 0.5
 Statistics: Total -ve Accuracy %                                 : 0.0
 /opt/homebrew/Caskroom/miniforge/base/envs/myPython3.9/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
   _warn_prf(average, modifier, msg_start, len(result))
-Result: Accuracy : 0.9996445708192643
-Result: Precision: 0.999289267968431
-Result: Recall   : 0.9996445708192643
-Result: F1 Score : 0.9994668878169857
+Result: Accuracy : 0.9973404255319149
+Result: Precision: 0.9946879244001811
+Result: Recall   : 0.9973404255319149
+Result: F1 Score : 0.9960124089865995
 
 
 # Define hyperparameters
@@ -178,4 +184,8 @@ num_layers = 2
 learning_rate = 0.001
 num_epochs = 500
 batch_size = 32
+
+-------------------------------------------------------------------------------------------
+
+
 
