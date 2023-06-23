@@ -27,7 +27,8 @@ num_layers = 2
 learning_rate = 0.001
 num_epochs = 500
 batch_size = 32
-modelName = "modelRNN_lang6_amod3b.pt"
+#modelName = "modelRNN_lang6_amod3b.pt"
+modelName = "modelRNN_lang1_aStar.pt"
 
 def debug(verbose_level, str):
     if verbose >= verbose_level:
@@ -192,13 +193,13 @@ def genSpecialNegExample(num_examples, w2v_model, lang):
             k = random.randint(1, maxlength-5)
             x = [word[0] for _ in range(k)]
             if maxlength - 4 - len(x) > 1:
-                k = random.randint(1, maxlength - 4 - len(x)):
+                k = random.randint(1, maxlength - 4 - len(x))
                 x  += [word[1] for _ in range(k)]
             if maxlength - 3 - len(x) > 1:
-                k = random.randint(1, maxlength - 3 - len(x)):
+                k = random.randint(1, maxlength - 3 - len(x))
                 x += [word[1] for _ in range(k)]
             if maxlength - 2 - len(x) > 1:
-                k = random.randint(1, maxlength - 2 - len(x)):
+                k = random.randint(1, maxlength - 2 - len(x))
                 x += [word[1] for _ in range(k)]
             x.insert(random.randint(0, len(x) - 1), newWord[0]) # a*b*a*b*(c/a)
             validCheck = (len(set(x)) > 2)
@@ -433,7 +434,7 @@ if __name__ == "__main__":
     RNNModelPath = "../models/" + modelName
     needTraining = RNN_model.load_RNN_model(RNNModelPath)
 
-    lang = 6
+    lang = 1
     if needTraining:
         numSamples = 300000
         X_train, y_train = create_datasets(numSamples, w2v_model=w2v_model, lang=lang, train=True)
