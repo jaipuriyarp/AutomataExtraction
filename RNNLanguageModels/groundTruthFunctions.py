@@ -89,14 +89,48 @@ def Lang_is_aMod3b(word: list):
             string, w when #_a(w) equiv_3 to #_b(w)'''
 
     checkType(word)
-    raise Exception("NOT IMPLEMENTED YET")
+    if len(set(word)) != 2:
+        return False
+    uniq_word = list(set(word))
+    if (word.count(uniq_word[0]) -  word.count(uniq_word[0])) % 3 == 0:
+        return True
+
+    return False
+
 
 def Lang_is_aStarbStaraStarbStar(word: list):
     '''This functions gives correct/ ground Truth for the language which accepts language
     a*b*a*b*'''
 
     checkType(word)
-    raise Exception("NOT IMPLEMENTED YET")
+    if len(set(word)) > 2:
+        return False
+
+    a = word[0]
+    i = 0
+    while (a == word[i]) and (i < len(word)): # a*
+        i += 1
+    if i != len(word) - 1:
+        b = word[i]
+        while (b == word[i]) and (i < len(word)): # a*b*
+            i += 1
+        if i != len(word) - 1:
+            c = word[i]
+            if c == a:
+                while (c == word[i]) and (i < len(word)) # a*b*a*
+                    i += 1
+                d = word[i]
+                if d == b:
+                    while (d == word[i]) and (i < len(word)): #a*b*a*b*
+                        i += 1
+                    if i != len(word) - 1:
+                        return False
+                else:
+                    return False
+            else:
+                return False
+
+    return True
 
 
 
