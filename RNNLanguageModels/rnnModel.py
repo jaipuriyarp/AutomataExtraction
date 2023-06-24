@@ -144,20 +144,28 @@ class RNNModel:
         return torch.as_tensor(y, dtype=torch.float).clone().detach().unsqueeze(1).to(self.device)
 
     def checkAccuracy(self, predicted, actual):
-        pos, neg = 0, 0
+        tp, tn, fp, fn = 0, 0, 0, 0
         # print(f"predicted : {predicted}")
-        for i, x in enumerate(actual):
-            for j, y in enumerate(x):
-                if predicted[i, j] == y:
-                    if y == 1:
-                        pos += 1
-                    else:
-                        neg += 1
+        y_pred = predicted.flatten()
+        y_true = actual.flatten()
+        for true_label, pred_label in zip(y_true, y_pred):
+            if pred_label == true_label:
+                if true_label:
+                    tp += 1
+                else:
+                    tn += 1
+            elif pred_label == 1 and true_label == 0:
+                fp += 1
+            elif pred_label == 0 and true_label == 1:
+                fn += 1
 
-        self.debug(1, f"Info: Total number of +ve data points identified correctly : {pos}")
-        self.debug(1, f"Info: Total number of -ve data points identified correctly : {neg}")
 
-        return pos, neg
+        self.debug(0, f"Info: True positive  : {tp}")
+        self.debug(0, f"Info: True negative  : {tn}")
+        self.debug(0, f"Info: False positive : {fp}")
+        self.debug(0, f"Info: False negative : {fn}")
+
+        return tp, tn
 
     def getScores(self, predicted, actual):
         if not (isinstance(predicted, np.ndarray) and isinstance(actual, np.ndarray)):
