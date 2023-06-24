@@ -27,8 +27,7 @@ num_layers = 2
 learning_rate = 0.001
 num_epochs = 500
 batch_size = 32
-#modelName = "modelRNN_lang6_amod3b.pt"
-modelName = "modelRNN_lang1_aStar.pt"
+model_name = "modelRNN_lang1_aStar.pt"
 
 def debug(verbose_level, str):
     if verbose >= verbose_level:
@@ -215,15 +214,16 @@ def generateTypeExamples(num_examples, w2v_model, lang, pos):
     wordL = []
     # lang = 1: L1 = (a)^n
     # lang = 2: L2 = (ab)^n
-    if lang > 3 and lang < 1:
-        raise Exception("No lang defined!")
+    if lang > 7 or lang < 0:
+        raise Exception("No such language exists!")
 
     while num_examples > 0:
         k = random.randint(1, maxlength)
         if pos:
             word = random.choices(w2v_model.index_to_key, k=2)
             if lang == 1: # L = (a)^n
-                wordL.append([word[0] if i % 2 == 0 else word[1] for i in range(k)])
+                k = random.randint(0, maxlength)
+                wordL.append([word[0] for _ in range(k)])
             elif lang == 2: # L = (ab)^n
                 if k%2 != 0:
                     k -= 1 # even
@@ -379,7 +379,7 @@ def encode_sequence(sequence, w2v_model):
     debug(2, "target:" + str(target_seq))
     return target_seq
 
-def create_datasets(num_examples, w2v_model, lang=1, train=False):
+def create_datasets(num_examples, w2v_model, lang, train=False):
     X = []
     y = []
     # update the w2v_model with new words, if we want to test RNN model on words outside the default vocab of w2v model.
@@ -427,12 +427,12 @@ if __name__ == "__main__":
     w2v_model = load_model(word2vecPath)
     test_model(w2v_model)
 
-    RNN_model = RNNModel(input_size=input_size, hidden_size=hidden_size,
-                         output_size=output_size, num_layers=num_layers, model_name=modelName)
+    rnn_model = RNNModel(input_size=input_size, hidden_size=hidden_size,
+                         output_size=output_size, num_layers=num_layers, model_name=model_name)
 
     # Load the model saved already in the models folder
-    RNNModelPath = "../models/" + modelName
-    needTraining = RNN_model.load_RNN_model(RNNModelPath)
+    RNNModelPath = "../models/" + model_name
+    needTraining = rnn_model.load_RNN_model(RNNModelPath)
 
     lang = 1
     if needTraining:
@@ -440,7 +440,7 @@ if __name__ == "__main__":
         X_train, y_train = create_datasets(numSamples, w2v_model=w2v_model, lang=lang, train=True)
         print(f"Info: Length of X(input) for training: {len(X_train)}")
         print(f"Info: Size of y(label) tensor for training: {y_train.size()}")
-        RNN_model.train_RNN(X_train, y_train, num_epochs, batch_size, learning_rate)
+        rnn_model.train_RNN(X_train, y_train, num_epochs, batch_size, learning_rate)
     else:
         print(f"Info: Training is skipped!")
 
@@ -449,9 +449,9 @@ if __name__ == "__main__":
     X_test, y_test = create_datasets(numSamples, w2v_model=w2v_model, lang=lang, train=False)
     print(f"Info: Length of X(input) for testing: {len(X_test)}")
     print(f"Info: Size of y(label) tensor for testing: {y_test.size()}")
-    predicted = RNN_model.test_RNN(X_test, y_test)
-    y_test = RNN_model.convertTensor1DTo2D(y_test).numpy()
+    predicted = rnn_model.test_RNN(X_test, y_test)
+    y_test = rnn_model.convertTensor1DTo2D(y_test).numpy()
     # print(f"{y_test} and {predicted}")
-    pos, neg = RNN_model.checkAccuracy(predicted=predicted, actual=y_test)
+    pos, neg = rnn_model.checkAccuracy(predicted=predicted, actual=y_test)
     statistics(numSamples, pos, neg)
-    RNN_model.getScores(predicted, y_test)
+    rnn_model.getScores(predicted, y_test)

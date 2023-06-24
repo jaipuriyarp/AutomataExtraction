@@ -2,32 +2,26 @@
 
 Name: modelRNN_lang1_aStar.pt
 
-Early stop at 285
-Info: The model exists at True
-Info: RNN Model loaded Successfully!
-Info: Training is skipped!
-Info: Total number of samples generated: 90000
-Info: Number of positive examples in test: 45000
-Info: Number of negative examples in test: 45000
-Info: Length of X(input) for testing: 90000
-Info: Size of y(label) tensor for testing: torch.Size([90000])
-<class 'torch.Tensor'> and torch.Size([90000])
-<class 'torch.Tensor'> and torch.Size([90000, 1])
-Info: Test Loss: 0.0977, Test Accuracy: 0.9860
-Statistics: Accuracy %                                           : 0.986
-Statistics: Inaccuracy %                                         : 0.014
-Statistics: Total number of data points                          : 90000
-Statistics: Total number of data points classified correctly     : 88740
-Statistics: Total number of data points misclassified            : 1260
-Statistics: Total number of +ve data points identified correctly : 44475
-Statistics: Total number of -ve data points identified correctly : 44265
-Statistics: Total +ve Accuracy %                                 : 0.9883333333333333
-Statistics: Total -ve Accuracy %                                 : 0.9836666666666667
-Result: Accuracy : 0.986
-Result: Precision: 0.9860105842305011
-Result: Recall   : 0.986
-Result: F1 Score : 0.9859999237773628
+Early stop at 164
 
+Info: Test Loss: 0.0118, Test Accuracy: 0.9987
+Info: True positive  : 44983
+Info: True negative  : 44902
+Info: False positive : 98
+Info: False negative : 17
+Statistics: Accuracy %                                           : 0.9987222222222222
+Statistics: Inaccuracy %                                         : 0.0012777777777777779
+Statistics: Total number of data points                          : 90000
+Statistics: Total number of data points classified correctly     : 89885
+Statistics: Total number of data points misclassified            : 115
+Statistics: Total number of +ve data points identified correctly : 44983
+Statistics: Total number of -ve data points identified correctly : 44902
+Statistics: Total +ve Accuracy %                                 : 0.9996222222222222
+Statistics: Total -ve Accuracy %                                 : 0.9978222222222223
+Result: Accuracy : 0.9987222222222222
+Result: Precision: 0.9987238380874577
+Result: Recall   : 0.9987222222222222
+Result: F1 Score : 0.9987222211872214
 
 # Define hyperparameters
 input_size = 300
