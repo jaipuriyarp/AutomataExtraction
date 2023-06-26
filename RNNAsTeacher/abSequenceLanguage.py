@@ -53,7 +53,7 @@ samples = [[RationalNumber(0,1)],
 
 
 rnnInterface = RNNInterface(word2vec_model_path=word2vecModelPath, rnn_model_path=RNNModelPath)
-gTComparison = GTComparison(Lang_is_aStar)
+gTComparison = GTComparison(Lang_is_abSeq)
 def membershipQuery(word : list, printing = True) -> bool:
     #expects a list of RationalNumbers
     if len(word) and type(word[0]) != type(RationalNumber(None,None)):
@@ -63,6 +63,7 @@ def membershipQuery(word : list, printing = True) -> bool:
     Qreply = gTComparison.getGT(word, rnnReply, printing)
     # print (Qreply)
     if Qreply:
+    # if rnnReply:
         if printing:
             print(f"membershipQuery: {word} is in the language.")
     else:

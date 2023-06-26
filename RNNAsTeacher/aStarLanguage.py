@@ -66,7 +66,7 @@ def membershipQuery(word: list, printing=True) -> bool:
     rnnReply = rnnInterface.askRNN(word)
     Qreply = gTComparison.getGT(word, rnnReply, printing)
     # print (Qreply)
-    if Qreply:
+    if rnnReply:
         if printing:
             print(f"membershipQuery: {word} is in the language.")
     else:
