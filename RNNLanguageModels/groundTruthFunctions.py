@@ -21,11 +21,12 @@ def Lang_is_aStar(word: list):
     return True
 
 def Lang_is_abSeq(word: list):
-    ''' This functions gives correct/ ground Truth for the language abSeq i.e. (ab)^n'''
+    ''' This functions gives correct/ ground Truth for the language abSeq i.e. (ab)^*'''
 
     checkType(word)
 
-    if len(word) % 2 == 0 and all([word[i] == word[i+2] for i in range(len(word)-2)]): #language acceptance criteria
+    if len(word) % 2 == 0 and ((len(word) > 1 and word[0] != word[1]) or len(word) == 0) and \
+            all([word[i] == word[i+2] for i in range(len(word)-2)]):  #language acceptance criteria
         return True
 
     return False
