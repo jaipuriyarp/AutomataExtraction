@@ -113,28 +113,11 @@ modelName = "modelRNN_lang3_OddaMustFollowedByEvenb.pt"
 
 
 -------------------------------------------------------------------------------------------
-NOT GOOD
 
-Name: modelRNN_lang4_stringWithoutTrigram.pt
+Name: modelRNN_lang4_stringWithoutTrigram_epoch61.pt
 
-Early stopping on epoch 446
 
-Info: Test Loss: 0.0220, Test Accuracy: 0.9973
-Statistics: Accuracy %                                           : 0.25
-Statistics: Inaccuracy %                                         : 0.75
-Statistics: Total number of data points                          : 90000
-Statistics: Total number of data points classified correctly     : 22500
-Statistics: Total number of data points misclassified            : 67500
-Statistics: Total number of +ve data points identified correctly : 22500
-Statistics: Total number of -ve data points identified correctly : 0
-Statistics: Total +ve Accuracy %                                 : 0.5
-Statistics: Total -ve Accuracy %                                 : 0.0
-/opt/homebrew/Caskroom/miniforge/base/envs/myPython3.9/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, msg_start, len(result))
-Result: Accuracy : 0.9973404255319149
-Result: Precision: 0.9946879244001811
-Result: Recall   : 0.9973404255319149
-Result: F1 Score : 0.9960124089865995
+
 
 
 # Define hyperparameters
@@ -181,5 +164,102 @@ batch_size = 32
 
 -------------------------------------------------------------------------------------------
 
+model_name = "modelRNN_lang6_amod3b_epoch287.pt"
+
+# Define hyperparameters
+input_size = 300
+hidden_size = 64
+output_size = 1
+num_layers = 2
+
+# Define hyperparameters
+learning_rate = 0.001
+num_epochs = 500
+batch_size = 32
+
+Statistics: Accuracy %                                           : 0.9459111111111111
+Statistics: Inaccuracy %                                         : 0.05408888888888889
+Statistics: Total number of data points                          : 90000
+Statistics: Total number of data points classified correctly     : 85132
+Statistics: Total number of data points misclassified            : 4868
+Statistics: Total number of +ve data points identified correctly : 42856
+Statistics: Total number of -ve data points identified correctly : 42276
+Statistics: Total +ve Accuracy %                                 : 0.9523555555555555
+Statistics: Total -ve Accuracy %                                 : 0.9394666666666667
+Result: Accuracy : 0.9459111111111111
+Result: Precision: 0.9459851997141648
+Result: Recall   : 0.9459111111111111
+Result: F1 Score : 0.945908864659515
+
+-------------------------------------------------------------------------------------------
+
+model_name = "modelRNN_lang7_aStarbStaraStarbStarSeq.pt"
+Early stopping on epoch 234
+
+# Define hyperparameters
+input_size = 300
+hidden_size = 64
+output_size = 1
+num_layers = 2
+
+# Define hyperparameters
+learning_rate = 0.001
+num_epochs = 500
+batch_size = 32
+
+lang = 7
+
+Info: Test Loss: 0.0615, Test Accuracy: 0.9896
+Info: True positive  : 44924
+Info: True negative  : 44138
+Info: False positive : 862
+Info: False negative : 76
+Statistics: Accuracy %                                           : 0.9895777777777778
+Statistics: Inaccuracy %                                         : 0.010422222222222222
+Statistics: Total number of data points                          : 90000
+Statistics: Total number of data points classified correctly     : 89062
+Statistics: Total number of data points misclassified            : 938
+Statistics: Total number of +ve data points identified correctly : 44924
+Statistics: Total number of -ve data points identified correctly : 44138
+Statistics: Total +ve Accuracy %                                 : 0.9983111111111111
+Statistics: Total -ve Accuracy %                                 : 0.9808444444444444
+Result: Accuracy : 0.9895777777777778
+Result: Precision: 0.9897271859242248
+Result: Recall   : 0.9895777777777778
+Result: F1 Score : 0.9895769828026749
 
 
+
+-------------------------------------------------------------------------------------------
+
+
+Lang 1:
+
+******************************************************************************************
+Total Number of queries asked                                      : 153
+Total number of pos queries asked                                  : 43
+Total number of neg queries asked                                  : 110
+Total number of queries answered correctly by RNN                  : 134
+Accuracy                                                           : 0.8758169934640523
+******************************************************************************************
+Total Number of membership queries asked                           : 19
+Total Number of positive membership queries asked                  : 4
+Total Number of negative membership queries asked                  : 15
+Total Number of queries asked during Equivalence check             : 134
+Total Number of positive queries asked during Equivalence check    : 39
+Total Number of negative queries asked during Equivalence check    : 95
+******************************************************************************************
+******************************************************************************************
+Total Number of membership queries answered by RNN correctly          : 16
+Accuracy of membership queries answered                               :0.8421052631578947
+Total Number of positive membership queries answered by RNN correctly : 4
+Accuracy of +ve membership queries                                    : 1.0
+Total Number of negative membership queries answered by RNN correctly : 12
+Accuracy of -ve membership queries                                    : 0.8
+****************************************
+Total Number of queries answered during equivalence check by RNN correctly          : 118
+Accuracy of equivalence queries answered                                            : 0.8805970149253731
+Total Number of positive queries answered during equivalence check by RNN correctly : 39
+Accuracy of +ve queries asked during equivalence check                              : 1.0
+Total Number of negative queries answered during equivalence check by RNN correctly : 79
+Accuracy of -ve queries asked during equivalence check                              : 0.8315789473684211

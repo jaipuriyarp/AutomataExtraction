@@ -27,7 +27,8 @@ num_layers = 2
 learning_rate = 0.001
 num_epochs = 500
 batch_size = 32
-model_name = "modelRNN_lang1_aStar.pt"
+model_name = "modelRNN_lang6_amod3b.pt"
+lang = 6
 
 def debug(verbose_level, str):
     if verbose >= verbose_level:
@@ -210,7 +211,6 @@ def genSpecialNegExample(num_examples, w2v_model, lang):
     debug(1, f"special Negatives:{wordL}")
     return wordL
 def generateTypeExamples(num_examples, w2v_model, lang, pos):
-    # lang: 1
     wordL = []
     # lang = 1: L1 = (a)^n
     # lang = 2: L2 = (ab)^n
@@ -281,7 +281,7 @@ def generateTypeExamples(num_examples, w2v_model, lang, pos):
                 x = [word[0] for _ in range(k)]
                 if maxlength - len(x) > 1:
                     x += [word[1] for _ in range(random.randint(1, maxlength - len(x)))]
-                if maxlength - lan(x) > 1:
+                if maxlength - len(x) > 1:
                     x += [word[0] for _ in range(random.randint(1, maxlength - len(x)))]
                 if maxlength - len(x) > 1:
                     x += [word[0] for _ in range(random.randint(1, maxlength - len(x)))]
@@ -308,7 +308,6 @@ def generateTypeExamples(num_examples, w2v_model, lang, pos):
                 # neg case: a word whose length is > 2 and at least contain trigram once.
                 if k < 3:
                     validCheck = False
-                    break
                 else:
                     x = [w2v_model.index_to_key[random.randint(0, len(w2v_model.index_to_key)-1)] for _ in range(k-3)]
                     if len(x):
@@ -358,10 +357,12 @@ def generateExamples(num_examples, w2v_model, lang):
     negL_count = num_examples - posL_count
     negL = genSpecialNegExample(int(negL_count / 2), w2v_model, lang)
     posL = genSpecialPosExample(int(posL_count / 2), w2v_model, lang)
+    debug(1, f"Number of special +ve data points: {len(posL)}")
+    debug(1, f"Number of special -ve data points: {len(negL)}")
     negL_count = negL_count - len(negL)
     posL_count = posL_count - len(posL)
     if posL_count != 0:
-        posL = generateTypeExamples(posL_count, w2v_model, lang, pos=True)
+        posL = posL + generateTypeExamples(posL_count, w2v_model, lang, pos=True)
     if negL_count != 0:
         negL = negL + generateTypeExamples(negL_count, w2v_model, lang, pos=False)
     debug(1, "positive examples:" + str(posL))
@@ -419,7 +420,7 @@ def statistics(numSamples, pos, neg):
     print(f"Statistics: Total number of +ve data points identified correctly : {pos}")
     print(f"Statistics: Total number of -ve data points identified correctly : {neg}")
     print(f"Statistics: Total +ve Accuracy %                                 : {pos / int(numSamples / 2)}")
-    print(f"Statistics: Total -ve Accuracy %                                 : {neg / (numSamples - (numSamples / 2))}")
+    print(f"Statistics: Total -ve Accuracy %                                 : {neg / (numSamples - int(numSamples / 2))}")
 
 
 if __name__ == "__main__":
@@ -434,7 +435,7 @@ if __name__ == "__main__":
     RNNModelPath = "../models/" + model_name
     needTraining = rnn_model.load_RNN_model(RNNModelPath)
 
-    lang = 1
+
     if needTraining:
         numSamples = 300000
         X_train, y_train = create_datasets(numSamples, w2v_model=w2v_model, lang=lang, train=True)
