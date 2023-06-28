@@ -92,7 +92,7 @@ def Lang_is_aMod3b(word: list):
     if len(set(word)) != 2:
         return False
     uniq_word = list(set(word))
-    if (word.count(uniq_word[0]) -  word.count(uniq_word[0])) % 3 == 0:
+    if (word.count(uniq_word[0]) -  word.count(uniq_word[1])) % 3 == 0:
         return True
 
     return False
