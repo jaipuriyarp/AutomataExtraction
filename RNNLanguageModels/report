@@ -116,8 +116,25 @@ modelName = "modelRNN_lang3_OddaMustFollowedByEvenb.pt"
 
 Name: modelRNN_lang4_stringWithoutTrigram_epoch61.pt
 
+Early stopping on epoch 182.
 
-
+Info: True positive  : 44831
+Info: True negative  : 44967
+Info: False positive : 33
+Info: False negative : 169
+Statistics: Accuracy %                                           : 0.9977555555555555
+Statistics: Inaccuracy %                                         : 0.0022444444444444443
+Statistics: Total number of data points                          : 90000
+Statistics: Total number of data points classified correctly     : 89798
+Statistics: Total number of data points misclassified            : 202
+Statistics: Total number of +ve data points identified correctly : 44831
+Statistics: Total number of -ve data points identified correctly : 44967
+Statistics: Total +ve Accuracy %                                 : 0.9962444444444445
+Statistics: Total -ve Accuracy %                                 : 0.9992666666666666
+Result: Accuracy : 0.9977555555555555
+Result: Precision: 0.9977601020102947
+Result: Recall   : 0.9977555555555555
+Result: F1 Score : 0.997755550430452
 
 
 # Define hyperparameters
@@ -164,7 +181,9 @@ batch_size = 32
 
 -------------------------------------------------------------------------------------------
 
-model_name = "modelRNN_lang6_amod3b_epoch287.pt"
+model_name = "modelRNN_lang6_amod3b.pt"
+
+Early stopping on epoch 417
 
 # Define hyperparameters
 input_size = 300
@@ -177,19 +196,24 @@ learning_rate = 0.001
 num_epochs = 500
 batch_size = 32
 
-Statistics: Accuracy %                                           : 0.9459111111111111
-Statistics: Inaccuracy %                                         : 0.05408888888888889
+Info: Test Loss: 0.2797, Test Accuracy: 0.9488
+Info: True positive  : 43233
+Info: True negative  : 42159
+Info: False positive : 2841
+Info: False negative : 1767
+Statistics: Accuracy %                                           : 0.9488
+Statistics: Inaccuracy %                                         : 0.0512
 Statistics: Total number of data points                          : 90000
-Statistics: Total number of data points classified correctly     : 85132
-Statistics: Total number of data points misclassified            : 4868
-Statistics: Total number of +ve data points identified correctly : 42856
-Statistics: Total number of -ve data points identified correctly : 42276
-Statistics: Total +ve Accuracy %                                 : 0.9523555555555555
-Statistics: Total -ve Accuracy %                                 : 0.9394666666666667
-Result: Accuracy : 0.9459111111111111
-Result: Precision: 0.9459851997141648
-Result: Recall   : 0.9459111111111111
-Result: F1 Score : 0.945908864659515
+Statistics: Total number of data points classified correctly     : 85392
+Statistics: Total number of data points misclassified            : 4608
+Statistics: Total number of +ve data points identified correctly : 43233
+Statistics: Total number of -ve data points identified correctly : 42159
+Statistics: Total +ve Accuracy %                                 : 0.9607333333333333
+Statistics: Total -ve Accuracy %                                 : 0.9368666666666666
+Result: Accuracy : 0.9488
+Result: Precision: 0.94905579016129
+Result: Recall   : 0.9488
+Result: F1 Score : 0.9487927078540104
 
 -------------------------------------------------------------------------------------------
 
