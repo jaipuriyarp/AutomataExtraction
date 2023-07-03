@@ -51,6 +51,18 @@ class RNNModel:
     def debug(self, verbose, str):
         if self.verbose_level >= verbose:
             print(str)
+
+    def getOptimizer(self, learning_rate):
+        return optim.Adam(self.model.parameters(),lr=learning_rate)
+    def train(self):
+        return self.model.train()
+    def eval(self):
+        return self.model.eval()
+    def getOutput(self, inputs):
+        return self.model(inputs)
+    def save(self, path):
+        torch.save(self.model.state_dict(), path)
+        print(f"INFO: RNN model saved at the path: {path}")
     def load_RNN_model(self, model_path):
         needTraining = False
         if not os.path.exists(model_path):
