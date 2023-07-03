@@ -5,12 +5,14 @@ import argparse
 import pandas as pd
 import torch.nn as nn
 from pathlib import Path
+from torch.utils.data import DataLoader
 from timeSeriesDataSet import TimeSeriesDataSet
 from rnnModel import RNNModel
 
 
 data_dir = '../data/'
 model_dir = '../models/'
+verbose = 1
 
 # rnn hyperparameters
 num_epochs = 100
@@ -24,11 +26,19 @@ output_size = 1
 num_layers  = 2
 model_name  = "modelRNN_timeSeries.pt"
 
-def load_data(file_name):
-    data = pd.read_csv(Path(data_dir, file_name))
-    return data
+def debug(verbose_level:int, str:str):
+    if verbose >= verbose_level:
+        print(str)
+def read_items_from_file(file_path):
+    items = []
+    with open(file_path, 'r') as file:
+        for line in file:
+            line = line.strip()  # Remove leading/trailing whitespace and newline characters
+            items.append(line)
+    return items
 
-def train_model(model, num_epochs, trainloader, valloader, len_trainset, len_valset):
+def train_model(model:RNNModel, num_epochs:int, trainloader:DataLoader, valloader:DataLoader,
+                len_trainset:int, len_valset:int):
     print(f"Start model training")
 
     best_acc = 0
@@ -152,8 +162,9 @@ if __name__ == "__main__":
     if needTraining:
         if args.file_name is None:
             raise Exception("Need file name to prepare data.")
-        df = load_data(args.file_name)
-        timeSeriesData = TimeSeriesDataSet(data=df, target_col='label', seq_length=128)
+        file_list = read_items_from_file(args.file_name)
+        debug(2, f"The file names to collect data from are: {file_list}")
+        timeSeriesData = TimeSeriesDataSet(file_list=file_list, target_col='label', seq_length=128)
         trainloader, testloader = timeSeriesData.get_loaders(batch_size=batch_size)
 
         train_model(model=rnn_model, num_epochs=num_epochs, trainloader=trainloader, valloader=testloader,
