@@ -4,7 +4,7 @@ import numpy as np
 from rnnModel import  RNNModel
 
 verbose = 0
-maxlength = 30
+maxlength = 24
 ## depth = maxlength/2 : (imp note) mentioned below in main function
 
 # Define hyperparameters
@@ -17,7 +17,7 @@ num_layers = 2
 learning_rate = 0.001
 num_epochs = 500
 batch_size = 32
-model_name = "modelRNN_lang8balancedParanthesis.pt"
+model_name = "modelRNN_lang8_balancedParenthesis.pt"
 
 def debug(verbose_level, str):
     if verbose >= verbose_level:
@@ -36,13 +36,34 @@ def generate_balanced_parentheses(n):
     return results
 
 def generate_balanced_parentheses_up_to_depth(k):
+    print(f"INFO: Starting to generate +ve examples..")
     all_parentheses = []
     for i in range(k + 1):
         all_parentheses.extend(generate_balanced_parentheses(i))
-
+    print(f"INFO: Done generating +ve examples..")
     return all_parentheses
 
-def generate_unbalanced_parantheses_from_posL(posL, num):
+def generate_unbalanced_parentheses(n):
+    if n == 0:
+        return ['']
+
+    results = []
+    for i in range(n):
+        for left in generate_unbalanced_parentheses(i):
+            for right in generate_unbalanced_parentheses(n - i - 1):
+                results.append(f'){left}({right}')
+
+    return results
+def generate_unbalanced_parentheses_up_to_depth(k):
+    print(f"INFO: Starting to generate -ve examples..")
+    all_parentheses = []
+    for i in range(k + 1):
+        all_parentheses.extend(generate_unbalanced_parentheses(i))
+    print(f"INFO: Done generating -ve examples..")
+    return all_parentheses
+
+def generate_unbalanced_parantheses_from_posL(posL):
+    print(f"INFO: Starting to generate -ve examples from +ve ones...")
     negL = []
     for x in posL:
         random_index = random.randint(0, len(x))
@@ -51,21 +72,22 @@ def generate_unbalanced_parantheses_from_posL(posL, num):
         else: ## adding a letter
             y = x[:random_index] + random.choice(['(', ')']) + x[random_index:]
         negL.append(y)
-
-    if len(negL) == num:
-        return negL
-    else:
-        while (num > 0):
-            balanced_parantheses_list = generate_balanced_parentheses(random.randint(0, maxlength))
-            x = random.choice(balanced_parantheses_list)
-            random_index = random.randint(0, len(x))
-            if len(x) == maxlength:  ## deleting a letter
-                y = x[:random_index] + x[random_index + 1:]
-            else:  ## adding a letter
-                y = x[:random_index] + random.choice(['(', ')']) + x[random_index:]
-            negL.append(y)
-            num -= 1
     return negL
+def generate_one_parantheses_up_to_depth(k):
+    print(f"INFO: Starting to generate one parentheses -ve examples..")
+    all_parentheses = []
+    for i in range(k + 1):
+        str1, str2 = "", ""
+        if i > 0:
+            for _ in range(i):
+                str1 += "("
+            all_parentheses.append(str1)
+            for _ in range(i):
+                str2 += ")"
+            all_parentheses.append(str2)
+    print(f"INFO: Done generating one parentheses -ve examples..")
+    return all_parentheses
+
 
 def one_hot_encoding(letter):
     alphabet = "()"
@@ -75,22 +97,27 @@ def one_hot_encoding(letter):
     encoding[alphabet.index(letter)] = 1
     return encoding
 def encode_sequence(sequence):
-    debug(2, "sequence:" + str(sequence))
+    debug(2, f"sequence: {sequence}")
     x = torch.tensor(np.array([one_hot_encoding(word) for word in sequence]))
-    debug(2, "size of x:" + str(x.size()))
+    debug(2, f"size of x: {x.size()}")
     target_seq = torch.zeros(maxlength, input_size)
     if x.size()[0] > 0:
         target_seq[0:x.size(0), :] = x
-    debug(2, "size of target:" + str(target_seq.size()))
-    debug(2, "target:" + str(target_seq))
+    debug(2, f"size of target: {target_seq.size()}")
+    debug(2, f"target: {target_seq}")
     return target_seq
 
 def generateExamples(depth):
     posL = generate_balanced_parentheses_up_to_depth(k=depth)
-    negL_count = len(posL)
-    negL = generate_unbalanced_parantheses_from_posL(posL, negL_count)
+    negL = generate_one_parantheses_up_to_depth(k=depth)
+    debug(0, f"length of negL at stage 1: {len(negL)}")
+    negL += generate_unbalanced_parentheses_up_to_depth(k=depth)
+    debug(0, f"length of negL at stage 2: {len(negL)}")
+    negL += generate_unbalanced_parantheses_from_posL(posL)
+    debug(0, f"length of negL at stage 3: {len(negL)}")
     debug(1, f"posL is: {posL}")
     debug(1, f"negL is: {negL}")
+
     return posL, negL
 
 def create_datasets(depth, train):
