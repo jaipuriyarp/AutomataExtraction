@@ -1,0 +1,145 @@
+Lang: 1
+
+Early stopping on epoch 262
+Info: Total number of samples generated: 90000
+Info: Number of positive examples in test: 45000
+Info: Number of negative examples in test: 45000
+Info: Length of X(input) for testing: 90000
+Info: Size of y(label) tensor for testing: torch.Size([90000])
+<class 'torch.Tensor'> and torch.Size([90000])
+<class 'torch.Tensor'> and torch.Size([90000, 1])
+Info: Test Loss: 0.2405, Test Accuracy: 0.9067
+Info: True positive  : 43721
+Info: True negative  : 37880
+Info: False positive : 7120
+Info: False negative : 1279
+Statistics: Accuracy %                                           : 0.9066777777777778
+Statistics: Inaccuracy %                                         : 0.09332222222222222
+Statistics: Total number of data points                          : 90000
+Statistics: Total number of data points classified correctly     : 81601
+Statistics: Total number of data points misclassified            : 8399
+Statistics: Total number of +ve data points identified correctly : 43721
+Statistics: Total number of -ve data points identified correctly : 37880
+Statistics: Total +ve Accuracy %                                 : 0.9715777777777778
+Statistics: Total -ve Accuracy %                                 : 0.8417777777777777
+Result: Accuracy : 0.9066777777777778
+Result: Precision: 0.9136469175912315
+Result: Recall   : 0.9066777777777778
+Result: F1 Score : 0.9062830410093395
+
+-------------------------------------------------------------------------------------------
+
+lang: 3
+
+
+Early stopping on epoch 118
+Info: Total number of samples generated: 90000
+Info: Number of positive examples in test: 45000
+Info: Number of negative examples in test: 45000
+Info: Length of X(input) for testing: 90000
+Info: Size of y(label) tensor for testing: torch.Size([90000])
+<class 'torch.Tensor'> and torch.Size([90000])
+<class 'torch.Tensor'> and torch.Size([90000, 1])
+Info: Test Loss: 0.0219, Test Accuracy: 0.9889
+Info: True positive  : 44137
+Info: True negative  : 44867
+Info: False positive : 133
+Info: False negative : 863
+Statistics: Accuracy %                                           : 0.9889333333333333
+Statistics: Inaccuracy %                                         : 0.011066666666666667
+Statistics: Total number of data points                          : 90000
+Statistics: Total number of data points classified correctly     : 89004
+Statistics: Total number of data points misclassified            : 996
+Statistics: Total number of +ve data points identified correctly : 44137
+Statistics: Total number of -ve data points identified correctly : 44867
+Statistics: Total +ve Accuracy %                                 : 0.9808222222222223
+Statistics: Total -ve Accuracy %                                 : 0.9970444444444444
+Result: Accuracy : 0.9889333333333333
+Result: Precision: 0.9890620351400129
+Result: Recall   : 0.9889333333333333
+Result: F1 Score : 0.9889326052080636
+
+-------------------------------------------------------------------------------------------
+
+lang: 4
+
+
+Early stopping on epoch 204
+Info: Total number of samples generated: 90000
+Info: Number of positive examples in test: 45437
+Info: Number of negative examples in test: 44563
+Info: Length of X(input) for testing: 90000
+Info: Size of y(label) tensor for testing: torch.Size([90000])
+<class 'torch.Tensor'> and torch.Size([90000])
+<class 'torch.Tensor'> and torch.Size([90000, 1])
+Info: Test Loss: 0.0521, Test Accuracy: 0.9809
+Info: True positive  : 44769
+Info: True negative  : 43516
+Info: False positive : 1047
+Info: False negative : 668
+Statistics: Accuracy %                                           : 0.9809444444444444
+Statistics: Inaccuracy %                                         : 0.019055555555555555
+Statistics: Total number of data points                          : 90000
+Statistics: Total number of data points classified correctly     : 88285
+Statistics: Total number of data points misclassified            : 1715
+Statistics: Total number of +ve data points identified correctly : 44769
+Statistics: Total number of -ve data points identified correctly : 43516
+Statistics: Total +ve Accuracy %                                 : 0.9948666666666667
+Statistics: Total -ve Accuracy %                                 : 0.9670222222222222
+Result: Accuracy : 0.9809444444444444
+Result: Precision: 0.98097701184586
+Result: Recall   : 0.9809444444444444
+Result: F1 Score : 0.9809433270382779
+
+-------------------------------------------------------------------------------------------
+
+lang : 5
+
+Early stopping on epoch 251
+Info: Total number of samples generated: 90000
+Info: Number of positive examples in test: 45000
+Info: Number of negative examples in test: 45000
+Info: Length of X(input) for testing: 90000
+Info: Size of y(label) tensor for testing: torch.Size([90000])
+<class 'torch.Tensor'> and torch.Size([90000])
+<class 'torch.Tensor'> and torch.Size([90000, 1])
+Info: Test Loss: 0.3901, Test Accuracy: 0.8475
+Info: True positive  : 42302
+Info: True negative  : 33975
+Info: False positive : 11025
+Info: False negative : 2698
+Statistics: Accuracy %                                           : 0.8475222222222222
+Statistics: Inaccuracy %                                         : 0.15247777777777777
+Statistics: Total number of data points                          : 90000
+Statistics: Total number of data points classified correctly     : 76277
+Statistics: Total number of data points misclassified            : 13723
+Statistics: Total number of +ve data points identified correctly : 42302
+Statistics: Total number of -ve data points identified correctly : 33975
+Statistics: Total +ve Accuracy %                                 : 0.9400444444444445
+Statistics: Total -ve Accuracy %                                 : 0.755
+Result: Accuracy : 0.8475222222222222
+Result: Precision: 0.8598437942215397
+Result: Recall   : 0.8475222222222222
+Result: F1 Score : 0.8462056872926645
+
+-------------------------------------------------------------------------------------------
+
+lang : 6
+
+Early stopping on epoch 252
+
+-------------------------------------------------------------------------------------------
+lang: balancedParantheses
+
+Info: Epoch 427 best Model saved with the loss 1.8545142444292488e-13
+Info: Epoch 428/500, Loss: 0.0000
+Info: Epoch 429/500, Loss: 0.0000
+Info: Epoch 430/500, Loss: 0.0000
+Info: Epoch 431/500, Loss: 0.0000
+Info: Epoch 432/500, Loss: 0.0000
+Info: Epoch 433/500, Loss: 0.0000
+Info: Epoch 434/500, Loss: 0.0000
+Info: Epoch 435/500, Loss: 0.0000
+libc++abi: terminating with uncaught exception of type std::__1::system_error: condition_variable wait failed: Invalid argument
+zsh: abort      python3 balancedParanthesis.py
+
