@@ -16,9 +16,8 @@ from rnnInterface import RNNInterface
 from GTComparison import GTComparison
 from groundTruthFunctions import Lang_is_aStar
 
-RNNModelName = "modelRNN_lang1_aStar.pt"
+RNNModelName = "modelRNNQ_lang1_aStar.pt"
 RNNModelPath = os.path.join(modelDir, "models", RNNModelName)
-word2vecModelPath = os.path.join(modelDir, "models", "GoogleNews-vectors-negative300.bin")
 
 samples = [[RationalNumber(0, 1)],
            [RationalNumber(0, 1), RationalNumber(0, 1)],
@@ -54,7 +53,7 @@ samples = [[RationalNumber(0, 1)],
            [RationalNumber(0, 1), RationalNumber(0, 1), RationalNumber(0, 1), RationalNumber(0, 1),
             RationalNumber(0, 1), RationalNumber(0, 1)]]
 
-rnnInterface = RNNInterface(word2vec_model_path=word2vecModelPath, rnn_model_path=RNNModelPath)
+rnnInterface = RNNInterface(rnn_model_path=RNNModelPath, input_size=1)
 gTComparison = GTComparison(Lang_is_aStar)
 
 

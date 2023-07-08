@@ -1,8 +1,6 @@
-import math
 
 import torch
 import argparse
-import pandas as pd
 import torch.nn as nn
 from pathlib import Path
 from torch.utils.data import DataLoader
@@ -15,7 +13,8 @@ model_dir = '../models/'
 verbose = 1
 
 # rnn hyperparameters
-num_epochs = 100
+seq_length = 512
+num_epochs = 300
 batch_size = 32
 learning_rate = 0.001
 
@@ -42,7 +41,7 @@ def train_model(model:RNNModel, num_epochs:int, trainloader:DataLoader, valloade
     print(f"Start model training")
 
     best_acc = 0
-    patience, patience_counter = 200, 0
+    patience, patience_counter = 100, 0
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     criterion = nn.BCELoss()
@@ -164,7 +163,7 @@ if __name__ == "__main__":
             raise Exception("Need file name to prepare data.")
         file_list = read_items_from_file(args.file_name)
         debug(2, f"The file names to collect data from are: {file_list}")
-        timeSeriesData = TimeSeriesDataSet(file_list=file_list, target_col='label', seq_length=128)
+        timeSeriesData = TimeSeriesDataSet(file_list=file_list, target_col='label', seq_length=seq_length)
         trainloader, testloader = timeSeriesData.get_loaders(batch_size=batch_size)
 
         train_model(model=rnn_model, num_epochs=num_epochs, trainloader=trainloader, valloader=testloader,
