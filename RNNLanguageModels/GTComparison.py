@@ -1,6 +1,6 @@
 class GTComparison:
 
-    def __init__(self, memQ_for_GT):
+    def __init__(self, memQ_for_GT=None):
         self.queries = {}
         self.qCount  = 0
         #actual count:
@@ -38,56 +38,68 @@ class GTComparison:
         if currKey in self.queries.keys():
             actual_ans =  self.queries[currKey]
         else:
-            actual_ans = self.memQ_for_GT(word)
-            self.queries[currKey] = (actual_ans)
+            if self.memQ_for_GT is not None:
+                actual_ans = self.memQ_for_GT(word)
+                self.queries[currKey] = (actual_ans)
+            else:
+                actual_ans = None
 
         # queries counting for statistics
-        if actual_ans: # case: positive case
-            if memQ: # case: membership Queries
+        if actual_ans is not None:
+            if actual_ans: # case: positive case
+                if memQ: # case: membership Queries
+                    self.num_pos_memQ += 1
+                    if RNN_ans:
+                        self.true_positive += 1
+                        self.true_positive_memQ += 1
+                    else:
+                        self.false_negative += 1
+                        self.false_negative_memQ += 1
+                        self.queries_incorrectlyAnswered.add(currKey)
+
+                else: # case: Equivalence check
+                    self.num_pos_EquivQ += 1
+                    if RNN_ans:
+                        self.true_positive += 1
+                        self.true_positive_EquivQ += 1
+                    else:
+                        self.false_negative += 1
+                        self.false_negative_EquivQ += 1
+                        # self.queries_incorrectlyAnswered.add(currKey)
+
+            else: # case: negative
+                if memQ: # case: membership Queries
+                    self.num_neg_memQ  += 1
+                    if RNN_ans:
+                        self.false_positive += 1
+                        self.false_positive_memQ += 1
+                        self.queries_incorrectlyAnswered.add(currKey)
+                    else:
+                        self.true_negative += 1
+                        self.true_negative_memQ += 1
+
+                else: # case: Equivalence check
+                    self.num_neg_EquivQ += 1
+                    if RNN_ans:
+                        self.false_positive += 1
+                        self.false_positive_EquivQ +=1
+                        # self.queries_incorrectlyAnswered.add(currKey)
+                    else:
+                        self.true_negative += 1
+                        self.true_negative_EquivQ += 1
+        else:
+            if memQ:  # case: membership Queries
                 self.num_pos_memQ += 1
-                if RNN_ans:
-                    self.true_positive += 1
-                    self.true_positive_memQ += 1
-                else:
-                    self.false_negative += 1
-                    self.false_negative_memQ += 1
-                    self.queries_incorrectlyAnswered.add(currKey)
-
-            else: # case: Equivalence check
+            else:
                 self.num_pos_EquivQ += 1
-                if RNN_ans:
-                    self.true_positive += 1
-                    self.true_positive_EquivQ += 1
-                else:
-                    self.false_negative += 1
-                    self.false_negative_EquivQ += 1
-                    # self.queries_incorrectlyAnswered.add(currKey)
-
-        else: # case: negative
-            if memQ: # case: membership Queries
-                self.num_neg_memQ  += 1
-                if RNN_ans:
-                    self.false_positive += 1
-                    self.false_positive_memQ += 1
-                    self.queries_incorrectlyAnswered.add(currKey)
-                else:
-                    self.true_negative += 1
-                    self.true_negative_memQ += 1
-
-            else: # case: Equivalence check
-                self.num_neg_EquivQ += 1
-                if RNN_ans:
-                    self.false_positive += 1
-                    self.false_positive_EquivQ +=1
-                    # self.queries_incorrectlyAnswered.add(currKey)
-                else:
-                    self.true_negative += 1
-                    self.true_negative_EquivQ += 1
 
         return actual_ans
 
     def statistics(self):
         '''This function shows statistics'''
+        if self.memQ_for_GT is None:
+            print(f"WARNING: There is no ground truth values, so every mem and Eqiuv queries "
+                  "are shown as positive memQ and Equiv Queries.")
 
         print('*' * 100)
         print(f"Total Number of queries asked                                      : {self.qCount}")
@@ -129,6 +141,8 @@ class GTComparison:
         print(f"Total Number of negative queries answered during equivalence check by RNN correctly : {self.true_negative_EquivQ}")
         print(f"Accuracy of -ve queries asked during equivalence check                              : "
               f"{self.true_negative_EquivQ / self.num_neg_EquivQ}")
+
+        print(f"Queries incorrectly answered by RNN is:{self.queries_incorrectlyAnswered}")
 
 
 
