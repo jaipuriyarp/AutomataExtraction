@@ -55,16 +55,31 @@ class RNNInterface:
 
     def convertRationalNumberListToParanthesesStr(self, rationalNumList: list) -> list:
         '''This function converts Rational number to a string of parantheses'''
-        '''TODO: catch: what if first parantheses is closing instead of opening parantheses'''
-        if len(set(rationalNumList)) > 2:
-            print(set(rationalNumList))
-            raise Exception("The RNN is learned on one hot encoding on 2bits only...")
+        '''TODO: catch: what if first parentheses is closing instead of opening parentheses'''
+        if type(rationalNumList) == str:
+            return rationalNumList
+        else:
+            # if rationalNumList is str and all([x=="(" or x==")" for x in rationalNumList]): # already converted??
+            #     return rationalNumList
+            x = list(set(rationalNumList))
+            paranthesesEncode = {}
+            if len(x) > 1:
+                if x[0] > x[1]:
+                    x[0], x[1] = x[1], x[0]
+                paranthesesEncode = {x[0] : ')', x[1] : '('}
+            elif len(x) == 1:
+                paranthesesEncode = {x[0]: ')'}
 
-        # if rationalNumList is str and all([x=="(" or x==")" for x in rationalNumList]): # already converted??
-        #     return rationalNumList
 
-        brackets_position = list(set(rationalNumList))
-        return ["(" if x==brackets_position[0] else ")" for x in rationalNumList]
+            stringQuery = ""
+            for num in rationalNumList:
+                if num in paranthesesEncode.keys():
+                    stringQuery += paranthesesEncode[num]
+                else:
+                    stringQuery += "x"
+
+            return stringQuery
+            # return [paranthesesEncode for x in rationalNumList]
 
     def getRNNCompatibleInputFromRationalNumber(self, numList:list, paranthesesLang:bool): #-> tensor
         if paranthesesLang:
@@ -74,6 +89,8 @@ class RNNInterface:
     def askRNN(self, numList: list, paranthesesLang=False) -> bool:
         wordL = self.getRNNCompatibleInputFromRationalNumber(numList, paranthesesLang)
         if paranthesesLang:
+            if len(set(numList)) > 2 or 'x' in wordL:
+                return False
             X = [encode_parantheses(wordL)]
         else:
             X = [encode_sequence(wordL)]
