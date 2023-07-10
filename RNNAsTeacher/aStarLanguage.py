@@ -3,10 +3,8 @@ import sys
 import os
 import random
 
-# import torch
-
 modelDir = "../"
-pathsToInclude = ["../../TheoryOfEquality/vLStarForRationalAutomata/", modelDir, "../RNNLanguageModels"]
+pathsToInclude = ["../../TheoryOfEquality/vLStarForRationalAutomata/", modelDir, "../RNNLanguageModels", "."]
 for path in pathsToInclude:
     sys.path.append(path)
 
@@ -15,47 +13,15 @@ from vLStar import RationalNumber, RationalNominalAutomata, learn
 from rnnInterface import RNNInterface
 from GTComparison import GTComparison
 from groundTruthFunctions import Lang_is_aStar
+from checkEquivalence import CheckEquivalence
 
 RNNModelName = "modelRNNQ_lang1_aStar.pt"
 RNNModelPath = os.path.join(modelDir, "models", RNNModelName)
 
-samples = [[RationalNumber(0, 1)],
-           [RationalNumber(0, 1), RationalNumber(0, 1)],
-           [RationalNumber(0, 1), RationalNumber(1, 1)],
-           [RationalNumber(1, 1), RationalNumber(0, 1)],
-           [RationalNumber(1, 1), RationalNumber(1, 1)],
-           [RationalNumber(0, 1), RationalNumber(0, 1), RationalNumber(0, 1)],
-           [RationalNumber(0, 1), RationalNumber(0, 1), RationalNumber(1, 1)],
-           [RationalNumber(0, 1), RationalNumber(1, 1), RationalNumber(0, 1)],
-           [RationalNumber(0, 1), RationalNumber(1, 1), RationalNumber(1, 1)],
-           [RationalNumber(1, 1), RationalNumber(0, 1), RationalNumber(0, 1)],
-           [RationalNumber(1, 1), RationalNumber(0, 1), RationalNumber(1, 1)],
-           [RationalNumber(1, 1), RationalNumber(1, 1), RationalNumber(0, 1)],
-           [RationalNumber(1, 1), RationalNumber(1, 1), RationalNumber(1, 1)],
-           [RationalNumber(0, 1), RationalNumber(0, 1), RationalNumber(0, 1), RationalNumber(0, 1)],
-           [RationalNumber(0, 1), RationalNumber(0, 1), RationalNumber(0, 1), RationalNumber(1, 1)],
-           [RationalNumber(0, 1), RationalNumber(0, 1), RationalNumber(1, 1), RationalNumber(0, 1)],
-           [RationalNumber(0, 1), RationalNumber(0, 1), RationalNumber(1, 1), RationalNumber(1, 1)],
-           [RationalNumber(0, 1), RationalNumber(1, 1), RationalNumber(0, 1), RationalNumber(0, 1)],
-           [RationalNumber(0, 1), RationalNumber(1, 1), RationalNumber(0, 1), RationalNumber(1, 1)],
-           [RationalNumber(0, 1), RationalNumber(1, 1), RationalNumber(1, 1), RationalNumber(0, 1)],
-           [RationalNumber(0, 1), RationalNumber(1, 1), RationalNumber(1, 1), RationalNumber(1, 1)],
-           [RationalNumber(1, 1), RationalNumber(0, 1), RationalNumber(0, 1), RationalNumber(0, 1)],
-           [RationalNumber(1, 1), RationalNumber(0, 1), RationalNumber(0, 1), RationalNumber(1, 1)],
-           [RationalNumber(1, 1), RationalNumber(0, 1), RationalNumber(1, 1), RationalNumber(0, 1)],
-           [RationalNumber(1, 1), RationalNumber(0, 1), RationalNumber(1, 1), RationalNumber(1, 1)],
-           [RationalNumber(1, 1), RationalNumber(1, 1), RationalNumber(0, 1), RationalNumber(0, 1)],
-           [RationalNumber(1, 1), RationalNumber(1, 1), RationalNumber(0, 1), RationalNumber(1, 1)],
-           [RationalNumber(1, 1), RationalNumber(1, 1), RationalNumber(1, 1), RationalNumber(0, 1)],
-           [RationalNumber(1, 1), RationalNumber(1, 1), RationalNumber(1, 1), RationalNumber(1, 1)],
-           [RationalNumber(0, 1), RationalNumber(0, 1), RationalNumber(0, 1), RationalNumber(0, 1),
-            RationalNumber(0, 1)],
-           [RationalNumber(0, 1), RationalNumber(0, 1), RationalNumber(0, 1), RationalNumber(0, 1),
-            RationalNumber(0, 1), RationalNumber(0, 1)]]
-
 rnnInterface = RNNInterface(rnn_model_path=RNNModelPath, input_size=1)
 gTComparison = GTComparison(Lang_is_aStar)
-
+checkEquivalence = CheckEquivalence(depth=7, num_of_RationalNumber=2,
+                                    automaton=None, membershipQuery=None)
 
 def membershipQuery(word: list, printing=True) -> bool:
     # expects a list of RationalNumbers
@@ -71,17 +37,18 @@ def membershipQuery(word: list, printing=True) -> bool:
     else:
         if printing:
             print(f"membershipQuery: {word} is not in the language.")
+    if printing:
+        return rnnReply
     return Qreply
 
 
 def statisticalEquivalenceQuery(automaton: RationalNominalAutomata) -> tuple:
-    global samples
     numberOfExamples = 100
-
     print("Checking equivalence of the following automaton:")
     print(automaton)
+    # checkEquivalence.setAutomaton(automaton)
 
-    for word in samples:
+    for word in checkEquivalence.generateQueries():
         isMember = membershipQuery(word, False)
         hypothesisIsMember = automaton.accepts(word)
 
@@ -119,12 +86,15 @@ def statisticalEquivalenceQuery(automaton: RationalNominalAutomata) -> tuple:
                 print(str(word) + " was correctly accepted")
             else:
                 print(str(word) + " was correctly rejected")
-    print("The languages appear to be  equivalent after checking " + str(numberOfExamples) + " random examples")
+    # print("The languages appear to be  equivalent after checking " + str(numberOfExamples) + " random examples")
+    print(f"The languages appear to be equivalent after checking  "
+          f"{checkEquivalence.getQueriesCount() + numberOfExamples} random examples.")
     return (True, None)
 
 
 def main() -> None:
     learnedAutomaton = learn(membershipQuery, statisticalEquivalenceQuery)
+    # checkEquivalence.setMembershipQuery(Lang_is_aStar)
     print(learnedAutomaton)
     gTComparison.statistics()
 

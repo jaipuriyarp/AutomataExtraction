@@ -71,6 +71,8 @@ def membershipQuery(word: list, printing=True) -> bool:
     else:
         if printing:
             print(f"membershipQuery: {word} is not in the language.")
+    if printing:
+        return rnnReply
     return Qreply
 
 

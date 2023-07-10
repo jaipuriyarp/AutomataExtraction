@@ -17,45 +17,10 @@ from rnnInterface import RNNInterface
 from GTComparison import GTComparison
 from groundTruthFunctions import Lang_is_abSeq_OddaEvenb
 
-RNNModelName = "modelRNN_lang3_aOdd_must_followed_by_bEven.pt"
+RNNModelName = "modelRNNQ_lang3_aOddbEvenNum.pt"
 RNNModelPath = os.path.join(modelDir, "models", RNNModelName)
-word2vecModelPath = os.path.join(modelDir, "models", "GoogleNews-vectors-negative300.bin")
 
-samples = [[RationalNumber(0, 1)],
-           [RationalNumber(0, 1), RationalNumber(0, 1)],
-           [RationalNumber(0, 1), RationalNumber(1, 1)],
-           [RationalNumber(1, 1), RationalNumber(0, 1)],
-           [RationalNumber(1, 1), RationalNumber(1, 1)],
-           [RationalNumber(0, 1), RationalNumber(0, 1), RationalNumber(0, 1)],
-           [RationalNumber(0, 1), RationalNumber(0, 1), RationalNumber(1, 1)],
-           [RationalNumber(0, 1), RationalNumber(1, 1), RationalNumber(0, 1)],
-           [RationalNumber(0, 1), RationalNumber(1, 1), RationalNumber(1, 1)],
-           [RationalNumber(1, 1), RationalNumber(0, 1), RationalNumber(0, 1)],
-           [RationalNumber(1, 1), RationalNumber(0, 1), RationalNumber(1, 1)],
-           [RationalNumber(1, 1), RationalNumber(1, 1), RationalNumber(0, 1)],
-           [RationalNumber(1, 1), RationalNumber(1, 1), RationalNumber(1, 1)],
-           [RationalNumber(0, 1), RationalNumber(0, 1), RationalNumber(0, 1), RationalNumber(0, 1)],
-           [RationalNumber(0, 1), RationalNumber(0, 1), RationalNumber(0, 1), RationalNumber(1, 1)],
-           [RationalNumber(0, 1), RationalNumber(0, 1), RationalNumber(1, 1), RationalNumber(0, 1)],
-           [RationalNumber(0, 1), RationalNumber(0, 1), RationalNumber(1, 1), RationalNumber(1, 1)],
-           [RationalNumber(0, 1), RationalNumber(1, 1), RationalNumber(0, 1), RationalNumber(0, 1)],
-           [RationalNumber(0, 1), RationalNumber(1, 1), RationalNumber(0, 1), RationalNumber(1, 1)],
-           [RationalNumber(0, 1), RationalNumber(1, 1), RationalNumber(1, 1), RationalNumber(0, 1)],
-           [RationalNumber(0, 1), RationalNumber(1, 1), RationalNumber(1, 1), RationalNumber(1, 1)],
-           [RationalNumber(1, 1), RationalNumber(0, 1), RationalNumber(0, 1), RationalNumber(0, 1)],
-           [RationalNumber(1, 1), RationalNumber(0, 1), RationalNumber(0, 1), RationalNumber(1, 1)],
-           [RationalNumber(1, 1), RationalNumber(0, 1), RationalNumber(1, 1), RationalNumber(0, 1)],
-           [RationalNumber(1, 1), RationalNumber(0, 1), RationalNumber(1, 1), RationalNumber(1, 1)],
-           [RationalNumber(1, 1), RationalNumber(1, 1), RationalNumber(0, 1), RationalNumber(0, 1)],
-           [RationalNumber(1, 1), RationalNumber(1, 1), RationalNumber(0, 1), RationalNumber(1, 1)],
-           [RationalNumber(1, 1), RationalNumber(1, 1), RationalNumber(1, 1), RationalNumber(0, 1)],
-           [RationalNumber(1, 1), RationalNumber(1, 1), RationalNumber(1, 1), RationalNumber(1, 1)],
-           [RationalNumber(0, 1), RationalNumber(0, 1), RationalNumber(0, 1), RationalNumber(0, 1),
-            RationalNumber(0, 1)],
-           [RationalNumber(0, 1), RationalNumber(0, 1), RationalNumber(0, 1), RationalNumber(0, 1),
-            RationalNumber(0, 1), RationalNumber(0, 1)]]
-
-rnnInterface = RNNInterface(word2vec_model_path=word2vecModelPath, rnn_model_path=RNNModelPath)
+rnnInterface = RNNInterface(rnn_model_path=RNNModelPath, input_size=1)
 gTComparison = GTComparison(Lang_is_abSeq_OddaEvenb)
 
 
@@ -73,6 +38,8 @@ def membershipQuery(word: list, printing=True) -> bool:
     else:
         if printing:
             print(f"membershipQuery: {word} is not in the language.")
+    if printing:
+        return rnnReply
     return Qreply
 
 
