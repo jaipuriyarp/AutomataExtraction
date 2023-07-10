@@ -19,8 +19,8 @@ num_layers = 2
 learning_rate = 0.001
 num_epochs = 500
 batch_size = 32
-model_name = "modelRNNQ_lang6_amod3b.pt"
-lang = 6
+model_name = "modelRNNQ_lang7_aStarbStaraStarbStarSeq.pt"
+lang = 7
 
 def debug(verbose_level, str):
     if verbose >= verbose_level:
@@ -110,7 +110,7 @@ def genSpecialNegExample(num_examples, lang):
             if maxlength - 2 - len(x) > 1:
                 k = random.randint(1, maxlength - 2 - len(x))
                 x += [word[1] for _ in range(k)]
-            x.insert(random.randint(0, len(x) - 1), newWord[0]) # a*b*a*b*(c/a)
+            x.insert(random.randint(0, len(x) - 1), newWord) # a*b*a*b*(c/a)
             validCheck = (len(set(x)) > 2)
             if validCheck:
                 wordL.append(x)
@@ -249,7 +249,7 @@ def generateTypeExamples(num_examples, lang, pos):
             elif lang == 6:
                 word = generate_two_random_words()
                 x = [word[0] for _ in range(k)]
-                k2 = random.randint(0, maxlength - len(x)-1)
+                k2 = random.randint(0, maxlength - len(x))
                 x += [word[1] for _ in range(k2)]
                 while (x.count(word[0]) - x.count(word[1])) % 3 == 0:
                     del x[random.randint(0, len(x)-1)]
