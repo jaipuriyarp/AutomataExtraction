@@ -126,20 +126,90 @@ Result: F1 Score : 0.8462056872926645
 
 lang : 6
 
-Early stopping on epoch 252
+Early stopping on epoch 198
+Info: Total number of samples generated: 90000
+Info: Number of positive examples in test: 45000
+Info: Number of negative examples in test: 45000
+Info: Length of X(input) for testing: 90000
+Info: Size of y(label) tensor for testing: torch.Size([90000])
+<class 'torch.Tensor'> and torch.Size([90000])
+<class 'torch.Tensor'> and torch.Size([90000, 1])
+Info: Test Loss: 0.2137, Test Accuracy: 0.9140
+Info: True positive  : 42517
+Info: True negative  : 39747
+Info: False positive : 5253
+Info: False negative : 2483
+Statistics: Accuracy %                                           : 0.9140444444444444
+Statistics: Inaccuracy %                                         : 0.08595555555555555
+Statistics: Total number of data points                          : 90000
+Statistics: Total number of data points classified correctly     : 82264
+Statistics: Total number of data points misclassified            : 7736
+Statistics: Total number of +ve data points identified correctly : 42517
+Statistics: Total number of -ve data points identified correctly : 39747
+Statistics: Total +ve Accuracy %                                 : 0.9448222222222222
+Statistics: Total -ve Accuracy %                                 : 0.8832666666666666
+Result: Accuracy : 0.9140444444444444
+Result: Precision: 0.9156192617449099
+Result: Recall   : 0.9140444444444444
+Result: F1 Score : 0.9139629439843081
+
+
+-------------------------------------------------------------------------------------------
+
+lang : 7
+
+Early stopping on epoch 211
+Info: Total number of samples generated: 90000
+Info: Number of positive examples in test: 45000
+Info: Number of negative examples in test: 45000
+Info: Length of X(input) for testing: 90000
+Info: Size of y(label) tensor for testing: torch.Size([90000])
+<class 'torch.Tensor'> and torch.Size([90000])
+<class 'torch.Tensor'> and torch.Size([90000, 1])
+Info: Test Loss: 0.4803, Test Accuracy: 0.7404
+Info: True positive  : 32046
+Info: True negative  : 34594
+Info: False positive : 10406
+Info: False negative : 12954
+Statistics: Accuracy %                                           : 0.7404444444444445
+Statistics: Inaccuracy %                                         : 0.25955555555555554
+Statistics: Total number of data points                          : 90000
+Statistics: Total number of data points classified correctly     : 66640
+Statistics: Total number of data points misclassified            : 23360
+Statistics: Total number of +ve data points identified correctly : 32046
+Statistics: Total number of -ve data points identified correctly : 34594
+Statistics: Total +ve Accuracy %                                 : 0.7121333333333333
+Statistics: Total -ve Accuracy %                                 : 0.7687555555555555
+Result: Accuracy : 0.7404444444444445
+Result: Precision: 0.7412178070784032
+Result: Recall   : 0.7404444444444445
+Result: F1 Score : 0.7402362388511654
+
 
 -------------------------------------------------------------------------------------------
 lang: balancedParantheses
 
-Info: Epoch 427 best Model saved with the loss 1.8545142444292488e-13
-Info: Epoch 428/500, Loss: 0.0000
-Info: Epoch 429/500, Loss: 0.0000
-Info: Epoch 430/500, Loss: 0.0000
-Info: Epoch 431/500, Loss: 0.0000
-Info: Epoch 432/500, Loss: 0.0000
-Info: Epoch 433/500, Loss: 0.0000
-Info: Epoch 434/500, Loss: 0.0000
-Info: Epoch 435/500, Loss: 0.0000
+Info: Epoch 460 best Model saved with the loss 1.6546239117809658e-13
+Info: Epoch 461/500, Loss: 0.0000
+Info: Epoch 461 best Model saved with the loss 1.6537616210628894e-13
+Info: Epoch 462/500, Loss: 0.0000
 libc++abi: terminating with uncaught exception of type std::__1::system_error: condition_variable wait failed: Invalid argument
 zsh: abort      python3 balancedParanthesis.py
 
+Automata:
+---------------------
+depth| states | final
+6    |  15    | 4
+9    |  15    | 4
+---------------------
+
+-------------------------------------------------------------------------------------------
+
+
+Q timeSeries Data:
+
+
+Early stopping on epoch 160
+
+Epoch 60 best model saved with accuracy: 85.63%
+with seq_length 512
