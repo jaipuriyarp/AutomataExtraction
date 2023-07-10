@@ -31,6 +31,19 @@ def Lang_is_abSeq(word: list):
 
     return False
 
+def Lang_is_abSeq_aLessThanb(word:list):
+    ''' This functions gives correct/ ground Truth for the language abSeq i.e. (ab)^*
+    where a<b '''
+
+    checkType(word)
+
+    if len(word) % 2 == 0 and ((len(word) > 1 and word[0] < word[1]) or len(word) == 0) and \
+            all([word[i] == word[i + 2] for i in range(len(word) - 2)]):  # language acceptance criteria
+        return True
+
+    return False
+
+
 def Lang_is_abSeq_OddaEvenb(word:list):
     ''' This functions gives correct/ ground Truth for the language a^nb^m where
     where n is an odd number and b is a an even number where b must be greater then 0 '''
