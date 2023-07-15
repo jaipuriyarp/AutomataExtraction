@@ -51,7 +51,10 @@ class RNNInterface:
 
     def convertRationalNumberListToFloat(self, rationalNumList: list) -> list:
         '''This function converts Rational number to floating point number'''
+        if len(rationalNumList) > 0 and type(rationalNumList[0]) is float:
+            return rationalNumList
         return [num.getNumerator()/num.getDenominator() for num in rationalNumList]
+
 
     def convertRationalNumberListToParanthesesStr(self, rationalNumList: list) -> list:
         '''This function converts Rational number to a string of parantheses'''
@@ -66,9 +69,9 @@ class RNNInterface:
             if len(x) > 1:
                 if x[0] > x[1]:
                     x[0], x[1] = x[1], x[0]
-                paranthesesEncode = {x[0] : ')', x[1] : '('}
+                paranthesesEncode = {x[0] : ")", x[1] : "("}
             elif len(x) == 1:
-                paranthesesEncode = {x[0]: ')'}
+                paranthesesEncode = {x[0]: ")"}
 
 
             stringQuery = ""
@@ -95,7 +98,7 @@ class RNNInterface:
         else:
             X = [encode_sequence(wordL)]
 
-        print(f"The converted query to RNN is:{wordL}")
+        # print(f"The converted query to RNN is:{wordL}")
 
         RNN_reply =  self.rnn_model.test_RNN(X, None)
         if len(RNN_reply) != 1:
