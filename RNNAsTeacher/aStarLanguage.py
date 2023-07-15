@@ -14,6 +14,7 @@ from rnnInterface import RNNInterface
 from GTComparison import GTComparison
 from groundTruthFunctions import Lang_is_aStar
 from checkEquivalence import CheckEquivalence
+from recordTime import RecordTime
 
 RNNModelName = "modelRNNQ_lang1_aStar.pt"
 RNNModelPath = os.path.join(modelDir, "models", RNNModelName)
@@ -22,14 +23,22 @@ rnnInterface = RNNInterface(rnn_model_path=RNNModelPath, input_size=1)
 gTComparison = GTComparison(Lang_is_aStar)
 checkEquivalence = CheckEquivalence(depth=7, num_of_RationalNumber=2,
                                     automaton=None, membershipQuery=None)
+timer = RecordTime(record_elapsed_time=True)
 
 def membershipQuery(word: list, printing=True) -> bool:
     # expects a list of RationalNumbers
     if len(word) and type(word[0]) != type(RationalNumber(None, None)):
         raise Exception("membershipQuery was called with the list: " + str(word) + "\n of type: " + str(type(word)))
-    print(f"The query is: {word}")
+    # print(f"The query is: {word}")
     rnnReply = rnnInterface.askRNN(word)
     Qreply = gTComparison.getGT(word, rnnReply, printing)
+
+    if (rnnReply != Qreply):
+        print(f"FOUND MISMATCH FOR {word}, rnn: {rnnReply} and GT: {Qreply}")
+        timer.stop()
+        timer.reset()
+        timer.start()
+
     # print (Qreply)
     if rnnReply:
         if printing:
@@ -89,10 +98,13 @@ def statisticalEquivalenceQuery(automaton: RationalNominalAutomata) -> tuple:
     # print("The languages appear to be  equivalent after checking " + str(numberOfExamples) + " random examples")
     print(f"The languages appear to be equivalent after checking  "
           f"{checkEquivalence.getQueriesCount() + numberOfExamples} random examples.")
+    timer.stop()
+    timer.report()
     return (True, None)
 
 
 def main() -> None:
+    timer.start()
     learnedAutomaton = learn(membershipQuery, statisticalEquivalenceQuery)
     # checkEquivalence.setMembershipQuery(Lang_is_aStar)
     print(learnedAutomaton)

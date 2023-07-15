@@ -19,6 +19,7 @@ from groundTruthFunctions import is_balanced_parenthesis
 from balancedParanthesis import generate_balanced_parentheses, generate_unbalanced_parentheses\
         ,generate_unbalanced_parantheses_from_posL, \
     generate_unbalanced_parentheses_up_to_depth, generate_one_parantheses_up_to_depth,  encode_sequence
+from recordTime import RecordTime
 
 RNNModelName = "modelRNN_lang8_balancedParenthesis.pt"
 RNNModelPath = os.path.join(modelDir, "models", RNNModelName)
@@ -27,7 +28,7 @@ maxDepth = 12
 
 rnnInterface = RNNInterface(rnn_model_path=RNNModelPath, input_size=2)
 gTComparison = GTComparison(is_balanced_parenthesis)
-
+timer = RecordTime(record_elapsed_time=True)
 def membershipQuery(word: list, printing=True) -> bool:
     # expects a list of RationalNumbers
     if len(word) and type(word[0]) != type(RationalNumber(0,1)) :
@@ -35,8 +36,12 @@ def membershipQuery(word: list, printing=True) -> bool:
 
     rnnReply = rnnInterface.askRNN(word, paranthesesLang=True)
     word = rnnInterface.getRNNCompatibleInputFromRationalNumber(word, paranthesesLang=True)
-    # print(f"The query is: {word}")
     Qreply = gTComparison.getGT(word, rnnReply, printing)
+    if (rnnReply != Qreply):
+        print(f"FOUND MISMATCH FOR {word}, rnn: {rnnReply} and GT: {Qreply}")
+        timer.stop()
+        timer.reset()
+        timer.start()
     # print (Qreply)
     if rnnReply:
         if printing:
@@ -65,7 +70,7 @@ def statisticalEquivalenceQuery(automaton: RationalNominalAutomata) -> tuple:
     print(automaton)
 
     # for l in range(numberOfExamples):  # + numberOfEquivalenceQueriesAsked):
-    k = 9
+    k = 12
     # p = []
     # for i in range(k):
     #     p += getQueriesForEquivalenceQuery(i)
@@ -95,9 +100,12 @@ def statisticalEquivalenceQuery(automaton: RationalNominalAutomata) -> tuple:
 
         # numberOfExamples -= len(p)
     print(f"The languages appear to be  equivalent after checking upto depth {k} random examples")
+    timer.stop()
+    timer.report()
     return None
 
 def main() -> None:
+    timer.start()
     learnedAutomaton = learn(membershipQuery, statisticalEquivalenceQuery, paranthesesLang=True)
     print(learnedAutomaton)
     gTComparison.statistics()

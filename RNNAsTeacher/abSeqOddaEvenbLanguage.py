@@ -12,26 +12,41 @@ for path in pathsToInclude:
     sys.path.append(path)
 
 from vLStar import RationalNumber, RationalNominalAutomata, learn
-
 from rnnInterface import RNNInterface
 from GTComparison import GTComparison
 from groundTruthFunctions import Lang_is_abSeq_OddaEvenb
+from checkEquivalence import CheckEquivalence
+from recordTime import RecordTime
 
 RNNModelName = "modelRNNQ_lang3_aOddbEvenNum.pt"
 RNNModelPath = os.path.join(modelDir, "models", RNNModelName)
 
 rnnInterface = RNNInterface(rnn_model_path=RNNModelPath, input_size=1)
 gTComparison = GTComparison(Lang_is_abSeq_OddaEvenb)
-
+checkEquivalence = CheckEquivalence(depth=7, num_of_RationalNumber=2,
+                                    automaton=None, membershipQuery=None)
+timer = RecordTime(record_elapsed_time=True)
 
 def membershipQuery(word: list, printing=True) -> bool:
     # expects a list of RationalNumbers
     if len(word) and type(word[0]) != type(RationalNumber(None, None)):
         raise Exception("membershipQuery was called with the list: " + str(word) + "\n of type: " + str(type(word)))
-    print(f"The query is: {word}")
-    rnnReply = rnnInterface.askRNN(word)
+    # print(f"The query is: {word}")
+    wordFloat = rnnInterface.getRNNCompatibleInputFromRationalNumber(word, paranthesesLang=False)
+    if len(set(wordFloat)) > 2:
+        rnnReply = False
+    else:
+        rnnReply = bool(rnnInterface.askRNN(word)[-1])
+
     Qreply = gTComparison.getGT(word, rnnReply, printing)
+    word = wordFloat
     # print (Qreply)
+    if (rnnReply != Qreply):
+        print(f"FOUND MISMATCH FOR {word}, rnn: {rnnReply} and GT: {Qreply}")
+        timer.stop()
+        timer.reset()
+        timer.start()
+
     if Qreply:
         if printing:
             print(f"membershipQuery: {word} is in the language.")
@@ -50,7 +65,7 @@ def statisticalEquivalenceQuery(automaton: RationalNominalAutomata) -> tuple:
     print("Checking equivalence of the following automaton:")
     print(automaton)
 
-    for word in samples:
+    for word in checkEquivalence.generateQueries():
         isMember = membershipQuery(word, False)
         hypothesisIsMember = automaton.accepts(word)
 
@@ -88,11 +103,16 @@ def statisticalEquivalenceQuery(automaton: RationalNominalAutomata) -> tuple:
                 print(str(word) + " was correctly accepted")
             else:
                 print(str(word) + " was correctly rejected")
+
     print("The languages appear to be  equivalent after checking " + str(numberOfExamples) + " random examples")
+    timer.stop()
+    timer.reset()
+    timer.report()
     return (True, None)
 
 
 def main() -> None:
+    timer.start()
     learnedAutomaton = learn(membershipQuery, statisticalEquivalenceQuery)
     print(learnedAutomaton)
     gTComparison.statistics()
