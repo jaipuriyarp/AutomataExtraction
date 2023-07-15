@@ -7,7 +7,7 @@ for path in pathsToInclude:
 from vLStar import RationalNumber
 
 def checkType(word: list):
-    if len(word) and not all([type(i) == type(RationalNumber(None,None)) for i in word]):
+    if len(word) and not all([type(i) == type(RationalNumber(None, None)) for i in word]):
         raise Exception("membershipQuery was called with the list: "+str(word)+"\n of type: "+str(type(word)))
 
 def Lang_is_aStar(word: list):
@@ -34,10 +34,10 @@ def Lang_is_abSeq(word: list):
 def Lang_is_abSeq_aLessThanb(word:list):
     ''' This functions gives correct/ ground Truth for the language abSeq i.e. (ab)^*
     where a<b '''
-
+    '''a<=b??'''
     checkType(word)
 
-    if len(word) % 2 == 0 and ((len(word) > 1 and word[0] < word[1]) or len(word) == 0) and \
+    if len(word) % 2 == 0 and ((len(word) > 1 and word[0] <= word[1]) or len(word) == 0) and \
             all([word[i] == word[i + 2] for i in range(len(word) - 2)]):  # language acceptance criteria
         return True
 
@@ -92,7 +92,8 @@ def Lang_is_abBothEven(word: list):
         return False
 
     uniq_word = list(set(word))
-    if (word.count(uniq_word[0]) % 2 == 0) and  (word.count(uniq_word[0]) % 2 == 0):
+    if (len(uniq_word) == 0) or (len(uniq_word) == 1 and (word.count(uniq_word[0]) % 2 == 0)) or \
+            ((word.count(uniq_word[0]) % 2 == 0) and (word.count(uniq_word[1]) % 2 == 0)):
         return True
 
     return False
@@ -146,18 +147,19 @@ def Lang_is_aStarbStaraStarbStar(word: list):
     return True
 
 def is_balanced_parenthesis(input: str):
-    stack = []
     opening_brackets = ['(', '[', '{']
     closing_brackets = [')', ']', '}']
 
-    for char in input:
-        if char in opening_brackets:
-            stack.append(char)
-        elif char in closing_brackets:
-            if not stack or opening_brackets[closing_brackets.index(char)] != stack.pop():
-                return False
+    if all((x in opening_brackets) or (x in closing_brackets) for x in input):
+        stack = []
+        for char in input:
+            if char in opening_brackets:
+                stack.append(char)
+            elif char in closing_brackets:
+                if not stack or opening_brackets[closing_brackets.index(char)] != stack.pop():
+                    return False
 
-    return len(stack) == 0
-
+        return len(stack) == 0
+    return False
 
 
