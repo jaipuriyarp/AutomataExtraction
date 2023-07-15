@@ -148,6 +148,30 @@ def train_model(model:RNNModel, num_epochs:int, trainloader:DataLoader, valloade
                 break
 
 
+def test_model(model:RNNModel, testloader:DataLoader):
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    with torch.no_grad():
+        model.eval()
+        for i, batch_data in enumerate(testloader):
+            print(f"batch_data: {batch_data}")
+            X_batch = batch_data['data'].to(device)
+            y_batch = batch_data['label'].to(device).long()
+            y_batch = y_batch.float().unsqueeze(1)
+
+            # y_pred = model(X_batch)
+            y_pred = model.getOutput(X_batch)
+
+            # class_predictions = nn.functional.log_softmax(y_pred, dim=1).argmax(dim=1)
+            class_predictions = torch.tensor([0 if x < 0.5 else 1 for x in torch.flatten(y_pred)])
+            # class_predictions = torch.flatten(y_pred)
+            # print(f"class_predictions: {class_predictions}")
+    print(f"class_predictions is {class_predictions}")
+    print(f"y_batch: {y_batch.flatten()}")
+    # if len(class_predictions.flatten()) > 1:
+    debug (0, f"check the Query...since class prediction size is: {len(class_predictions.flatten())}")
+    return class_predictions.flatten()
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--file_name", type=str, default=None)

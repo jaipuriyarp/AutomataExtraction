@@ -15,6 +15,7 @@ class MyDataSet(Dataset):
         self.X = X
         self.y = y
         self.seq_len = seq_len
+        # self.drop_column_names = ['series_id', 'measurement_no']
         print(f"INFO: In MyDataSet: Shape of X is: {X.shape}")
         print(f"INFO: In MyDataSet: Shape of y is: {y.shape}")
         print(f"INFO: In MyDataSet: Number of time series: {len(self.y)}")
@@ -32,11 +33,12 @@ class MyDataSet(Dataset):
         return return_dict
 
 class TimeSeriesDataSet():
-    def __init__(self, file_list:list, target_col:str, seq_length:int):
+    def __init__(self, file_list:list, target_col:str, seq_length:int, split=True):
         # self.data = data
         self.file_list = file_list
         self.target_col = target_col
         self.seq_length = seq_length
+        self.split = split
         # self.numerical_cols = list(set(data.columns) - set(target_col))
         # self.numerical_cols = None
         self.preprocessor = StandardScaler()
@@ -50,7 +52,7 @@ class TimeSeriesDataSet():
     def load_data(self, file:str):
         data = pd.read_csv(file)
         return data
-    def preprocess_data(self, data:pd.DataFrame, split=True):
+    def preprocess_data(self, data:pd.DataFrame):
         '''This function preprocess using Standard Scaler i.e. it fits the data to be have mean 0 and
         splits the data into train and test data
         :return: returns X_train, X_test, y_train, y_test of datatype as pandas.DataFrame'''
@@ -65,8 +67,11 @@ class TimeSeriesDataSet():
         #     [("scaler", StandardScaler(), self.numerical_cols)],
         #      # ("encoder", OneHotEncoder(), self.categorical_cols)],
         #     remainder="passthrough")
-        if split:
+        X_train = X
+        y_train = y
+        if self.split:
             X_train, X_test, y_train, y_test = train_test_split(X, y, train_size=0.8, shuffle=False)
+
 
         # X_train = self.preprocessor.fit_transform(X_train)
         # X_test = self.preprocessor.transform(X_test)
@@ -74,16 +79,19 @@ class TimeSeriesDataSet():
 
         debug(3, f"DEBUG: After fit, X_train is {X_train}")
         debug(3, f"DEBUG: After fit, y_train is {y_train.values}")
-        debug(3, f"DEBUG: After fit, X_test is {X_test}")
-        debug(3, f"DEBUG: After fit, y_test is {y_test.values}")
 
         debug(2, f"DEBUG: After fit, shape of X_train is {X_train.shape}")
         debug(2, f"DEBUG: After fit, shape of y_train is {y_train.shape}")
-        debug(2, f"DEBUG: After fit, shape of X_test is {X_test.shape}")
-        debug(2, f"DEBUG: After fit, shape of y_test is {y_test.shape}")
 
-        if split:
-            return X_train, X_test, y_train, y_test
+        if self.split:
+            debug(3, f"DEBUG: After fit, X_test is {X_test}")
+            debug(3, f"DEBUG: After fit, y_test is {y_test.values}")
+
+            debug(2, f"DEBUG: After fit, shape of X_test is {X_test.shape}")
+            debug(2, f"DEBUG: After fit, shape of y_test is {y_test.shape}")
+
+        if self.split:
+            return X_train, y_train, X_test, y_test
         else:
             return X, y, None, None
 
@@ -164,7 +172,7 @@ class TimeSeriesDataSet():
         for i,file in enumerate(self.file_list):
             debug(0, f"INFO: Started processing {i}st/nd/th file: {file}")
             data = self.load_data(file)
-            X_train, X_test, y_train, y_test = self.preprocess_data(data)
+            X_train, y_train, X_test, y_test = self.preprocess_data(data)
 
             train_X_df, train_y_df = self.convert_to_multipleTimeSeries(X_train, y_train)
             self.accumulate_multipleTimeSeries(train_X_df, train_y_df, train=True)
@@ -173,24 +181,25 @@ class TimeSeriesDataSet():
                 train_X_df.to_csv(Path("../data/", str(i)+"_train_X.csv"), index=False)
                 train_y_df.to_csv(Path("../data/", str(i)+"_train_y.csv"), index=False)
 
+            train_dataset = self.get_MyDatSet(train=True)
+            self.train_num = len(train_dataset)
+            debug(0, f"INFO: size of train_dataset is : {len(train_dataset)} "
+                     f"and type of train_dataset is : {type(train_dataset)}")
+
+            train_iter = DataLoader(train_dataset, batch_size=batch_size, shuffle=True, drop_last=True)
+
+
             if (X_test is not None) and (y_test is not None):
                 test_X_df, test_y_df = self.convert_to_multipleTimeSeries(X_test, y_test)
                 self.accumulate_multipleTimeSeries(test_X_df, test_y_df, train=False)
+                test_dataset = self.get_MyDatSet(train=False)
+                self.test_num = len(test_dataset)
+                debug(0, f"INFO: size of test_dataset is : {len(test_dataset)} "
+                         f"and type of test_dataset is : {type(test_dataset)}")
+                test_iter = DataLoader(test_dataset, batch_size=batch_size, shuffle=True, drop_last=True)
+            else:
+                test_iter = None
 
-
-        train_dataset = self.get_MyDatSet(train=True)
-        test_dataset = self.get_MyDatSet(train=False)
-
-        self.train_num = len(train_dataset)
-        self.test_num = len(test_dataset)
-
-        debug(0, f"INFO: size of train_dataset is : {len(train_dataset)} "
-                 f"and type of train_dataset is : {type(train_dataset)}")
-        debug(0, f"INFO: size of test_dataset is : {len(test_dataset)} "
-                 f"and type of test_dataset is : {type(test_dataset)}")
-
-        train_iter = DataLoader(train_dataset, batch_size=batch_size, shuffle=True, drop_last=True)
-        test_iter = DataLoader(test_dataset, batch_size=batch_size, shuffle=True, drop_last=True)
         return train_iter, test_iter
 
     def get_train_length(self):
