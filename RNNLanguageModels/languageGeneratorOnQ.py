@@ -129,9 +129,9 @@ def generateTypeExamples(num_examples, lang, pos):
     wordL = []
     # lang = 1: L1 = (a)^n.
     # lang = 2: L2 = (ab)^n and a<b.
-    # lang = 3: L3 = (a)^n(b)^m where a is odd and b is even.
+    # lang = 3: L3 = (a)^n(b)^m where n is odd and m is even.
     # lang = 4: L4 = any string without Trigram.
-    # lang = 5: L5 = any string containing ab and number of occurence of a and b are even.
+    # lang = 5: L5 = any string containing ab and number of occurrence of a and b are even.
     # lang = 6: L6 = (number of a) equivalent to (number of b) mod 3. i.e. 3|(#a - #b)
     # lang = 7: L7 = a^*b^*a^*b^*
     if lang > 7 or lang < 0:
