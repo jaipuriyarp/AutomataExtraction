@@ -103,6 +103,8 @@ def Lang_is_aMod3b(word: list):
             string, w when #_a(w) equiv_3 to #_b(w)'''
 
     checkType(word)
+    if len(word) == 0:
+        return True
     if len(set(word)) != 2:
         return False
     uniq_word = list(set(word))
@@ -117,27 +119,32 @@ def Lang_is_aStarbStaraStarbStar(word: list):
     a*b*a*b*'''
 
     checkType(word)
+    if len(word) == 0:
+        return True
+
     if len(set(word)) > 2:
         return False
 
+    print(word)
+
     a = word[0]
     i = 0
-    while (a == word[i]) and (i < len(word)): # a*
+    while (i < len(word)) and (a == word[i]): # a*
         i += 1
-    if i != len(word) - 1:
+    if i < len(word):
         b = word[i]
-        while (b == word[i]) and (i < len(word)): # a*b*
+        while (i < len(word)) and (b == word[i]): # a*b*
             i += 1
-        if i != len(word) - 1:
+        if i < len(word):
             c = word[i]
             if c == a:
-                while (c == word[i]) and (i < len(word)): # a*b*a*
+                while (i < len(word)) and (c == word[i]): # a*b*a*
                     i += 1
                 d = word[i]
                 if d == b:
-                    while (d == word[i]) and (i < len(word)): #a*b*a*b*
+                    while (i < len(word)) and (d == word[i]): #a*b*a*b*
                         i += 1
-                    if i != len(word) - 1:
+                    if i < len(word) - 1:
                         return False
                 else:
                     return False
