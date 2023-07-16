@@ -22,7 +22,7 @@ RNNModelPath = os.path.join(modelDir, "models", RNNModelName)
 
 rnnInterface = RNNInterface(rnn_model_path=RNNModelPath, input_size=1)
 gTComparison = GTComparison(Lang_is_noTrigrams)
-checkEquivalence = CheckEquivalence(depth=10, num_of_RationalNumber=5,
+checkEquivalence = CheckEquivalence(depth=8, num_of_RationalNumber=5,
                                     automaton=None, membershipQuery=None)
 timer = RecordTime(record_elapsed_time=True)
 
@@ -34,12 +34,15 @@ def membershipQuery(word: list, printing=True) -> bool:
     rnnReply = bool(rnnInterface.askRNN(word)[-1])
     Qreply = gTComparison.getGT(word, rnnReply, printing)
     word = rnnInterface.getRNNCompatibleInputFromRationalNumber(word, paranthesesLang=False)
-    # print (Qreply)
+
     if (rnnReply != Qreply):
-        print(f"FOUND MISMATCH FOR {word}, rnn: {rnnReply} and GT: {Qreply}")
-        timer.stop()
-        timer.reset()
-        timer.start()
+        if printing:
+            print(f"membershipQuery: FOUND MISMATCH FOR {word}, rnn: {rnnReply} and GT: {Qreply}")
+            timer.stop()
+            timer.reset()
+            timer.start()
+        else:
+            print(f"equivalenceQuery: FOUND MISMATCH FOR {word}, rnn: {rnnReply} and GT: {Qreply}")
 
     if Qreply:
         if printing:

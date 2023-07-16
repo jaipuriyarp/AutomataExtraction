@@ -64,6 +64,8 @@ def membershipQuery(word: list, printing=True) -> bool:
     print(f"The query is: {word}")
     rnnReply = rnnInterface.askRNN(word)
     Qreply = gTComparison.getGT(word, rnnReply, printing)
+    if (rnnReply != Qreply):
+        print(f"FOUND MISMATCH FOR {word}, rnn: {rnnReply} and GT: {Qreply}")
 
     if rnnReply:
         if printing:
@@ -126,7 +128,7 @@ def statisticalEquivalenceQuery(automaton: RationalNominalAutomata) -> tuple:
 
 
 def main() -> None:
-    learnedAutomaton = learn(membershipQuery, statisticalEquivalenceQuery)
+    learnedAutomaton = learn(membershipQuery, statisticalEquivalenceQuery, verbose=True)
     print(learnedAutomaton)
     gTComparison.statistics()
 

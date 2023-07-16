@@ -31,19 +31,23 @@ def membershipQuery(word: list, printing=True) -> bool:
     if len(word) and type(word[0]) != type(RationalNumber(None, None)):
         raise Exception("membershipQuery was called with the list: " + str(word) + "\n of type: " + str(type(word)))
     # print(f"The query is: {word}")
-    wordFloat = rnnInterface.getRNNCompatibleInputFromRationalNumber(word, paranthesesLang=False)
-    if len(set(wordFloat)) > 2:
-        rnnReply = False
-    else:
-        rnnReply = bool(rnnInterface.askRNN(word)[-1])
+
+    rnnReply = bool(rnnInterface.askRNN(word)[-1])
     Qreply = gTComparison.getGT(word, rnnReply, printing)
+    word = rnnInterface.getRNNCompatibleInputFromRationalNumber(word, paranthesesLang=False)
 
     # print (Qreply)
     if (rnnReply != Qreply):
-        print(f"FOUND MISMATCH FOR {word}, rnn: {rnnReply} and GT: {Qreply}")
-        timer.stop()
-        timer.reset()
-        timer.start()
+        if printing:
+            print(f"membershipQuery: FOUND MISMATCH FOR {word}, rnn: {rnnReply} and GT: {Qreply}")
+            timer.stop()
+            timer.reset()
+            timer.start()
+            if len(set(word)) > 2:
+                rnnReply = False
+                print(f"WARNING: RNN reply set to false since the word contained more than two unique values.")
+        else:
+            print(f"equivalenceQuery: FOUND MISMATCH FOR {word}, rnn: {rnnReply} and GT: {Qreply}")
 
     if Qreply:
         if printing:

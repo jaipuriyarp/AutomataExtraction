@@ -32,12 +32,16 @@ def membershipQuery(word: list, printing=True) -> bool:
     # print(f"The query is: {word}")
     rnnReply = rnnInterface.askRNN(word)
     Qreply = gTComparison.getGT(word, rnnReply, printing)
+    word = rnnInterface.getRNNCompatibleInputFromRationalNumber(word, paranthesesLang=False)
 
     if (rnnReply != Qreply):
-        print(f"FOUND MISMATCH FOR {word}, rnn: {rnnReply} and GT: {Qreply}")
-        timer.stop()
-        timer.reset()
-        timer.start()
+        if printing:
+            print(f"membershipQuery: FOUND MISMATCH FOR {word}, rnn: {rnnReply} and GT: {Qreply}")
+            timer.stop()
+            timer.reset()
+            timer.start()
+        else:
+            print(f"equivalenceQuery: FOUND MISMATCH FOR {word}, rnn: {rnnReply} and GT: {Qreply}")
 
     # print (Qreply)
     if rnnReply:
