@@ -17,7 +17,7 @@ num_layers = 2
 learning_rate = 0.001
 num_epochs = 500
 batch_size = 32
-model_name = "modelRNN_lang8_balancedParenthesis.pt"
+model_name = "modelRNNQ_lang8_balancedParenthesis.pt"
 
 def debug(verbose_level, str):
     if verbose >= verbose_level:
@@ -62,7 +62,7 @@ def generate_unbalanced_parentheses_up_to_depth(k):
     print(f"INFO: Done generating -ve examples..")
     return all_parentheses
 
-def generate_unbalanced_parantheses_from_posL(posL):
+def generate_unbalanced_parantheses_from_posL(posL, maxlength):
     print(f"INFO: Starting to generate -ve examples from +ve ones...")
     negL = []
     for x in posL:
@@ -96,39 +96,41 @@ def one_hot_encoding(letter):
         raise Exception("this function returns one-hot encoding of only one letter at a time")
     encoding[alphabet.index(letter)] = 1
     return encoding
-def encode_sequence(sequence):
+def encode_sequence(sequence, maxlength=maxlength):
     debug(2, f"sequence: {sequence}")
     x = torch.tensor(np.array([one_hot_encoding(word) for word in sequence]))
     debug(2, f"size of x: {x.size()}")
-    target_seq = torch.zeros(maxlength, input_size)
+    target_seq = torch.zeros(maxlength, input_size, dtype=torch.float64)
     if x.size()[0] > 0:
         target_seq[0:x.size(0), :] = x
     debug(2, f"size of target: {target_seq.size()}")
     debug(2, f"target: {target_seq}")
     return target_seq
 
-def generateExamples(depth):
+def generateExamples(maxlength):
+    depth = int(maxlength / 2)
     posL = generate_balanced_parentheses_up_to_depth(k=depth)
     negL = generate_one_parantheses_up_to_depth(k=depth)
     debug(0, f"length of negL at stage 1: {len(negL)}")
     negL += generate_unbalanced_parentheses_up_to_depth(k=depth)
     debug(0, f"length of negL at stage 2: {len(negL)}")
-    negL += generate_unbalanced_parantheses_from_posL(posL)
+    negL += generate_unbalanced_parantheses_from_posL(posL, maxlength)
     debug(0, f"length of negL at stage 3: {len(negL)}")
     debug(1, f"posL is: {posL}")
     debug(1, f"negL is: {negL}")
 
     return posL, negL
 
-def create_datasets(depth, train):
+def create_datasets(maxlength, train):
     X = []
     y = []
-    posL, negL = generateExamples(depth)
+    depth = int(maxlength / 2)
+    posL, negL = generateExamples(maxlength)
     result = posL + negL
     random.shuffle(result)
     debug(3, f"result: {result}")
     for sequence in result:
-        X.append(encode_sequence(sequence))
+        X.append(encode_sequence(sequence), maxlength)
         y.append(1 if sequence in posL else 0)
     debug(3, "X =" + str(X))
     debug(3, "y=" + str(y))
@@ -139,7 +141,7 @@ def create_datasets(depth, train):
     else:
         print(f"Info: Number of positive examples in test: {y.count(1)}")
         print(f"Info: Number of negative examples in test: {y.count(0)}")
-    return X, torch.tensor(y, dtype=torch.float)
+    return X, torch.tensor(y, dtype=torch.float64)
 
 if __name__ == "__main__":
 
@@ -151,17 +153,16 @@ if __name__ == "__main__":
     RNNModelPath = "../models/" + model_name
     needTraining = rnn_model.load_RNN_model(RNNModelPath)
 
-    depth = int(maxlength/2)
     if needTraining:
-        X_train, y_train = create_datasets(depth, train=True)
+        X_train, y_train = create_datasets(maxlength, train=True)
         print(f"Info: Length of X(input) for training: {len(X_train)}")
         print(f"Info: Size of y(label) tensor for training: {y_train.size()}")
         rnn_model.train_RNN(X_train, y_train, num_epochs, batch_size, learning_rate)
     else:
         print(f"Info: Training is skipped!")
 
-
-    X_test, y_test = create_datasets(depth, train=False)
+    depth=9
+    X_test, y_test = create_datasets(maxlength, train=False)
     print(f"Info: Length of X(input) for testing: {len(X_test)}")
     print(f"Info: Size of y(label) tensor for testing: {y_test.size()}")
     predicted = rnn_model.test_RNN(X_test, y_test)

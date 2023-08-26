@@ -3,10 +3,13 @@ import torch
 import numpy as np
 from rnnModel import  RNNModel
 
+from groundTruthFunctions import Lang_is_aStar as checkGndLabel
+# from groundTruthFunctions import Lang_is_abSeq as checkGndLabel
 # changing the languages according to Tomita languages
 
 verbose = 0
-maxlength = 50
+maxlength = 20
+start = 1
 maxInteger = (2^63 -1)
 
 # Define hyperparameters
@@ -19,48 +22,72 @@ num_layers = 2
 learning_rate = 0.001
 num_epochs = 500
 batch_size = 32
-model_name = "modelRNNQ_lang7_aStarbStaraStarbStarSeq.pt"
-lang = 7
+model_name = "modelRNNQ_lang1_try_withlangGenOnQ.pt"
+lang = 1
 
 def debug(verbose_level, str):
     if verbose >= verbose_level:
         print(str)
 
-
-def genSpecialPosExample(num_examples, lang):
-    if lang != 4:
+def genSpecialPosExample(num_examples, lang, maxlength=maxlength):
+    if not(lang == 2 or lang == 4):
         return []
     wordL = []
-    while num_examples > 0:
-        k = random.randint(2, maxlength)
-        word = random.randint(0, maxInteger)
-        validCheck = True
-        if lang == 4:
-            x = [random.randint(0, maxInteger) for _ in range(k - 2)]
-            if len(x) > 1:
-                index_to_insert_at = random.randint(0, len(x) - 1)
+
+    if lang == 2:
+        len, wordCounter = 2, 0
+        for i in range(num_examples):
+            word = generate_two_random_words()
+            if wordCounter == 40:
+                wordCounter = 0
+                len += 2
+                if len > maxlength:
+                    len = 2
+            wordL.append([word[0] if i % 2 == 0 else word[1] for i in range(len)])
+            wordCounter += 1
+
+    else:
+        while num_examples > 0:
+            k = random.randint(2, maxlength)
+            word = random.randint(start, maxInteger)
+            validCheck = True
+            if lang == 4:
+                x = [random.randint(start, maxInteger) for _ in range(k - 2)]
+                if len(x) > 1:
+                    index_to_insert_at = random.randint(0, len(x) - 1)
+                else:
+                    index_to_insert_at = 0
+                for i in range(2):
+                    x.insert(index_to_insert_at + i, word)
+                for i in range(len(x)):
+                    if i > 2 and x[i-1] == x[i-2] and x[i] == x[i-1]:
+                        validCheck = False
+                        break
+            if validCheck:
+                wordL.append(x)
             else:
-                index_to_insert_at = 0
-            for i in range(2):
-                x.insert(index_to_insert_at + i, word)
-            for i in range(len(x)):
-                if i > 2 and x[i-1] == x[i-2] and x[i] == x[i-1]:
-                    validCheck = False
-                    break
-        if validCheck:
-            wordL.append(x)
-        else:
-            num_examples += 1 # since the current word is not added
-        num_examples -= 1
+                num_examples += 1 # since the current word is not added
+            num_examples -= 1
     debug(1, f"Special Positive Examples : {wordL}")
     return wordL
 
 
-def genSpecialNegExample(num_examples, lang):
+def genSpecialNegExample(num_examples, lang, maxlength=maxlength):
     if lang > 3  and lang < 7:
         return []
 
     wordL = []
+
+    if lang == 2:
+        #length 1 is negative example
+        fixedlen = 1
+        for i in range(500):
+            randNum = random.randint(start, maxInteger)
+            for j in range(10):
+                wordL.append([randNum for _ in range(j)])
+
+    num_examples -= len(wordL)
+
     while num_examples > 0:
         k = random.randint(1, maxlength-1)
         word = generate_two_random_words()
@@ -74,17 +101,12 @@ def genSpecialNegExample(num_examples, lang):
                 k += 1
             if k >= maxlength:
                 k -= 2
-            if word[0] > word[1]:
-                word.reverse()
             x = [word[0] if i%2 == 0 else word[1] for i in range(k)]
-            if k > 1:
-                newWord = random.randint(0, maxInteger)
-                word.append(newWord)
-                x.insert(random.randint(0, len(x)-1), word[random.randint(0,len(word)-1)])
-            #creating one more neg example here: case: (ab)^n but a>b
-            y = [word[1] if i%2 == 0 else word[0] for i in range(k)]
-            wordL.append(y)
-            num_examples -= 1
+            if len(x) -1 == 0:
+                index = 0
+            else:
+                index = random.randint(0, len(x) - 1)
+            x.insert(index, random.randint(start, maxInteger))
 
         elif lang == 3:
             # odd # of a followed by 0 or odd number of b's.
@@ -98,7 +120,7 @@ def genSpecialNegExample(num_examples, lang):
 
         elif lang == 7:
             # negative case of :a*b*a*b*
-            newWord = random.randint(0, maxInteger)
+            newWord = random.randint(start, maxInteger)
             k = random.randint(1, maxlength-5)
             x = [word[0] for _ in range(k)]
             if maxlength - 4 - len(x) > 1:
@@ -121,14 +143,14 @@ def genSpecialNegExample(num_examples, lang):
     return wordL
 
 def generate_two_random_words():
-    word = [random.randint(0, maxInteger) for _ in range(2)]
+    word = [random.randint(start, maxInteger) for _ in range(2)]
     while word[0] == word[1]:
-        word = [random.randint(0, maxInteger) for _ in range(2)]
+        word = [random.randint(start, maxInteger) for _ in range(2)]
     return word
-def generateTypeExamples(num_examples, lang, pos):
+def generateTypeExamples(num_examples, lang, pos, maxlength=maxlength):
     wordL = []
     # lang = 1: L1 = (a)^n.
-    # lang = 2: L2 = (ab)^n and a<b.
+    # lang = 2: L2 = (ab)^n
     # lang = 3: L3 = (a)^n(b)^m where n is odd and m is even.
     # lang = 4: L4 = any string without Trigram.
     # lang = 5: L5 = any string containing ab and number of occurrence of a and b are even.
@@ -144,11 +166,9 @@ def generateTypeExamples(num_examples, lang, pos):
             if lang == 1: # L = (a)^n
                 k = random.randint(0, maxlength)
                 wordL.append([word[0] for _ in range(k)])
-            elif lang == 2: # L = (ab)^n and a<b
+            elif lang == 2: # L = (ab)^n
                 if k % 2 != 0:
                     k -= 1 # even
-                if word[0] > word[1]:
-                    word.reverse()
                 wordL.append([word[0] if i % 2 == 0 else word[1] for i in range(k)])
             elif lang == 3: # L = odd numbers of a must be followed by even numbers of b
                 k = random.randint(1, maxlength-2)
@@ -163,10 +183,10 @@ def generateTypeExamples(num_examples, lang, pos):
             elif lang == 4: # L = any string not containing aaa (3a's consecutively)
                 x = []
                 for i in range(k):
-                    p = random.randint(0, maxInteger)
+                    p = random.randint(start, maxInteger)
                     if i > 1 and x[i-1] == x[i-2]:
                         while x[i-2] == p:
-                            p = random.randint(0, maxInteger)
+                            p = random.randint(start, maxInteger)
                     x.append(p)
                 wordL.append(x)
             elif lang == 5: # L = number of a and number of b in string are even.
@@ -216,8 +236,8 @@ def generateTypeExamples(num_examples, lang, pos):
                 x = [random.randint(0, maxInteger) for _ in range(k)]
                 validCheck = (k > 1 and len(set(x)) > 1)
             elif lang == 2:
-                x = [random.randint(0, maxInteger) for _ in range(k)]
-                validCheck = (k%2 == 1) or (k > 2 and len(set(x)) > 2) or (k==2 and x[0]>x[1])
+                x = [random.randint(start, maxInteger) for _ in range(k)]
+                validCheck = (k%2 == 1) or (k > 2 and len(set(x)) > 2)
             elif lang == 3:
                 # neg case 1: even # of a followed by even # of b (includes number of b to be zero)
                 # neg case 2: even # of a followed by odd  # of b
@@ -229,12 +249,12 @@ def generateTypeExamples(num_examples, lang, pos):
                 validCheck = x.count(word[0]) %2 == 0
             elif lang == 4:
                 # neg case: a word whose length is > 2 and at least contains trigram once.
-                x = [random.randint(0, maxInteger) for _ in range(k-3)]
+                x = [random.randint(start, maxInteger) for _ in range(k-3)]
                 if len(x):
                     index_to_insert_at = random.randint(0, len(x)-1)
                 else:
                     index_to_insert_at = 0
-                repeated_word = random.randint(0, maxInteger)
+                repeated_word = random.randint(start, maxInteger)
                 for i in range(3):
                     x.insert(index_to_insert_at + i, repeated_word)
                 validCheck = x[index_to_insert_at] == x[index_to_insert_at + 1] and \
@@ -255,7 +275,7 @@ def generateTypeExamples(num_examples, lang, pos):
                     del x[random.randint(0, len(x)-1)]
                 validCheck = not(x.count(word[0]) - x.count(word[1]) % 3 == 0)
             elif lang == 7:
-                x = [random.randint(0, maxInteger) for _ in range(k)]
+                x = [random.randint(start, maxInteger) for _ in range(k)]
                 validCheck = (k > 2 and len(set(x)) > 2)
 
             if validCheck:
@@ -264,6 +284,26 @@ def generateTypeExamples(num_examples, lang, pos):
                 num_examples += 1 # since x is not added in the wordL
         num_examples -= 1
     return wordL
+
+def generatelimitedExamples(num_examples, pos, lang, maxlength) -> list:
+    wordL = []
+    divide_50 = int (num_examples/50)
+    if pos:
+        wordL += genSpecialPosExample(divide_50, lang, maxlength)
+        print(f"Info: level 2, Number of special +ve data points: {len(wordL)}")
+        prev_count = len(wordL)
+        wordL += generateTypeExamples(num_examples - divide_50, lang, pos=True, maxlength=maxlength)
+        print(f"Info: level 3, Number of special +ve data points: {len(wordL) - prev_count}")
+
+    else:
+        wordL += genSpecialNegExample(divide_50, lang, maxlength)
+        print(f"Info: level 2, Number of special -ve data points: {len(wordL)}")
+        prev_count = len(wordL)
+        wordL += generateTypeExamples(num_examples - divide_50, lang, pos=False, maxlength=maxlength)
+        print(f"Info: level 3, Number of special -ve data points: {len(wordL) - prev_count}")
+    return wordL
+
+
 
 def generateExamples(num_examples: int, lang: int) -> list:
 
@@ -283,30 +323,62 @@ def generateExamples(num_examples: int, lang: int) -> list:
     debug(1, "negative examples:" + str(negL))
     return posL, negL
 
+
+def seperate_data_for_eval(posL, negL, _fraction):
+    random.shuffle(posL)
+    random.shuffle(negL)
+    posL_eval = posL[:int(len(posL)*_fraction/2)]
+    negL_eval = negL[:int(len(negL)*_fraction/2)]
+    # print(f"length of pos_eval: {len(posL_eval)}")
+    # print(f"length of neg_eval: {len(negL_eval)}")
+    new_posL = posL[int(len(posL)*_fraction/2):]
+    new_negL = negL[int(len(negL)*_fraction/2):]
+    return new_posL, new_negL, posL_eval, negL_eval
+
+
 def encode_sequence(sequence):
     debug(2, f"sequence: {sequence}")
     x = torch.tensor(np.array([[word] for word in sequence]))
     debug(2, "size of x: {x.size()}")
-    target_seq = torch.zeros(maxlength, input_size)
+    target_seq = torch.zeros(maxlength, input_size, dtype=torch.float64)
     if x.size()[0] > 0:
         target_seq[0:x.size(0),:] = x
     debug(2, "size of target: {target_seq.size()}")
     debug(2, "target: {target_seq}")
     return target_seq
 
-def create_datasets(num_examples, lang, train=False):
+def create_datasets(num_examples, lang, train=False, eval=False):
     X = []
     y = []
+    X_eval = []
+    y_eval = []
 
     posL, negL = generateExamples(num_examples, lang=lang)
+    if eval:
+        posL, negL, posL_eval, negL_eval = seperate_data_for_eval(posL, negL, 0.2)
+
+    file_name_for_savingdata = model_name.strip(".pt").strip("modelRNNQ_")
+    with open("../dataOnQ/"+ file_name_for_savingdata + "_posL", "w+") as f:
+        f.write(str(posL))
+    with open("../dataOnQ/"+ file_name_for_savingdata + "_negL", "w+") as f:
+        f.write(str(negL))
+
     result = posL + negL
     random.shuffle(result)
     debug(3, f"result: {result}")
     for sequence in result:
         X.append(encode_sequence(sequence))
-        y.append(1 if sequence in posL else 0)
+        y.append(1 if checkGndLabel(sequence, False) else 0)
     debug(3, "X =" + str(X))
     debug(3, "y=" + str(y))
+
+    if eval:
+        result_eval = posL_eval + negL_eval
+        random.shuffle(result_eval)
+        for sequence in result_eval:
+            X_eval.append(encode_sequence(sequence))
+            y_eval.append(1 if checkGndLabel(sequence, False) else 0)
+
     print(f"Info: Total number of samples generated: {num_examples}")
     if train:
         print(f"Info: Number of positive examples in training: {y.count(1)}")
@@ -314,7 +386,11 @@ def create_datasets(num_examples, lang, train=False):
     else:
         print(f"Info: Number of positive examples in test: {y.count(1)}")
         print(f"Info: Number of negative examples in test: {y.count(0)}")
-    return X, torch.tensor(y, dtype=torch.float)
+    if eval:
+        print(f"Info: Number of positive examples in eval: {y_eval.count(1)}")
+        print(f"Info: Number of negative examples in eval: {y_eval.count(0)}")
+    return X, torch.tensor(y, dtype=torch.float64), X_eval, torch.tensor(y_eval, dtype=torch.float64)
+
 
 def statistics(numSamples, pos, neg):
 
@@ -341,17 +417,20 @@ if __name__ == "__main__":
 
 
     if needTraining:
-        numSamples = 300000
-        X_train, y_train = create_datasets(numSamples, lang=lang, train=True)
+        numSamples = 500000
+        X_train, y_train, X_eval, y_eval = create_datasets(numSamples, lang=lang, train=True, eval=True)
         print(f"Info: Length of X(input) for training: {len(X_train)}")
         print(f"Info: Size of y(label) tensor for training: {y_train.size()}")
-        rnn_model.train_RNN(X_train, y_train, num_epochs, batch_size, learning_rate)
+        # print(f"X_train:{X_train}")
+        # print(f"X_eval: {X_eval}")
+        rnn_model.train_RNN(X_train, y_train, num_epochs, batch_size, learning_rate, X_eval, y_eval)
     else:
         print(f"Info: Training is skipped!")
 
     numSamples = 90000
 
-    X_test, y_test = create_datasets(numSamples, lang=lang, train=False)
+    X_test, y_test, _, _ = create_datasets(numSamples, lang=lang, train=False, eval=False)
+    # print(f"X_test:{X_test}")
     print(f"Info: Length of X(input) for testing: {len(X_test)}")
     print(f"Info: Size of y(label) tensor for testing: {y_test.size()}")
     predicted = rnn_model.test_RNN(X_test, y_test)
