@@ -133,14 +133,17 @@ class GTComparison:
         print('*' * 100)
         print(f"Total Number of queries answered during equivalence check by RNN correctly          : "
             f"{(self.true_positive_EquivQ + self.true_negative_EquivQ)}")
-        print(f"Accuracy of equivalence queries answered                                            : "
-              f"{(self.true_positive_EquivQ + self.true_negative_EquivQ) / (self.num_pos_EquivQ + self.num_neg_EquivQ)}")
+        if self.num_pos_EquivQ > 0 or self.num_neg_EquivQ > 0 :
+            print(f"Accuracy of equivalence queries answered                                            : "
+                f"{(self.true_positive_EquivQ + self.true_negative_EquivQ) / (self.num_pos_EquivQ + self.num_neg_EquivQ)}")
         print(f"Total Number of positive queries answered during equivalence check by RNN correctly : {self.true_positive_EquivQ}")
-        print(f"Accuracy of +ve queries asked during equivalence check                              : "
-              f"{self.true_positive_EquivQ/ self.num_pos_EquivQ}")
+        if self.num_pos_EquivQ > 0:
+            print(f"Accuracy of +ve queries asked during equivalence check                              : "
+                 f"{self.true_positive_EquivQ/ self.num_pos_EquivQ}")
         print(f"Total Number of negative queries answered during equivalence check by RNN correctly : {self.true_negative_EquivQ}")
-        print(f"Accuracy of -ve queries asked during equivalence check                              : "
-              f"{self.true_negative_EquivQ / self.num_neg_EquivQ}")
+        if self.num_neg_EquivQ > 0:
+            print(f"Accuracy of -ve queries asked during equivalence check                              : "
+                 f"{self.true_negative_EquivQ / self.num_neg_EquivQ}")
 
         print(f"Queries incorrectly answered by RNN is:{self.queries_incorrectlyAnswered}")
 

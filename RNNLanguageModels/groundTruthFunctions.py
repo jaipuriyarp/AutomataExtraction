@@ -1,5 +1,7 @@
 import sys
 
+import numpy as np
+
 pathsToInclude = ["../../TheoryOfEquality/vLStarForRationalAutomata/"]
 for path in pathsToInclude:
     sys.path.append(path)
@@ -10,20 +12,24 @@ def checkType(word: list):
     if len(word) and not all([type(i) == type(RationalNumber(None, None)) for i in word]):
         raise Exception("membershipQuery was called with the list: "+str(word)+"\n of type: "+str(type(word)))
 
-def Lang_is_aStar(word: list):
+def Lang_is_aStar(word: list, check=True):
     ''' This functions gives correct/ ground Truth for the language a* i.e. (a)^*'''
-
-    checkType(word)
+    if check:
+        checkType(word)
 
     if len(set(word)) > 1: #language rejecting criteria
         return False
 
     return True
 
-def Lang_is_abSeq(word: list):
+def Lang_is_abSeq(word: list, check=True):
     ''' This functions gives correct/ ground Truth for the language abSeq i.e. (ab)^*'''
 
-    checkType(word)
+    if check:
+        checkType(word)
+
+    if isinstance(word, np.ndarray):
+        word = np.trim_zeros(word)
 
     if len(word) % 2 == 0 and ((len(word) > 1 and word[0] != word[1]) or len(word) == 0) and \
             all([word[i] == word[i+2] for i in range(len(word)-2)]):  #language acceptance criteria
@@ -44,11 +50,11 @@ def Lang_is_abSeq_aLessThanb(word:list):
     return False
 
 
-def Lang_is_abSeq_OddaEvenb(word:list):
+def Lang_is_abSeq_OddaEvenb(word:list, check=True):
     ''' This functions gives correct/ ground Truth for the language a^nb^m where
     where n is an odd number and b is a an even number where b must be greater then 0 '''
-
-    checkType(word)
+    if check:
+        checkType(word)
 
     s  = list(set(word))
     if len(s) != 2:
@@ -67,11 +73,11 @@ def Lang_is_abSeq_OddaEvenb(word:list):
 
     return False
 
-def Lang_is_noTrigrams(word: list):
+def Lang_is_noTrigrams(word: list, check=True):
     '''This functions gives correct/ ground Truth for the language which accepts any
     string, w which doesn't contain any trigrams.'''
-
-    checkType(word)
+    if check:
+        checkType(word)
 
     if len(word) < 3:
         return True
@@ -82,11 +88,11 @@ def Lang_is_noTrigrams(word: list):
 
     return True
 
-def Lang_is_abBothEven(word: list):
+def Lang_is_abBothEven(word: list, check=True):
     '''This functions gives correct/ ground Truth for the language which accepts any
         string, w which contains only two unique words and is even in number'''
-
-    checkType(word)
+    if check:
+        checkType(word)
 
     if len(set(word)) > 2:
         return False
@@ -98,11 +104,12 @@ def Lang_is_abBothEven(word: list):
 
     return False
 
-def Lang_is_aMod3b(word: list):
+def Lang_is_aMod3b(word: list, check=True):
     '''This functions gives correct/ ground Truth for the language which accepts any
             string, w when #_a(w) equiv_3 to #_b(w)'''
+    if check:
+        checkType(word)
 
-    checkType(word)
     if len(word) == 0:
         return True
     if len(set(word)) != 2:
@@ -114,18 +121,19 @@ def Lang_is_aMod3b(word: list):
     return False
 
 
-def Lang_is_aStarbStaraStarbStar(word: list):
+def Lang_is_aStarbStaraStarbStar(word: list, check=True):
     '''This functions gives correct/ ground Truth for the language which accepts language
     a*b*a*b*'''
+    if check:
+        checkType(word)
 
-    checkType(word)
     if len(word) == 0:
         return True
 
     if len(set(word)) > 2:
         return False
 
-    print(word)
+    # print(word)
 
     a = word[0]
     i = 0
@@ -140,14 +148,15 @@ def Lang_is_aStarbStaraStarbStar(word: list):
             if c == a:
                 while (i < len(word)) and (c == word[i]): # a*b*a*
                     i += 1
-                d = word[i]
-                if d == b:
-                    while (i < len(word)) and (d == word[i]): #a*b*a*b*
-                        i += 1
-                    if i < len(word) - 1:
+                if i < len(word):
+                    d = word[i]
+                    if d == b:
+                        while (i < len(word)) and (d == word[i]): #a*b*a*b*
+                            i += 1
+                        if i < len(word) - 1:
+                            return False
+                    else:
                         return False
-                else:
-                    return False
             else:
                 return False
 

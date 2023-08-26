@@ -18,7 +18,7 @@ class RNNModel:
                 super(RNN, self).__init__()
                 self.hidden_size = hidden_size
                 self.rnn = nn.LSTM(input_size=input_size, hidden_size=hidden_size,
-                                   batch_first=True, num_layers=num_layers)
+                                   batch_first=True, num_layers=num_layers, dropout=0.2)
                 self.fc = nn.Linear(hidden_size, output_size)
                 self.sigmoid = nn.Sigmoid()
 
@@ -75,7 +75,8 @@ class RNNModel:
             # print(f'Info: Model {self.model}')
         return needTraining
 
-    def train_RNN(self, X_train, y_train, num_epochs, batch_size, learning_rate):
+    def train_RNN(self, X_train, y_train, num_epochs, batch_size, learning_rate, X_eval=None, y_eval=None,
+                  eval_decision_include=False):
         # defining Hyperparameter
         criterion = self.criterion
 
@@ -83,9 +84,13 @@ class RNNModel:
 
         patience, patience_counter = 100, 0
         best_avg_loss = 1
+        best_eval_loss = 100
         # Training loop
+        self.model = self.model.double()
+
         for epoch in range(num_epochs):
             total_loss = 0
+            self.model.train()
             for i in range(0, len(X_train), batch_size):
                 inputs = torch.stack(X_train[i:i+batch_size]).to(self.device)
                 labels = y_train[i:i+batch_size].unsqueeze(1).to(self.device)
@@ -105,11 +110,41 @@ class RNNModel:
 
             avg_loss = total_loss / (len(X_train) / batch_size)
 
-            if avg_loss < best_avg_loss:
+            # self.model.eval()
+            # with torch.no_grad():
+            #     X_eval = torch.stack(X_eval).to(self.device)
+            #     outputs_eval = self.model(X_eval)
+            #     self.debug(1, f"X_test size is: {X_eval.size()} and outputs size is: {outputs.size()}")
+            #     predicted_labels = torch.round(outputs)
+            #     criterion = self.criterion
+            #     self.debug(1, f" y_eval.size is:{y_eval.size()}")
+            #     print(f"{type(y_eval)} and {y_eval.size()}")
+            #     # y_test = torch.as_tensor(y_test, dtype=torch.float).clone().detach().unsqueeze(1).to(self.device)
+            #     y_eval = self.convertTensor1DTo2D(y_eval)
+            #     print(f"{type(y_eval)} and {y_eval.size()}")
+            #     eval_loss = criterion(outputs_eval, y_eval)
+            #     eval_accuracy = (predicted_labels == y_eval).sum().item() / len(y_test)
+            if X_eval != [] :
+                y_pred = self.test_RNN(X_eval, y_eval)
+                y_eval_tensor = self.convertTensor1DTo2D(y_eval)
+                # print(f"here: y_pred: {y_pred} and y_eval:{y_eval_tensor}")
+                eval_loss = criterion(torch.tensor(y_pred), y_eval_tensor)
+                # print(f"Info: Epoch {epoch} eval_loss: {eval_loss}")
+            else:
+                eval_loss = 0
+
+            if eval_decision_include:
+                cond_eval = eval_loss <= best_eval_loss
+            else:
+                cond_eval = True
+
+            if avg_loss < best_avg_loss and cond_eval:
                 best_avg_loss = avg_loss
+                best_eval_loss = eval_loss
                 patience_counter = 0
                 torch.save(self.model.state_dict(), Path("../models/", self.model_name))
-                print(f'Info: Epoch {epoch} best Model saved with the loss {best_avg_loss}')
+                print(f'Info: Epoch {epoch}, train_loss {avg_loss}, eval_loss {eval_loss}, '
+                      f'best Model saved with the loss {best_avg_loss}')
 
             else:
                 patience_counter +=1
@@ -117,18 +152,20 @@ class RNNModel:
                     print(f'Early stopping on epoch {epoch}')
                     break
 
-            print(f'Info: Epoch {epoch+1}/{num_epochs}, Loss: {avg_loss:.4f}')
+            print(f'Info: Epoch {epoch+1}/{num_epochs}, Loss: {avg_loss:.4f}, Eval_loss: {eval_loss:.4f}')
 
     def test_RNN(self, X_test, y_test=None):
     # Evaluation
+        self.model = self.model.double()
+
+        self.model.eval()
         with torch.no_grad():
-            self.model.eval()
             # X_test_padded = pad_sequences(X_test)
             # X_test_padded = torch.stack(X_test_padded).to(device)
             X_test = torch.stack(X_test).to(self.device)
             # y_test = torch.tensor(y_test, dtype=torch.float).unsqueeze(1).to(device)
             outputs = self.model(X_test)
-            self.debug(1, f"X_test size is: {X_test.size()} and outputs size is: {outputs.size()}")
+            # self.debug(3, f"X_test size is: {X_test.size()} and outputs size is: {outputs.size()}")
             predicted_labels = torch.round(outputs)
 
             if y_test is not None:
@@ -136,10 +173,10 @@ class RNNModel:
                 criterion = self.criterion
 
                 self.debug(1, f" y_test.size is:{y_test.size()}")
-                print(f"{type(y_test)} and {y_test.size()}")
+                # print(f"{type(y_test)} and {y_test.size()}")
                 # y_test = torch.as_tensor(y_test, dtype=torch.float).clone().detach().unsqueeze(1).to(self.device)
                 y_test = self.convertTensor1DTo2D(y_test)
-                print(f"{type(y_test)} and {y_test.size()}")
+                # print(f"{type(y_test)} and {y_test.size()}")
                 loss = criterion(outputs, y_test)
                 accuracy = (predicted_labels == y_test).sum().item() / len(y_test)
                 print(f"Info: Test Loss: {loss.item():.4f}, Test Accuracy: {accuracy:.4f}")
@@ -153,7 +190,7 @@ class RNNModel:
         return predicted_labels.numpy()
 
     def convertTensor1DTo2D(self, y):
-        return torch.as_tensor(y, dtype=torch.float).clone().detach().unsqueeze(1).to(self.device)
+        return torch.as_tensor(y, dtype=torch.float64).clone().detach().unsqueeze(1).to(self.device)
 
     def checkAccuracy(self, predicted, actual):
         tp, tn, fp, fn = 0, 0, 0, 0

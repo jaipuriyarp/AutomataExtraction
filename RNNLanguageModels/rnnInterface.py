@@ -4,11 +4,12 @@ pathsToInclude = ["../../TheoryOfEquality/vLStarForRationalAutomata/", modelDir,
 for path in pathsToInclude:
     sys.path.append(path)
 
-from languageGeneratorOnQ import encode_sequence
+# from languageGeneratorOnQ import encode_sequence
 from balancedParanthesis import encode_sequence as encode_parantheses
+from languageGeneratorOnQ_from_file import encode_sequence
 from vLStar import RationalNumber
 from rnnModel import RNNModel
-
+maxlength = 20
 class RNNInterface:
 
     def __init__(self, rnn_model_path: str, input_size: int, hidden_size=64, output_size=1, num_layers=2):
@@ -91,12 +92,13 @@ class RNNInterface:
 
     def askRNN(self, numList: list, paranthesesLang=False) -> bool:
         wordL = self.getRNNCompatibleInputFromRationalNumber(numList, paranthesesLang)
+        print(wordL)
         if paranthesesLang:
             if len(set(numList)) > 2 or 'x' in wordL:
                 return False
-            X = [encode_parantheses(wordL)]
+            X = [encode_parantheses(wordL, maxlength)]
         else:
-            X = [encode_sequence(wordL)]
+            X = [encode_sequence(wordL, maxlength)]
 
         # print(f"The converted query to RNN is:{wordL}")
 
