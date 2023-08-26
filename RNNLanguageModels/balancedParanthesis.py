@@ -130,7 +130,7 @@ def create_datasets(maxlength, train):
     random.shuffle(result)
     debug(3, f"result: {result}")
     for sequence in result:
-        X.append(encode_sequence(sequence), maxlength)
+        X.append(encode_sequence(sequence, maxlength))
         y.append(1 if sequence in posL else 0)
     debug(3, "X =" + str(X))
     debug(3, "y=" + str(y))
