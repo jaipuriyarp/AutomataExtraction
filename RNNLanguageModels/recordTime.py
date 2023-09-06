@@ -1,5 +1,5 @@
 import time
-
+round_upto_digits = 3
 class RecordTime():
     def __init__(self, record_elapsed_time=False):
         self.real_start = None
@@ -14,12 +14,26 @@ class RecordTime():
         if self.real_start is None:
             self.real_start = time.time()
         self.start_time = time.time()
+
+    def getTotalRunTimeTillNow(self):
+        return time.time() - self.real_start
+
+    def pause(self):
+        self.end_time = time.time()
+        elapsed_time = self.end_time - self.real_start
+        print(f"Execution time: {elapsed_time:.4f} seconds")
+        if self.record_elapsed_time:
+            # self.end_time_list.append(self.end_time)
+            self.elapsed_time_list.append(elapsed_time)
+        self.end_time = None
+        return round(elapsed_time, round_upto_digits)
+
     def stop(self):
         self.end_time = time.time()
         elapsed_time = self.end_time - self.start_time
         print(f"Execution time: {elapsed_time:.4f} seconds")
         if self.record_elapsed_time:
-            self.end_time_list.append(self.end_time)
+            # self.end_time_list.append(self.end_time)
             self.elapsed_time_list.append(elapsed_time)
 
     def reset(self):

@@ -3,9 +3,15 @@ import torch
 import numpy as np
 from rnnModel import  RNNModel
 
-from groundTruthFunctions import Lang_is_aStar as checkGndLabel
+from groundTruthFunctions import *
+# from groundTruthFunctions import Lang_is_aStar as checkGndLabel
 # from groundTruthFunctions import Lang_is_abSeq as checkGndLabel
+# from groundTruthFunctions import Lang_is_noTrigrams as checkGndLabel
+# from groundTruthFunctions import Lang_is_abBothEven as checkGndLabel
+# from groundTruthFunctions import Lang_is_aMod3b as checkGndLabel
+# from groundTruthFunctions import Lang_is_aStarbStaraStarbStar as checkGndLabel
 # changing the languages according to Tomita languages
+
 
 verbose = 0
 maxlength = 20
@@ -22,12 +28,36 @@ num_layers = 2
 learning_rate = 0.001
 num_epochs = 500
 batch_size = 32
-model_name = "modelRNNQ_lang1_try_withlangGenOnQ.pt"
-lang = 1
+# model_name = "modelRNNQ_lang1_try_withlangGenOnQ.pt"
+lang = 7
 
 def debug(verbose_level, str):
     if verbose >= verbose_level:
         print(str)
+
+if lang == 1:
+    checkGndLabel = Lang_is_aStar
+    model_name = "modelRNNQ_lang1_try_withlangGenOnQ.pt"
+elif lang == 2:
+    checkGndLabel = Lang_is_abSeq
+    model_name = "modelRNNQ_lang2_try_withlangGenOnQ.pt"
+elif lang == 3:
+    checkGndLabel = Lang_is_abSeq_OddaEvenb
+    model_name = "modelRNNQ_lang3_aOddbEvenNum_new.pt"
+elif lang == 4:
+    checkGndLabel = Lang_is_noTrigrams
+    model_name = "modelRNNQ_lang4_try_withlangGenOnQ.pt"
+elif lang == 5:
+    checkGndLabel = Lang_is_abBothEven
+    model_name = "modelRNNQ_lang5_try_withlangGenOnQ1.pt"
+elif lang == 6:
+    checkGndLabel = Lang_is_aMod3b
+    model_name = "modelRNNQ_lang6_try_withlangGenOnQ.pt"
+elif lang == 7:
+    checkGndLabel = Lang_is_aStarbStaraStarbStar
+    model_name = "modelRNNQ_lang7_try_withlangGenOnQ.pt"
+
+print(f"Info: Lang: {lang}, model name: {model_name}, gnd function {checkGndLabel}")
 
 def genSpecialPosExample(num_examples, lang, maxlength=maxlength):
     if not(lang == 2 or lang == 4):
@@ -35,15 +65,15 @@ def genSpecialPosExample(num_examples, lang, maxlength=maxlength):
     wordL = []
 
     if lang == 2:
-        len, wordCounter = 2, 0
+        fixedlength, wordCounter = 2, 0
         for i in range(num_examples):
             word = generate_two_random_words()
             if wordCounter == 40:
                 wordCounter = 0
-                len += 2
-                if len > maxlength:
-                    len = 2
-            wordL.append([word[0] if i % 2 == 0 else word[1] for i in range(len)])
+                fixedlength += 2
+                if fixedlength > maxlength:
+                    fixedlength = 2
+            wordL.append([word[0] if i % 2 == 0 else word[1] for i in range(fixedlength)])
             wordCounter += 1
 
     else:
@@ -303,24 +333,39 @@ def generatelimitedExamples(num_examples, pos, lang, maxlength) -> list:
         print(f"Info: level 3, Number of special -ve data points: {len(wordL) - prev_count}")
     return wordL
 
+def generateExampleOfEachlength(maxlength=maxlength):
+    pos, neg = [], []
+    for l in range(0, maxlength):
+        w = generate_two_random_words()
+        for sublist_length in range(l):
+            sublist = [w[random.randint(0, 1)] for _ in range(sublist_length)]
+            if checkGndLabel(sublist, False):
+                pos.append(sublist)
+            else:
+                neg.append(sublist)
+    return pos, neg
 
 
 def generateExamples(num_examples: int, lang: int) -> list:
+    posL, negL = generateExampleOfEachlength()
 
-    posL_count = int(num_examples / 2)
-    negL_count = num_examples - posL_count
-    negL = genSpecialNegExample(int(negL_count / 2), lang)
-    posL = genSpecialPosExample(int(posL_count / 2), lang)
-    debug(1, f"Number of special +ve data points: {len(posL)}")
-    debug(1, f"Number of special -ve data points: {len(negL)}")
+    posL_count = int(num_examples / 2) - len(posL)
+    negL_count = num_examples - posL_count - len(negL)
+
+    negL += genSpecialNegExample(int(negL_count / 2), lang)
+    posL += genSpecialPosExample(int(posL_count / 2), lang)
+    debug(0, f"Number of special +ve data points: {len(posL)}")
+    debug(0, f"Number of special -ve data points: {len(negL)}")
     negL_count = negL_count - len(negL)
     posL_count = posL_count - len(posL)
-    if posL_count != 0:
-        posL = posL + generateTypeExamples(posL_count, lang, pos=True)
-    if negL_count != 0:
-        negL = negL + generateTypeExamples(negL_count, lang, pos=False)
-    debug(1, "positive examples:" + str(posL))
-    debug(1, "negative examples:" + str(negL))
+    # if posL_count != 0:
+    posL = posL + generateTypeExamples(posL_count, lang, pos=True)
+    # if negL_count != 0:
+    negL = negL + generateTypeExamples(negL_count, lang, pos=False)
+    # debug(0, "positive examples:" + str(posL))
+    # debug(0, "negative examples:" + str(negL))
+    debug(0, f"Number of special +ve data points: {len(posL)}")
+    debug(0, f"Number of special -ve data points: {len(negL)}")
     return posL, negL
 
 
@@ -389,21 +434,25 @@ def create_datasets(num_examples, lang, train=False, eval=False):
     if eval:
         print(f"Info: Number of positive examples in eval: {y_eval.count(1)}")
         print(f"Info: Number of negative examples in eval: {y_eval.count(0)}")
-    return X, torch.tensor(y, dtype=torch.float64), X_eval, torch.tensor(y_eval, dtype=torch.float64)
+    return X, torch.tensor(y, dtype=torch.float64), X_eval, torch.tensor(y_eval, dtype=torch.float64), y.count(1), y.count(0)
 
 
-def statistics(numSamples, pos, neg):
+def statistics(actual_pos, actual_neg, predicted_pos, predicted_neg):
+    numSamples = actual_pos + actual_neg
 
-    print(f"Statistics: Accuracy %                                           : {(pos + neg) / numSamples}")
+    print(f"Statistics: Accuracy %                                           : "
+          f"{(predicted_pos + predicted_neg) / numSamples}")
     print(
-        f"Statistics: Inaccuracy %                                         : {(numSamples - (pos + neg)) / numSamples}")
-    print(f"Statistics: Total number of data points                          : {numSamples}")
-    print(f"Statistics: Total number of data points classified correctly     : {pos + neg}")
-    print(f"Statistics: Total number of data points misclassified            : {numSamples - (pos + neg)}")
-    print(f"Statistics: Total number of +ve data points identified correctly : {pos}")
-    print(f"Statistics: Total number of -ve data points identified correctly : {neg}")
-    print(f"Statistics: Total +ve Accuracy %                                 : {pos / int(numSamples / 2)}")
-    print(f"Statistics: Total -ve Accuracy %                                 : {neg / (numSamples - int(numSamples / 2))}")
+        f"Statistics: Inaccuracy %                                         : {(numSamples - (predicted_pos + predicted_neg)) / numSamples}")
+    print(f"Statistics: Total number of data points generated                : {numSamples}")
+    print(f"Statistics: Total number of data points classified correctly     : {predicted_pos + predicted_neg}")
+    print(f"Statistics: Total number of data points misclassified            : {numSamples - (predicted_pos + predicted_neg)}")
+    print(f"Statistics: Total number of +ve data points generated            : {actual_pos}")
+    print(f"Statistics: Total number of +ve data points identified correctly : {predicted_pos}")
+    print(f"Statistics: Total number of -ve data points generated            : {actual_neg}")
+    print(f"Statistics: Total number of -ve data points identified correctly : {predicted_neg}")
+    print(f"Statistics: Total +ve Accuracy %                                 : {predicted_pos / actual_pos}")
+    print(f"Statistics: Total -ve Accuracy %                                 : {predicted_neg / actual_neg}")
 
 
 if __name__ == "__main__":
@@ -418,7 +467,8 @@ if __name__ == "__main__":
 
     if needTraining:
         numSamples = 500000
-        X_train, y_train, X_eval, y_eval = create_datasets(numSamples, lang=lang, train=True, eval=True)
+        X_train, y_train, X_eval, y_eval, num_of_pos_examples_generated, num_of_pos_examples_generated = \
+            create_datasets(numSamples, lang=lang, train=True, eval=True)
         print(f"Info: Length of X(input) for training: {len(X_train)}")
         print(f"Info: Size of y(label) tensor for training: {y_train.size()}")
         # print(f"X_train:{X_train}")
@@ -427,15 +477,17 @@ if __name__ == "__main__":
     else:
         print(f"Info: Training is skipped!")
 
-    numSamples = 90000
+    numSamples = 100000
 
-    X_test, y_test, _, _ = create_datasets(numSamples, lang=lang, train=False, eval=False)
+    X_test, y_test, _, _, num_of_pos_examples_generated, num_of_neg_examples_generated = \
+        create_datasets(numSamples, lang=lang, train=False, eval=False)
     # print(f"X_test:{X_test}")
+    numSamples_generated = len(X_test)
     print(f"Info: Length of X(input) for testing: {len(X_test)}")
     print(f"Info: Size of y(label) tensor for testing: {y_test.size()}")
     predicted = rnn_model.test_RNN(X_test, y_test)
     y_test = rnn_model.convertTensor1DTo2D(y_test).numpy()
     # print(f"{y_test} and {predicted}")
     pos, neg = rnn_model.checkAccuracy(predicted=predicted, actual=y_test)
-    statistics(numSamples, pos, neg)
+    statistics(num_of_pos_examples_generated, num_of_neg_examples_generated, pos, neg)
     rnn_model.getScores(predicted, y_test)
