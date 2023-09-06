@@ -124,7 +124,7 @@ class RNNModel:
             #     print(f"{type(y_eval)} and {y_eval.size()}")
             #     eval_loss = criterion(outputs_eval, y_eval)
             #     eval_accuracy = (predicted_labels == y_eval).sum().item() / len(y_test)
-            if X_eval != [] :
+            if not (X_eval is None) :
                 y_pred = self.test_RNN(X_eval, y_eval)
                 y_eval_tensor = self.convertTensor1DTo2D(y_eval)
                 # print(f"here: y_pred: {y_pred} and y_eval:{y_eval_tensor}")
