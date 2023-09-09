@@ -12,15 +12,20 @@ from rnnInterface import RNNInterface
 from GTComparison import GTComparison
 from groundTruthFunctions import *
 from recordTime import RecordTime
-from EquivQueryGenerator import queryGenerator
+from EquivQueryGenerator import queryGenerator, generateOneQuery
 filelist = None
 
 #maimum run time is set to 5 hours
 MAX_RUN_TIME = 18000 # in seconds
-Upper_time_limit = 600 # in seconds
+# Upper_time_limit = 600 # in seconds
+Upper_time_limit = 400 # in seconds
 Upper_limit_of_sequence_checking = 5000
+# Upper_time_limit = 30 # in seconds
+# Upper_limit_of_sequence_checking = 50
 lang = 1
 max_length = 20
+# global count_function_calls
+count_function_calls = 0
 
 if lang == 1:
     checkGndLabel = Lang_is_aStar
@@ -49,8 +54,8 @@ rnnInterface = RNNInterface(rnn_model_path=RNNModelPath, input_size=1)
 gTComparison = GTComparison(checkGndLabel)
 # checkEquivalence = CheckEquivalence(depth=7, num_of_RationalNumber=2,
 #                                     automaton=None, membershipQuery=None)
-timer = RecordTime(record_elapsed_time=True)
-
+timer = RecordTime(record_elapsed_time=False)
+printQlimit, printTlimit = False, False
 
 print(f"Info: Lang: {lang}, model name: {model_name}, gnd function {checkGndLabel}")
 
@@ -59,20 +64,44 @@ def membershipQuery(word: list, printing=True) -> bool:
     # print(word)
     if len(word) and type(word[0]) != type(RationalNumber(None, None)):
         raise Exception("membershipQuery was called with the list: " + str(word) + "\n of type: " + str(type(word)))
-    # print(f"The query is: {word}")
-    rnnReply = rnnInterface.askRNN(word)
-    Qreply = gTComparison.getGT(word, rnnReply, printing)
-    word = rnnInterface.getRNNCompatibleInputFromRationalNumber(word, paranthesesLang=False)
 
     if timer.getTotalRunTimeTillNow() >= MAX_RUN_TIME:
         print(f"WARNING: Exiting now. The MAX_RUN_TIME: {MAX_RUN_TIME} has been reached.")
+        timer.stop()
         return None
+
+    global printQlimit, printTlimit
+
+    if gTComparison.queriesCount() >= Upper_limit_of_sequence_checking and printQlimit == False:
+        print(f"DIAMOND: No. of qCount: {gTComparison.queriesCount()} ",
+              f"No. of memQ count: {gTComparison.num_pos_memQ + gTComparison.num_pos_memQ} ",
+              f"No. of EquivQ count: {gTComparison.num_pos_EquivQ + gTComparison.num_neg_EquivQ} ",
+              f"No. of adversarial memQ: {gTComparison.num_pos_memQ + gTComparison.num_neg_memQ - (gTComparison.true_positive_memQ + gTComparison.true_negative_memQ)} ",
+              f"No. of adversarial EquivQ: {gTComparison.num_pos_EquivQ + gTComparison.num_neg_EquivQ - (gTComparison.true_positive_EquivQ + gTComparison.true_negative_EquivQ)} ",
+              f"No. of adversarial examples: {gTComparison.queriesCount() - (gTComparison.true_positive_memQ + gTComparison.true_negative_memQ + gTComparison.true_positive_EquivQ + gTComparison.true_negative_EquivQ)} ",
+              f"Time: {timer.getTotalRunTimeTillNow()}")
+        printQlimit = True
+
+    if timer.getTotalRunTimeTillNow() >= Upper_time_limit and printTlimit == False:
+        print(f"DIAMOND: No. of qCount: {gTComparison.queriesCount()} ",
+              f"No. of memQ count: {gTComparison.num_pos_memQ + gTComparison.num_pos_memQ} ",
+              f"No. of EquivQ count: {gTComparison.num_pos_EquivQ + gTComparison.num_neg_EquivQ} ",
+              f"No. of adversarial memQ: {gTComparison.num_pos_memQ + gTComparison.num_neg_memQ - (gTComparison.true_positive_memQ + gTComparison.true_negative_memQ)} ",
+              f"No. of adversarial EquivQ: {gTComparison.num_pos_EquivQ + gTComparison.num_neg_EquivQ - (gTComparison.true_positive_EquivQ + gTComparison.true_negative_EquivQ)} ",
+              f"No. of adversarial examples: {gTComparison.queriesCount() - (gTComparison.true_positive_memQ + gTComparison.true_negative_memQ + gTComparison.true_positive_EquivQ + gTComparison.true_negative_EquivQ)} ",
+              f"Time: {timer.getTotalRunTimeTillNow()}")
+        printTlimit = True
 
     if gTComparison.queriesCount() >= Upper_limit_of_sequence_checking and \
             timer.getTotalRunTimeTillNow() >= Upper_time_limit:
-        print(f"WARNING: The Upper limit of queries count: {Upper_limit_of_sequence_checking} and"
+        print(f"WARNING: The Upper limit of queries count: {Upper_limit_of_sequence_checking} and "
               f"the upper limit of run time: {Upper_time_limit} has been reached.")
+        timer.stop()
         return None
+
+    rnnReply = rnnInterface.askRNN(word)
+    Qreply = gTComparison.getGT(word, rnnReply, printing)
+    word = rnnInterface.getRNNCompatibleInputFromRationalNumber(word, paranthesesLang=False)
 
     if (rnnReply != Qreply):
         if printing:
@@ -80,7 +109,7 @@ def membershipQuery(word: list, printing=True) -> bool:
         else:
             print(f"equivalenceQuery: FOUND MISMATCH FOR {word}, rnn: {rnnReply} and GT: {Qreply}")
         time_elapsed = timer.pause()
-        gTComparison.save_elapsed_time_for_query(word, time_elapsed)
+        gTComparison.save_elapsed_time_for_query(word, time_elapsed, printing)
 
     if rnnReply:
         if printing:
@@ -96,34 +125,82 @@ def statisticalEquivalenceQuery(automaton: RationalNominalAutomata) -> tuple:
     print("Checking equivalence of the following automaton:")
     print(automaton)
 
-    for eachSequence in queryGenerator(upper_limit_of_sequence_generation=Upper_limit_of_sequence_checking,
-            max_length=max_length,current_query_count=gTComparison.queriesCount()):
-        rationalNumberSequence = [RationalNumber(i,1) for i in eachSequence]
-        isMember = membershipQuery(rationalNumberSequence, False)
+    # for eachSequence in queryGenerator(upper_limit_of_sequence_generation=Upper_limit_of_sequence_checking,
+    #         max_length=max_length,current_query_count=gTComparison.queriesCount()):
+    global count_function_calls
+    global printQlimit, printTlimit
+    while timer.getTotalRunTimeTillNow() < Upper_time_limit or \
+            gTComparison.queriesCount() < Upper_limit_of_sequence_checking:
 
-        if isMember is None:
-            timer.stop()
-            timer.report()
-            print(f"Final hypothesis is: {automaton}")
-            return True, None
+        if gTComparison.queriesCount() >= Upper_limit_of_sequence_checking and printQlimit == False:
+            print(f"DIAMOND: No. of qCount: {gTComparison.queriesCount()} ",
+                  f"No. of memQ count: {gTComparison.num_pos_memQ + gTComparison.num_pos_memQ} ",
+                  f"No. of EquivQ count: {gTComparison.num_pos_EquivQ + gTComparison.num_neg_EquivQ} ",
+                  f"No. of adversarial memQ: {gTComparison.num_pos_memQ + gTComparison.num_neg_memQ - (gTComparison.true_positive_memQ + gTComparison.true_negative_memQ)} ",
+                  f"No. of adversarial EquivQ: {gTComparison.num_pos_EquivQ + gTComparison.num_neg_EquivQ - (gTComparison.true_positive_EquivQ + gTComparison.true_negative_EquivQ)} ",
+                  f"No. of adversarial examples: {gTComparison.queriesCount() - (gTComparison.true_positive_memQ + gTComparison.true_negative_memQ + gTComparison.true_positive_EquivQ + gTComparison.true_negative_EquivQ)} ",
+                  f"Time: {timer.getTotalRunTimeTillNow()}")
+            printQlimit = True
 
-        hypothesisIsMember = automaton.accepts(rationalNumberSequence)
+        if timer.getTotalRunTimeTillNow() >= Upper_time_limit and printTlimit == False:
+            print(f"DIAMOND: No. of qCount: {gTComparison.queriesCount()} ",
+                  f"No. of memQ count: {gTComparison.num_pos_memQ + gTComparison.num_pos_memQ} ",
+                  f"No. of EquivQ count: {gTComparison.num_pos_EquivQ + gTComparison.num_neg_EquivQ} ",
+                  f"No. of adversarial memQ: {gTComparison.num_pos_memQ + gTComparison.num_neg_memQ - (gTComparison.true_positive_memQ + gTComparison.true_negative_memQ)} ",
+                  f"No. of adversarial EquivQ: {gTComparison.num_pos_EquivQ + gTComparison.num_neg_EquivQ - (gTComparison.true_positive_EquivQ + gTComparison.true_negative_EquivQ)} ",
+                  f"No. of adversarial examples: {gTComparison.queriesCount() - (gTComparison.true_positive_memQ + gTComparison.true_negative_memQ + gTComparison.true_positive_EquivQ + gTComparison.true_negative_EquivQ)} ",
+                  f"Time: {timer.getTotalRunTimeTillNow()}")
+            printTlimit = True
 
-        if isMember != hypothesisIsMember:
-            print(f"The languages are not equivalent, a counterexample is: {rationalNumberSequence}, length: {len(rationalNumberSequence)}")
-            if isMember:
-                print(f"The word was rejected, but is in the language.")
+        for sequence in generateOneQuery(max_length, no_of_times_called=count_function_calls):
+            count_function_calls += 1
+            rationalNumberSequence = [RationalNumber(i,1) for i in sequence]
+            isMember = membershipQuery(rationalNumberSequence, False)
+
+            if isMember is None:
+                timer.report()
+                print(f"Final hypothesis is: {automaton}")
+                return True, None
+
+            hypothesisIsMember = automaton.accepts(rationalNumberSequence)
+
+            if isMember != hypothesisIsMember:
+                print(f"The languages are not equivalent, a counterexample is: {rationalNumberSequence}, length: {len(rationalNumberSequence)}")
+                if isMember:
+                    print(f"The word was rejected, but is in the language.")
+                else:
+                    print(f"The word was accepted, but is not in the language.")
+                timer.pause()
+                return (False, rationalNumberSequence)
             else:
-                print(f"The word was accepted, but is not in the language.")
-            timer.pause()
-            return (False, rationalNumberSequence)
-        else:
-            if isMember:
-                print(f"{rationalNumberSequence} was correctly accepted")
-            else:
-                print(f"{rationalNumberSequence} was correctly rejected")
+                if isMember:
+                    print(f"{rationalNumberSequence} was correctly accepted")
+                else:
+                    print(f"{rationalNumberSequence} was correctly rejected")
 
     timer.stop()
+
+    if gTComparison.queriesCount() >= Upper_limit_of_sequence_checking and printQlimit == False:
+        print(f"DIAMOND: No. of qCount: {gTComparison.queriesCount()} ",
+              f"No. of memQ count: {gTComparison.num_pos_memQ + gTComparison.num_pos_memQ} ",
+              f"No. of EquivQ count: {gTComparison.num_pos_EquivQ + gTComparison.num_neg_EquivQ} ",
+              f"No. of adversarial memQ: {gTComparison.num_pos_memQ + gTComparison.num_neg_memQ - (gTComparison.true_positive_memQ + gTComparison.true_negative_memQ)} ",
+              f"No. of adversarial EquivQ: {gTComparison.num_pos_EquivQ + gTComparison.num_neg_EquivQ - (gTComparison.true_positive_EquivQ + gTComparison.true_negative_EquivQ)} ",
+              f"No. of adversarial examples: {gTComparison.queriesCount() - (gTComparison.true_positive_memQ + gTComparison.true_negative_memQ + gTComparison.true_positive_EquivQ + gTComparison.true_negative_EquivQ)} ",
+              f"Time: {timer.getTotalRunTimeTillNow()}")
+        printQlimit = True
+
+    if timer.getTotalRunTimeTillNow() >= Upper_time_limit and printTlimit == False:
+        print(f"DIAMOND: No. of qCount: {gTComparison.queriesCount()} ",
+              f"No. of memQ count: {gTComparison.num_pos_memQ + gTComparison.num_pos_memQ} ",
+              f"No. of EquivQ count: {gTComparison.num_pos_EquivQ + gTComparison.num_neg_EquivQ} ",
+              f"No. of adversarial memQ: {gTComparison.num_pos_memQ + gTComparison.num_neg_memQ - (gTComparison.true_positive_memQ + gTComparison.true_negative_memQ)} ",
+              f"No. of adversarial EquivQ: {gTComparison.num_pos_EquivQ + gTComparison.num_neg_EquivQ - (gTComparison.true_positive_EquivQ + gTComparison.true_negative_EquivQ)} ",
+              f"No. of adversarial examples: {gTComparison.queriesCount() - (gTComparison.true_positive_memQ + gTComparison.true_negative_memQ + gTComparison.true_positive_EquivQ + gTComparison.true_negative_EquivQ)} ",
+              f"Time: {timer.getTotalRunTimeTillNow()}")
+        printTlimit = True
+
+
     # print(f"The final automata extracted is : {automaton}")
     print(f"The equivalence Query is passed and total number of queries count is {gTComparison.queriesCount()}")
     return True, None
@@ -154,13 +231,13 @@ def main() -> None:
     timer.start()
     learnedAutomaton = learn(membershipQuery, statisticalEquivalenceQuery,
                              verbose=False, fileList=None)
-
     print(learnedAutomaton)
-    timer.report()
-
+    # timer.report()
+    gTComparison.create_presentation_table(file_name="lang" + str(lang) + "_presentationTable.csv")
     gTComparison.statistics(file_name= "lang" + str(lang) + "_list.csv")
-    gTComparison.display_adversarial_query_time_relation(file_name= "lang" +str(lang) + "_adversarial_list.csv")
+    gTComparison.display_adversarial_query_time_relation(file_name= "lang" + str(lang) + "_adversarial_list.csv")
 
 
 if __name__ == "__main__":
     main()
+
