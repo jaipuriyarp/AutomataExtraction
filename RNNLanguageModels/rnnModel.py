@@ -52,6 +52,9 @@ class RNNModel:
         if self.verbose_level >= verbose:
             print(str)
 
+    def forward(self, input):
+       return self.model.forward(input)
+
     def getOptimizer(self, learning_rate):
         return optim.Adam(self.model.parameters(),lr=learning_rate)
     def train(self):
@@ -69,14 +72,15 @@ class RNNModel:
             print(f"Warning: Model doesn't exist at path {model_path}, So training is needed for a new RNN model")
             needTraining = True
         else:
-            print(f"Info: The model exists at {os.path.exists(model_path)}")
+            print(f"Info: The model exists at {model_path}")
             self.model.load_state_dict(torch.load(model_path))
             print(f"Info: RNN Model loaded Successfully!")
             # print(f'Info: Model {self.model}')
         return needTraining
 
     def train_RNN(self, X_train, y_train, num_epochs, batch_size, learning_rate, X_eval=None, y_eval=None,
-                  eval_decision_include=False):
+                  eval_decision_include=True, model_dir="../models"):
+
         # defining Hyperparameter
         criterion = self.criterion
 
@@ -142,7 +146,7 @@ class RNNModel:
                 best_avg_loss = avg_loss
                 best_eval_loss = eval_loss
                 patience_counter = 0
-                torch.save(self.model.state_dict(), Path("../models/", self.model_name))
+                torch.save(self.model.state_dict(), Path(model_dir, self.model_name))
                 print(f'Info: Epoch {epoch}, train_loss {avg_loss}, eval_loss {eval_loss}, '
                       f'best Model saved with the loss {best_avg_loss}')
 
