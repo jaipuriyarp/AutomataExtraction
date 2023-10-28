@@ -1,12 +1,12 @@
 import sys
 import os
-import random
-import ast
 import argparse
 modelDir = "../models"
 pathsToInclude = ["../../TheoryOfEquality/vLStarForRationalAutomata/", modelDir, "../RNNLanguageModels", "."]
 for path in pathsToInclude:
     sys.path.append(path)
+
+file_extension_name = "_newX"
 
 from vLStar import RationalNumber, RationalNominalAutomata, learn
 from rnnInterface import RNNInterface
@@ -19,7 +19,7 @@ from EquivQueryGenerator import queryGenerator, generateOneQuery
 MAX_RUN_TIME = 18000 # in seconds
 # Upper_time_limit = 600 # in seconds
 Upper_time_limit_global = 400 # in seconds
-Upper_limit_of_sequence_checking_global = 5000
+Upper_limit_of_sequence_checking_global = 2000
 # Upper_time_limit = 30 # in seconds
 # Upper_limit_of_sequence_checking = 50
 # lang = 4
@@ -104,7 +104,7 @@ def findAdversarialExamples(max_length:int, rnnInterface:object, gTComparison:ob
 
 def main() -> None:
     parser = argparse.ArgumentParser(description='A Python script that accepts input using -lang.')
-    parser.add_argument('-lang', type=str, help='Specify an input value.')
+    parser.add_argument('--lang', type=str, help='Specify an input value.')
     args = parser.parse_args()
     global lang
     lang = args.lang
@@ -140,7 +140,10 @@ def main() -> None:
         input_size, max_length = 2, 24
         checkGndLabel = is_balanced_parenthesis
         model_name = "modelRNNQ_lang8_balancedParenthesis.pt"
+        model_name = "modelRNNQ_lang8_balancedParenthesis_allEx1.pt"
 
+    dir_to_save = "../logs/"
+    model_name = "modelRNNQ_lang" + str(lang) + "_newX.pt"
     print(f"Info: Lang: {lang}, model name: {model_name}, gnd function: {checkGndLabel}")
     RNNModelPath = os.path.join(modelDir, model_name)
     rnnInterface = RNNInterface(rnn_model_path=RNNModelPath, input_size=input_size, maxlength=max_length)
@@ -156,9 +159,10 @@ def main() -> None:
                                 timer=timer, Upper_time_limit=Upper_time_limit, Upper_limit_of_sequence_checking=Upper_limit_of_sequence_checking)
 
     # timer.report()
-    gTComparison.create_presentation_table(file_name="lang" + str(lang) + "_presentationTable_rSampling.csv")
-    gTComparison.statistics(file_name= "lang" + str(lang) + "_list_rSampling.csv")
-    gTComparison.display_adversarial_query_time_relation(file_name= "lang" + str(lang) + "_adversarial_list_rSampling.csv")
+
+    gTComparison.create_presentation_table(file_name= dir_to_save + "lang" + str(lang) + "_presentationTable_rSampling" + file_extension_name + ".csv")
+    gTComparison.statistics(file_name= dir_to_save + "lang" + str(lang) + "_list_rSampling" + file_extension_name + ".csv")
+    gTComparison.display_adversarial_query_time_relation(file_name=  dir_to_save + "lang" + str(lang) + "_adversarial_list_rSampling" + file_extension_name + ".csv")
 
 
 if __name__ == "__main__":

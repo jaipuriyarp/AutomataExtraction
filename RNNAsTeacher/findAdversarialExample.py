@@ -2,11 +2,13 @@ import sys
 import os
 import random
 import ast
+import argparse
 modelDir = "../models"
 pathsToInclude = ["../../TheoryOfEquality/vLStarForRationalAutomata/", modelDir, "../RNNLanguageModels", "."]
 for path in pathsToInclude:
     sys.path.append(path)
 
+file_suffix_name = "_newX"
 from vLStar import RationalNumber, RationalNominalAutomata, learn
 from rnnInterface import RNNInterface
 from GTComparison import GTComparison
@@ -19,45 +21,43 @@ filelist = None
 MAX_RUN_TIME = 18000 # in seconds
 # Upper_time_limit = 600 # in seconds
 Upper_time_limit = 400 # in seconds
-Upper_limit_of_sequence_checking = 5000
+Upper_limit_of_sequence_checking = 2000
 # Upper_time_limit = 30 # in seconds
 # Upper_limit_of_sequence_checking = 50
-lang = 1
+lang = 2
 max_length = 20
 # global count_function_calls
 count_function_calls = 0
-
-if lang == 1:
-    checkGndLabel = Lang_is_aStar
-    model_name = "modelRNNQ_lang1_try_withlangGenOnQ.pt"
-elif lang == 2:
-    checkGndLabel = Lang_is_abSeq
-    model_name = "modelRNNQ_lang2_try_withlangGenOnQ.pt"
-elif lang == 3:
-    checkGndLabel = Lang_is_abSeq_OddaEvenb
-    model_name = "modelRNNQ_lang3_aOddbEvenNum_new.pt"
-elif lang == 4:
-    checkGndLabel = Lang_is_noTrigrams
-    model_name = "modelRNNQ_lang4_try_withlangGenOnQ.pt"
-elif lang == 5:
-    checkGndLabel = Lang_is_abBothEven
-    model_name = "modelRNNQ_lang5_try_withlangGenOnQ1.pt"
-elif lang == 6:
-    checkGndLabel = Lang_is_aMod3b
-    model_name = "modelRNNQ_lang6_try_withlangGenOnQ.pt"
-elif lang == 7:
-    checkGndLabel = Lang_is_aStarbStaraStarbStar
-    model_name = "modelRNNQ_lang7_try_withlangGenOnQ.pt"
-
-RNNModelPath = os.path.join(modelDir, model_name)
-rnnInterface = RNNInterface(rnn_model_path=RNNModelPath, input_size=1)
-gTComparison = GTComparison(checkGndLabel)
-# checkEquivalence = CheckEquivalence(depth=7, num_of_RationalNumber=2,
-#                                     automaton=None, membershipQuery=None)
-timer = RecordTime(record_elapsed_time=False)
 printQlimit, printTlimit = False, False
+def get_gndFunc(lang):
+    if lang == 1:
+        checkGndLabel = Lang_is_aStar
+        # model_name = "modelRNNQ_lang1_try_withlangGenOnQ.pt"
+    elif lang == 2:
+        checkGndLabel = Lang_is_abSeq
+        # model_name = "modelRNNQ_lang2_try_withlangGenOnQ.pt"
+        # model_name = "modelRNNQ_lang2_newX.pt"
+    elif lang == 3:
+        checkGndLabel = Lang_is_abSeq_OddaEvenb
+        # model_name = "modelRNNQ_lang3_aOddbEvenNum_new.pt"
+        # model_name = "modelRNNQ_lang3_newX.pt"
+    elif lang == 4:
+        checkGndLabel = Lang_is_noTrigrams
+        # model_name = "modelRNNQ_lang4_try_withlangGenOnQ.pt"
+        # model_name = "modelRNNQ_lang2_newX.pt"
+    elif lang == 5:
+        checkGndLabel = Lang_is_abBothEven
+        # model_name = "modelRNNQ_lang5_try_withlangGenOnQ1.pt"
+    elif lang == 6:
+        checkGndLabel = Lang_is_aMod3b
+        # model_name = "modelRNNQ_lang6_try_withlangGenOnQ.pt"
+    elif lang == 7:
+        checkGndLabel = Lang_is_aStarbStaraStarbStar
+        # model_name = "modelRNNQ_lang7_try_withlangGenOnQ.pt"
+    else:
+        raise Exception(f"No such languages!!")
 
-print(f"Info: Lang: {lang}, model name: {model_name}, gnd function {checkGndLabel}")
+    return checkGndLabel
 
 def membershipQuery(word: list, printing=True) -> bool:
     # expects a list of RationalNumbers
@@ -214,13 +214,29 @@ def convert_to_list_from_list(filelist=filelist) -> list:
     return [pos, neg]
 
 def main() -> None:
-    numberOfExamples = 3000
+    parser = argparse.ArgumentParser(description='Process some language options.')
+    parser.add_argument('--lang', help='Specify the programming language.')
+    args = parser.parse_args()
+    lang = args.lang
+    lang = int(lang)
+
+    checkGndLabel = get_gndFunc(lang)
+    model_name = "modelRNNQ_lang" + str(lang) + "_newX.pt"
+    RNNModelPath = os.path.join(modelDir, model_name)
+    global rnnInterface,  gTComparison, timer
+    rnnInterface = RNNInterface(rnn_model_path=RNNModelPath, input_size=1)
+    gTComparison = GTComparison(checkGndLabel)
+    timer = RecordTime(record_elapsed_time=False)
+
+    print(f"Info: Lang: {lang}, model name: {model_name}, gnd function {checkGndLabel}")
+    global res_f
+
     if filelist is not None:
+        numberOfExamples = 3000
         pos, neg = convert_to_list_from_list(filelist=filelist)
         select_pos = random.sample(pos, int(numberOfExamples / 2))
         select_neg = random.sample(neg, numberOfExamples - int(numberOfExamples / 2))
         selected_data = select_pos + select_neg
-        global res_f
         res_f = sorted(selected_data, key=len)
         pos_neg_list = convert_to_list_from_list(filelist=filelist)
     else:
@@ -233,9 +249,12 @@ def main() -> None:
                              verbose=False, fileList=None)
     print(learnedAutomaton)
     # timer.report()
-    gTComparison.create_presentation_table(file_name="lang" + str(lang) + "_presentationTable.csv")
-    gTComparison.statistics(file_name= "lang" + str(lang) + "_list.csv")
-    gTComparison.display_adversarial_query_time_relation(file_name= "lang" + str(lang) + "_adversarial_list.csv")
+    pt_file = "../logs/" + "lang" + str(lang) + "_presentationTable" + file_suffix_name + ".csv"
+    gTComparison.create_presentation_table(file_name=pt_file)
+    st_file = "../logs/" +  "lang" + str(lang) + "_list" + file_suffix_name + ".csv"
+    gTComparison.statistics(file_name=st_file)
+    comp_file = "../logs/" + "lang" + str(lang) + "_adversarial_list" + file_suffix_name + ".csv"
+    gTComparison.display_adversarial_query_time_relation(file_name=comp_file)
 
 
 if __name__ == "__main__":
