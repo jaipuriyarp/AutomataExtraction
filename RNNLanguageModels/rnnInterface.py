@@ -9,10 +9,11 @@ from balancedParanthesis import encode_sequence as encode_parantheses
 from languageGeneratorOnQ_from_file import encode_sequence
 from vLStar import RationalNumber
 from rnnModel import RNNModel
-maxlength = 20
+
 class RNNInterface:
 
-    def __init__(self, rnn_model_path: str, input_size: int, hidden_size=64, output_size=1, num_layers=2):
+    def __init__(self, rnn_model_path: str, input_size: int, hidden_size=64, output_size=1, num_layers=2,
+                 maxlength=20):
         # self.w2v_model = load_model(word2vec_model_path, limit=None)
         RNN_model = RNNModel(input_size=input_size, hidden_size=hidden_size,
                              output_size=output_size, num_layers=num_layers, model_name=rnn_model_path.split("/")[-1])
@@ -20,6 +21,7 @@ class RNNInterface:
         RNN_model.load_RNN_model(rnn_model_path)
         print ("RNN loaded successfully! {RNN_model}")
         self.rnn_model = RNN_model
+        self.maxlength = maxlength
 
     def find_lcm(self, num1: int, num2: int):
         max = max(num1, num2)
@@ -58,18 +60,21 @@ class RNNInterface:
 
 
     def convertRationalNumberListToParanthesesStr(self, rationalNumList: list) -> list:
-        '''This function converts Rational number to a string of parantheses'''
+        '''This function converts Rational number to a string of parentheses'''
         '''TODO: catch: what if first parentheses is closing instead of opening parentheses'''
         if type(rationalNumList) == str:
             return rationalNumList
         else:
             # if rationalNumList is str and all([x=="(" or x==")" for x in rationalNumList]): # already converted??
             #     return rationalNumList
+            # print(f"rationalNumList: {rationalNumList}")
             x = list(set(rationalNumList))
+
             paranthesesEncode = {}
             if len(x) > 1:
-                if x[0] > x[1]:
-                    x[0], x[1] = x[1], x[0]
+                # if x[0] > x[1]:
+                #     x[0], x[1] = x[1], x[0]
+                x.sort()
                 paranthesesEncode = {x[0] : ")", x[1] : "("}
             elif len(x) == 1:
                 paranthesesEncode = {x[0]: ")"}
@@ -92,13 +97,13 @@ class RNNInterface:
 
     def askRNN(self, numList: list, paranthesesLang=False) -> bool:
         wordL = self.getRNNCompatibleInputFromRationalNumber(numList, paranthesesLang)
-        print(wordL)
+        # print(wordL)
         if paranthesesLang:
             if len(set(numList)) > 2 or 'x' in wordL:
                 return False
-            X = [encode_parantheses(wordL, maxlength)]
+            X = [encode_parantheses(wordL, self.maxlength)]
         else:
-            X = [encode_sequence(wordL, maxlength)]
+            X = [encode_sequence(wordL, self.maxlength)]
 
         # print(f"The converted query to RNN is:{wordL}")
 

@@ -31,7 +31,7 @@ class RecordTime():
     def stop(self):
         self.end_time = time.time()
         elapsed_time = self.end_time - self.start_time
-        print(f"Execution time: {elapsed_time:.4f} seconds")
+        print(f"Stopped time: {elapsed_time:.4f} seconds")
         if self.record_elapsed_time:
             # self.end_time_list.append(self.end_time)
             self.elapsed_time_list.append(elapsed_time)

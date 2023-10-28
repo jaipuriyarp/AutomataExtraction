@@ -33,15 +33,45 @@ class GTComparison:
         self.query_elapsed_time_dict = {}
         self.round_digits_upto = 4
 
+        self.table_list_info_word = []
+        self.table_list_info_time = []
+        self.table_list_info_memQ_asked_before = []
+        self.table_list_info_total_seq_asked_before = []
+        self.table_list_info_is_memQ = []
+
     def queriesCount(self):
         return self.qCount
 
     def addAdversarialExample(self, word:list):
         if word not in self.queries_incorrectlyAnswered:
             self.queries_incorrectlyAnswered.append(word)
-    def save_elapsed_time_for_query(self, word:list, time:float):
+    def save_elapsed_time_for_query(self, word:list, time:float, memQuery:bool):
         if tuple(word) not in self.query_elapsed_time_dict.keys():
             self.query_elapsed_time_dict[tuple(word)] = time
+            self.save_all_info(word, time, memQuery)
+
+    def save_all_info(self, word:list, time:float, memQuery: bool):
+        self.table_list_info_word.append(tuple(word))
+        self.table_list_info_time.append(time)
+        self.table_list_info_memQ_asked_before.append(self.num_pos_memQ + self.num_neg_memQ-1)
+        self.table_list_info_total_seq_asked_before.append(self.qCount-1)
+        if memQuery:
+            self.table_list_info_is_memQ.append("Y")
+        else:
+            self.table_list_info_is_memQ.append("N")
+
+    def create_presentation_table(self, file_name=None):
+        data = {
+            "Adversarial Examples" : self.table_list_info_word,
+            "Time(s)" :  self.table_list_info_time,
+            "Mem Queries asked before" : self.table_list_info_memQ_asked_before,
+            "Total sequences asked before" : self.table_list_info_total_seq_asked_before,
+            "Mem Query?" : self.table_list_info_is_memQ
+        }
+        df = pd.DataFrame(data)
+        print(df)
+        if file_name is not None:
+            df.to_csv(file_name, index=False)
 
     def display_adversarial_query_time_relation(self, file_name=None):
         adversarial_example_col, adversarial_example_time_col, adversarial_example_length_col = [], [], []
@@ -151,10 +181,10 @@ class GTComparison:
                             (self.num_pos_memQ + self.num_neg_memQ) - (self.true_positive_memQ + self.true_negative_memQ),
                             total_memQ_accuracy]
         #Equiv:
-        if self.num_pos_memQ:
+        if self.num_pos_EquivQ:
             pos_EquivQ_accuray = round(self.true_positive_EquivQ / self.num_pos_EquivQ, ndigits=self.round_digits_upto)
 
-        if self.num_neg_memQ:
+        if self.num_neg_EquivQ:
             neg_EquivQ_accuracy = round(self.true_negative_EquivQ / self.num_neg_EquivQ, ndigits=self.round_digits_upto)
 
         if self.num_pos_EquivQ or self.num_neg_EquivQ:
