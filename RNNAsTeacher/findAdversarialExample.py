@@ -8,7 +8,7 @@ pathsToInclude = ["../../TheoryOfEquality/vLStarForRationalAutomata/", modelDir,
 for path in pathsToInclude:
     sys.path.append(path)
 
-file_suffix_name = "_newX"
+# file_suffix_name = "_newX_try"
 from vLStar import RationalNumber, RationalNominalAutomata, learn
 from rnnInterface import RNNInterface
 from GTComparison import GTComparison
@@ -24,7 +24,6 @@ Upper_time_limit = 400 # in seconds
 Upper_limit_of_sequence_checking = 2000
 # Upper_time_limit = 30 # in seconds
 # Upper_limit_of_sequence_checking = 50
-lang = 2
 max_length = 20
 # global count_function_calls
 count_function_calls = 0
@@ -54,6 +53,8 @@ def get_gndFunc(lang):
     elif lang == 7:
         checkGndLabel = Lang_is_aStarbStaraStarbStar
         # model_name = "modelRNNQ_lang7_try_withlangGenOnQ.pt"
+    elif lang == 8:
+        checkGndLabel = is_balanced_parenthesis
     else:
         raise Exception(f"No such languages!!")
 
@@ -215,16 +216,32 @@ def convert_to_list_from_list(filelist=filelist) -> list:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description='Process some language options.')
+    parser.add_argument('--file_suffix', type=str, default="",
+                        help='Specify the suffix of the file for saving the data.\n Default value is None.')
+    parser.add_argument('--model_suffix', type=str, default="",
+                        help='Specify the suffix of the RNN model name.\n Default value is None.')
     parser.add_argument('--lang', help='Specify the programming language.')
+
     args = parser.parse_args()
     lang = args.lang
     lang = int(lang)
+    model_suffix = args.model_suffix
+    file_suffix = args.file_suffix
 
     checkGndLabel = get_gndFunc(lang)
-    model_name = "modelRNNQ_lang" + str(lang) + "_newX.pt"
+    # model_name = "modelRNNQ_lang" + str(lang) + "_newX.pt"
+    model_name = "modelRNNQ_lang" + str(lang)
+    if model_suffix != "":
+        model_name = model_name + "_" + model_suffix + ".pt"
+    else:
+        model_name = model_name + ".pt"
+
     RNNModelPath = os.path.join(modelDir, model_name)
     global rnnInterface,  gTComparison, timer
-    rnnInterface = RNNInterface(rnn_model_path=RNNModelPath, input_size=1)
+    input_size = 1
+    if lang == 8:
+        input_size = 2
+    rnnInterface = RNNInterface(rnn_model_path=RNNModelPath, input_size=input_size)
     gTComparison = GTComparison(checkGndLabel)
     timer = RecordTime(record_elapsed_time=False)
 
@@ -249,11 +266,11 @@ def main() -> None:
                              verbose=False, fileList=None)
     print(learnedAutomaton)
     # timer.report()
-    pt_file = "../logs/" + "lang" + str(lang) + "_presentationTable" + file_suffix_name + ".csv"
+    pt_file = "../logs/" + "lang" + str(lang) + "_presentationTable" + file_suffix + ".csv"
     gTComparison.create_presentation_table(file_name=pt_file)
-    st_file = "../logs/" +  "lang" + str(lang) + "_list" + file_suffix_name + ".csv"
+    st_file = "../logs/" +  "lang" + str(lang) + "_list" + file_suffix + ".csv"
     gTComparison.statistics(file_name=st_file)
-    comp_file = "../logs/" + "lang" + str(lang) + "_adversarial_list" + file_suffix_name + ".csv"
+    comp_file = "../logs/" + "lang" + str(lang) + "_adversarial_list" + file_suffix + ".csv"
     gTComparison.display_adversarial_query_time_relation(file_name=comp_file)
 
 

@@ -1,12 +1,12 @@
 import sys
 import os
 import argparse
-modelDir = "../models"
-pathsToInclude = ["../../TheoryOfEquality/vLStarForRationalAutomata/", modelDir, "../RNNLanguageModels", "."]
+model_dir = "../models"
+pathsToInclude = ["../../TheoryOfEquality/vLStarForRationalAutomata/", model_dir, "../RNNLanguageModels", "."]
 for path in pathsToInclude:
     sys.path.append(path)
 
-file_extension_name = "_newX"
+file_extension_name = "_newX_try"
 
 from vLStar import RationalNumber, RationalNominalAutomata, learn
 from rnnInterface import RNNInterface
@@ -104,12 +104,18 @@ def findAdversarialExamples(max_length:int, rnnInterface:object, gTComparison:ob
 
 def main() -> None:
     parser = argparse.ArgumentParser(description='A Python script that accepts input using -lang.')
-    parser.add_argument('--lang', type=str, help='Specify an input value.')
+    parser.add_argument('--file_suffix', type=str, default="",
+                        help='Specify the suffix of the file for saving the data.\n Default value is None.')
+    parser.add_argument('--model_suffix', type=str, default="",
+                        help='Specify the suffix of the RNN model name.\n Default value is None.')
+    parser.add_argument('--lang', type=str, help='Specify an language input value.')
     args = parser.parse_args()
     global lang
     lang = args.lang
+    model_suffix = args.model_suffix
+    file_suffix = args.file_suffix
 
-    print(f"INFO: Lang selected is : {lang}")
+    print(f"INFO: Lang selected is: {lang}, file_suffix is:{file_suffix} and model_suffix is: {model_suffix}")
     input_size, max_length  = 1, 20
     model_name, checkGndLabel = None, None
     lang = int(lang)
@@ -142,10 +148,15 @@ def main() -> None:
         model_name = "modelRNNQ_lang8_balancedParenthesis.pt"
         model_name = "modelRNNQ_lang8_balancedParenthesis_allEx1.pt"
 
-    dir_to_save = "../logs/"
-    model_name = "modelRNNQ_lang" + str(lang) + "_newX.pt"
+    log_dir = "../logs/"
+
+    model_name = "modelRNNQ_lang" + str(lang)
+    if model_suffix != "":
+        model_name = model_name + "_" + model_suffix
+    model_name =  model_name + ".pt"
     print(f"Info: Lang: {lang}, model name: {model_name}, gnd function: {checkGndLabel}")
-    RNNModelPath = os.path.join(modelDir, model_name)
+
+    RNNModelPath = os.path.join(model_dir, model_name)
     rnnInterface = RNNInterface(rnn_model_path=RNNModelPath, input_size=input_size, maxlength=max_length)
     gTComparison = GTComparison(checkGndLabel)
     # checkEquivalence = CheckEquivalence(depth=7, num_of_RationalNumber=2,
@@ -159,10 +170,12 @@ def main() -> None:
                                 timer=timer, Upper_time_limit=Upper_time_limit, Upper_limit_of_sequence_checking=Upper_limit_of_sequence_checking)
 
     # timer.report()
-
-    gTComparison.create_presentation_table(file_name= dir_to_save + "lang" + str(lang) + "_presentationTable_rSampling" + file_extension_name + ".csv")
-    gTComparison.statistics(file_name= dir_to_save + "lang" + str(lang) + "_list_rSampling" + file_extension_name + ".csv")
-    gTComparison.display_adversarial_query_time_relation(file_name=  dir_to_save + "lang" + str(lang) + "_adversarial_list_rSampling" + file_extension_name + ".csv")
+    pt_file = os.path.join(log_dir, "lang" + str(lang) + "_presentationTable_rSampling" + file_suffix + ".csv")
+    gTComparison.create_presentation_table(file_name=pt_file)
+    st_file = os.path.join(log_dir, "lang" + str(lang) + "_list_rSampling" + file_suffix + ".csv")
+    gTComparison.statistics(file_name=st_file)
+    comp_file = os.path.join(log_dir, "lang" + str(lang) + "_adversarial_list_rSampling" + file_suffix + ".csv")
+    gTComparison.display_adversarial_query_time_relation(file_name=comp_file)
 
 
 if __name__ == "__main__":
