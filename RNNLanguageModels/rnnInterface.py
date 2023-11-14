@@ -15,12 +15,15 @@ class RNNInterface:
     def __init__(self, rnn_model_path: str, input_size: int, hidden_size=64, output_size=1, num_layers=2,
                  maxlength=20):
         # self.w2v_model = load_model(word2vec_model_path, limit=None)
-        RNN_model = RNNModel(input_size=input_size, hidden_size=hidden_size,
-                             output_size=output_size, num_layers=num_layers, model_name=rnn_model_path.split("/")[-1])
-        # Load the model saved already in the models folder
-        RNN_model.load_RNN_model(rnn_model_path)
-        print ("RNN loaded successfully! {RNN_model}")
-        self.rnn_model = RNN_model
+        if rnn_model_path and input_size:
+            RNN_model = RNNModel(input_size=input_size, hidden_size=hidden_size,
+                                 output_size=output_size, num_layers=num_layers, model_name=rnn_model_path.split("/")[-1])
+            # Load the model saved already in the models folder
+            RNN_model.load_RNN_model(rnn_model_path)
+            print("RNN loaded successfully! {RNN_model}")
+            self.rnn_model = RNN_model
+        else:
+            print('Warning: No RNN model provided!!')
         self.maxlength = maxlength
 
     def find_lcm(self, num1: int, num2: int):

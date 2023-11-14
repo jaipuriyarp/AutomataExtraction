@@ -107,45 +107,49 @@ class GTComparison:
             if actual_ans: # case: positive case
                 if memQ: # case: membership Queries
                     self.num_pos_memQ += 1
-                    if RNN_ans:
-                        self.true_positive += 1
-                        self.true_positive_memQ += 1
-                    else:
-                        self.false_negative += 1
-                        self.false_negative_memQ += 1
-                        self.addAdversarialExample(word)
+                    if RNN_ans is not None:
+                        if RNN_ans:
+                            self.true_positive += 1
+                            self.true_positive_memQ += 1
+                        else:
+                            self.false_negative += 1
+                            self.false_negative_memQ += 1
+                            self.addAdversarialExample(word)
 
                 else: # case: Equivalence check
                     self.num_pos_EquivQ += 1
-                    if RNN_ans:
-                        self.true_positive += 1
-                        self.true_positive_EquivQ += 1
-                    else:
-                        self.false_negative += 1
-                        self.false_negative_EquivQ += 1
-                        self.addAdversarialExample(word)
+                    if RNN_ans is not None:
+                        if RNN_ans:
+                            self.true_positive += 1
+                            self.true_positive_EquivQ += 1
+                        else:
+                            self.false_negative += 1
+                            self.false_negative_EquivQ += 1
+                            self.addAdversarialExample(word)
 
             else: # case: negative
                 if memQ: # case: membership Queries
                     self.num_neg_memQ  += 1
-                    if RNN_ans:
-                        self.false_positive += 1
-                        self.false_positive_memQ += 1
-                        self.addAdversarialExample(word)
-                    else:
-                        self.true_negative += 1
-                        self.true_negative_memQ += 1
+                    if RNN_ans is not None:
+                        if RNN_ans:
+                            self.false_positive += 1
+                            self.false_positive_memQ += 1
+                            self.addAdversarialExample(word)
+                        else:
+                            self.true_negative += 1
+                            self.true_negative_memQ += 1
 
                 else: # case: Equivalence check
                     self.num_neg_EquivQ += 1
-                    if RNN_ans:
-                        self.false_positive += 1
-                        self.false_positive_EquivQ +=1
-                        self.addAdversarialExample(word)
-                    else:
-                        self.true_negative += 1
-                        self.true_negative_EquivQ += 1
-        else:
+                    if RNN_ans is not None:
+                        if RNN_ans:
+                            self.false_positive += 1
+                            self.false_positive_EquivQ +=1
+                            self.addAdversarialExample(word)
+                        else:
+                            self.true_negative += 1
+                            self.true_negative_EquivQ += 1
+        else: # actual_ans is None
             if memQ:  # case: membership Queries
                 self.num_pos_memQ += 1
             else:
