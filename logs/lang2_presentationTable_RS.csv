@@ -1,0 +1,5 @@
+Details,+ve Membership Query,-ve Membership Query,Total Membership Query,+ve Equivalence Query,-ve Equivalence Query,Total Equivalence Query,Total count
+No. of queries asked,33141.0,312311.0,345452.0,0,0,0,345452.0
+No. of queries answered correctly,33141.0,311759.0,344900.0,0,0,0,344900.0
+No. of queries answered incorrectly,0.0,552.0,552.0,0,0,0,552.0
+Accuracy,1.0,0.9982,0.9984,0,0,0,0.9984020934891099

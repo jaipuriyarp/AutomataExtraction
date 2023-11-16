@@ -1,0 +1,2097 @@
+Info: RNN Model instantiation is:  RNN(
+  (rnn): LSTM(1, 64, num_layers=2, batch_first=True, dropout=0.2)
+  (fc): Linear(in_features=64, out_features=1, bias=True)
+  (sigmoid): Sigmoid()
+)
+Info: The model exists at True
+Info: RNN Model loaded Successfully!
+RNN loaded successfully! {RNN_model}
+WARNING: record_elapsed_time parameter is not enabled!!
+Info: Lang: 4, model name: modelRNNQ_lang4_newX.pt, gnd function <function Lang_is_noTrigrams at 0x12f302b80>
+membershipQuery: [] is in the language.
+membershipQuery: [39.0] is in the language.
+Checking equivalence of the following automaton:
+(Q,q0,delta,F) with:
+   Q    : {<>}
+   q0   : <>
+   F    : {<>}
+   delta: {<> --a--> <>,   
+}
+INFO : No. of times..query Generated: 0
+[39/1, 19/1, 53/1, 11/1] was correctly accepted
+[60/1, 12/1, 39/1, 54/1, 50/1] was correctly accepted
+[11/1, 17/1, 24/1] was correctly accepted
+[13/1] was correctly accepted
+[] was correctly accepted
+[] was correctly accepted
+[2/1] was correctly accepted
+[] was correctly accepted
+[60/1, 54/1] was correctly accepted
+[50/1, 9/1, 36/1, 21/1] was correctly accepted
+[53/1, 45/1] was correctly accepted
+[25/1, 54/1] was correctly accepted
+[53/1, 41/1, 16/1, 37/1] was correctly accepted
+[33/1, 56/1, 2/1, 49/1] was correctly accepted
+[16/1] was correctly accepted
+[3/1, 48/1] was correctly accepted
+[14/1, 33/1] was correctly accepted
+[54/1, 27/1, 43/1, 29/1, 57/1] was correctly accepted
+[34/1] was correctly accepted
+[50/1] was correctly accepted
+[37/1, 42/1, 41/1] was correctly accepted
+[34/1] was correctly accepted
+[15/1, 42/1, 5/1, 56/1] was correctly accepted
+[1/1, 34/1, 28/1] was correctly accepted
+[25/1, 14/1, 19/1, 22/1] was correctly accepted
+[40/1, 19/1, 26/1, 11/1] was correctly accepted
+[25/1] was correctly accepted
+[17/1] was correctly accepted
+[33/1, 28/1, 52/1] was correctly accepted
+[11/1] was correctly accepted
+[29/1, 26/1, 29/1, 8/1, 59/1] was correctly accepted
+[54/1, 59/1] was correctly accepted
+[55/1, 5/1, 1/1, 13/1, 47/1] was correctly accepted
+[51/1] was correctly accepted
+[] was correctly accepted
+[37/1, 36/1] was correctly accepted
+[20/1] was correctly accepted
+[] was correctly accepted
+[3/1, 41/1] was correctly accepted
+[] was correctly accepted
+[13/1, 13/1] was correctly accepted
+[34/1, 50/1] was correctly accepted
+[16/1] was correctly accepted
+[6/1] was correctly accepted
+[34/1, 55/1, 8/1] was correctly accepted
+[28/1, 35/1] was correctly accepted
+[43/1, 33/1, 54/1, 27/1, 34/1] was correctly accepted
+[46/1, 10/1, 4/1] was correctly accepted
+[16/1] was correctly accepted
+[52/1, 57/1, 52/1, 13/1] was correctly accepted
+[38/1, 23/1, 39/1] was correctly accepted
+[] was correctly accepted
+[49/1, 8/1, 45/1, 50/1] was correctly accepted
+[39/1, 22/1, 18/1, 51/1] was correctly accepted
+[16/1, 9/1, 50/1] was correctly accepted
+[14/1] was correctly accepted
+[29/1, 43/1, 44/1, 37/1, 49/1] was correctly accepted
+[5/1, 36/1, 12/1, 14/1, 42/1] was correctly accepted
+[10/1, 37/1] was correctly accepted
+[55/1, 32/1, 35/1] was correctly accepted
+[] was correctly accepted
+[36/1, 24/1] was correctly accepted
+[] was correctly accepted
+[2/1, 14/1] was correctly accepted
+[3/1, 7/1] was correctly accepted
+[31/1, 50/1, 22/1, 37/1] was correctly accepted
+[10/1, 60/1, 32/1] was correctly accepted
+[28/1] was correctly accepted
+[] was correctly accepted
+[] was correctly accepted
+[45/1] was correctly accepted
+[] was correctly accepted
+[57/1, 22/1] was correctly accepted
+[20/1, 1/1, 29/1] was correctly accepted
+[51/1, 4/1, 29/1] was correctly accepted
+[9/1, 23/1, 59/1] was correctly accepted
+[32/1, 20/1, 17/1, 31/1] was correctly accepted
+[] was correctly accepted
+[29/1, 47/1] was correctly accepted
+[43/1, 25/1, 53/1, 10/1] was correctly accepted
+[] was correctly accepted
+[2/1, 53/1] was correctly accepted
+[25/1, 1/1, 35/1, 55/1, 37/1] was correctly accepted
+[12/1, 40/1, 8/1] was correctly accepted
+[21/1, 15/1, 12/1] was correctly accepted
+[53/1, 14/1, 52/1] was correctly accepted
+[18/1, 10/1] was correctly accepted
+[59/1, 59/1, 45/1, 4/1, 5/1] was correctly accepted
+[24/1] was correctly accepted
+[28/1, 10/1, 16/1] was correctly accepted
+[60/1, 15/1, 43/1, 23/1] was correctly accepted
+[] was correctly accepted
+[26/1] was correctly accepted
+[16/1, 23/1, 11/1, 39/1] was correctly accepted
+[35/1, 6/1] was correctly accepted
+[57/1, 14/1, 2/1, 12/1, 9/1] was correctly accepted
+[52/1] was correctly accepted
+[21/1, 18/1, 33/1, 15/1] was correctly accepted
+[5/1, 31/1, 32/1, 32/1] was correctly accepted
+[50/1, 26/1, 5/1, 56/1, 20/1] was correctly accepted
+[] was correctly accepted
+[] was correctly accepted
+[] was correctly accepted
+[] was correctly accepted
+[3/1, 32/1, 36/1, 52/1, 6/1] was correctly accepted
+[31/1, 34/1, 54/1] was correctly accepted
+[25/1, 4/1] was correctly accepted
+[] was correctly accepted
+[19/1, 40/1, 29/1, 36/1, 5/1] was correctly accepted
+[59/1, 7/1] was correctly accepted
+[22/1, 52/1] was correctly accepted
+[20/1, 1/1] was correctly accepted
+[60/1, 12/1, 43/1, 39/1, 6/1] was correctly accepted
+[] was correctly accepted
+[29/1, 5/1] was correctly accepted
+[25/1, 8/1, 8/1] was correctly accepted
+[27/1, 17/1, 55/1, 56/1, 6/1] was correctly accepted
+[30/1, 25/1, 12/1, 40/1] was correctly accepted
+[40/1, 34/1] was correctly accepted
+[32/1, 24/1, 8/1, 38/1] was correctly accepted
+[40/1] was correctly accepted
+[37/1, 38/1, 11/1, 24/1, 57/1] was correctly accepted
+[48/1, 5/1, 21/1, 31/1] was correctly accepted
+[45/1] was correctly accepted
+[28/1, 18/1] was correctly accepted
+[41/1] was correctly accepted
+[14/1, 58/1, 19/1] was correctly accepted
+[24/1, 18/1] was correctly accepted
+[27/1, 43/1] was correctly accepted
+[1/1] was correctly accepted
+[2/1] was correctly accepted
+[34/1, 9/1] was correctly accepted
+[13/1, 14/1] was correctly accepted
+[1/1, 48/1, 43/1] was correctly accepted
+[] was correctly accepted
+[29/1] was correctly accepted
+[42/1] was correctly accepted
+[] was correctly accepted
+[41/1, 2/1, 52/1] was correctly accepted
+[48/1] was correctly accepted
+[24/1, 44/1, 11/1] was correctly accepted
+[1/1, 34/1, 52/1, 1/1] was correctly accepted
+[] was correctly accepted
+[47/1, 46/1] was correctly accepted
+[17/1] was correctly accepted
+[2/1, 27/1, 15/1, 40/1] was correctly accepted
+[27/1, 9/1, 19/1] was correctly accepted
+[25/1] was correctly accepted
+[51/1, 50/1, 24/1, 56/1] was correctly accepted
+[24/1, 40/1, 32/1, 35/1] was correctly accepted
+[28/1] was correctly accepted
+[19/1, 7/1, 55/1, 39/1, 20/1] was correctly accepted
+[15/1] was correctly accepted
+[8/1, 51/1, 33/1] was correctly accepted
+[] was correctly accepted
+[] was correctly accepted
+[49/1, 22/1, 7/1, 23/1] was correctly accepted
+[53/1, 49/1] was correctly accepted
+[] was correctly accepted
+[] was correctly accepted
+[50/1, 13/1, 32/1] was correctly accepted
+[34/1, 19/1, 20/1, 20/1] was correctly accepted
+[37/1, 18/1, 39/1] was correctly accepted
+[14/1, 8/1, 52/1, 28/1] was correctly accepted
+[] was correctly accepted
+[] was correctly accepted
+[44/1, 55/1, 39/1, 34/1] was correctly accepted
+[6/1, 41/1, 26/1, 22/1] was correctly accepted
+[19/1] was correctly accepted
+[45/1, 36/1, 3/1, 46/1] was correctly accepted
+[] was correctly accepted
+[26/1, 2/1, 2/1, 19/1, 20/1] was correctly accepted
+[36/1, 48/1, 2/1, 7/1] was correctly accepted
+[56/1, 44/1, 30/1, 41/1, 19/1] was correctly accepted
+[9/1, 24/1, 38/1] was correctly accepted
+[45/1, 25/1] was correctly accepted
+[39/1, 17/1] was correctly accepted
+[48/1, 19/1, 17/1, 46/1] was correctly accepted
+[] was correctly accepted
+[] was correctly accepted
+[4/1, 26/1, 1/1, 15/1, 26/1] was correctly accepted
+[8/1, 51/1, 51/1, 56/1] was correctly accepted
+[15/1, 4/1, 23/1, 18/1] was correctly accepted
+[11/1, 49/1, 46/1, 45/1] was correctly accepted
+[30/1, 40/1, 36/1] was correctly accepted
+[53/1, 7/1, 45/1] was correctly accepted
+[35/1, 47/1, 41/1, 51/1, 35/1] was correctly accepted
+[30/1, 56/1, 10/1, 43/1] was correctly accepted
+[40/1, 54/1] was correctly accepted
+[7/1, 49/1, 19/1, 12/1] was correctly accepted
+[27/1, 31/1, 43/1] was correctly accepted
+[42/1, 55/1, 22/1, 34/1, 16/1] was correctly accepted
+[] was correctly accepted
+[2/1, 48/1] was correctly accepted
+[24/1, 49/1, 54/1] was correctly accepted
+[29/1, 27/1, 16/1] was correctly accepted
+[3/1, 58/1] was correctly accepted
+[] was correctly accepted
+[8/1, 3/1, 58/1] was correctly accepted
+[14/1, 47/1, 42/1, 9/1] was correctly accepted
+[34/1, 26/1, 56/1, 46/1, 57/1] was correctly accepted
+[53/1, 45/1, 47/1] was correctly accepted
+[22/1] was correctly accepted
+[55/1, 28/1, 41/1, 11/1] was correctly accepted
+[40/1, 52/1, 32/1, 31/1, 1/1] was correctly accepted
+[31/1, 47/1] was correctly accepted
+[] was correctly accepted
+[20/1, 20/1, 16/1, 2/1, 24/1] was correctly accepted
+[52/1, 29/1, 37/1, 35/1] was correctly accepted
+[43/1, 42/1, 2/1, 42/1] was correctly accepted
+[35/1, 29/1, 19/1, 34/1] was correctly accepted
+[45/1, 59/1, 26/1, 19/1] was correctly accepted
+[58/1, 31/1, 38/1, 40/1, 12/1] was correctly accepted
+[53/1, 54/1, 18/1, 35/1, 38/1] was correctly accepted
+[28/1, 34/1, 4/1, 5/1] was correctly accepted
+[26/1, 40/1, 42/1, 20/1, 21/1] was correctly accepted
+[] was correctly accepted
+[45/1] was correctly accepted
+[10/1, 15/1] was correctly accepted
+[32/1, 44/1, 55/1, 14/1, 16/1] was correctly accepted
+[12/1, 56/1, 19/1, 8/1, 22/1] was correctly accepted
+[46/1, 41/1] was correctly accepted
+[29/1, 55/1, 60/1] was correctly accepted
+[17/1, 16/1, 6/1, 9/1] was correctly accepted
+[] was correctly accepted
+[51/1, 23/1, 48/1, 6/1, 4/1] was correctly accepted
+[7/1, 5/1, 22/1, 36/1, 57/1] was correctly accepted
+[56/1, 54/1, 26/1, 37/1] was correctly accepted
+[31/1, 57/1, 49/1] was correctly accepted
+[30/1, 31/1] was correctly accepted
+[51/1, 24/1, 33/1, 9/1, 39/1] was correctly accepted
+[49/1] was correctly accepted
+[50/1, 56/1, 37/1] was correctly accepted
+[42/1] was correctly accepted
+[25/1, 19/1, 33/1, 3/1] was correctly accepted
+[54/1, 27/1, 8/1, 12/1, 27/1] was correctly accepted
+[51/1, 9/1] was correctly accepted
+[] was correctly accepted
+[51/1, 18/1, 30/1] was correctly accepted
+[42/1] was correctly accepted
+[21/1, 11/1] was correctly accepted
+[58/1] was correctly accepted
+[2/1, 44/1, 51/1] was correctly accepted
+[] was correctly accepted
+[28/1, 58/1, 12/1, 34/1] was correctly accepted
+[41/1] was correctly accepted
+[9/1, 59/1, 30/1, 33/1, 19/1] was correctly accepted
+[26/1, 34/1, 49/1, 48/1, 60/1] was correctly accepted
+[43/1, 48/1, 26/1, 60/1, 55/1] was correctly accepted
+[18/1, 15/1] was correctly accepted
+[6/1, 38/1, 42/1, 56/1] was correctly accepted
+[57/1, 47/1, 18/1] was correctly accepted
+[52/1, 40/1, 45/1, 53/1, 56/1] was correctly accepted
+[] was correctly accepted
+[28/1, 44/1] was correctly accepted
+[31/1, 38/1, 13/1, 33/1, 23/1] was correctly accepted
+[31/1, 30/1, 6/1] was correctly accepted
+[52/1, 8/1, 28/1, 33/1] was correctly accepted
+[43/1, 4/1, 19/1, 33/1] was correctly accepted
+[17/1, 42/1] was correctly accepted
+[32/1] was correctly accepted
+[60/1, 17/1, 3/1, 41/1, 6/1] was correctly accepted
+[55/1] was correctly accepted
+[35/1] was correctly accepted
+[44/1, 27/1, 49/1, 14/1] was correctly accepted
+[39/1, 16/1, 50/1, 37/1] was correctly accepted
+[17/1, 57/1] was correctly accepted
+[6/1, 3/1] was correctly accepted
+[4/1, 44/1] was correctly accepted
+[23/1, 44/1] was correctly accepted
+[10/1, 1/1] was correctly accepted
+[18/1, 25/1, 34/1, 60/1, 13/1] was correctly accepted
+[] was correctly accepted
+[7/1, 8/1, 28/1] was correctly accepted
+[25/1, 34/1, 41/1, 4/1] was correctly accepted
+[27/1, 46/1, 9/1, 6/1] was correctly accepted
+[18/1, 23/1, 49/1, 18/1, 29/1] was correctly accepted
+[12/1, 44/1, 48/1] was correctly accepted
+[16/1, 37/1, 33/1] was correctly accepted
+[1/1, 12/1, 2/1, 36/1] was correctly accepted
+[8/1, 58/1, 4/1, 17/1, 47/1] was correctly accepted
+[43/1, 40/1, 13/1, 47/1] was correctly accepted
+[] was correctly accepted
+[10/1, 49/1] was correctly accepted
+[42/1, 6/1, 5/1, 13/1, 19/1] was correctly accepted
+[53/1, 6/1, 22/1, 32/1] was correctly accepted
+[56/1] was correctly accepted
+[] was correctly accepted
+[32/1, 29/1, 55/1] was correctly accepted
+[39/1] was correctly accepted
+[14/1, 23/1, 56/1, 31/1] was correctly accepted
+[23/1, 60/1, 22/1] was correctly accepted
+[15/1, 9/1] was correctly accepted
+[23/1, 52/1, 22/1, 58/1, 11/1] was correctly accepted
+[2/1] was correctly accepted
+[43/1, 26/1, 42/1] was correctly accepted
+[] was correctly accepted
+[16/1] was correctly accepted
+[43/1, 1/1, 30/1] was correctly accepted
+[] was correctly accepted
+[3/1, 54/1, 12/1] was correctly accepted
+[14/1] was correctly accepted
+[34/1, 7/1, 9/1, 19/1, 59/1] was correctly accepted
+[52/1, 4/1, 56/1, 1/1, 35/1] was correctly accepted
+[46/1, 35/1, 14/1, 51/1] was correctly accepted
+[] was correctly accepted
+[30/1] was correctly accepted
+[32/1, 54/1, 44/1] was correctly accepted
+[52/1, 40/1, 21/1] was correctly accepted
+[36/1, 30/1, 34/1, 51/1] was correctly accepted
+[] was correctly accepted
+[23/1, 55/1, 60/1, 32/1, 60/1] was correctly accepted
+[56/1, 53/1] was correctly accepted
+[9/1, 1/1, 18/1, 53/1] was correctly accepted
+[4/1] was correctly accepted
+[4/1, 53/1] was correctly accepted
+[] was correctly accepted
+[50/1] was correctly accepted
+[26/1, 56/1, 45/1, 3/1] was correctly accepted
+[19/1, 21/1, 23/1] was correctly accepted
+[14/1, 13/1, 56/1, 6/1, 49/1] was correctly accepted
+[2/1, 26/1, 51/1, 18/1, 30/1] was correctly accepted
+[42/1] was correctly accepted
+[35/1, 37/1] was correctly accepted
+[1/1, 25/1, 24/1] was correctly accepted
+[16/1, 14/1, 35/1, 3/1, 24/1] was correctly accepted
+[32/1] was correctly accepted
+[48/1, 40/1, 2/1, 37/1, 13/1] was correctly accepted
+[23/1, 16/1, 39/1] was correctly accepted
+[] was correctly accepted
+[60/1, 60/1, 16/1] was correctly accepted
+[36/1, 37/1, 15/1, 2/1] was correctly accepted
+[58/1, 59/1, 10/1, 31/1, 14/1] was correctly accepted
+[58/1, 58/1, 56/1, 45/1, 49/1] was correctly accepted
+[22/1, 54/1] was correctly accepted
+[29/1, 13/1] was correctly accepted
+[30/1, 2/1] was correctly accepted
+[14/1, 48/1, 22/1, 3/1] was correctly accepted
+[6/1, 60/1, 48/1] was correctly accepted
+[6/1, 45/1, 10/1, 3/1] was correctly accepted
+[18/1] was correctly accepted
+[26/1, 20/1, 51/1, 5/1, 51/1] was correctly accepted
+[36/1, 32/1] was correctly accepted
+[11/1] was correctly accepted
+[57/1] was correctly accepted
+[28/1, 18/1, 58/1, 50/1] was correctly accepted
+[55/1, 45/1, 2/1, 28/1, 1/1] was correctly accepted
+[] was correctly accepted
+[50/1, 18/1] was correctly accepted
+[53/1, 24/1, 11/1, 19/1, 17/1] was correctly accepted
+[7/1, 2/1, 55/1, 48/1] was correctly accepted
+[34/1] was correctly accepted
+[5/1, 43/1, 26/1, 13/1] was correctly accepted
+[30/1, 6/1, 37/1, 4/1, 53/1] was correctly accepted
+[26/1, 36/1, 34/1] was correctly accepted
+[55/1, 34/1, 4/1] was correctly accepted
+[35/1, 45/1] was correctly accepted
+[45/1, 31/1] was correctly accepted
+[18/1, 6/1] was correctly accepted
+[31/1, 41/1, 13/1] was correctly accepted
+[56/1, 41/1] was correctly accepted
+[60/1] was correctly accepted
+[25/1, 11/1, 6/1, 44/1] was correctly accepted
+[10/1, 35/1, 48/1, 19/1, 42/1] was correctly accepted
+[2/1, 39/1, 50/1] was correctly accepted
+[] was correctly accepted
+[45/1, 32/1, 46/1, 9/1] was correctly accepted
+[24/1, 48/1, 32/1, 15/1, 20/1] was correctly accepted
+[52/1] was correctly accepted
+[44/1, 6/1] was correctly accepted
+[5/1, 4/1] was correctly accepted
+[10/1, 4/1, 3/1, 22/1] was correctly accepted
+[12/1] was correctly accepted
+[] was correctly accepted
+[57/1, 40/1] was correctly accepted
+[10/1, 49/1] was correctly accepted
+[50/1, 47/1, 59/1, 41/1] was correctly accepted
+[42/1, 36/1, 29/1, 8/1] was correctly accepted
+[11/1, 56/1, 42/1, 1/1, 10/1] was correctly accepted
+[22/1, 31/1] was correctly accepted
+[17/1, 19/1, 41/1, 35/1] was correctly accepted
+[32/1, 20/1, 59/1, 57/1, 26/1] was correctly accepted
+[] was correctly accepted
+[] was correctly accepted
+[4/1, 59/1] was correctly accepted
+[11/1, 28/1, 10/1, 27/1] was correctly accepted
+[4/1, 49/1, 10/1, 57/1] was correctly accepted
+[34/1, 2/1, 8/1, 47/1, 59/1] was correctly accepted
+[30/1] was correctly accepted
+[30/1, 43/1, 36/1, 46/1, 56/1] was correctly accepted
+[24/1, 43/1] was correctly accepted
+[7/1, 44/1, 56/1] was correctly accepted
+[20/1, 4/1] was correctly accepted
+[9/1, 31/1, 12/1, 6/1, 3/1] was correctly accepted
+[11/1, 28/1, 39/1, 18/1, 16/1] was correctly accepted
+[55/1] was correctly accepted
+[26/1, 18/1, 12/1, 10/1, 18/1] was correctly accepted
+[48/1, 57/1, 60/1, 39/1] was correctly accepted
+[58/1, 1/1] was correctly accepted
+[59/1] was correctly accepted
+[] was correctly accepted
+[] was correctly accepted
+[41/1, 1/1, 52/1, 34/1] was correctly accepted
+[2/1, 9/1, 60/1, 10/1, 7/1] was correctly accepted
+[] was correctly accepted
+[36/1, 11/1, 49/1] was correctly accepted
+[34/1, 21/1] was correctly accepted
+[] was correctly accepted
+[20/1, 50/1] was correctly accepted
+[53/1, 12/1, 24/1, 48/1] was correctly accepted
+[2/1, 20/1, 4/1] was correctly accepted
+[28/1, 47/1, 3/1, 17/1, 4/1] was correctly accepted
+[12/1, 28/1, 50/1] was correctly accepted
+[] was correctly accepted
+[30/1, 36/1] was correctly accepted
+[41/1, 34/1, 45/1, 25/1, 54/1] was correctly accepted
+[20/1] was correctly accepted
+[] was correctly accepted
+[38/1, 35/1, 17/1, 35/1, 14/1] was correctly accepted
+[44/1, 5/1, 9/1] was correctly accepted
+[55/1, 19/1] was correctly accepted
+[] was correctly accepted
+[6/1, 32/1] was correctly accepted
+[29/1, 41/1, 51/1] was correctly accepted
+[8/1] was correctly accepted
+[8/1, 2/1] was correctly accepted
+[] was correctly accepted
+[60/1, 59/1, 44/1, 32/1, 53/1] was correctly accepted
+[25/1, 12/1] was correctly accepted
+[26/1, 2/1, 2/1] was correctly accepted
+[2/1, 20/1, 28/1] was correctly accepted
+[55/1, 54/1] was correctly accepted
+[28/1, 49/1, 3/1, 37/1, 28/1] was correctly accepted
+[32/1, 40/1, 34/1, 11/1, 6/1] was correctly accepted
+[40/1] was correctly accepted
+[5/1] was correctly accepted
+[51/1, 52/1] was correctly accepted
+[32/1] was correctly accepted
+[21/1, 29/1, 27/1, 16/1, 30/1] was correctly accepted
+[29/1, 22/1, 44/1] was correctly accepted
+[14/1, 29/1, 42/1, 17/1, 22/1] was correctly accepted
+[2/1, 14/1] was correctly accepted
+[5/1, 20/1, 43/1, 21/1] was correctly accepted
+[6/1, 35/1] was correctly accepted
+[40/1, 18/1] was correctly accepted
+[] was correctly accepted
+[26/1, 27/1, 39/1, 28/1] was correctly accepted
+[9/1, 2/1, 44/1, 39/1] was correctly accepted
+[39/1, 53/1, 3/1] was correctly accepted
+[10/1] was correctly accepted
+[4/1, 52/1] was correctly accepted
+[18/1, 39/1, 34/1] was correctly accepted
+[29/1, 50/1, 38/1, 28/1, 20/1] was correctly accepted
+[] was correctly accepted
+[24/1, 4/1] was correctly accepted
+[17/1, 56/1] was correctly accepted
+[] was correctly accepted
+[3/1] was correctly accepted
+[41/1] was correctly accepted
+[30/1, 43/1, 20/1, 49/1, 43/1] was correctly accepted
+[22/1, 49/1, 5/1, 36/1, 29/1] was correctly accepted
+[28/1, 1/1] was correctly accepted
+[47/1] was correctly accepted
+[4/1, 17/1, 59/1] was correctly accepted
+[] was correctly accepted
+[48/1] was correctly accepted
+[38/1, 50/1, 24/1] was correctly accepted
+[19/1] was correctly accepted
+[41/1, 60/1, 51/1, 55/1] was correctly accepted
+[] was correctly accepted
+[32/1, 36/1] was correctly accepted
+[5/1, 48/1, 29/1] was correctly accepted
+[30/1] was correctly accepted
+[55/1, 39/1] was correctly accepted
+[] was correctly accepted
+[53/1, 2/1, 15/1, 54/1, 5/1] was correctly accepted
+[30/1, 10/1, 35/1] was correctly accepted
+[] was correctly accepted
+[44/1, 16/1, 18/1, 48/1, 25/1] was correctly accepted
+[44/1, 25/1, 22/1, 10/1, 16/1] was correctly accepted
+[] was correctly accepted
+[52/1, 27/1, 48/1, 33/1, 37/1] was correctly accepted
+[50/1, 32/1, 11/1, 13/1] was correctly accepted
+[39/1] was correctly accepted
+[] was correctly accepted
+[24/1, 20/1, 40/1] was correctly accepted
+[43/1, 43/1] was correctly accepted
+[34/1] was correctly accepted
+[25/1, 3/1, 8/1, 18/1, 24/1] was correctly accepted
+[46/1, 34/1, 13/1, 35/1, 30/1] was correctly accepted
+[44/1, 40/1, 2/1, 23/1, 54/1] was correctly accepted
+[] was correctly accepted
+[53/1, 47/1] was correctly accepted
+[55/1, 14/1] was correctly accepted
+[33/1, 29/1] was correctly accepted
+[44/1, 44/1, 26/1] was correctly accepted
+[55/1, 60/1] was correctly accepted
+[31/1, 50/1, 24/1] was correctly accepted
+[18/1, 14/1] was correctly accepted
+[25/1, 20/1, 20/1] was correctly accepted
+[28/1] was correctly accepted
+[55/1] was correctly accepted
+[43/1, 19/1, 37/1, 49/1, 45/1] was correctly accepted
+[56/1, 32/1, 28/1, 6/1, 10/1] was correctly accepted
+[20/1] was correctly accepted
+[24/1] was correctly accepted
+[] was correctly accepted
+[40/1, 27/1, 38/1, 49/1] was correctly accepted
+[10/1, 23/1, 48/1, 9/1, 44/1] was correctly accepted
+[55/1] was correctly accepted
+[] was correctly accepted
+[8/1, 23/1] was correctly accepted
+[24/1, 46/1, 21/1, 1/1] was correctly accepted
+[10/1] was correctly accepted
+[1/1, 43/1, 45/1, 21/1, 53/1] was correctly accepted
+[] was correctly accepted
+[] was correctly accepted
+[47/1] was correctly accepted
+[1/1, 34/1] was correctly accepted
+[23/1, 24/1] was correctly accepted
+[27/1, 15/1, 20/1] was correctly accepted
+[] was correctly accepted
+[8/1, 22/1, 44/1] was correctly accepted
+[7/1, 30/1, 21/1, 23/1, 26/1] was correctly accepted
+[37/1, 45/1, 48/1, 19/1] was correctly accepted
+[30/1] was correctly accepted
+[41/1, 5/1, 27/1] was correctly accepted
+[] was correctly accepted
+[9/1, 10/1, 39/1, 23/1] was correctly accepted
+[37/1, 19/1, 33/1] was correctly accepted
+[44/1, 9/1] was correctly accepted
+[40/1, 46/1, 2/1] was correctly accepted
+[15/1] was correctly accepted
+[2/1] was correctly accepted
+[47/1, 4/1, 40/1, 42/1, 52/1] was correctly accepted
+[5/1, 42/1, 45/1, 44/1] was correctly accepted
+[7/1, 55/1] was correctly accepted
+[46/1, 36/1, 34/1, 48/1, 47/1] was correctly accepted
+[15/1, 20/1, 19/1, 22/1, 40/1] was correctly accepted
+[14/1, 5/1] was correctly accepted
+[57/1, 53/1, 53/1, 48/1] was correctly accepted
+[8/1, 45/1, 39/1, 47/1] was correctly accepted
+[47/1, 42/1, 18/1, 31/1, 24/1] was correctly accepted
+[] was correctly accepted
+[48/1, 17/1, 21/1, 5/1] was correctly accepted
+[54/1, 43/1, 39/1, 13/1, 4/1] was correctly accepted
+[] was correctly accepted
+[55/1, 26/1] was correctly accepted
+[54/1, 54/1, 14/1, 9/1] was correctly accepted
+[] was correctly accepted
+[23/1, 2/1, 10/1, 38/1, 49/1] was correctly accepted
+[45/1] was correctly accepted
+[40/1, 22/1, 21/1, 10/1, 18/1] was correctly accepted
+[] was correctly accepted
+[22/1, 5/1, 11/1] was correctly accepted
+[41/1, 60/1, 18/1, 40/1] was correctly accepted
+[1/1, 8/1, 19/1, 31/1] was correctly accepted
+[52/1, 54/1, 21/1, 31/1] was correctly accepted
+[18/1, 35/1] was correctly accepted
+[53/1, 38/1, 14/1] was correctly accepted
+[] was correctly accepted
+[23/1] was correctly accepted
+[] was correctly accepted
+[3/1, 20/1] was correctly accepted
+[1/1, 3/1] was correctly accepted
+[57/1] was correctly accepted
+[50/1, 55/1, 17/1, 9/1, 53/1] was correctly accepted
+[3/1, 7/1, 19/1, 12/1, 48/1] was correctly accepted
+[43/1, 15/1, 24/1] was correctly accepted
+[50/1, 42/1, 26/1, 32/1, 58/1] was correctly accepted
+[] was correctly accepted
+[29/1, 60/1] was correctly accepted
+[23/1, 50/1] was correctly accepted
+[52/1, 51/1] was correctly accepted
+[] was correctly accepted
+[9/1] was correctly accepted
+[40/1, 16/1, 13/1, 34/1, 58/1] was correctly accepted
+[5/1, 14/1] was correctly accepted
+[59/1, 5/1, 60/1, 8/1, 4/1] was correctly accepted
+[7/1, 10/1, 38/1, 10/1] was correctly accepted
+[38/1, 10/1, 42/1, 18/1, 40/1] was correctly accepted
+[9/1] was correctly accepted
+[35/1] was correctly accepted
+[42/1] was correctly accepted
+[37/1, 23/1] was correctly accepted
+[22/1, 32/1] was correctly accepted
+[48/1, 42/1] was correctly accepted
+[28/1, 45/1, 35/1, 39/1, 39/1] was correctly accepted
+[17/1, 40/1, 16/1, 16/1, 4/1] was correctly accepted
+[54/1, 2/1, 16/1] was correctly accepted
+[16/1, 25/1, 25/1, 46/1] was correctly accepted
+[] was correctly accepted
+[] was correctly accepted
+[13/1, 55/1, 51/1] was correctly accepted
+[37/1, 50/1, 43/1, 15/1, 17/1] was correctly accepted
+[30/1, 34/1, 18/1] was correctly accepted
+[37/1, 23/1] was correctly accepted
+[60/1, 19/1, 4/1, 16/1] was correctly accepted
+[57/1, 14/1] was correctly accepted
+[48/1] was correctly accepted
+[25/1, 59/1] was correctly accepted
+[20/1, 13/1] was correctly accepted
+[8/1, 53/1] was correctly accepted
+[9/1, 27/1] was correctly accepted
+[18/1] was correctly accepted
+[7/1, 52/1, 57/1] was correctly accepted
+[28/1, 43/1, 42/1, 40/1, 34/1] was correctly accepted
+[] was correctly accepted
+[9/1, 17/1, 10/1] was correctly accepted
+[43/1, 44/1] was correctly accepted
+[47/1, 19/1, 24/1] was correctly accepted
+[34/1] was correctly accepted
+[17/1] was correctly accepted
+[26/1, 1/1, 48/1, 30/1] was correctly accepted
+[30/1, 2/1, 50/1, 22/1, 8/1] was correctly accepted
+[36/1] was correctly accepted
+[52/1, 35/1, 6/1] was correctly accepted
+[37/1, 13/1, 52/1, 59/1, 37/1] was correctly accepted
+[19/1] was correctly accepted
+[32/1, 42/1, 26/1, 21/1] was correctly accepted
+[3/1] was correctly accepted
+[] was correctly accepted
+[41/1, 54/1] was correctly accepted
+[23/1, 3/1, 56/1, 4/1] was correctly accepted
+[33/1, 52/1, 3/1] was correctly accepted
+[9/1, 3/1, 20/1] was correctly accepted
+[12/1, 2/1] was correctly accepted
+[24/1] was correctly accepted
+[53/1, 32/1, 9/1, 1/1] was correctly accepted
+[] was correctly accepted
+[28/1] was correctly accepted
+[] was correctly accepted
+[41/1, 49/1, 17/1, 29/1] was correctly accepted
+[38/1, 51/1, 22/1, 26/1, 9/1] was correctly accepted
+[35/1, 56/1, 24/1, 47/1] was correctly accepted
+[25/1, 13/1, 26/1] was correctly accepted
+[10/1, 45/1, 57/1, 49/1, 39/1] was correctly accepted
+[27/1, 48/1] was correctly accepted
+[19/1, 31/1, 19/1, 59/1, 50/1] was correctly accepted
+[16/1, 30/1, 39/1, 19/1] was correctly accepted
+[28/1, 21/1, 35/1, 43/1] was correctly accepted
+[44/1] was correctly accepted
+[26/1, 33/1, 29/1, 14/1] was correctly accepted
+[12/1, 38/1, 34/1, 44/1, 33/1] was correctly accepted
+[28/1, 52/1, 9/1, 55/1, 42/1] was correctly accepted
+[5/1] was correctly accepted
+[57/1, 49/1] was correctly accepted
+[] was correctly accepted
+[] was correctly accepted
+[40/1, 25/1] was correctly accepted
+[60/1, 3/1, 30/1, 16/1, 21/1] was correctly accepted
+[11/1] was correctly accepted
+[15/1, 39/1, 23/1] was correctly accepted
+[47/1, 6/1] was correctly accepted
+[17/1, 40/1] was correctly accepted
+[34/1, 21/1, 49/1, 47/1] was correctly accepted
+[24/1, 10/1, 34/1, 22/1, 19/1] was correctly accepted
+[54/1, 19/1, 24/1] was correctly accepted
+[50/1, 37/1, 20/1, 21/1, 12/1] was correctly accepted
+[23/1, 48/1, 17/1, 23/1, 10/1] was correctly accepted
+[36/1, 17/1] was correctly accepted
+[54/1, 4/1] was correctly accepted
+[41/1, 41/1, 15/1] was correctly accepted
+[60/1, 35/1, 21/1, 43/1] was correctly accepted
+[41/1] was correctly accepted
+[9/1, 28/1] was correctly accepted
+[] was correctly accepted
+[10/1, 39/1, 51/1, 18/1, 47/1] was correctly accepted
+[48/1, 58/1, 53/1, 36/1] was correctly accepted
+[34/1] was correctly accepted
+[8/1, 23/1, 5/1] was correctly accepted
+[33/1, 43/1, 21/1, 29/1, 54/1] was correctly accepted
+[4/1, 60/1, 8/1, 27/1] was correctly accepted
+[] was correctly accepted
+[] was correctly accepted
+[] was correctly accepted
+[55/1, 24/1] was correctly accepted
+[55/1, 8/1, 27/1, 23/1] was correctly accepted
+[27/1, 28/1, 11/1, 38/1] was correctly accepted
+[] was correctly accepted
+[46/1, 43/1, 47/1] was correctly accepted
+[59/1, 32/1, 23/1, 21/1, 15/1] was correctly accepted
+[13/1] was correctly accepted
+[27/1] was correctly accepted
+[] was correctly accepted
+[17/1, 53/1, 30/1] was correctly accepted
+[22/1, 30/1] was correctly accepted
+[] was correctly accepted
+[] was correctly accepted
+[39/1, 33/1, 21/1] was correctly accepted
+[44/1, 14/1, 25/1, 44/1] was correctly accepted
+[33/1, 10/1, 47/1, 43/1, 32/1] was correctly accepted
+[4/1, 2/1, 12/1, 14/1] was correctly accepted
+[41/1, 60/1, 23/1, 3/1] was correctly accepted
+[41/1, 25/1, 6/1, 35/1, 56/1] was correctly accepted
+[54/1, 54/1] was correctly accepted
+[54/1, 23/1] was correctly accepted
+[12/1, 50/1, 23/1, 50/1] was correctly accepted
+[] was correctly accepted
+[] was correctly accepted
+[2/1, 59/1] was correctly accepted
+[17/1, 2/1, 52/1] was correctly accepted
+[13/1, 31/1, 14/1] was correctly accepted
+[18/1, 14/1, 46/1, 7/1] was correctly accepted
+[10/1, 27/1, 1/1, 45/1] was correctly accepted
+[] was correctly accepted
+[32/1, 55/1, 9/1, 16/1, 37/1] was correctly accepted
+[] was correctly accepted
+[5/1, 31/1, 46/1] was correctly accepted
+[10/1, 4/1, 23/1, 2/1] was correctly accepted
+[57/1, 15/1, 19/1, 34/1, 47/1] was correctly accepted
+[14/1, 6/1, 26/1, 26/1] was correctly accepted
+[53/1, 34/1, 9/1] was correctly accepted
+[4/1, 15/1] was correctly accepted
+[8/1] was correctly accepted
+[55/1] was correctly accepted
+[] was correctly accepted
+[34/1, 28/1, 6/1] was correctly accepted
+[31/1, 9/1, 54/1] was correctly accepted
+[12/1, 7/1, 13/1, 21/1] was correctly accepted
+[29/1, 30/1, 12/1] was correctly accepted
+[] was correctly accepted
+[57/1, 13/1] was correctly accepted
+[32/1, 32/1, 37/1, 5/1] was correctly accepted
+[19/1, 8/1, 10/1] was correctly accepted
+[31/1, 50/1, 23/1, 54/1] was correctly accepted
+[21/1, 6/1, 28/1] was correctly accepted
+[28/1, 9/1] was correctly accepted
+[24/1, 53/1, 29/1, 52/1, 1/1] was correctly accepted
+[29/1, 36/1] was correctly accepted
+[4/1, 17/1, 33/1, 29/1, 22/1] was correctly accepted
+[8/1, 38/1] was correctly accepted
+[13/1, 5/1, 60/1] was correctly accepted
+[11/1, 59/1] was correctly accepted
+[22/1, 14/1] was correctly accepted
+[31/1, 55/1, 41/1] was correctly accepted
+[31/1] was correctly accepted
+[] was correctly accepted
+[] was correctly accepted
+[] was correctly accepted
+[20/1, 7/1, 13/1, 10/1] was correctly accepted
+[] was correctly accepted
+[58/1] was correctly accepted
+[46/1] was correctly accepted
+[] was correctly accepted
+[25/1, 53/1] was correctly accepted
+[3/1, 51/1] was correctly accepted
+[48/1, 7/1, 51/1, 29/1, 3/1] was correctly accepted
+[8/1, 31/1] was correctly accepted
+[3/1, 20/1] was correctly accepted
+[55/1, 46/1, 31/1, 1/1] was correctly accepted
+[58/1, 56/1] was correctly accepted
+[39/1, 50/1, 10/1] was correctly accepted
+[2/1] was correctly accepted
+[60/1, 7/1, 27/1] was correctly accepted
+[50/1] was correctly accepted
+[54/1, 17/1, 17/1, 37/1] was correctly accepted
+[55/1] was correctly accepted
+[43/1, 46/1, 60/1] was correctly accepted
+[50/1, 8/1, 48/1] was correctly accepted
+[3/1, 52/1, 33/1] was correctly accepted
+[3/1, 32/1, 56/1, 27/1] was correctly accepted
+[36/1, 3/1, 50/1, 29/1] was correctly accepted
+[48/1, 54/1, 14/1] was correctly accepted
+[56/1] was correctly accepted
+[59/1, 1/1, 50/1] was correctly accepted
+[31/1] was correctly accepted
+[41/1, 13/1, 17/1, 45/1] was correctly accepted
+[24/1, 22/1, 12/1, 34/1] was correctly accepted
+[40/1] was correctly accepted
+[20/1] was correctly accepted
+[2/1, 10/1, 4/1, 49/1, 4/1] was correctly accepted
+[] was correctly accepted
+[51/1] was correctly accepted
+[10/1, 5/1, 41/1, 27/1] was correctly accepted
+[54/1] was correctly accepted
+[13/1, 14/1, 6/1] was correctly accepted
+[4/1, 49/1, 34/1, 52/1, 58/1] was correctly accepted
+[44/1, 55/1, 18/1, 4/1] was correctly accepted
+[40/1, 14/1, 7/1, 49/1] was correctly accepted
+[41/1] was correctly accepted
+[44/1, 50/1] was correctly accepted
+[45/1, 46/1] was correctly accepted
+[39/1, 24/1, 48/1] was correctly accepted
+[7/1, 21/1] was correctly accepted
+[28/1] was correctly accepted
+[25/1] was correctly accepted
+[2/1, 45/1, 12/1, 54/1] was correctly accepted
+[43/1, 55/1, 39/1, 26/1, 14/1] was correctly accepted
+[19/1] was correctly accepted
+[58/1, 25/1, 20/1, 56/1, 31/1] was correctly accepted
+[] was correctly accepted
+[3/1] was correctly accepted
+[39/1, 11/1, 31/1, 44/1, 37/1] was correctly accepted
+[5/1, 16/1, 6/1, 54/1] was correctly accepted
+[46/1, 30/1, 19/1] was correctly accepted
+[] was correctly accepted
+[] was correctly accepted
+[35/1, 2/1, 33/1] was correctly accepted
+[50/1, 13/1, 50/1] was correctly accepted
+[33/1, 26/1, 55/1] was correctly accepted
+[2/1, 41/1, 43/1, 55/1, 55/1] was correctly accepted
+[] was correctly accepted
+[38/1, 28/1, 49/1, 51/1] was correctly accepted
+[57/1, 43/1, 21/1] was correctly accepted
+[] was correctly accepted
+[32/1, 7/1, 56/1, 15/1, 23/1] was correctly accepted
+[36/1, 33/1] was correctly accepted
+[20/1, 60/1, 14/1, 21/1, 42/1] was correctly accepted
+[26/1] was correctly accepted
+[48/1, 42/1, 37/1] was correctly accepted
+[9/1] was correctly accepted
+[30/1, 57/1] was correctly accepted
+[53/1] was correctly accepted
+[] was correctly accepted
+[32/1, 29/1] was correctly accepted
+[3/1] was correctly accepted
+[] was correctly accepted
+[] was correctly accepted
+[49/1] was correctly accepted
+[37/1, 20/1, 59/1] was correctly accepted
+[47/1, 28/1] was correctly accepted
+[] was correctly accepted
+[1/1] was correctly accepted
+[19/1, 53/1, 2/1] was correctly accepted
+[] was correctly accepted
+[18/1, 36/1, 27/1, 48/1] was correctly accepted
+[58/1, 10/1, 15/1, 55/1, 56/1] was correctly accepted
+[] was correctly accepted
+[60/1, 12/1, 11/1] was correctly accepted
+[50/1, 24/1] was correctly accepted
+[25/1, 10/1, 49/1, 25/1, 29/1] was correctly accepted
+[50/1, 45/1] was correctly accepted
+[40/1, 8/1, 51/1, 11/1] was correctly accepted
+[17/1, 19/1, 59/1, 36/1] was correctly accepted
+[59/1] was correctly accepted
+[] was correctly accepted
+[58/1, 7/1, 35/1, 37/1] was correctly accepted
+[24/1] was correctly accepted
+[48/1] was correctly accepted
+[] was correctly accepted
+[53/1] was correctly accepted
+[59/1] was correctly accepted
+[12/1, 16/1, 27/1] was correctly accepted
+[17/1, 57/1] was correctly accepted
+[41/1, 34/1, 42/1] was correctly accepted
+[39/1, 24/1, 1/1] was correctly accepted
+[48/1, 13/1, 55/1] was correctly accepted
+[4/1, 42/1, 18/1, 50/1] was correctly accepted
+[13/1] was correctly accepted
+[17/1, 59/1, 24/1] was correctly accepted
+[31/1, 46/1, 10/1, 13/1] was correctly accepted
+[46/1, 31/1, 20/1, 19/1] was correctly accepted
+[3/1] was correctly accepted
+[38/1, 50/1, 56/1] was correctly accepted
+[28/1, 54/1, 27/1, 57/1] was correctly accepted
+[12/1, 20/1, 60/1, 60/1] was correctly accepted
+[37/1, 32/1, 27/1, 38/1, 25/1] was correctly accepted
+[37/1, 4/1] was correctly accepted
+[] was correctly accepted
+[57/1, 30/1, 21/1, 34/1] was correctly accepted
+[24/1, 42/1, 51/1] was correctly accepted
+[49/1, 32/1, 53/1, 46/1, 15/1] was correctly accepted
+[8/1, 10/1, 56/1, 24/1, 36/1] was correctly accepted
+[17/1, 26/1] was correctly accepted
+[] was correctly accepted
+[16/1] was correctly accepted
+[9/1] was correctly accepted
+[13/1, 30/1, 16/1] was correctly accepted
+[26/1, 54/1] was correctly accepted
+[35/1, 8/1, 13/1, 9/1] was correctly accepted
+[38/1] was correctly accepted
+[56/1, 42/1] was correctly accepted
+[] was correctly accepted
+[54/1, 57/1] was correctly accepted
+[36/1, 23/1] was correctly accepted
+[3/1] was correctly accepted
+[34/1] was correctly accepted
+[48/1, 41/1, 28/1, 55/1] was correctly accepted
+[] was correctly accepted
+[] was correctly accepted
+[] was correctly accepted
+[43/1, 9/1, 18/1, 37/1] was correctly accepted
+[10/1, 20/1, 46/1] was correctly accepted
+[39/1, 54/1, 5/1, 33/1] was correctly accepted
+[] was correctly accepted
+[54/1, 58/1, 54/1, 43/1] was correctly accepted
+[3/1, 5/1, 30/1] was correctly accepted
+[22/1, 49/1, 58/1, 48/1] was correctly accepted
+[] was correctly accepted
+[29/1, 6/1, 12/1, 14/1, 44/1] was correctly accepted
+[58/1, 50/1, 57/1, 16/1, 49/1] was correctly accepted
+[] was correctly accepted
+[7/1, 43/1, 54/1] was correctly accepted
+[] was correctly accepted
+[4/1, 47/1, 49/1, 29/1, 60/1] was correctly accepted
+[53/1, 57/1, 1/1] was correctly accepted
+[21/1, 19/1, 40/1, 34/1] was correctly accepted
+[51/1, 36/1, 14/1, 45/1, 53/1] was correctly accepted
+[33/1, 6/1, 43/1] was correctly accepted
+[] was correctly accepted
+[] was correctly accepted
+[15/1, 14/1, 5/1, 23/1] was correctly accepted
+[47/1] was correctly accepted
+[] was correctly accepted
+[59/1, 53/1] was correctly accepted
+[29/1, 22/1, 58/1] was correctly accepted
+[54/1, 21/1, 50/1] was correctly accepted
+[] was correctly accepted
+[] was correctly accepted
+[50/1, 44/1, 16/1, 25/1] was correctly accepted
+[] was correctly accepted
+[29/1, 55/1] was correctly accepted
+[29/1, 42/1] was correctly accepted
+[36/1, 9/1] was correctly accepted
+[34/1, 39/1] was correctly accepted
+[54/1] was correctly accepted
+[33/1] was correctly accepted
+[29/1, 24/1] was correctly accepted
+[] was correctly accepted
+[42/1, 6/1, 4/1, 38/1, 34/1] was correctly accepted
+[53/1, 42/1, 6/1] was correctly accepted
+[12/1, 49/1, 27/1] was correctly accepted
+[] was correctly accepted
+[49/1, 41/1, 38/1, 41/1] was correctly accepted
+[16/1, 6/1, 33/1] was correctly accepted
+[] was correctly accepted
+[12/1, 17/1, 2/1, 22/1, 46/1] was correctly accepted
+[4/1] was correctly accepted
+[] was correctly accepted
+[17/1] was correctly accepted
+[50/1, 49/1] was correctly accepted
+[59/1, 11/1] was correctly accepted
+[44/1, 7/1, 20/1, 33/1] was correctly accepted
+[26/1, 13/1, 27/1] was correctly accepted
+[38/1, 43/1, 35/1] was correctly accepted
+[29/1, 19/1, 42/1] was correctly accepted
+[18/1, 39/1, 27/1] was correctly accepted
+[] was correctly accepted
+[] was correctly accepted
+[49/1, 53/1] was correctly accepted
+[] was correctly accepted
+[56/1, 5/1] was correctly accepted
+[] was correctly accepted
+[14/1, 13/1, 55/1, 53/1] was correctly accepted
+[60/1] was correctly accepted
+[36/1, 53/1] was correctly accepted
+[] was correctly accepted
+[20/1, 42/1, 1/1, 59/1] was correctly accepted
+[3/1] was correctly accepted
+[58/1, 20/1, 27/1, 49/1, 32/1] was correctly accepted
+[50/1] was correctly accepted
+[32/1, 46/1, 44/1, 30/1] was correctly accepted
+[15/1, 12/1] was correctly accepted
+[] was correctly accepted
+The languages are not equivalent, a counterexample is: [41/1, 4/1, 4/1, 4/1], length: 4
+The word was accepted, but is not in the language.
+Execution time: 1.2912 seconds
+membershipQuery: [39.0, 37.0] is in the language.
+membershipQuery: [40.0, 29.0, 29.0] is in the language.
+membershipQuery: [36.0, 8.0, 8.0, 8.0] is not in the language.
+membershipQuery: [21.0, 21.0] is in the language.
+membershipQuery: [43.0, 20.0, 24.0] is in the language.
+membershipQuery: [26.0, 21.0, 26.0] is in the language.
+membershipQuery: [22.0, 8.0, 8.0, 8.0] is not in the language.
+membershipQuery: [53.0, 41.0, 41.0, 53.0] is in the language.
+membershipQuery: [3.0, 53.0, 53.0, 53.0, 61.0] is not in the language.
+membershipQuery: [34.0, 53.0, 53.0, 53.0, 34.0] is not in the language.
+membershipQuery: [46.0, 7.0, 7.0, 7.0, 7.0] is not in the language.
+membershipQuery: [58.0, 58.0, 30.0] is in the language.
+membershipQuery: [56.0, 56.0, 56.0] is not in the language.
+membershipQuery: [21.0, 48.0, 51.0, 20.0] is in the language.
+membershipQuery: [42.0, 45.0, 18.0, 42.0] is in the language.
+membershipQuery: [35.0, 22.0, 3.0, 22.0] is in the language.
+membershipQuery: [44.0, 27.0, 14.0, 14.0] is in the language.
+membershipQuery: [12.0, 49.0, 12.0, 52.0] is in the language.
+membershipQuery: [13.0, 44.0, 13.0, 13.0] is in the language.
+membershipQuery: [42.0, 39.0, 42.0, 39.0] is in the language.
+membershipQuery: [24.0, 4.0, 4.0, 49.0, 37.0] is in the language.
+membershipQuery: [18.0, 30.0, 30.0, 48.0, 18.0] is in the language.
+membershipQuery: [50.0, 21.0, 21.0, 1.0, 21.0] is in the language.
+membershipQuery: [53.0, 33.0, 33.0, 52.0, 52.0] is in the language.
+membershipQuery: [42.0, 55.0, 55.0, 42.0, 29.0] is in the language.
+membershipQuery: [51.0, 61.0, 61.0, 51.0, 51.0] is in the language.
+membershipQuery: [11.0, 30.0, 30.0, 11.0, 30.0] is in the language.
+membershipQuery: [31.0, 7.0, 7.0, 7.0, 50.0, 40.0] is not in the language.
+membershipQuery: [15.0, 8.0, 8.0, 8.0, 11.0, 15.0] is not in the language.
+membershipQuery: [36.0, 47.0, 47.0, 47.0, 18.0, 47.0] is not in the language.
+membershipQuery: [31.0, 40.0, 40.0, 40.0, 54.0, 54.0] is not in the language.
+membershipQuery: [52.0, 28.0, 28.0, 28.0, 52.0, 3.0] is not in the language.
+membershipQuery: [32.0, 43.0, 43.0, 43.0, 32.0, 32.0] is not in the language.
+membershipQuery: [58.0, 31.0, 31.0, 31.0, 58.0, 31.0] is not in the language.
+membershipQuery: [27.0, 35.0, 35.0, 35.0, 35.0, 43.0] is not in the language.
+membershipQuery: [27.0, 37.0, 37.0, 37.0, 37.0, 27.0] is not in the language.
+membershipQuery: [6.0, 49.0, 49.0, 49.0, 49.0, 49.0] is not in the language.
+membershipQuery: [4.0, 4.0, 36.0, 59.0] is in the language.
+membershipQuery: [11.0, 11.0, 17.0, 11.0] is in the language.
+membershipQuery: [4.0, 4.0, 22.0, 22.0] is in the language.
+membershipQuery: [50.0, 50.0, 50.0, 42.0] is not in the language.
+membershipQuery: [4.0, 4.0, 4.0, 4.0] is not in the language.
+membershipQuery: [47.0, 41.0, 41.0, 39.0, 33.0, 23.0] is in the language.
+membershipQuery: [18.0, 13.0, 13.0, 40.0, 34.0, 18.0] is in the language.
+membershipQuery: [28.0, 7.0, 7.0, 25.0, 34.0, 34.0] is in the language.
+membershipQuery: [6.0, 10.0, 10.0, 27.0, 19.0, 10.0] is in the language.
+membershipQuery: [26.0, 51.0, 51.0, 5.0, 45.0, 5.0] is in the language.
+membershipQuery: [0.0, 60.0, 60.0, 8.0, 0.0, 11.0] is in the language.
+membershipQuery: [59.0, 50.0, 50.0, 7.0, 59.0, 59.0] is in the language.
+membershipQuery: [38.0, 26.0, 26.0, 54.0, 38.0, 26.0] is in the language.
+membershipQuery: [21.0, 54.0, 54.0, 35.0, 21.0, 35.0] is in the language.
+membershipQuery: [25.0, 27.0, 27.0, 36.0, 27.0, 31.0] is in the language.
+membershipQuery: [39.0, 13.0, 13.0, 44.0, 13.0, 39.0] is in the language.
+membershipQuery: [6.0, 14.0, 14.0, 42.0, 14.0, 14.0] is in the language.
+membershipQuery: [14.0, 43.0, 43.0, 17.0, 43.0, 17.0] is in the language.
+membershipQuery: [36.0, 3.0, 3.0, 47.0, 47.0, 23.0] is in the language.
+membershipQuery: [26.0, 59.0, 59.0, 56.0, 56.0, 26.0] is in the language.
+membershipQuery: [4.0, 48.0, 48.0, 33.0, 33.0, 48.0] is in the language.
+membershipQuery: [57.0, 5.0, 5.0, 27.0, 27.0, 27.0] is not in the language.
+membershipQuery: [43.0, 3.0, 3.0, 3.0, 3.0, 8.0, 26.0] is not in the language.
+membershipQuery: [24.0, 14.0, 14.0, 30.0, 30.0, 7.0, 24.0] is in the language.
+membershipQuery: [60.0, 56.0, 56.0, 8.0, 8.0, 54.0, 54.0] is in the language.
+membershipQuery: [60.0, 54.0, 54.0, 60.0, 60.0, 52.0, 54.0] is in the language.
+membershipQuery: [27.0, 45.0, 45.0, 14.0, 14.0, 32.0, 14.0] is in the language.
+membershipQuery: [5.0, 14.0, 14.0, 26.0, 26.0, 5.0, 21.0] is in the language.
+membershipQuery: [21.0, 40.0, 40.0, 1.0, 1.0, 21.0, 21.0] is in the language.
+membershipQuery: [57.0, 53.0, 53.0, 31.0, 31.0, 57.0, 53.0] is in the language.
+membershipQuery: [51.0, 10.0, 10.0, 20.0, 20.0, 51.0, 20.0] is in the language.
+membershipQuery: [45.0, 45.0, 45.0, 18.0, 18.0, 45.0, 58.0] is not in the language.
+membershipQuery: [50.0, 48.0, 48.0, 41.0, 41.0, 48.0, 50.0] is in the language.
+membershipQuery: [39.0, 33.0, 33.0, 42.0, 42.0, 33.0, 33.0] is in the language.
+membershipQuery: [45.0, 23.0, 23.0, 39.0, 39.0, 23.0, 39.0] is in the language.
+membershipQuery: [27.0, 27.0, 27.0, 2.0, 2.0, 2.0, 12.0] is not in the language.
+membershipQuery: [58.0, 31.0, 31.0, 32.0, 32.0, 32.0, 58.0] is not in the language.
+membershipQuery: [15.0, 51.0, 51.0, 36.0, 36.0, 36.0, 51.0] is not in the language.
+membershipQuery: [21.0, 50.0, 50.0, 40.0, 40.0, 40.0, 40.0] is not in the language.
+membershipQuery: [54.0, 11.0, 11.0, 8.0, 8.0, 34.0, 40.0, 14.0] is in the language.
+membershipQuery: [3.0, 27.0, 27.0, 12.0, 12.0, 15.0, 47.0, 3.0] is in the language.
+membershipQuery: [28.0, 36.0, 36.0, 48.0, 48.0, 37.0, 29.0, 29.0] is in the language.
+membershipQuery: [56.0, 35.0, 35.0, 8.0, 8.0, 23.0, 20.0, 35.0] is in the language.
+membershipQuery: [26.0, 3.0, 3.0, 37.0, 37.0, 39.0, 24.0, 37.0] is in the language.
+membershipQuery: [4.0, 37.0, 37.0, 3.0, 3.0, 33.0, 3.0, 33.0] is in the language.
+membershipQuery: [10.0, 27.0, 27.0, 21.0, 21.0, 25.0, 10.0, 30.0] is in the language.
+membershipQuery: [2.0, 8.0, 8.0, 8.0, 8.0, 11.0, 2.0, 2.0] is not in the language.
+membershipQuery: [50.0, 39.0, 39.0, 2.0, 2.0, 17.0, 50.0, 17.0] is in the language.
+membershipQuery: [24.0, 60.0, 60.0, 12.0, 12.0, 14.0, 24.0, 60.0] is in the language.
+membershipQuery: [11.0, 17.0, 17.0, 52.0, 52.0, 52.0, 11.0, 52.0] is not in the language.
+membershipQuery: [37.0, 29.0, 29.0, 51.0, 51.0, 45.0, 45.0, 2.0] is in the language.
+membershipQuery: [4.0, 15.0, 15.0, 52.0, 52.0, 41.0, 41.0, 4.0] is in the language.
+membershipQuery: [44.0, 22.0, 22.0, 53.0, 53.0, 61.0, 61.0, 61.0] is not in the language.
+membershipQuery: [49.0, 9.0, 9.0, 8.0, 8.0, 33.0, 33.0, 9.0] is in the language.
+membershipQuery: [55.0, 36.0, 36.0, 52.0, 52.0, 54.0, 54.0, 52.0] is in the language.
+membershipQuery: [32.0, 28.0, 28.0, 1.0, 1.0, 6.0, 28.0, 57.0] is in the language.
+membershipQuery: [51.0, 3.0, 3.0, 5.0, 5.0, 37.0, 3.0, 51.0] is in the language.
+membershipQuery: [61.0, 11.0, 11.0, 37.0, 37.0, 28.0, 11.0, 28.0] is in the language.
+membershipQuery: [17.0, 16.0, 16.0, 22.0, 22.0, 59.0, 16.0, 16.0] is in the language.
+membershipQuery: [10.0, 3.0, 3.0, 39.0, 39.0, 26.0, 3.0, 39.0] is in the language.
+membershipQuery: [41.0, 21.0, 21.0, 54.0, 54.0, 47.0, 54.0, 33.0] is in the language.
+membershipQuery: [52.0, 45.0, 45.0, 40.0, 40.0, 55.0, 40.0, 52.0] is in the language.
+membershipQuery: [50.0, 50.0, 50.0, 53.0, 53.0, 28.0, 53.0, 28.0] is not in the language.
+membershipQuery: [13.0, 31.0, 31.0, 6.0, 6.0, 5.0, 6.0, 31.0] is in the language.
+membershipQuery: [46.0, 23.0, 23.0, 36.0, 36.0, 9.0, 36.0, 36.0] is in the language.
+membershipQuery: [57.0, 58.0, 58.0, 53.0, 53.0, 58.0, 51.0, 53.0] is in the language.
+membershipQuery: [60.0, 12.0, 12.0, 8.0, 8.0, 12.0, 20.0, 60.0] is in the language.
+membershipQuery: [6.0, 1.0, 1.0, 30.0, 30.0, 1.0, 32.0, 32.0] is in the language.
+membershipQuery: [36.0, 29.0, 29.0, 12.0, 12.0, 29.0, 36.0, 29.0] is in the language.
+membershipQuery: [38.0, 52.0, 52.0, 40.0, 40.0, 52.0, 25.0, 40.0] is in the language.
+membershipQuery: [52.0, 42.0, 42.0, 31.0, 31.0, 42.0, 52.0, 55.0] is in the language.
+membershipQuery: [2.0, 42.0, 42.0, 58.0, 58.0, 42.0, 2.0, 2.0] is in the language.
+membershipQuery: [23.0, 1.0, 1.0, 29.0, 29.0, 1.0, 23.0, 1.0] is in the language.
+membershipQuery: [19.0, 11.0, 11.0, 22.0, 22.0, 11.0, 19.0, 22.0] is in the language.
+membershipQuery: [21.0, 61.0, 61.0, 26.0, 26.0, 61.0, 61.0, 24.0] is in the language.
+membershipQuery: [11.0, 9.0, 9.0, 53.0, 53.0, 9.0, 9.0, 11.0] is in the language.
+membershipQuery: [9.0, 20.0, 20.0, 26.0, 26.0, 20.0, 20.0, 20.0] is not in the language.
+membershipQuery: [18.0, 1.0, 1.0, 55.0, 55.0, 1.0, 1.0, 55.0] is in the language.
+membershipQuery: [45.0, 41.0, 41.0, 43.0, 43.0, 41.0, 43.0, 49.0] is in the language.
+membershipQuery: [28.0, 19.0, 19.0, 61.0, 61.0, 19.0, 61.0, 28.0] is in the language.
+membershipQuery: [51.0, 28.0, 28.0, 19.0, 19.0, 28.0, 19.0, 28.0] is in the language.
+membershipQuery: [44.0, 20.0, 20.0, 53.0, 53.0, 20.0, 53.0, 53.0] is in the language.
+membershipQuery: [41.0, 40.0, 40.0, 45.0, 45.0, 6.0, 41.0, 50.0, 10.0] is in the language.
+membershipQuery: [4.0, 10.0, 10.0, 38.0, 38.0, 60.0, 4.0, 23.0, 4.0] is in the language.
+membershipQuery: [54.0, 39.0, 39.0, 41.0, 41.0, 24.0, 54.0, 25.0, 25.0] is in the language.
+membershipQuery: [7.0, 5.0, 5.0, 58.0, 58.0, 39.0, 7.0, 56.0, 5.0] is in the language.
+membershipQuery: [17.0, 51.0, 51.0, 46.0, 46.0, 5.0, 17.0, 50.0, 46.0] is in the language.
+membershipQuery: [37.0, 35.0, 35.0, 29.0, 29.0, 61.0, 37.0, 33.0, 61.0] is in the language.
+membershipQuery: [3.0, 43.0, 43.0, 61.0, 61.0, 22.0, 3.0, 3.0, 5.0] is in the language.
+membershipQuery: [50.0, 17.0, 17.0, 49.0, 49.0, 21.0, 50.0, 50.0, 50.0] is not in the language.
+membershipQuery: [55.0, 41.0, 41.0, 35.0, 35.0, 41.0, 55.0, 55.0, 41.0] is in the language.
+membershipQuery: [29.0, 33.0, 33.0, 15.0, 15.0, 43.0, 29.0, 29.0, 33.0] is in the language.
+membershipQuery: [5.0, 37.0, 37.0, 45.0, 45.0, 49.0, 5.0, 5.0, 45.0] is in the language.
+membershipQuery: [31.0, 55.0, 55.0, 50.0, 50.0, 58.0, 31.0, 58.0, 58.0] is in the language.
+membershipQuery: [37.0, 6.0, 6.0, 32.0, 32.0, 42.0, 37.0, 42.0, 37.0] is in the language.
+membershipQuery: [30.0, 41.0, 41.0, 57.0, 57.0, 59.0, 30.0, 59.0, 59.0] is in the language.
+membershipQuery: [30.0, 31.0, 31.0, 22.0, 22.0, 24.0, 30.0, 24.0, 31.0] is in the language.
+membershipQuery: [48.0, 1.0, 1.0, 8.0, 8.0, 25.0, 48.0, 25.0, 8.0] is in the language.
+membershipQuery: [14.0, 6.0, 6.0, 41.0, 41.0, 32.0, 14.0, 6.0, 48.0] is in the language.
+membershipQuery: [43.0, 31.0, 31.0, 17.0, 17.0, 61.0, 43.0, 31.0, 43.0] is in the language.
+membershipQuery: [32.0, 23.0, 23.0, 9.0, 9.0, 30.0, 32.0, 23.0, 30.0] is in the language.
+membershipQuery: [37.0, 34.0, 34.0, 20.0, 20.0, 11.0, 37.0, 34.0, 34.0] is in the language.
+membershipQuery: [33.0, 12.0, 12.0, 49.0, 49.0, 30.0, 33.0, 12.0, 49.0] is in the language.
+membershipQuery: [5.0, 0.0, 0.0, 45.0, 45.0, 22.0, 5.0, 45.0, 36.0] is in the language.
+membershipQuery: [19.0, 51.0, 51.0, 54.0, 54.0, 7.0, 19.0, 54.0, 19.0] is in the language.
+membershipQuery: [16.0, 58.0, 58.0, 10.0, 10.0, 48.0, 16.0, 10.0, 48.0] is in the language.
+membershipQuery: [48.0, 39.0, 39.0, 8.0, 8.0, 44.0, 48.0, 8.0, 39.0] is in the language.
+membershipQuery: [27.0, 28.0, 28.0, 14.0, 14.0, 58.0, 27.0, 14.0, 14.0] is in the language.
+membershipQuery: [4.0, 44.0, 44.0, 50.0, 50.0, 15.0, 4.0, 4.0, 4.0, 57.0] is not in the language.
+membershipQuery: [60.0, 45.0, 45.0, 48.0, 48.0, 8.0, 60.0, 60.0, 53.0, 60.0] is in the language.
+membershipQuery: [46.0, 28.0, 28.0, 52.0, 52.0, 55.0, 46.0, 46.0, 12.0, 12.0] is in the language.
+membershipQuery: [50.0, 40.0, 40.0, 42.0, 42.0, 9.0, 50.0, 50.0, 55.0, 40.0] is in the language.
+membershipQuery: [15.0, 16.0, 16.0, 25.0, 25.0, 23.0, 15.0, 15.0, 17.0, 25.0] is in the language.
+membershipQuery: [48.0, 5.0, 5.0, 41.0, 41.0, 0.0, 48.0, 48.0, 27.0, 0.0] is in the language.
+membershipQuery: [60.0, 44.0, 44.0, 56.0, 56.0, 15.0, 60.0, 60.0, 60.0, 28.0] is not in the language.
+membershipQuery: [32.0, 10.0, 10.0, 41.0, 41.0, 10.0, 32.0, 32.0, 32.0, 32.0] is not in the language.
+membershipQuery: [37.0, 10.0, 10.0, 50.0, 50.0, 59.0, 37.0, 37.0, 37.0, 59.0] is not in the language.
+membershipQuery: [28.0, 28.0, 28.0, 50.0, 50.0, 37.0, 28.0, 28.0, 28.0, 28.0] is not in the language.
+membershipQuery: [13.0, 5.0, 5.0, 57.0, 57.0, 7.0, 13.0, 13.0, 13.0, 57.0] is not in the language.
+membershipQuery: [34.0, 15.0, 15.0, 53.0, 53.0, 33.0, 34.0, 34.0, 33.0, 15.0] is in the language.
+membershipQuery: [43.0, 43.0, 43.0, 20.0, 20.0, 19.0, 43.0, 43.0, 19.0, 43.0] is not in the language.
+membershipQuery: [53.0, 34.0, 34.0, 10.0, 10.0, 23.0, 53.0, 53.0, 23.0, 23.0] is in the language.
+membershipQuery: [18.0, 22.0, 22.0, 41.0, 41.0, 21.0, 18.0, 18.0, 21.0, 22.0] is in the language.
+membershipQuery: [51.0, 57.0, 57.0, 45.0, 45.0, 26.0, 51.0, 51.0, 26.0, 45.0] is in the language.
+membershipQuery: [10.0, 44.0, 44.0, 9.0, 9.0, 1.0, 10.0, 10.0, 44.0, 21.0] is in the language.
+membershipQuery: [8.0, 56.0, 56.0, 58.0, 58.0, 25.0, 8.0, 8.0, 56.0, 8.0] is in the language.
+membershipQuery: [44.0, 23.0, 23.0, 41.0, 41.0, 25.0, 44.0, 44.0, 23.0, 25.0] is in the language.
+membershipQuery: [37.0, 4.0, 4.0, 43.0, 43.0, 15.0, 37.0, 37.0, 4.0, 4.0] is in the language.
+membershipQuery: [10.0, 38.0, 38.0, 45.0, 45.0, 42.0, 10.0, 10.0, 38.0, 45.0] is in the language.
+membershipQuery: [45.0, 20.0, 20.0, 47.0, 47.0, 57.0, 45.0, 45.0, 47.0, 26.0] is in the language.
+membershipQuery: [49.0, 2.0, 2.0, 28.0, 28.0, 54.0, 49.0, 49.0, 28.0, 49.0] is in the language.
+membershipQuery: [20.0, 50.0, 50.0, 43.0, 43.0, 38.0, 20.0, 20.0, 43.0, 38.0] is in the language.
+membershipQuery: [27.0, 47.0, 47.0, 11.0, 11.0, 57.0, 27.0, 27.0, 11.0, 47.0] is in the language.
+membershipQuery: [28.0, 30.0, 30.0, 37.0, 37.0, 44.0, 28.0, 28.0, 37.0, 37.0] is in the language.
+membershipQuery: [41.0, 26.0, 26.0, 1.0, 1.0, 58.0, 41.0, 41.0, 29.0, 58.0, 55.0] is in the language.
+membershipQuery: [10.0, 48.0, 48.0, 13.0, 13.0, 4.0, 10.0, 10.0, 55.0, 53.0, 10.0] is in the language.
+membershipQuery: [41.0, 0.0, 0.0, 57.0, 57.0, 61.0, 41.0, 41.0, 22.0, 5.0, 22.0] is in the language.
+membershipQuery: [11.0, 52.0, 52.0, 55.0, 55.0, 21.0, 11.0, 11.0, 10.0, 43.0, 52.0] is in the language.
+membershipQuery: [60.0, 21.0, 21.0, 12.0, 12.0, 22.0, 60.0, 60.0, 42.0, 47.0, 12.0] is in the language.
+membershipQuery: [9.0, 29.0, 29.0, 19.0, 19.0, 34.0, 9.0, 9.0, 32.0, 39.0, 34.0] is in the language.
+membershipQuery: [35.0, 25.0, 25.0, 56.0, 56.0, 7.0, 35.0, 35.0, 51.0, 55.0, 55.0] is in the language.
+membershipQuery: [58.0, 52.0, 52.0, 38.0, 38.0, 31.0, 58.0, 58.0, 40.0, 58.0, 10.0] is in the language.
+membershipQuery: [25.0, 47.0, 47.0, 30.0, 30.0, 1.0, 25.0, 25.0, 49.0, 25.0, 25.0] is in the language.
+membershipQuery: FOUND MISMATCH FOR [7.0, 46.0, 46.0, 45.0, 45.0, 46.0, 7.0, 7.0, 42.0, 7.0, 42.0], rnn: [0.] and GT: True
+Execution time: 140.3718 seconds
+membershipQuery: [7.0, 46.0, 46.0, 45.0, 45.0, 46.0, 7.0, 7.0, 42.0, 7.0, 42.0] is not in the language.
+membershipQuery: [27.0, 22.0, 22.0, 54.0, 54.0, 30.0, 27.0, 27.0, 30.0, 27.0, 22.0] is in the language.
+membershipQuery: [48.0, 25.0, 25.0, 35.0, 35.0, 30.0, 48.0, 48.0, 56.0, 48.0, 35.0] is in the language.
+membershipQuery: [49.0, 3.0, 3.0, 13.0, 13.0, 53.0, 49.0, 49.0, 22.0, 49.0, 53.0] is in the language.
+membershipQuery: [42.0, 18.0, 18.0, 33.0, 33.0, 44.0, 42.0, 42.0, 11.0, 11.0, 42.0] is in the language.
+membershipQuery: [3.0, 28.0, 28.0, 0.0, 0.0, 48.0, 3.0, 3.0, 56.0, 56.0, 3.0] is in the language.
+membershipQuery: [45.0, 30.0, 30.0, 14.0, 14.0, 23.0, 45.0, 45.0, 6.0, 6.0, 6.0] is not in the language.
+membershipQuery: [51.0, 46.0, 46.0, 27.0, 27.0, 48.0, 51.0, 51.0, 50.0, 50.0, 46.0] is in the language.
+membershipQuery: [6.0, 3.0, 3.0, 19.0, 19.0, 53.0, 6.0, 6.0, 5.0, 5.0, 19.0] is in the language.
+membershipQuery: [10.0, 21.0, 21.0, 24.0, 24.0, 51.0, 10.0, 10.0, 24.0, 24.0, 51.0] is in the language.
+membershipQuery: [20.0, 13.0, 13.0, 12.0, 12.0, 28.0, 20.0, 20.0, 3.0, 13.0, 54.0] is in the language.
+membershipQuery: [48.0, 16.0, 16.0, 33.0, 33.0, 42.0, 48.0, 48.0, 37.0, 16.0, 48.0] is in the language.
+membershipQuery: [50.0, 29.0, 29.0, 59.0, 59.0, 15.0, 50.0, 50.0, 15.0, 29.0, 15.0] is in the language.
+membershipQuery: [28.0, 16.0, 16.0, 46.0, 46.0, 50.0, 28.0, 28.0, 6.0, 16.0, 16.0] is in the language.
+membershipQuery: [29.0, 10.0, 10.0, 0.0, 0.0, 41.0, 29.0, 29.0, 44.0, 10.0, 0.0] is in the language.
+membershipQuery: [17.0, 24.0, 24.0, 13.0, 13.0, 5.0, 17.0, 17.0, 36.0, 24.0, 5.0] is in the language.
+membershipQuery: [16.0, 46.0, 46.0, 0.0, 0.0, 5.0, 16.0, 16.0, 41.0, 0.0, 57.0] is in the language.
+membershipQuery: [20.0, 49.0, 49.0, 28.0, 28.0, 4.0, 20.0, 20.0, 27.0, 28.0, 20.0] is in the language.
+membershipQuery: [52.0, 59.0, 59.0, 18.0, 18.0, 53.0, 52.0, 52.0, 20.0, 18.0, 20.0] is in the language.
+membershipQuery: FOUND MISMATCH FOR [30.0, 28.0, 28.0, 29.0, 29.0, 5.0, 30.0, 30.0, 5.0, 29.0, 28.0], rnn: [0.] and GT: True
+Execution time: 140.5102 seconds
+membershipQuery: [30.0, 28.0, 28.0, 29.0, 29.0, 5.0, 30.0, 30.0, 5.0, 29.0, 28.0] is not in the language.
+membershipQuery: [9.0, 7.0, 7.0, 55.0, 55.0, 53.0, 9.0, 9.0, 8.0, 55.0, 55.0] is in the language.
+membershipQuery: [24.0, 10.0, 10.0, 40.0, 40.0, 59.0, 24.0, 24.0, 2.0, 40.0, 59.0] is in the language.
+membershipQuery: [10.0, 46.0, 46.0, 21.0, 21.0, 61.0, 10.0, 10.0, 14.0, 61.0, 7.0] is in the language.
+membershipQuery: [33.0, 14.0, 14.0, 51.0, 51.0, 21.0, 33.0, 33.0, 38.0, 21.0, 33.0] is in the language.
+membershipQuery: [23.0, 2.0, 2.0, 26.0, 26.0, 45.0, 23.0, 23.0, 3.0, 45.0, 3.0] is in the language.
+membershipQuery: [53.0, 41.0, 41.0, 54.0, 54.0, 10.0, 53.0, 53.0, 1.0, 10.0, 41.0] is in the language.
+membershipQuery: [13.0, 25.0, 25.0, 32.0, 32.0, 55.0, 13.0, 13.0, 11.0, 55.0, 32.0] is in the language.
+membershipQuery: [56.0, 39.0, 39.0, 14.0, 14.0, 42.0, 56.0, 56.0, 1.0, 42.0, 42.0] is in the language.
+membershipQuery: [47.0, 44.0, 7.0, 58.0, 58.0] is in the language.
+membershipQuery: [12.0, 6.0, 19.0, 12.0, 12.0] is in the language.
+membershipQuery: [40.0, 1.0, 58.0, 1.0, 1.0] is in the language.
+membershipQuery: [2.0, 6.0, 33.0, 33.0, 33.0] is not in the language.
+membershipQuery: [52.0, 4.0, 52.0, 35.0, 35.0] is in the language.
+membershipQuery: [35.0, 55.0, 35.0, 35.0, 35.0] is not in the language.
+membershipQuery: [46.0, 13.0, 46.0, 13.0, 13.0] is in the language.
+membershipQuery: [56.0, 52.0, 52.0, 56.0, 3.0, 3.0] is in the language.
+membershipQuery: [11.0, 13.0, 13.0, 11.0, 11.0, 11.0] is not in the language.
+membershipQuery: [41.0, 4.0, 4.0, 41.0, 4.0, 4.0] is in the language.
+membershipQuery: [61.0, 22.0, 22.0, 22.0, 39.0, 55.0, 55.0] is not in the language.
+membershipQuery: [5.0, 5.0, 5.0, 5.0, 46.0, 5.0, 5.0] is not in the language.
+membershipQuery: [23.0, 27.0, 27.0, 27.0, 17.0, 27.0, 27.0] is not in the language.
+membershipQuery: [23.0, 29.0, 29.0, 29.0, 5.0, 5.0, 5.0] is not in the language.
+membershipQuery: [55.0, 5.0, 5.0, 5.0, 55.0, 27.0, 27.0] is not in the language.
+membershipQuery: [31.0, 4.0, 4.0, 4.0, 31.0, 31.0, 31.0] is not in the language.
+membershipQuery: [17.0, 54.0, 54.0, 54.0, 17.0, 54.0, 54.0] is not in the language.
+membershipQuery: [18.0, 17.0, 17.0, 17.0, 17.0, 52.0, 52.0] is not in the language.
+membershipQuery: [54.0, 46.0, 46.0, 46.0, 46.0, 54.0, 54.0] is not in the language.
+membershipQuery: [15.0, 19.0, 19.0, 19.0, 19.0, 19.0, 19.0] is not in the language.
+membershipQuery: [44.0, 44.0, 13.0, 49.0, 49.0] is in the language.
+membershipQuery: [30.0, 30.0, 1.0, 30.0, 30.0] is in the language.
+membershipQuery: [53.0, 53.0, 32.0, 32.0, 32.0] is not in the language.
+membershipQuery: [11.0, 11.0, 11.0, 20.0, 20.0] is not in the language.
+membershipQuery: [18.0, 18.0, 18.0, 18.0, 18.0] is not in the language.
+membershipQuery: [6.0, 19.0, 19.0, 33.0, 54.0, 40.0, 40.0] is in the language.
+membershipQuery: [10.0, 9.0, 9.0, 56.0, 6.0, 10.0, 10.0] is in the language.
+membershipQuery: [50.0, 10.0, 10.0, 18.0, 25.0, 25.0, 25.0] is not in the language.
+membershipQuery: [13.0, 23.0, 23.0, 57.0, 60.0, 23.0, 23.0] is in the language.
+membershipQuery: [24.0, 52.0, 52.0, 36.0, 26.0, 36.0, 36.0] is in the language.
+membershipQuery: [43.0, 24.0, 24.0, 14.0, 43.0, 33.0, 33.0] is in the language.
+membershipQuery: [38.0, 48.0, 48.0, 5.0, 38.0, 38.0, 38.0] is not in the language.
+membershipQuery: [57.0, 14.0, 14.0, 48.0, 57.0, 14.0, 14.0] is in the language.
+membershipQuery: [35.0, 27.0, 27.0, 60.0, 35.0, 60.0, 60.0] is in the language.
+membershipQuery: [44.0, 31.0, 31.0, 51.0, 31.0, 14.0, 14.0] is in the language.
+membershipQuery: [12.0, 30.0, 30.0, 25.0, 30.0, 12.0, 12.0] is in the language.
+membershipQuery: [58.0, 39.0, 39.0, 60.0, 39.0, 39.0, 39.0] is not in the language.
+membershipQuery: [4.0, 3.0, 3.0, 33.0, 3.0, 33.0, 33.0] is in the language.
+membershipQuery: [59.0, 6.0, 6.0, 51.0, 51.0, 59.0, 10.0, 10.0] is in the language.
+membershipQuery: [30.0, 5.0, 5.0, 57.0, 57.0, 30.0, 30.0, 30.0] is not in the language.
+membershipQuery: [33.0, 2.0, 2.0, 39.0, 39.0, 33.0, 2.0, 2.0] is in the language.
+membershipQuery: [20.0, 53.0, 53.0, 47.0, 47.0, 20.0, 47.0, 47.0] is in the language.
+membershipQuery: [17.0, 5.0, 5.0, 26.0, 26.0, 26.0, 25.0, 25.0] is not in the language.
+membershipQuery: [51.0, 43.0, 43.0, 24.0, 24.0, 24.0, 51.0, 51.0] is not in the language.
+membershipQuery: [61.0, 55.0, 55.0, 53.0, 53.0, 53.0, 55.0, 55.0] is not in the language.
+membershipQuery: [56.0, 50.0, 50.0, 12.0, 12.0, 12.0, 12.0, 12.0] is not in the language.
+membershipQuery: [47.0, 22.0, 22.0, 23.0, 23.0, 35.0, 57.0, 48.0, 48.0] is in the language.
+membershipQuery: [32.0, 61.0, 61.0, 46.0, 46.0, 22.0, 7.0, 32.0, 32.0] is in the language.
+membershipQuery: [0.0, 3.0, 3.0, 37.0, 37.0, 40.0, 19.0, 19.0, 19.0] is not in the language.
+membershipQuery: [39.0, 6.0, 6.0, 56.0, 56.0, 20.0, 42.0, 6.0, 6.0] is in the language.
+membershipQuery: [9.0, 51.0, 51.0, 53.0, 53.0, 51.0, 22.0, 53.0, 53.0] is in the language.
+membershipQuery: [5.0, 57.0, 57.0, 61.0, 61.0, 3.0, 11.0, 3.0, 3.0] is in the language.
+membershipQuery: [20.0, 20.0, 20.0, 32.0, 32.0, 57.0, 57.0, 53.0, 53.0] is not in the language.
+membershipQuery: [61.0, 17.0, 17.0, 23.0, 23.0, 12.0, 12.0, 61.0, 61.0] is in the language.
+membershipQuery: [34.0, 53.0, 53.0, 30.0, 30.0, 59.0, 59.0, 59.0, 59.0] is not in the language.
+membershipQuery: [54.0, 39.0, 39.0, 20.0, 20.0, 15.0, 15.0, 39.0, 39.0] is in the language.
+membershipQuery: [6.0, 38.0, 38.0, 45.0, 45.0, 23.0, 23.0, 45.0, 45.0] is in the language.
+membershipQuery: [4.0, 44.0, 44.0, 23.0, 23.0, 48.0, 44.0, 35.0, 35.0] is in the language.
+membershipQuery: [53.0, 46.0, 46.0, 22.0, 22.0, 31.0, 46.0, 53.0, 53.0] is in the language.
+membershipQuery: [12.0, 53.0, 53.0, 51.0, 51.0, 43.0, 53.0, 43.0, 43.0] is in the language.
+membershipQuery: [55.0, 15.0, 15.0, 34.0, 34.0, 28.0, 15.0, 15.0, 15.0] is not in the language.
+membershipQuery: [12.0, 27.0, 27.0, 50.0, 50.0, 0.0, 27.0, 50.0, 50.0] is in the language.
+membershipQuery: [8.0, 38.0, 38.0, 32.0, 32.0, 32.0, 32.0, 51.0, 51.0] is not in the language.
+membershipQuery: [45.0, 52.0, 52.0, 26.0, 26.0, 9.0, 26.0, 45.0, 45.0] is in the language.
+membershipQuery: [33.0, 36.0, 36.0, 41.0, 41.0, 47.0, 41.0, 47.0, 47.0] is in the language.
+membershipQuery: [51.0, 22.0, 22.0, 41.0, 41.0, 58.0, 41.0, 22.0, 22.0] is in the language.
+membershipQuery: [31.0, 46.0, 46.0, 21.0, 21.0, 27.0, 21.0, 21.0, 21.0] is not in the language.
+membershipQuery: [1.0, 11.0, 11.0, 34.0, 34.0, 11.0, 61.0, 34.0, 34.0] is in the language.
+membershipQuery: [45.0, 7.0, 7.0, 9.0, 9.0, 7.0, 24.0, 45.0, 45.0] is in the language.
+membershipQuery: [56.0, 54.0, 54.0, 8.0, 8.0, 54.0, 15.0, 15.0, 15.0] is not in the language.
+membershipQuery: [35.0, 40.0, 40.0, 9.0, 9.0, 40.0, 58.0, 40.0, 40.0] is in the language.
+membershipQuery: [8.0, 20.0, 20.0, 37.0, 37.0, 20.0, 39.0, 37.0, 37.0] is in the language.
+membershipQuery: [51.0, 11.0, 11.0, 30.0, 30.0, 11.0, 51.0, 10.0, 10.0] is in the language.
+membershipQuery: [8.0, 23.0, 23.0, 28.0, 28.0, 23.0, 8.0, 8.0, 8.0] is not in the language.
+membershipQuery: [58.0, 38.0, 38.0, 50.0, 50.0, 38.0, 58.0, 38.0, 38.0] is in the language.
+membershipQuery: [36.0, 6.0, 6.0, 51.0, 51.0, 6.0, 36.0, 51.0, 51.0] is in the language.
+membershipQuery: [14.0, 3.0, 3.0, 57.0, 57.0, 3.0, 3.0, 41.0, 41.0] is in the language.
+membershipQuery: [41.0, 34.0, 34.0, 46.0, 46.0, 34.0, 34.0, 41.0, 41.0] is in the language.
+membershipQuery: [43.0, 58.0, 58.0, 1.0, 1.0, 58.0, 58.0, 58.0, 58.0] is not in the language.
+membershipQuery: [4.0, 32.0, 32.0, 39.0, 39.0, 32.0, 32.0, 39.0, 39.0] is in the language.
+membershipQuery: [29.0, 27.0, 27.0, 11.0, 11.0, 27.0, 11.0, 61.0, 61.0] is in the language.
+membershipQuery: [22.0, 55.0, 55.0, 57.0, 57.0, 55.0, 57.0, 22.0, 22.0] is in the language.
+membershipQuery: [48.0, 39.0, 39.0, 28.0, 28.0, 39.0, 28.0, 39.0, 39.0] is in the language.
+membershipQuery: [52.0, 23.0, 23.0, 49.0, 49.0, 23.0, 49.0, 49.0, 49.0] is not in the language.
+membershipQuery: [28.0, 19.0, 19.0, 28.0, 28.0, 46.0, 28.0, 37.0, 58.0, 58.0] is in the language.
+membershipQuery: [54.0, 11.0, 11.0, 23.0, 23.0, 29.0, 54.0, 12.0, 54.0, 54.0] is in the language.
+membershipQuery: [41.0, 23.0, 23.0, 33.0, 33.0, 10.0, 41.0, 32.0, 32.0, 32.0] is not in the language.
+membershipQuery: [11.0, 44.0, 44.0, 4.0, 4.0, 53.0, 11.0, 21.0, 44.0, 44.0] is in the language.
+membershipQuery: [57.0, 32.0, 32.0, 60.0, 60.0, 33.0, 57.0, 48.0, 60.0, 60.0] is in the language.
+membershipQuery: [14.0, 47.0, 47.0, 27.0, 27.0, 60.0, 14.0, 38.0, 60.0, 60.0] is in the language.
+membershipQuery: [59.0, 33.0, 33.0, 23.0, 23.0, 27.0, 59.0, 27.0, 52.0, 52.0] is in the language.
+membershipQuery: [28.0, 18.0, 18.0, 1.0, 1.0, 0.0, 28.0, 0.0, 28.0, 28.0] is in the language.
+membershipQuery: [60.0, 15.0, 15.0, 50.0, 50.0, 39.0, 60.0, 39.0, 39.0, 39.0] is not in the language.
+membershipQuery: [6.0, 40.0, 40.0, 53.0, 53.0, 50.0, 6.0, 50.0, 40.0, 40.0] is in the language.
+membershipQuery: [22.0, 1.0, 1.0, 6.0, 6.0, 36.0, 22.0, 36.0, 6.0, 6.0] is in the language.
+membershipQuery: [34.0, 40.0, 40.0, 4.0, 4.0, 0.0, 34.0, 40.0, 32.0, 32.0] is in the language.
+membershipQuery: [56.0, 23.0, 23.0, 22.0, 22.0, 57.0, 56.0, 23.0, 56.0, 56.0] is in the language.
+membershipQuery: [11.0, 27.0, 27.0, 56.0, 56.0, 26.0, 11.0, 27.0, 26.0, 26.0] is in the language.
+membershipQuery: [40.0, 14.0, 14.0, 49.0, 49.0, 50.0, 40.0, 14.0, 14.0, 14.0] is not in the language.
+membershipQuery: [57.0, 29.0, 29.0, 14.0, 14.0, 39.0, 57.0, 29.0, 14.0, 14.0] is in the language.
+membershipQuery: [23.0, 1.0, 1.0, 20.0, 20.0, 60.0, 23.0, 20.0, 58.0, 58.0] is in the language.
+membershipQuery: [42.0, 16.0, 16.0, 59.0, 59.0, 50.0, 42.0, 59.0, 42.0, 42.0] is in the language.
+membershipQuery: [36.0, 22.0, 22.0, 15.0, 15.0, 14.0, 36.0, 15.0, 14.0, 14.0] is in the language.
+membershipQuery: [18.0, 44.0, 44.0, 51.0, 51.0, 3.0, 18.0, 51.0, 44.0, 44.0] is in the language.
+membershipQuery: [46.0, 46.0, 46.0, 25.0, 25.0, 43.0, 46.0, 25.0, 25.0, 25.0] is not in the language.
+membershipQuery: [9.0, 54.0, 54.0, 20.0, 20.0, 46.0, 9.0, 9.0, 9.0, 28.0, 28.0] is not in the language.
+membershipQuery: [18.0, 60.0, 60.0, 24.0, 24.0, 11.0, 18.0, 18.0, 18.0, 18.0, 18.0] is not in the language.
+membershipQuery: [58.0, 61.0, 61.0, 14.0, 14.0, 30.0, 58.0, 58.0, 58.0, 30.0, 30.0] is not in the language.
+membershipQuery: [56.0, 27.0, 27.0, 46.0, 46.0, 21.0, 56.0, 56.0, 56.0, 27.0, 27.0] is not in the language.
+membershipQuery: [21.0, 36.0, 36.0, 52.0, 52.0, 36.0, 21.0, 21.0, 21.0, 52.0, 52.0] is not in the language.
+membershipQuery: FOUND MISMATCH FOR [27.0, 3.0, 3.0, 31.0, 31.0, 28.0, 27.0, 27.0, 28.0, 24.0, 24.0], rnn: [0.] and GT: True
+Execution time: 324.5387 seconds
+membershipQuery: [27.0, 3.0, 3.0, 31.0, 31.0, 28.0, 27.0, 27.0, 28.0, 24.0, 24.0] is not in the language.
+membershipQuery: [9.0, 21.0, 21.0, 6.0, 6.0, 39.0, 9.0, 9.0, 39.0, 9.0, 9.0] is in the language.
+membershipQuery: [45.0, 46.0, 46.0, 53.0, 53.0, 19.0, 45.0, 45.0, 19.0, 19.0, 19.0] is not in the language.
+membershipQuery: [15.0, 58.0, 58.0, 36.0, 36.0, 38.0, 15.0, 15.0, 38.0, 58.0, 58.0] is in the language.
+membershipQuery: [26.0, 2.0, 2.0, 51.0, 51.0, 25.0, 26.0, 26.0, 25.0, 51.0, 51.0] is in the language.
+membershipQuery: [21.0, 34.0, 34.0, 33.0, 33.0, 51.0, 21.0, 21.0, 34.0, 27.0, 27.0] is in the language.
+membershipQuery: [38.0, 8.0, 8.0, 11.0, 11.0, 60.0, 38.0, 38.0, 8.0, 38.0, 38.0] is in the language.
+membershipQuery: [23.0, 49.0, 49.0, 18.0, 18.0, 10.0, 23.0, 23.0, 49.0, 10.0, 10.0] is in the language.
+membershipQuery: [37.0, 12.0, 12.0, 49.0, 49.0, 19.0, 37.0, 37.0, 12.0, 12.0, 12.0] is not in the language.
+membershipQuery: [50.0, 10.0, 10.0, 11.0, 11.0, 34.0, 50.0, 50.0, 10.0, 11.0, 11.0] is in the language.
+membershipQuery: [61.0, 38.0, 38.0, 23.0, 23.0, 12.0, 61.0, 61.0, 23.0, 28.0, 28.0] is in the language.
+membershipQuery: [5.0, 50.0, 50.0, 52.0, 52.0, 40.0, 5.0, 5.0, 52.0, 5.0, 5.0] is in the language.
+membershipQuery: [5.0, 6.0, 6.0, 51.0, 51.0, 39.0, 5.0, 5.0, 51.0, 39.0, 39.0] is in the language.
+membershipQuery: [7.0, 51.0, 51.0, 61.0, 61.0, 12.0, 7.0, 7.0, 61.0, 51.0, 51.0] is in the language.
+membershipQuery: [54.0, 27.0, 27.0, 27.0, 27.0, 34.0, 54.0, 54.0, 27.0, 27.0, 27.0] is not in the language.
+membershipQuery: [48.0, 61.0, 61.0, 26.0, 26.0, 16.0, 48.0, 48.0, 31.0, 21.0, 5.0, 5.0] is in the language.
+membershipQuery: [36.0, 51.0, 51.0, 45.0, 45.0, 16.0, 36.0, 36.0, 22.0, 3.0, 36.0, 36.0] is in the language.
+membershipQuery: [0.0, 32.0, 32.0, 39.0, 39.0, 19.0, 0.0, 0.0, 55.0, 44.0, 55.0, 55.0] is in the language.
+membershipQuery: [45.0, 27.0, 27.0, 29.0, 29.0, 43.0, 45.0, 45.0, 4.0, 31.0, 27.0, 27.0] is in the language.
+membershipQuery: [2.0, 0.0, 0.0, 49.0, 49.0, 42.0, 2.0, 2.0, 11.0, 40.0, 49.0, 49.0] is in the language.
+membershipQuery: [6.0, 38.0, 38.0, 24.0, 24.0, 23.0, 6.0, 6.0, 55.0, 31.0, 23.0, 23.0] is in the language.
+membershipQuery: FOUND MISMATCH FOR [34.0, 54.0, 54.0, 29.0, 29.0, 30.0, 34.0, 34.0, 56.0, 61.0, 61.0, 61.0], rnn: [1.] and GT: False
+Execution time: 324.6336 seconds
+membershipQuery: [34.0, 54.0, 54.0, 29.0, 29.0, 30.0, 34.0, 34.0, 56.0, 61.0, 61.0, 61.0] is in the language.
+membershipQuery: [22.0, 29.0, 29.0, 61.0, 61.0, 53.0, 22.0, 22.0, 23.0, 22.0, 55.0, 55.0] is in the language.
+membershipQuery: [34.0, 7.0, 7.0, 41.0, 41.0, 27.0, 34.0, 34.0, 45.0, 34.0, 34.0, 34.0] is not in the language.
+membershipQuery: [45.0, 18.0, 18.0, 16.0, 16.0, 50.0, 45.0, 45.0, 52.0, 45.0, 52.0, 52.0] is in the language.
+membershipQuery: [57.0, 41.0, 41.0, 36.0, 36.0, 10.0, 57.0, 57.0, 9.0, 57.0, 41.0, 41.0] is in the language.
+membershipQuery: [22.0, 55.0, 55.0, 0.0, 0.0, 18.0, 22.0, 22.0, 51.0, 22.0, 0.0, 0.0] is in the language.
+membershipQuery: [32.0, 30.0, 30.0, 9.0, 9.0, 39.0, 32.0, 32.0, 9.0, 32.0, 39.0, 39.0] is in the language.
+membershipQuery: [55.0, 23.0, 23.0, 8.0, 8.0, 30.0, 55.0, 55.0, 16.0, 16.0, 26.0, 26.0] is in the language.
+membershipQuery: [61.0, 59.0, 59.0, 29.0, 29.0, 21.0, 61.0, 61.0, 36.0, 36.0, 61.0, 61.0] is in the language.
+membershipQuery: [23.0, 55.0, 55.0, 19.0, 19.0, 37.0, 23.0, 23.0, 29.0, 29.0, 29.0, 29.0] is not in the language.
+membershipQuery: [5.0, 40.0, 40.0, 23.0, 23.0, 42.0, 5.0, 5.0, 22.0, 22.0, 40.0, 40.0] is in the language.
+membershipQuery: [29.0, 3.0, 3.0, 10.0, 10.0, 53.0, 29.0, 29.0, 50.0, 50.0, 10.0, 10.0] is in the language.
+membershipQuery: [23.0, 26.0, 26.0, 10.0, 10.0, 12.0, 23.0, 23.0, 35.0, 35.0, 12.0, 12.0] is in the language.
+membershipQuery: [54.0, 56.0, 56.0, 29.0, 29.0, 58.0, 54.0, 54.0, 44.0, 56.0, 30.0, 30.0] is in the language.
+membershipQuery: [53.0, 4.0, 4.0, 45.0, 45.0, 48.0, 53.0, 53.0, 28.0, 4.0, 53.0, 53.0] is in the language.
+membershipQuery: [5.0, 57.0, 57.0, 58.0, 58.0, 28.0, 5.0, 5.0, 7.0, 57.0, 7.0, 7.0] is in the language.
+membershipQuery: FOUND MISMATCH FOR [18.0, 0.0, 0.0, 10.0, 10.0, 37.0, 18.0, 18.0, 4.0, 0.0, 0.0, 0.0], rnn: [1.] and GT: False
+Execution time: 324.7291 seconds
+membershipQuery: [18.0, 0.0, 0.0, 10.0, 10.0, 37.0, 18.0, 18.0, 4.0, 0.0, 0.0, 0.0] is in the language.
+membershipQuery: [42.0, 2.0, 2.0, 30.0, 30.0, 23.0, 42.0, 42.0, 16.0, 2.0, 30.0, 30.0] is in the language.
+membershipQuery: [61.0, 22.0, 22.0, 29.0, 29.0, 17.0, 61.0, 61.0, 39.0, 22.0, 17.0, 17.0] is in the language.
+membershipQuery: [22.0, 22.0, 22.0, 33.0, 33.0, 40.0, 22.0, 22.0, 23.0, 33.0, 41.0, 41.0] is not in the language.
+membershipQuery: [12.0, 49.0, 49.0, 23.0, 23.0, 56.0, 12.0, 12.0, 39.0, 23.0, 12.0, 12.0] is in the language.
+membershipQuery: [10.0, 34.0, 34.0, 52.0, 52.0, 24.0, 10.0, 10.0, 26.0, 52.0, 26.0, 26.0] is in the language.
+membershipQuery: [52.0, 5.0, 5.0, 17.0, 17.0, 29.0, 52.0, 52.0, 27.0, 17.0, 5.0, 5.0] is in the language.
+membershipQuery: [58.0, 36.0, 36.0, 51.0, 51.0, 3.0, 58.0, 58.0, 35.0, 51.0, 51.0, 51.0] is not in the language.
+membershipQuery: [22.0, 34.0, 34.0, 11.0, 11.0, 8.0, 22.0, 22.0, 57.0, 11.0, 8.0, 8.0] is in the language.
+membershipQuery: [16.0, 2.0, 2.0, 5.0, 5.0, 10.0, 16.0, 16.0, 7.0, 10.0, 23.0, 23.0] is in the language.
+membershipQuery: [59.0, 21.0, 21.0, 33.0, 33.0, 7.0, 59.0, 59.0, 46.0, 7.0, 59.0, 59.0] is in the language.
+membershipQuery: [42.0, 38.0, 38.0, 23.0, 23.0, 35.0, 42.0, 42.0, 58.0, 35.0, 58.0, 58.0] is in the language.
+membershipQuery: [15.0, 27.0, 27.0, 16.0, 16.0, 46.0, 15.0, 15.0, 33.0, 46.0, 27.0, 27.0] is in the language.
+membershipQuery: [52.0, 39.0, 39.0, 8.0, 8.0, 21.0, 52.0, 52.0, 21.0, 21.0, 8.0, 8.0] is in the language.
+membershipQuery: [35.0, 58.0, 58.0, 31.0, 31.0, 48.0, 35.0, 35.0, 40.0, 48.0, 48.0, 48.0] is not in the language.
+membershipQuery: [6.0, 42.0, 42.0, 7.0, 7.0, 6.0, 6.0, 4.0, 57.0] is in the language.
+membershipQuery: [37.0, 13.0, 13.0, 30.0, 30.0, 10.0, 10.0, 24.0, 37.0] is in the language.
+membershipQuery: [35.0, 58.0, 58.0, 37.0, 37.0, 34.0, 34.0, 8.0, 58.0] is in the language.
+membershipQuery: [60.0, 55.0, 55.0, 27.0, 27.0, 17.0, 17.0, 32.0, 27.0] is in the language.
+membershipQuery: [28.0, 50.0, 50.0, 28.0, 28.0, 15.0, 15.0, 5.0, 15.0] is in the language.
+membershipQuery: [4.0, 27.0, 27.0, 18.0, 18.0, 37.0, 37.0, 17.0, 50.0, 50.0] is in the language.
+membershipQuery: [53.0, 16.0, 16.0, 6.0, 6.0, 13.0, 13.0, 22.0, 53.0, 53.0] is in the language.
+membershipQuery: [19.0, 52.0, 52.0, 9.0, 9.0, 61.0, 61.0, 34.0, 34.0, 34.0] is not in the language.
+membershipQuery: [32.0, 44.0, 44.0, 9.0, 9.0, 25.0, 25.0, 16.0, 44.0, 44.0] is in the language.
+membershipQuery: [14.0, 8.0, 8.0, 53.0, 53.0, 2.0, 2.0, 25.0, 53.0, 53.0] is in the language.
+membershipQuery: [7.0, 29.0, 29.0, 17.0, 17.0, 28.0, 28.0, 8.0, 28.0, 28.0] is in the language.
+membershipQuery: [26.0, 61.0, 61.0, 4.0, 4.0, 61.0, 61.0, 26.0, 9.0] is in the language.
+membershipQuery: [7.0, 54.0, 54.0, 31.0, 31.0, 17.0, 17.0, 7.0, 17.0] is in the language.
+membershipQuery: [57.0, 49.0, 49.0, 1.0, 1.0, 10.0, 10.0, 57.0, 49.0] is in the language.
+membershipQuery: [52.0, 37.0, 37.0, 42.0, 42.0, 30.0, 30.0, 52.0, 42.0] is in the language.
+membershipQuery: [6.0, 5.0, 5.0, 49.0, 49.0, 9.0, 9.0, 6.0, 34.0, 34.0] is in the language.
+membershipQuery: [16.0, 54.0, 54.0, 14.0, 14.0, 31.0, 31.0, 16.0, 16.0, 16.0] is not in the language.
+membershipQuery: [59.0, 19.0, 19.0, 25.0, 25.0, 24.0, 24.0, 59.0, 24.0, 24.0] is in the language.
+membershipQuery: [52.0, 50.0, 50.0, 26.0, 26.0, 51.0, 51.0, 52.0, 50.0, 50.0] is in the language.
+membershipQuery: [1.0, 32.0, 32.0, 18.0, 18.0, 41.0, 41.0, 1.0, 18.0, 18.0] is in the language.
+membershipQuery: [34.0, 6.0, 6.0, 60.0, 60.0, 39.0, 39.0, 39.0, 18.0] is not in the language.
+membershipQuery: [22.0, 61.0, 61.0, 40.0, 40.0, 41.0, 41.0, 41.0, 22.0] is not in the language.
+membershipQuery: [2.0, 61.0, 61.0, 3.0, 3.0, 13.0, 13.0, 13.0, 61.0] is not in the language.
+membershipQuery: [0.0, 33.0, 33.0, 41.0, 41.0, 54.0, 54.0, 54.0, 41.0] is not in the language.
+membershipQuery: [61.0, 55.0, 55.0, 9.0, 9.0, 32.0, 32.0, 32.0, 60.0, 60.0] is not in the language.
+membershipQuery: [30.0, 43.0, 43.0, 36.0, 36.0, 33.0, 33.0, 33.0, 30.0, 30.0] is not in the language.
+membershipQuery: [9.0, 21.0, 21.0, 7.0, 7.0, 1.0, 1.0, 1.0, 1.0, 1.0] is not in the language.
+membershipQuery: [14.0, 3.0, 3.0, 18.0, 18.0, 61.0, 61.0, 61.0, 3.0, 3.0] is not in the language.
+membershipQuery: [20.0, 6.0, 6.0, 0.0, 0.0, 16.0, 16.0, 16.0, 0.0, 0.0] is not in the language.
+membershipQuery: [32.0, 39.0, 39.0, 48.0, 48.0, 58.0, 58.0, 39.0, 8.0] is in the language.
+membershipQuery: [35.0, 4.0, 4.0, 37.0, 37.0, 25.0, 25.0, 4.0, 35.0] is in the language.
+membershipQuery: [17.0, 7.0, 7.0, 50.0, 50.0, 26.0, 26.0, 7.0, 26.0] is in the language.
+membershipQuery: [48.0, 33.0, 33.0, 5.0, 5.0, 8.0, 8.0, 33.0, 5.0] is in the language.
+membershipQuery: [30.0, 26.0, 26.0, 46.0, 46.0, 25.0, 25.0, 26.0, 46.0, 46.0] is in the language.
+membershipQuery: [32.0, 35.0, 35.0, 24.0, 24.0, 50.0, 50.0, 35.0, 32.0, 32.0] is in the language.
+membershipQuery: [39.0, 58.0, 58.0, 21.0, 21.0, 35.0, 35.0, 58.0, 35.0, 35.0] is in the language.
+membershipQuery: [29.0, 42.0, 42.0, 56.0, 56.0, 3.0, 3.0, 42.0, 42.0, 42.0] is not in the language.
+membershipQuery: [16.0, 57.0, 57.0, 9.0, 9.0, 27.0, 27.0, 57.0, 9.0, 9.0] is in the language.
+membershipQuery: [9.0, 6.0, 6.0, 54.0, 54.0, 50.0, 50.0, 54.0, 43.0] is in the language.
+membershipQuery: [39.0, 12.0, 12.0, 39.0, 39.0, 30.0, 30.0, 39.0, 39.0] is in the language.
+membershipQuery: [31.0, 22.0, 22.0, 43.0, 43.0, 59.0, 59.0, 43.0, 59.0] is in the language.
+membershipQuery: [61.0, 0.0, 0.0, 46.0, 46.0, 6.0, 6.0, 46.0, 0.0] is in the language.
+membershipQuery: [45.0, 30.0, 30.0, 23.0, 23.0, 40.0, 40.0, 23.0, 25.0, 25.0] is in the language.
+membershipQuery: [26.0, 48.0, 48.0, 17.0, 17.0, 33.0, 33.0, 17.0, 26.0, 26.0] is in the language.
+membershipQuery: [34.0, 9.0, 9.0, 9.0, 9.0, 49.0, 49.0, 9.0, 49.0, 49.0] is not in the language.
+membershipQuery: [16.0, 32.0, 32.0, 34.0, 34.0, 53.0, 53.0, 34.0, 32.0, 32.0] is in the language.
+membershipQuery: [6.0, 1.0, 1.0, 56.0, 56.0, 17.0, 17.0, 56.0, 56.0, 56.0] is not in the language.
+DIAMOND: No. of qCount: 1375  No. of memQ count: 626  No. of EquivQ count: 956  No. of adversarial memQ: 5  No. of adversarial EquivQ: 0  No. of adversarial examples: 5  Time: 402.77803802490234
+membershipQuery: [51.0, 40.0, 40.0, 47.0, 47.0, 29.0, 47.0, 46.0, 30.0] is in the language.
+membershipQuery: [39.0, 0.0, 0.0, 19.0, 19.0, 29.0, 19.0, 47.0, 39.0] is in the language.
+membershipQuery: [39.0, 46.0, 46.0, 4.0, 4.0, 10.0, 4.0, 37.0, 46.0] is in the language.
+membershipQuery: [29.0, 29.0, 29.0, 5.0, 5.0, 2.0, 5.0, 35.0, 5.0] is not in the language.
+membershipQuery: [29.0, 5.0, 5.0, 52.0, 52.0, 27.0, 52.0, 42.0, 27.0] is in the language.
+membershipQuery: [31.0, 52.0, 52.0, 11.0, 11.0, 2.0, 11.0, 49.0, 29.0, 29.0] is in the language.
+membershipQuery: [19.0, 61.0, 61.0, 18.0, 18.0, 54.0, 18.0, 27.0, 19.0, 19.0] is in the language.
+membershipQuery: [12.0, 29.0, 29.0, 59.0, 59.0, 46.0, 59.0, 61.0, 61.0, 61.0] is not in the language.
+membershipQuery: [50.0, 2.0, 2.0, 17.0, 17.0, 14.0, 17.0, 15.0, 2.0, 2.0] is in the language.
+membershipQuery: [42.0, 51.0, 51.0, 6.0, 6.0, 2.0, 6.0, 18.0, 6.0, 6.0] is in the language.
+membershipQuery: [54.0, 0.0, 0.0, 35.0, 35.0, 26.0, 35.0, 33.0, 26.0, 26.0] is in the language.
+membershipQuery: [40.0, 34.0, 34.0, 4.0, 4.0, 60.0, 4.0, 40.0, 21.0] is in the language.
+membershipQuery: [2.0, 23.0, 23.0, 8.0, 8.0, 17.0, 8.0, 2.0, 17.0] is in the language.
+membershipQuery: [61.0, 61.0, 61.0, 20.0, 20.0, 6.0, 20.0, 61.0, 61.0] is not in the language.
+membershipQuery: [12.0, 58.0, 58.0, 60.0, 60.0, 40.0, 60.0, 12.0, 60.0] is in the language.
+membershipQuery: [32.0, 30.0, 30.0, 27.0, 27.0, 26.0, 27.0, 32.0, 35.0, 35.0] is in the language.
+membershipQuery: [38.0, 4.0, 4.0, 50.0, 50.0, 45.0, 50.0, 38.0, 38.0, 38.0] is not in the language.
+membershipQuery: [18.0, 18.0, 18.0, 5.0, 5.0, 11.0, 5.0, 18.0, 11.0, 11.0] is not in the language.
+membershipQuery: [44.0, 29.0, 29.0, 20.0, 20.0, 30.0, 20.0, 44.0, 29.0, 29.0] is in the language.
+membershipQuery: [57.0, 47.0, 47.0, 39.0, 39.0, 2.0, 39.0, 57.0, 39.0, 39.0] is in the language.
+membershipQuery: [50.0, 46.0, 46.0, 11.0, 11.0, 16.0, 11.0, 16.0, 34.0] is in the language.
+membershipQuery: [22.0, 42.0, 42.0, 15.0, 15.0, 56.0, 15.0, 56.0, 22.0] is in the language.
+membershipQuery: [2.0, 11.0, 11.0, 61.0, 61.0, 50.0, 61.0, 50.0, 11.0] is in the language.
+membershipQuery: [40.0, 7.0, 7.0, 16.0, 16.0, 13.0, 16.0, 13.0, 16.0] is in the language.
+membershipQuery: [11.0, 24.0, 24.0, 20.0, 20.0, 11.0, 20.0, 11.0, 38.0, 38.0] is in the language.
+membershipQuery: [47.0, 26.0, 26.0, 19.0, 19.0, 33.0, 19.0, 33.0, 47.0, 47.0] is in the language.
+membershipQuery: [36.0, 45.0, 45.0, 49.0, 49.0, 20.0, 49.0, 20.0, 20.0, 20.0] is not in the language.
+membershipQuery: [53.0, 0.0, 0.0, 25.0, 25.0, 33.0, 25.0, 33.0, 0.0, 0.0] is in the language.
+membershipQuery: [30.0, 40.0, 40.0, 6.0, 6.0, 9.0, 6.0, 9.0, 6.0, 6.0] is in the language.
+membershipQuery: [57.0, 35.0, 35.0, 44.0, 44.0, 7.0, 44.0, 35.0, 29.0] is in the language.
+membershipQuery: [50.0, 35.0, 35.0, 33.0, 33.0, 25.0, 33.0, 35.0, 50.0] is in the language.
+membershipQuery: [47.0, 2.0, 2.0, 33.0, 33.0, 60.0, 33.0, 2.0, 60.0] is in the language.
+membershipQuery: [48.0, 34.0, 34.0, 50.0, 50.0, 34.0, 50.0, 34.0, 50.0] is in the language.
+membershipQuery: [35.0, 51.0, 51.0, 53.0, 53.0, 35.0, 53.0, 51.0, 52.0, 52.0] is in the language.
+membershipQuery: [21.0, 13.0, 13.0, 55.0, 55.0, 14.0, 55.0, 13.0, 21.0, 21.0] is in the language.
+membershipQuery: [37.0, 38.0, 38.0, 19.0, 19.0, 28.0, 19.0, 38.0, 28.0, 28.0] is in the language.
+membershipQuery: [57.0, 52.0, 52.0, 42.0, 42.0, 51.0, 42.0, 52.0, 52.0, 52.0] is not in the language.
+membershipQuery: [44.0, 51.0, 51.0, 59.0, 59.0, 5.0, 59.0, 51.0, 59.0, 59.0] is in the language.
+membershipQuery: [55.0, 13.0, 13.0, 16.0, 16.0, 40.0, 16.0, 16.0, 58.0] is in the language.
+membershipQuery: [1.0, 26.0, 26.0, 60.0, 60.0, 45.0, 60.0, 60.0, 1.0] is in the language.
+membershipQuery: [4.0, 61.0, 61.0, 60.0, 60.0, 37.0, 60.0, 60.0, 37.0] is in the language.
+membershipQuery: [52.0, 9.0, 9.0, 3.0, 3.0, 42.0, 3.0, 3.0, 9.0] is in the language.
+membershipQuery: [29.0, 38.0, 38.0, 42.0, 42.0, 18.0, 42.0, 42.0, 53.0, 53.0] is in the language.
+membershipQuery: [2.0, 18.0, 18.0, 23.0, 23.0, 12.0, 23.0, 23.0, 2.0, 2.0] is in the language.
+membershipQuery: [42.0, 0.0, 0.0, 15.0, 15.0, 3.0, 15.0, 15.0, 3.0, 3.0] is in the language.
+membershipQuery: [43.0, 30.0, 30.0, 9.0, 9.0, 55.0, 9.0, 9.0, 30.0, 30.0] is in the language.
+membershipQuery: [34.0, 52.0, 52.0, 11.0, 11.0, 12.0, 11.0, 11.0, 11.0, 11.0] is not in the language.
+membershipQuery: [39.0, 24.0, 24.0, 32.0, 32.0, 30.0, 39.0, 2.0, 53.0, 19.0] is in the language.
+membershipQuery: [15.0, 55.0, 55.0, 56.0, 56.0, 34.0, 15.0, 5.0, 38.0, 15.0] is in the language.
+membershipQuery: [30.0, 3.0, 3.0, 12.0, 12.0, 36.0, 30.0, 10.0, 25.0, 10.0] is in the language.
+membershipQuery: [12.0, 53.0, 53.0, 4.0, 4.0, 15.0, 12.0, 14.0, 12.0, 53.0] is in the language.
+membershipQuery: [9.0, 15.0, 15.0, 10.0, 10.0, 9.0, 9.0, 41.0, 58.0, 10.0] is in the language.
+membershipQuery: [43.0, 3.0, 3.0, 12.0, 12.0, 54.0, 43.0, 31.0, 45.0, 54.0] is in the language.
+membershipQuery: [33.0, 1.0, 1.0, 16.0, 16.0, 29.0, 33.0, 32.0, 26.0, 41.0, 41.0] is in the language.
+membershipQuery: [6.0, 40.0, 40.0, 34.0, 34.0, 20.0, 6.0, 17.0, 9.0, 6.0, 6.0] is in the language.
+membershipQuery: [25.0, 29.0, 29.0, 58.0, 58.0, 52.0, 25.0, 42.0, 53.0, 42.0, 42.0] is in the language.
+membershipQuery: [6.0, 10.0, 10.0, 43.0, 43.0, 54.0, 6.0, 28.0, 8.0, 10.0, 10.0] is in the language.
+membershipQuery: [37.0, 42.0, 42.0, 22.0, 22.0, 14.0, 37.0, 23.0, 44.0, 22.0, 22.0] is in the language.
+membershipQuery: [38.0, 5.0, 5.0, 41.0, 41.0, 39.0, 38.0, 13.0, 47.0, 39.0, 39.0] is in the language.
+membershipQuery: [45.0, 27.0, 27.0, 44.0, 44.0, 39.0, 45.0, 28.0, 42.0, 42.0, 42.0] is not in the language.
+membershipQuery: [43.0, 21.0, 21.0, 6.0, 6.0, 33.0, 43.0, 0.0, 43.0, 19.0] is in the language.
+membershipQuery: [5.0, 20.0, 20.0, 23.0, 23.0, 47.0, 5.0, 53.0, 5.0, 53.0] is in the language.
+membershipQuery: [30.0, 57.0, 57.0, 21.0, 21.0, 9.0, 30.0, 14.0, 30.0, 57.0] is in the language.
+membershipQuery: [47.0, 31.0, 31.0, 12.0, 12.0, 61.0, 47.0, 32.0, 47.0, 12.0] is in the language.
+membershipQuery: [11.0, 35.0, 35.0, 15.0, 15.0, 6.0, 11.0, 35.0, 11.0, 6.0] is in the language.
+membershipQuery: [35.0, 39.0, 39.0, 4.0, 4.0, 36.0, 35.0, 32.0, 35.0, 19.0, 19.0] is in the language.
+membershipQuery: [26.0, 23.0, 23.0, 39.0, 39.0, 21.0, 26.0, 27.0, 26.0, 26.0, 26.0] is not in the language.
+membershipQuery: [48.0, 30.0, 30.0, 32.0, 32.0, 16.0, 48.0, 40.0, 48.0, 40.0, 40.0] is in the language.
+membershipQuery: [36.0, 50.0, 50.0, 60.0, 60.0, 14.0, 36.0, 5.0, 36.0, 50.0, 50.0] is in the language.
+membershipQuery: [54.0, 2.0, 2.0, 57.0, 57.0, 56.0, 54.0, 0.0, 54.0, 57.0, 57.0] is in the language.
+membershipQuery: [13.0, 42.0, 42.0, 7.0, 7.0, 1.0, 13.0, 27.0, 13.0, 1.0, 1.0] is in the language.
+membershipQuery: [58.0, 17.0, 17.0, 54.0, 54.0, 14.0, 58.0, 23.0, 23.0, 23.0] is not in the language.
+membershipQuery: [15.0, 16.0, 16.0, 25.0, 25.0, 54.0, 15.0, 34.0, 34.0, 15.0] is in the language.
+membershipQuery: [38.0, 18.0, 18.0, 39.0, 39.0, 59.0, 38.0, 8.0, 8.0, 18.0] is in the language.
+membershipQuery: [35.0, 50.0, 50.0, 4.0, 4.0, 37.0, 35.0, 13.0, 13.0, 4.0] is in the language.
+membershipQuery: [51.0, 10.0, 10.0, 55.0, 55.0, 0.0, 51.0, 18.0, 18.0, 0.0] is in the language.
+membershipQuery: [40.0, 22.0, 22.0, 43.0, 43.0, 8.0, 40.0, 8.0, 8.0, 40.0, 40.0] is in the language.
+membershipQuery: [13.0, 10.0, 10.0, 25.0, 25.0, 56.0, 13.0, 32.0, 32.0, 13.0, 13.0] is in the language.
+membershipQuery: [39.0, 36.0, 36.0, 35.0, 35.0, 26.0, 39.0, 52.0, 52.0, 52.0, 52.0] is not in the language.
+membershipQuery: [3.0, 37.0, 37.0, 16.0, 16.0, 12.0, 3.0, 55.0, 55.0, 37.0, 37.0] is in the language.
+membershipQuery: [27.0, 10.0, 10.0, 11.0, 11.0, 48.0, 27.0, 44.0, 44.0, 11.0, 11.0] is in the language.
+membershipQuery: [43.0, 20.0, 20.0, 33.0, 33.0, 10.0, 43.0, 61.0, 61.0, 10.0, 10.0] is in the language.
+membershipQuery: FOUND MISMATCH FOR [59.0, 54.0, 54.0, 55.0, 55.0, 37.0, 59.0, 8.0, 54.0, 58.0], rnn: [0.] and GT: True
+Execution time: 529.0567 seconds
+membershipQuery: [59.0, 54.0, 54.0, 55.0, 55.0, 37.0, 59.0, 8.0, 54.0, 58.0] is not in the language.
+membershipQuery: [20.0, 19.0, 19.0, 50.0, 50.0, 59.0, 20.0, 55.0, 19.0, 20.0] is in the language.
+membershipQuery: [2.0, 31.0, 31.0, 40.0, 40.0, 47.0, 2.0, 46.0, 31.0, 46.0] is in the language.
+membershipQuery: [6.0, 7.0, 7.0, 17.0, 17.0, 36.0, 6.0, 26.0, 7.0, 17.0] is in the language.
+membershipQuery: [19.0, 45.0, 45.0, 38.0, 38.0, 34.0, 19.0, 56.0, 45.0, 34.0] is in the language.
+membershipQuery: [2.0, 54.0, 54.0, 29.0, 29.0, 47.0, 2.0, 30.0, 54.0, 20.0, 20.0] is in the language.
+membershipQuery: [5.0, 7.0, 7.0, 14.0, 14.0, 1.0, 5.0, 55.0, 7.0, 5.0, 5.0] is in the language.
+membershipQuery: [11.0, 36.0, 36.0, 12.0, 12.0, 31.0, 11.0, 25.0, 36.0, 25.0, 25.0] is in the language.
+membershipQuery: [45.0, 9.0, 9.0, 21.0, 21.0, 19.0, 45.0, 10.0, 9.0, 9.0, 9.0] is not in the language.
+membershipQuery: [29.0, 45.0, 45.0, 41.0, 41.0, 18.0, 29.0, 32.0, 45.0, 41.0, 41.0] is in the language.
+membershipQuery: [42.0, 19.0, 19.0, 56.0, 56.0, 57.0, 42.0, 32.0, 19.0, 57.0, 57.0] is in the language.
+membershipQuery: [46.0, 31.0, 31.0, 29.0, 29.0, 7.0, 46.0, 34.0, 29.0, 45.0] is in the language.
+membershipQuery: [35.0, 42.0, 42.0, 21.0, 21.0, 42.0, 35.0, 14.0, 21.0, 35.0] is in the language.
+membershipQuery: [1.0, 22.0, 22.0, 46.0, 46.0, 52.0, 1.0, 16.0, 46.0, 16.0] is in the language.
+membershipQuery: [48.0, 23.0, 23.0, 8.0, 8.0, 0.0, 48.0, 25.0, 8.0, 23.0] is in the language.
+membershipQuery: [47.0, 59.0, 59.0, 52.0, 52.0, 48.0, 47.0, 55.0, 52.0, 48.0] is in the language.
+membershipQuery: [7.0, 54.0, 54.0, 55.0, 55.0, 21.0, 7.0, 39.0, 55.0, 41.0, 41.0] is in the language.
+membershipQuery: [41.0, 13.0, 13.0, 37.0, 37.0, 8.0, 41.0, 25.0, 37.0, 41.0, 41.0] is in the language.
+membershipQuery: [40.0, 16.0, 16.0, 60.0, 60.0, 50.0, 40.0, 37.0, 60.0, 37.0, 37.0] is in the language.
+membershipQuery: [53.0, 21.0, 21.0, 28.0, 28.0, 29.0, 53.0, 59.0, 28.0, 21.0, 21.0] is in the language.
+membershipQuery: FOUND MISMATCH FOR [22.0, 41.0, 41.0, 0.0, 0.0, 9.0, 22.0, 45.0, 0.0, 0.0, 0.0], rnn: [1.] and GT: False
+Execution time: 529.2265 seconds
+membershipQuery: [22.0, 41.0, 41.0, 0.0, 0.0, 9.0, 22.0, 45.0, 0.0, 0.0, 0.0] is in the language.
+membershipQuery: [1.0, 50.0, 50.0, 42.0, 42.0, 33.0, 1.0, 42.0, 42.0, 33.0, 33.0] is in the language.
+membershipQuery: [14.0, 59.0, 59.0, 54.0, 54.0, 6.0, 14.0, 51.0, 6.0, 26.0] is in the language.
+membershipQuery: [55.0, 6.0, 6.0, 34.0, 34.0, 27.0, 55.0, 10.0, 27.0, 55.0] is in the language.
+membershipQuery: [44.0, 3.0, 3.0, 59.0, 59.0, 6.0, 44.0, 47.0, 6.0, 47.0] is in the language.
+membershipQuery: [13.0, 33.0, 33.0, 8.0, 8.0, 23.0, 13.0, 27.0, 23.0, 33.0] is in the language.
+membershipQuery: [17.0, 49.0, 49.0, 51.0, 51.0, 36.0, 17.0, 16.0, 36.0, 51.0] is in the language.
+membershipQuery: [61.0, 2.0, 2.0, 10.0, 10.0, 53.0, 61.0, 61.0, 53.0, 22.0, 22.0] is in the language.
+membershipQuery: [59.0, 54.0, 54.0, 33.0, 33.0, 15.0, 59.0, 0.0, 15.0, 59.0, 59.0] is in the language.
+membershipQuery: [56.0, 5.0, 5.0, 26.0, 26.0, 13.0, 56.0, 21.0, 13.0, 21.0, 21.0] is in the language.
+membershipQuery: [3.0, 60.0, 60.0, 44.0, 44.0, 8.0, 3.0, 46.0, 8.0, 60.0, 60.0] is in the language.
+membershipQuery: [24.0, 38.0, 38.0, 47.0, 47.0, 1.0, 24.0, 31.0, 1.0, 47.0, 47.0] is in the language.
+membershipQuery: [19.0, 31.0, 31.0, 45.0, 45.0, 20.0, 19.0, 8.0, 20.0, 20.0, 20.0] is not in the language.
+membershipQuery: [13.0, 12.0, 12.0, 27.0, 27.0, 18.0, 13.0, 13.0, 20.0, 28.0, 7.0, 34.0] is in the language.
+membershipQuery: [8.0, 43.0, 43.0, 25.0, 25.0, 57.0, 8.0, 8.0, 21.0, 13.0, 8.0, 8.0] is in the language.
+membershipQuery: [12.0, 35.0, 35.0, 17.0, 17.0, 42.0, 12.0, 12.0, 47.0, 59.0, 31.0, 47.0] is in the language.
+membershipQuery: [22.0, 61.0, 61.0, 33.0, 33.0, 50.0, 22.0, 22.0, 40.0, 15.0, 12.0, 61.0] is in the language.
+membershipQuery: [10.0, 59.0, 59.0, 15.0, 15.0, 9.0, 10.0, 10.0, 9.0, 10.0, 14.0, 15.0] is in the language.
+membershipQuery: [53.0, 47.0, 47.0, 36.0, 36.0, 7.0, 53.0, 53.0, 11.0, 42.0, 49.0, 7.0] is in the language.
+membershipQuery: [46.0, 5.0, 5.0, 57.0, 57.0, 45.0, 46.0, 46.0, 33.0, 32.0, 27.0, 32.0] is in the language.
+membershipQuery: [44.0, 6.0, 6.0, 36.0, 36.0, 38.0, 44.0, 44.0, 45.0, 43.0, 25.0, 50.0, 50.0] is in the language.
+membershipQuery: [20.0, 3.0, 3.0, 34.0, 34.0, 37.0, 20.0, 20.0, 25.0, 46.0, 8.0, 20.0, 20.0] is in the language.
+membershipQuery: [13.0, 16.0, 16.0, 56.0, 56.0, 57.0, 13.0, 13.0, 45.0, 7.0, 47.0, 45.0, 45.0] is in the language.
+membershipQuery: [32.0, 31.0, 31.0, 6.0, 6.0, 56.0, 32.0, 32.0, 56.0, 23.0, 24.0, 31.0, 31.0] is in the language.
+membershipQuery: [39.0, 22.0, 22.0, 57.0, 57.0, 19.0, 39.0, 39.0, 40.0, 20.0, 58.0, 58.0, 58.0] is not in the language.
+membershipQuery: [4.0, 57.0, 57.0, 15.0, 15.0, 28.0, 4.0, 4.0, 18.0, 53.0, 56.0, 15.0, 15.0] is in the language.
+membershipQuery: [7.0, 49.0, 49.0, 60.0, 60.0, 20.0, 7.0, 7.0, 19.0, 15.0, 33.0, 20.0, 20.0] is in the language.
+membershipQuery: [40.0, 43.0, 43.0, 3.0, 3.0, 19.0, 40.0, 40.0, 60.0, 8.0, 14.0, 8.0, 8.0] is in the language.
+membershipQuery: [8.0, 26.0, 26.0, 37.0, 37.0, 12.0, 8.0, 8.0, 50.0, 8.0, 8.0, 58.0] is in the language.
+membershipQuery: [1.0, 59.0, 59.0, 20.0, 20.0, 51.0, 1.0, 1.0, 55.0, 41.0, 1.0, 55.0] is in the language.
+membershipQuery: [35.0, 39.0, 39.0, 54.0, 54.0, 29.0, 35.0, 35.0, 16.0, 28.0, 35.0, 39.0] is in the language.
+membershipQuery: [2.0, 16.0, 16.0, 23.0, 23.0, 55.0, 2.0, 2.0, 30.0, 29.0, 2.0, 23.0] is in the language.
+membershipQuery: [44.0, 25.0, 25.0, 20.0, 20.0, 50.0, 44.0, 44.0, 45.0, 38.0, 44.0, 50.0] is in the language.
+membershipQuery: [60.0, 33.0, 33.0, 29.0, 29.0, 3.0, 60.0, 60.0, 31.0, 49.0, 60.0, 49.0] is in the language.
+membershipQuery: [36.0, 26.0, 26.0, 20.0, 20.0, 61.0, 36.0, 36.0, 3.0, 2.0, 36.0, 32.0, 32.0] is in the language.
+membershipQuery: [38.0, 33.0, 33.0, 57.0, 57.0, 61.0, 38.0, 38.0, 54.0, 7.0, 38.0, 38.0, 38.0] is not in the language.
+membershipQuery: FOUND MISMATCH FOR [53.0, 30.0, 30.0, 26.0, 26.0, 24.0, 53.0, 53.0, 36.0, 12.0, 53.0, 36.0, 36.0], rnn: [0.] and GT: True
+Execution time: 996.6667 seconds
+membershipQuery: [53.0, 30.0, 30.0, 26.0, 26.0, 24.0, 53.0, 53.0, 36.0, 12.0, 53.0, 36.0, 36.0] is not in the language.
+membershipQuery: [28.0, 20.0, 20.0, 34.0, 34.0, 48.0, 28.0, 28.0, 41.0, 11.0, 28.0, 20.0, 20.0] is in the language.
+membershipQuery: [49.0, 27.0, 27.0, 36.0, 36.0, 10.0, 49.0, 49.0, 19.0, 40.0, 49.0, 36.0, 36.0] is in the language.
+membershipQuery: [0.0, 33.0, 33.0, 8.0, 8.0, 4.0, 0.0, 0.0, 56.0, 4.0, 0.0, 4.0, 4.0] is in the language.
+membershipQuery: [53.0, 37.0, 37.0, 48.0, 48.0, 36.0, 53.0, 53.0, 47.0, 4.0, 53.0, 4.0, 4.0] is in the language.
+membershipQuery: [37.0, 43.0, 43.0, 56.0, 56.0, 47.0, 37.0, 37.0, 9.0, 44.0, 9.0, 51.0] is in the language.
+membershipQuery: [22.0, 47.0, 47.0, 16.0, 16.0, 8.0, 22.0, 22.0, 58.0, 32.0, 58.0, 22.0] is in the language.
+membershipQuery: [1.0, 2.0, 2.0, 3.0, 3.0, 37.0, 1.0, 1.0, 3.0, 40.0, 3.0, 2.0] is in the language.
+membershipQuery: [4.0, 25.0, 25.0, 9.0, 9.0, 26.0, 4.0, 4.0, 49.0, 28.0, 49.0, 9.0] is in the language.
+membershipQuery: [18.0, 25.0, 25.0, 50.0, 50.0, 8.0, 18.0, 18.0, 43.0, 40.0, 43.0, 8.0] is in the language.
+membershipQuery: [0.0, 6.0, 6.0, 37.0, 37.0, 53.0, 0.0, 0.0, 7.0, 51.0, 7.0, 51.0] is in the language.
+membershipQuery: [55.0, 21.0, 21.0, 53.0, 53.0, 5.0, 55.0, 55.0, 31.0, 31.0, 31.0, 6.0, 6.0] is not in the language.
+membershipQuery: [34.0, 56.0, 56.0, 42.0, 42.0, 19.0, 34.0, 34.0, 33.0, 20.0, 33.0, 34.0, 34.0] is in the language.
+membershipQuery: [26.0, 39.0, 39.0, 21.0, 21.0, 33.0, 26.0, 26.0, 31.0, 12.0, 31.0, 31.0, 31.0] is not in the language.
+membershipQuery: [18.0, 43.0, 43.0, 36.0, 36.0, 25.0, 18.0, 18.0, 46.0, 59.0, 46.0, 43.0, 43.0] is in the language.
+membershipQuery: [26.0, 31.0, 31.0, 32.0, 32.0, 4.0, 26.0, 26.0, 3.0, 35.0, 3.0, 32.0, 32.0] is in the language.
+membershipQuery: [24.0, 9.0, 9.0, 1.0, 1.0, 13.0, 24.0, 24.0, 20.0, 8.0, 20.0, 13.0, 13.0] is in the language.
+membershipQuery: [5.0, 58.0, 58.0, 18.0, 18.0, 41.0, 5.0, 5.0, 4.0, 50.0, 4.0, 50.0, 50.0] is in the language.
+membershipQuery: [17.0, 5.0, 5.0, 30.0, 30.0, 19.0, 17.0, 17.0, 3.0, 40.0, 5.0, 15.0] is in the language.
+membershipQuery: [54.0, 11.0, 11.0, 9.0, 9.0, 13.0, 54.0, 54.0, 32.0, 0.0, 11.0, 54.0] is in the language.
+membershipQuery: [49.0, 57.0, 57.0, 42.0, 42.0, 12.0, 49.0, 49.0, 50.0, 10.0, 57.0, 50.0] is in the language.
+membershipQuery: [48.0, 35.0, 35.0, 21.0, 21.0, 34.0, 48.0, 48.0, 14.0, 17.0, 35.0, 21.0] is in the language.
+membershipQuery: [5.0, 20.0, 20.0, 44.0, 44.0, 4.0, 5.0, 5.0, 23.0, 38.0, 20.0, 4.0] is in the language.
+membershipQuery: [38.0, 44.0, 44.0, 33.0, 33.0, 21.0, 38.0, 38.0, 44.0, 26.0, 44.0, 26.0] is in the language.
+membershipQuery: [22.0, 1.0, 1.0, 21.0, 21.0, 20.0, 22.0, 22.0, 35.0, 37.0, 1.0, 21.0, 21.0] is in the language.
+membershipQuery: [23.0, 25.0, 25.0, 53.0, 53.0, 21.0, 23.0, 23.0, 33.0, 14.0, 25.0, 23.0, 23.0] is in the language.
+membershipQuery: [19.0, 6.0, 6.0, 23.0, 23.0, 29.0, 19.0, 19.0, 21.0, 34.0, 6.0, 21.0, 21.0] is in the language.
+membershipQuery: [31.0, 33.0, 33.0, 9.0, 9.0, 19.0, 31.0, 31.0, 23.0, 13.0, 33.0, 33.0, 33.0] is not in the language.
+membershipQuery: [8.0, 19.0, 19.0, 0.0, 0.0, 24.0, 8.0, 8.0, 26.0, 59.0, 19.0, 0.0, 0.0] is in the language.
+membershipQuery: [45.0, 58.0, 58.0, 53.0, 53.0, 32.0, 45.0, 45.0, 19.0, 3.0, 58.0, 32.0, 32.0] is in the language.
+membershipQuery: [41.0, 6.0, 6.0, 2.0, 2.0, 54.0, 41.0, 41.0, 34.0, 26.0, 6.0, 26.0, 26.0] is in the language.
+membershipQuery: [32.0, 31.0, 31.0, 19.0, 19.0, 2.0, 32.0, 32.0, 35.0, 15.0, 19.0, 49.0] is in the language.
+membershipQuery: [6.0, 23.0, 23.0, 28.0, 28.0, 17.0, 6.0, 6.0, 21.0, 30.0, 28.0, 6.0] is in the language.
+membershipQuery: [20.0, 44.0, 44.0, 1.0, 1.0, 30.0, 20.0, 20.0, 36.0, 57.0, 1.0, 36.0] is in the language.
+membershipQuery: [44.0, 35.0, 35.0, 40.0, 40.0, 9.0, 44.0, 44.0, 58.0, 45.0, 40.0, 35.0] is in the language.
+membershipQuery: [20.0, 37.0, 37.0, 49.0, 49.0, 60.0, 20.0, 20.0, 40.0, 15.0, 49.0, 60.0] is in the language.
+membershipQuery: [9.0, 38.0, 38.0, 7.0, 7.0, 32.0, 9.0, 9.0, 3.0, 30.0, 7.0, 30.0] is in the language.
+membershipQuery: [48.0, 43.0, 43.0, 16.0, 16.0, 22.0, 48.0, 48.0, 24.0, 46.0, 16.0, 7.0, 7.0] is in the language.
+membershipQuery: [40.0, 46.0, 46.0, 8.0, 8.0, 20.0, 40.0, 40.0, 4.0, 45.0, 8.0, 40.0, 40.0] is in the language.
+membershipQuery: [43.0, 8.0, 8.0, 18.0, 18.0, 55.0, 43.0, 43.0, 48.0, 5.0, 18.0, 48.0, 48.0] is in the language.
+membershipQuery: [34.0, 25.0, 25.0, 61.0, 61.0, 48.0, 34.0, 34.0, 27.0, 28.0, 61.0, 25.0, 25.0] is in the language.
+membershipQuery: [9.0, 56.0, 56.0, 31.0, 31.0, 59.0, 9.0, 9.0, 21.0, 61.0, 31.0, 31.0, 31.0] is not in the language.
+membershipQuery: [50.0, 22.0, 22.0, 53.0, 53.0, 56.0, 50.0, 50.0, 4.0, 53.0, 53.0, 56.0, 56.0] is in the language.
+membershipQuery: [34.0, 21.0, 21.0, 44.0, 44.0, 7.0, 34.0, 34.0, 46.0, 57.0, 44.0, 57.0, 57.0] is in the language.
+membershipQuery: [25.0, 56.0, 56.0, 58.0, 58.0, 41.0, 25.0, 25.0, 41.0, 19.0, 41.0, 12.0] is in the language.
+membershipQuery: [59.0, 22.0, 22.0, 27.0, 27.0, 32.0, 59.0, 59.0, 48.0, 27.0, 32.0, 59.0] is in the language.
+membershipQuery: [44.0, 31.0, 31.0, 44.0, 44.0, 25.0, 44.0, 44.0, 23.0, 16.0, 25.0, 23.0] is in the language.
+membershipQuery: [7.0, 52.0, 52.0, 0.0, 0.0, 34.0, 7.0, 7.0, 4.0, 39.0, 34.0, 52.0] is in the language.
+membershipQuery: [30.0, 31.0, 31.0, 38.0, 38.0, 31.0, 30.0, 30.0, 37.0, 35.0, 31.0, 38.0] is in the language.
+membershipQuery: [44.0, 16.0, 16.0, 3.0, 3.0, 16.0, 44.0, 44.0, 35.0, 7.0, 16.0, 7.0] is in the language.
+membershipQuery: [19.0, 37.0, 37.0, 3.0, 3.0, 56.0, 19.0, 19.0, 59.0, 5.0, 56.0, 2.0, 2.0] is in the language.
+membershipQuery: [2.0, 31.0, 31.0, 54.0, 54.0, 59.0, 2.0, 2.0, 16.0, 48.0, 59.0, 2.0, 2.0] is in the language.
+membershipQuery: [24.0, 28.0, 28.0, 58.0, 58.0, 15.0, 24.0, 24.0, 2.0, 18.0, 15.0, 2.0, 2.0] is in the language.
+membershipQuery: [38.0, 19.0, 19.0, 4.0, 4.0, 36.0, 38.0, 38.0, 35.0, 10.0, 36.0, 19.0, 19.0] is in the language.
+membershipQuery: [46.0, 29.0, 29.0, 5.0, 5.0, 11.0, 46.0, 46.0, 58.0, 6.0, 11.0, 5.0, 5.0] is in the language.
+membershipQuery: [27.0, 48.0, 48.0, 52.0, 52.0, 54.0, 27.0, 27.0, 48.0, 7.0, 54.0, 54.0, 54.0] is not in the language.
+membershipQuery: [19.0, 31.0, 31.0, 6.0, 6.0, 42.0, 19.0, 19.0, 26.0, 55.0, 42.0, 55.0, 55.0] is in the language.
+membershipQuery: [49.0, 10.0, 10.0, 4.0, 4.0, 40.0, 49.0, 49.0, 56.0, 33.0, 33.0, 47.0] is in the language.
+membershipQuery: [48.0, 10.0, 10.0, 2.0, 2.0, 46.0, 48.0, 48.0, 6.0, 16.0, 16.0, 48.0] is in the language.
+membershipQuery: [26.0, 41.0, 41.0, 52.0, 52.0, 38.0, 26.0, 26.0, 29.0, 58.0, 58.0, 29.0] is in the language.
+membershipQuery: [30.0, 32.0, 32.0, 25.0, 25.0, 59.0, 30.0, 30.0, 47.0, 27.0, 27.0, 32.0] is in the language.
+membershipQuery: FOUND MISMATCH FOR [43.0, 45.0, 45.0, 39.0, 39.0, 61.0, 43.0, 43.0, 42.0, 47.0, 47.0, 39.0], rnn: [0.] and GT: True
+Execution time: 997.3059 seconds
+membershipQuery: [43.0, 45.0, 45.0, 39.0, 39.0, 61.0, 43.0, 43.0, 42.0, 47.0, 47.0, 39.0] is not in the language.
+membershipQuery: [31.0, 16.0, 16.0, 42.0, 42.0, 27.0, 31.0, 31.0, 53.0, 11.0, 11.0, 27.0] is in the language.
+membershipQuery: [45.0, 19.0, 19.0, 55.0, 55.0, 58.0, 45.0, 45.0, 27.0, 45.0, 45.0, 2.0, 2.0] is in the language.
+membershipQuery: [61.0, 41.0, 41.0, 13.0, 13.0, 45.0, 61.0, 61.0, 45.0, 1.0, 1.0, 61.0, 61.0] is in the language.
+membershipQuery: [25.0, 12.0, 12.0, 10.0, 10.0, 19.0, 25.0, 25.0, 21.0, 34.0, 34.0, 21.0, 21.0] is in the language.
+membershipQuery: FOUND MISMATCH FOR [48.0, 17.0, 17.0, 54.0, 54.0, 52.0, 48.0, 48.0, 61.0, 60.0, 60.0, 17.0, 17.0], rnn: [0.] and GT: True
+Execution time: 997.3637 seconds
+membershipQuery: [48.0, 17.0, 17.0, 54.0, 54.0, 52.0, 48.0, 48.0, 61.0, 60.0, 60.0, 17.0, 17.0] is not in the language.
+membershipQuery: [38.0, 45.0, 45.0, 49.0, 49.0, 13.0, 38.0, 38.0, 24.0, 17.0, 17.0, 49.0, 49.0] is in the language.
+membershipQuery: [17.0, 32.0, 32.0, 45.0, 45.0, 5.0, 17.0, 17.0, 6.0, 21.0, 21.0, 5.0, 5.0] is in the language.
+membershipQuery: [51.0, 17.0, 17.0, 42.0, 42.0, 16.0, 51.0, 51.0, 53.0, 57.0, 57.0, 57.0, 57.0] is not in the language.
+membershipQuery: [44.0, 28.0, 28.0, 52.0, 52.0, 2.0, 44.0, 44.0, 18.0, 44.0, 6.0, 61.0] is in the language.
+membershipQuery: [60.0, 35.0, 35.0, 9.0, 9.0, 53.0, 60.0, 60.0, 45.0, 60.0, 50.0, 60.0] is in the language.
+membershipQuery: [56.0, 23.0, 23.0, 11.0, 11.0, 55.0, 56.0, 56.0, 36.0, 56.0, 45.0, 36.0] is in the language.
+membershipQuery: [21.0, 15.0, 15.0, 20.0, 20.0, 40.0, 21.0, 21.0, 47.0, 21.0, 0.0, 15.0] is in the language.
+membershipQuery: [44.0, 30.0, 30.0, 54.0, 54.0, 8.0, 44.0, 44.0, 3.0, 44.0, 23.0, 54.0] is in the language.
+membershipQuery: [9.0, 14.0, 14.0, 35.0, 35.0, 1.0, 9.0, 9.0, 27.0, 9.0, 46.0, 1.0] is in the language.
+membershipQuery: [20.0, 28.0, 28.0, 45.0, 45.0, 49.0, 20.0, 20.0, 1.0, 20.0, 56.0, 51.0, 51.0] is in the language.
+membershipQuery: [28.0, 9.0, 9.0, 52.0, 52.0, 51.0, 28.0, 28.0, 19.0, 28.0, 17.0, 28.0, 28.0] is in the language.
+membershipQuery: [57.0, 31.0, 31.0, 28.0, 28.0, 14.0, 57.0, 57.0, 41.0, 57.0, 36.0, 41.0, 41.0] is in the language.
+membershipQuery: [9.0, 11.0, 11.0, 22.0, 22.0, 45.0, 9.0, 9.0, 11.0, 9.0, 36.0, 11.0, 11.0] is in the language.
+membershipQuery: [38.0, 58.0, 58.0, 12.0, 12.0, 16.0, 38.0, 38.0, 8.0, 38.0, 14.0, 12.0, 12.0] is in the language.
+membershipQuery: [52.0, 15.0, 15.0, 39.0, 39.0, 45.0, 52.0, 52.0, 16.0, 52.0, 47.0, 45.0, 45.0] is in the language.
+membershipQuery: [61.0, 36.0, 36.0, 59.0, 59.0, 35.0, 61.0, 61.0, 20.0, 61.0, 40.0, 40.0, 40.0] is not in the language.
+membershipQuery: [54.0, 0.0, 0.0, 42.0, 42.0, 59.0, 54.0, 54.0, 18.0, 54.0, 54.0, 58.0] is in the language.
+membershipQuery: [18.0, 20.0, 20.0, 57.0, 57.0, 33.0, 18.0, 18.0, 49.0, 18.0, 18.0, 49.0] is in the language.
+membershipQuery: [0.0, 54.0, 54.0, 24.0, 24.0, 20.0, 0.0, 0.0, 27.0, 0.0, 0.0, 54.0] is in the language.
+membershipQuery: [24.0, 50.0, 50.0, 56.0, 56.0, 61.0, 24.0, 24.0, 7.0, 24.0, 24.0, 56.0] is in the language.
+membershipQuery: [4.0, 55.0, 55.0, 17.0, 17.0, 25.0, 4.0, 4.0, 59.0, 4.0, 4.0, 25.0] is in the language.
+membershipQuery: [5.0, 17.0, 17.0, 25.0, 25.0, 20.0, 5.0, 5.0, 27.0, 5.0, 5.0, 15.0, 15.0] is in the language.
+membershipQuery: [34.0, 17.0, 17.0, 4.0, 4.0, 44.0, 34.0, 34.0, 33.0, 34.0, 34.0, 34.0, 34.0] is not in the language.
+membershipQuery: [22.0, 56.0, 56.0, 48.0, 48.0, 47.0, 22.0, 22.0, 20.0, 22.0, 22.0, 20.0, 20.0] is in the language.
+membershipQuery: [57.0, 54.0, 54.0, 43.0, 43.0, 2.0, 57.0, 57.0, 9.0, 57.0, 57.0, 54.0, 54.0] is in the language.
+membershipQuery: [52.0, 47.0, 47.0, 38.0, 38.0, 47.0, 52.0, 52.0, 39.0, 52.0, 52.0, 38.0, 38.0] is in the language.
+membershipQuery: [57.0, 7.0, 7.0, 48.0, 48.0, 31.0, 57.0, 57.0, 43.0, 57.0, 57.0, 31.0, 31.0] is in the language.
+membershipQuery: [7.0, 25.0, 25.0, 39.0, 39.0, 25.0, 7.0, 7.0, 41.0, 7.0, 41.0, 46.0] is in the language.
+membershipQuery: [4.0, 43.0, 43.0, 16.0, 16.0, 39.0, 4.0, 4.0, 18.0, 4.0, 18.0, 4.0] is in the language.
+membershipQuery: [5.0, 43.0, 43.0, 28.0, 28.0, 2.0, 5.0, 5.0, 48.0, 5.0, 48.0, 43.0] is in the language.
+membershipQuery: [6.0, 22.0, 22.0, 14.0, 14.0, 31.0, 6.0, 6.0, 42.0, 6.0, 42.0, 14.0] is in the language.
+membershipQuery: [15.0, 30.0, 30.0, 51.0, 51.0, 45.0, 15.0, 15.0, 28.0, 15.0, 28.0, 45.0] is in the language.
+membershipQuery: [56.0, 3.0, 3.0, 5.0, 5.0, 16.0, 56.0, 56.0, 51.0, 56.0, 51.0, 17.0, 17.0] is in the language.
+membershipQuery: [18.0, 40.0, 40.0, 3.0, 3.0, 44.0, 18.0, 18.0, 47.0, 18.0, 47.0, 18.0, 18.0] is in the language.
+membershipQuery: [16.0, 40.0, 40.0, 42.0, 42.0, 18.0, 16.0, 16.0, 33.0, 16.0, 33.0, 33.0, 33.0] is not in the language.
+membershipQuery: [3.0, 29.0, 29.0, 12.0, 12.0, 26.0, 3.0, 3.0, 51.0, 3.0, 51.0, 29.0, 29.0] is in the language.
+membershipQuery: [12.0, 36.0, 36.0, 33.0, 33.0, 57.0, 12.0, 12.0, 25.0, 12.0, 25.0, 33.0, 33.0] is in the language.
+membershipQuery: [15.0, 40.0, 40.0, 49.0, 49.0, 16.0, 15.0, 15.0, 0.0, 15.0, 0.0, 16.0, 16.0] is in the language.
+membershipQuery: [44.0, 60.0, 60.0, 43.0, 43.0, 57.0, 44.0, 44.0, 14.0, 44.0, 60.0, 40.0] is in the language.
+membershipQuery: [26.0, 20.0, 20.0, 43.0, 43.0, 58.0, 26.0, 26.0, 26.0, 26.0, 20.0, 26.0] is not in the language.
+membershipQuery: [16.0, 1.0, 1.0, 54.0, 54.0, 40.0, 16.0, 16.0, 14.0, 16.0, 1.0, 14.0] is in the language.
+membershipQuery: [38.0, 27.0, 27.0, 43.0, 43.0, 57.0, 38.0, 38.0, 45.0, 38.0, 27.0, 43.0] is in the language.
+membershipQuery: [13.0, 39.0, 39.0, 4.0, 4.0, 23.0, 13.0, 13.0, 20.0, 13.0, 39.0, 23.0] is in the language.
+membershipQuery: [34.0, 13.0, 13.0, 44.0, 44.0, 34.0, 34.0, 34.0, 60.0, 34.0, 13.0, 6.0, 6.0] is not in the language.
+membershipQuery: [34.0, 16.0, 16.0, 55.0, 55.0, 48.0, 34.0, 34.0, 14.0, 34.0, 16.0, 34.0, 34.0] is in the language.
+membershipQuery: [25.0, 2.0, 2.0, 3.0, 3.0, 23.0, 25.0, 25.0, 25.0, 25.0, 2.0, 25.0, 25.0] is not in the language.
+membershipQuery: [18.0, 53.0, 53.0, 44.0, 44.0, 24.0, 18.0, 18.0, 48.0, 18.0, 53.0, 53.0, 53.0] is not in the language.
+membershipQuery: [17.0, 24.0, 24.0, 42.0, 42.0, 32.0, 17.0, 17.0, 13.0, 17.0, 24.0, 42.0, 42.0] is in the language.
+membershipQuery: [16.0, 20.0, 20.0, 20.0, 20.0, 23.0, 16.0, 16.0, 16.0, 16.0, 20.0, 23.0, 23.0] is not in the language.
+membershipQuery: [56.0, 29.0, 29.0, 58.0, 58.0, 58.0, 56.0, 56.0, 23.0, 56.0, 58.0, 3.0] is not in the language.
+membershipQuery: [38.0, 25.0, 25.0, 5.0, 5.0, 6.0, 38.0, 38.0, 21.0, 38.0, 5.0, 38.0] is in the language.
+membershipQuery: [59.0, 19.0, 19.0, 37.0, 37.0, 18.0, 59.0, 59.0, 27.0, 59.0, 37.0, 27.0] is in the language.
+membershipQuery: [35.0, 15.0, 15.0, 56.0, 56.0, 60.0, 35.0, 35.0, 10.0, 35.0, 56.0, 15.0] is in the language.
+membershipQuery: [18.0, 56.0, 56.0, 6.0, 6.0, 59.0, 18.0, 18.0, 36.0, 18.0, 6.0, 59.0] is in the language.
+membershipQuery: [12.0, 26.0, 26.0, 25.0, 25.0, 49.0, 12.0, 12.0, 20.0, 12.0, 25.0, 25.0, 25.0] is not in the language.
+membershipQuery: [52.0, 52.0, 52.0, 37.0, 37.0, 17.0, 52.0, 52.0, 25.0, 52.0, 37.0, 52.0, 52.0] is not in the language.
+membershipQuery: [20.0, 35.0, 35.0, 4.0, 4.0, 53.0, 20.0, 20.0, 52.0, 20.0, 4.0, 52.0, 52.0] is in the language.
+membershipQuery: [50.0, 20.0, 20.0, 48.0, 48.0, 11.0, 50.0, 50.0, 11.0, 50.0, 48.0, 20.0, 20.0] is in the language.
+membershipQuery: [28.0, 23.0, 23.0, 17.0, 17.0, 41.0, 28.0, 28.0, 12.0, 28.0, 17.0, 17.0, 17.0] is not in the language.
+membershipQuery: [44.0, 39.0, 39.0, 47.0, 47.0, 22.0, 44.0, 44.0, 44.0, 44.0, 47.0, 22.0, 22.0] is not in the language.
+membershipQuery: [30.0, 34.0, 34.0, 31.0, 31.0, 43.0, 30.0, 30.0, 61.0, 30.0, 43.0, 36.0] is in the language.
+membershipQuery: [53.0, 40.0, 40.0, 57.0, 57.0, 40.0, 53.0, 53.0, 26.0, 53.0, 40.0, 53.0] is in the language.
+membershipQuery: [2.0, 25.0, 25.0, 24.0, 24.0, 59.0, 2.0, 2.0, 59.0, 2.0, 59.0, 59.0] is in the language.
+membershipQuery: [48.0, 12.0, 12.0, 9.0, 9.0, 0.0, 48.0, 48.0, 37.0, 48.0, 0.0, 12.0] is in the language.
+membershipQuery: [42.0, 2.0, 2.0, 56.0, 56.0, 36.0, 42.0, 42.0, 44.0, 42.0, 36.0, 56.0] is in the language.
+membershipQuery: [20.0, 55.0, 55.0, 29.0, 29.0, 2.0, 20.0, 20.0, 31.0, 20.0, 2.0, 31.0, 31.0] is in the language.
+membershipQuery: [58.0, 2.0, 2.0, 27.0, 27.0, 7.0, 58.0, 58.0, 54.0, 58.0, 7.0, 58.0, 58.0] is in the language.
+membershipQuery: [3.0, 52.0, 52.0, 20.0, 20.0, 0.0, 3.0, 3.0, 40.0, 3.0, 0.0, 40.0, 40.0] is in the language.
+membershipQuery: [55.0, 57.0, 57.0, 57.0, 57.0, 18.0, 55.0, 55.0, 53.0, 55.0, 18.0, 57.0, 57.0] is not in the language.
+membershipQuery: [6.0, 29.0, 29.0, 36.0, 36.0, 12.0, 6.0, 6.0, 3.0, 6.0, 12.0, 36.0, 36.0] is in the language.
+membershipQuery: [32.0, 43.0, 43.0, 16.0, 16.0, 27.0, 32.0, 32.0, 55.0, 32.0, 27.0, 27.0, 27.0] is not in the language.
+membershipQuery: [43.0, 38.0, 38.0, 35.0, 35.0, 52.0, 43.0, 43.0, 47.0, 35.0, 34.0, 28.0] is in the language.
+membershipQuery: [40.0, 48.0, 48.0, 58.0, 58.0, 18.0, 40.0, 40.0, 29.0, 58.0, 28.0, 40.0] is in the language.
+membershipQuery: [57.0, 3.0, 3.0, 10.0, 10.0, 20.0, 57.0, 57.0, 34.0, 10.0, 4.0, 34.0] is in the language.
+membershipQuery: [23.0, 7.0, 7.0, 31.0, 31.0, 8.0, 23.0, 23.0, 15.0, 31.0, 17.0, 7.0] is in the language.
+membershipQuery: [47.0, 6.0, 6.0, 55.0, 55.0, 36.0, 47.0, 47.0, 0.0, 55.0, 10.0, 55.0] is in the language.
+membershipQuery: [20.0, 14.0, 14.0, 56.0, 56.0, 54.0, 20.0, 20.0, 45.0, 56.0, 7.0, 54.0] is in the language.
+membershipQuery: [38.0, 42.0, 42.0, 47.0, 47.0, 34.0, 38.0, 38.0, 3.0, 47.0, 11.0, 21.0, 21.0] is in the language.
+membershipQuery: [29.0, 29.0, 29.0, 36.0, 36.0, 52.0, 29.0, 29.0, 36.0, 36.0, 29.0, 29.0, 29.0] is not in the language.
+membershipQuery: [18.0, 39.0, 39.0, 23.0, 23.0, 8.0, 18.0, 18.0, 18.0, 23.0, 10.0, 18.0, 18.0] is not in the language.
+membershipQuery: [13.0, 36.0, 36.0, 17.0, 17.0, 36.0, 13.0, 13.0, 15.0, 17.0, 3.0, 36.0, 36.0] is in the language.
+membershipQuery: [33.0, 35.0, 35.0, 3.0, 3.0, 40.0, 33.0, 33.0, 38.0, 3.0, 17.0, 3.0, 3.0] is in the language.
+membershipQuery: [59.0, 37.0, 37.0, 35.0, 35.0, 57.0, 59.0, 59.0, 11.0, 35.0, 10.0, 57.0, 57.0] is in the language.
+membershipQuery: [40.0, 3.0, 3.0, 55.0, 55.0, 9.0, 40.0, 40.0, 26.0, 55.0, 12.0, 12.0, 12.0] is not in the language.
+membershipQuery: [61.0, 15.0, 15.0, 52.0, 52.0, 37.0, 61.0, 61.0, 53.0, 52.0, 61.0, 26.0] is in the language.
+membershipQuery: [13.0, 47.0, 47.0, 22.0, 22.0, 44.0, 13.0, 13.0, 12.0, 22.0, 13.0, 12.0] is in the language.
+membershipQuery: [34.0, 3.0, 3.0, 57.0, 57.0, 46.0, 34.0, 34.0, 5.0, 57.0, 34.0, 3.0] is in the language.
+membershipQuery: [2.0, 11.0, 11.0, 23.0, 23.0, 11.0, 2.0, 2.0, 53.0, 23.0, 2.0, 23.0] is in the language.
+membershipQuery: [32.0, 46.0, 46.0, 10.0, 10.0, 19.0, 32.0, 32.0, 19.0, 10.0, 32.0, 19.0] is in the language.
+membershipQuery: [57.0, 49.0, 49.0, 35.0, 35.0, 11.0, 57.0, 57.0, 37.0, 35.0, 57.0, 49.0, 49.0] is in the language.
+membershipQuery: [46.0, 21.0, 21.0, 49.0, 49.0, 4.0, 46.0, 46.0, 13.0, 49.0, 46.0, 46.0, 46.0] is not in the language.
+membershipQuery: [12.0, 43.0, 43.0, 53.0, 53.0, 47.0, 12.0, 12.0, 56.0, 53.0, 12.0, 56.0, 56.0] is in the language.
+membershipQuery: [11.0, 21.0, 21.0, 28.0, 28.0, 59.0, 11.0, 11.0, 28.0, 28.0, 11.0, 21.0, 21.0] is in the language.
+membershipQuery: [32.0, 17.0, 17.0, 13.0, 13.0, 20.0, 32.0, 32.0, 7.0, 13.0, 32.0, 13.0, 13.0] is in the language.
+membershipQuery: [30.0, 17.0, 17.0, 3.0, 3.0, 48.0, 30.0, 30.0, 34.0, 3.0, 30.0, 48.0, 48.0] is in the language.
+membershipQuery: [1.0, 10.0, 10.0, 29.0, 29.0, 4.0, 1.0, 1.0, 13.0, 29.0, 13.0, 12.0] is in the language.
+membershipQuery: [14.0, 8.0, 8.0, 10.0, 10.0, 3.0, 14.0, 14.0, 44.0, 10.0, 44.0, 14.0] is in the language.
+membershipQuery: [33.0, 12.0, 12.0, 41.0, 41.0, 6.0, 33.0, 33.0, 39.0, 41.0, 39.0, 12.0] is in the language.
+membershipQuery: [43.0, 38.0, 38.0, 22.0, 22.0, 36.0, 43.0, 43.0, 54.0, 22.0, 54.0, 22.0] is in the language.
+membershipQuery: [39.0, 29.0, 29.0, 27.0, 27.0, 8.0, 39.0, 39.0, 59.0, 27.0, 59.0, 8.0] is in the language.
+membershipQuery: [10.0, 14.0, 14.0, 41.0, 41.0, 10.0, 10.0, 10.0, 16.0, 41.0, 16.0, 28.0, 28.0] is not in the language.
+membershipQuery: [3.0, 35.0, 35.0, 61.0, 61.0, 58.0, 3.0, 3.0, 38.0, 61.0, 38.0, 3.0, 3.0] is in the language.
+membershipQuery: [4.0, 31.0, 31.0, 5.0, 5.0, 20.0, 4.0, 4.0, 2.0, 5.0, 2.0, 2.0, 2.0] is not in the language.
+membershipQuery: [9.0, 37.0, 37.0, 29.0, 29.0, 41.0, 9.0, 9.0, 6.0, 29.0, 6.0, 37.0, 37.0] is in the language.
+membershipQuery: [52.0, 9.0, 9.0, 22.0, 22.0, 25.0, 52.0, 52.0, 49.0, 22.0, 49.0, 22.0, 22.0] is in the language.
+membershipQuery: [15.0, 44.0, 44.0, 47.0, 47.0, 15.0, 15.0, 15.0, 2.0, 47.0, 2.0, 15.0, 15.0] is not in the language.
+membershipQuery: [61.0, 4.0, 4.0, 35.0, 35.0, 30.0, 61.0, 61.0, 55.0, 35.0, 4.0, 61.0] is in the language.
+membershipQuery: [36.0, 48.0, 48.0, 49.0, 49.0, 40.0, 36.0, 36.0, 55.0, 49.0, 48.0, 36.0] is in the language.
+membershipQuery: [56.0, 12.0, 12.0, 20.0, 20.0, 12.0, 56.0, 56.0, 38.0, 20.0, 12.0, 38.0] is in the language.
+membershipQuery: [46.0, 15.0, 15.0, 23.0, 23.0, 29.0, 46.0, 46.0, 1.0, 23.0, 15.0, 23.0] is in the language.
+membershipQuery: [21.0, 48.0, 48.0, 61.0, 61.0, 19.0, 21.0, 21.0, 19.0, 61.0, 48.0, 19.0] is in the language.
+membershipQuery: [19.0, 25.0, 25.0, 7.0, 7.0, 28.0, 19.0, 19.0, 21.0, 7.0, 25.0, 28.0, 28.0] is in the language.
+membershipQuery: [55.0, 40.0, 40.0, 8.0, 8.0, 31.0, 55.0, 55.0, 31.0, 8.0, 40.0, 55.0, 55.0] is in the language.
+membershipQuery: [58.0, 32.0, 32.0, 17.0, 17.0, 17.0, 58.0, 58.0, 1.0, 17.0, 32.0, 1.0, 1.0] is not in the language.
+membershipQuery: [37.0, 15.0, 15.0, 27.0, 27.0, 4.0, 37.0, 37.0, 61.0, 27.0, 15.0, 15.0, 15.0] is not in the language.
+membershipQuery: [10.0, 5.0, 5.0, 31.0, 31.0, 20.0, 10.0, 10.0, 20.0, 31.0, 5.0, 31.0, 31.0] is in the language.
+membershipQuery: [18.0, 10.0, 10.0, 4.0, 4.0, 36.0, 18.0, 18.0, 34.0, 4.0, 10.0, 36.0, 36.0] is in the language.
+membershipQuery: [7.0, 10.0, 10.0, 35.0, 35.0, 11.0, 7.0, 7.0, 22.0, 35.0, 35.0, 30.0] is in the language.
+membershipQuery: [28.0, 57.0, 57.0, 48.0, 48.0, 18.0, 28.0, 28.0, 40.0, 48.0, 48.0, 28.0] is in the language.
+membershipQuery: [37.0, 32.0, 32.0, 44.0, 44.0, 46.0, 37.0, 37.0, 10.0, 44.0, 44.0, 10.0] is in the language.
+membershipQuery: [59.0, 45.0, 45.0, 38.0, 38.0, 33.0, 59.0, 59.0, 20.0, 38.0, 38.0, 45.0] is in the language.
+membershipQuery: [43.0, 20.0, 20.0, 56.0, 56.0, 17.0, 43.0, 43.0, 24.0, 56.0, 56.0, 17.0] is in the language.
+membershipQuery: [26.0, 1.0, 1.0, 15.0, 15.0, 36.0, 26.0, 26.0, 55.0, 15.0, 15.0, 20.0, 20.0] is in the language.
+membershipQuery: [6.0, 2.0, 2.0, 48.0, 48.0, 33.0, 6.0, 6.0, 53.0, 48.0, 48.0, 6.0, 6.0] is in the language.
+membershipQuery: [14.0, 13.0, 13.0, 58.0, 58.0, 53.0, 14.0, 14.0, 13.0, 58.0, 58.0, 13.0, 13.0] is in the language.
+membershipQuery: [47.0, 59.0, 59.0, 32.0, 32.0, 21.0, 47.0, 47.0, 30.0, 32.0, 32.0, 59.0, 59.0] is in the language.
+membershipQuery: [28.0, 8.0, 8.0, 13.0, 13.0, 35.0, 28.0, 28.0, 60.0, 13.0, 13.0, 13.0, 13.0] is not in the language.
+membershipQuery: [11.0, 4.0, 4.0, 34.0, 34.0, 13.0, 11.0, 11.0, 57.0, 34.0, 34.0, 13.0, 13.0] is in the language.
+membershipQuery: [30.0, 7.0, 7.0, 9.0, 9.0, 8.0, 30.0, 30.0, 22.0, 9.0, 8.0, 33.0] is in the language.
+membershipQuery: [44.0, 3.0, 3.0, 25.0, 25.0, 57.0, 44.0, 44.0, 2.0, 25.0, 57.0, 44.0] is in the language.
+membershipQuery: [48.0, 2.0, 2.0, 3.0, 3.0, 2.0, 48.0, 48.0, 30.0, 3.0, 2.0, 30.0] is in the language.
+membershipQuery: [38.0, 37.0, 37.0, 57.0, 57.0, 17.0, 38.0, 38.0, 11.0, 57.0, 17.0, 37.0] is in the language.
+membershipQuery: [22.0, 46.0, 46.0, 35.0, 35.0, 59.0, 22.0, 22.0, 27.0, 35.0, 59.0, 35.0] is in the language.
+membershipQuery: [48.0, 48.0, 48.0, 32.0, 32.0, 11.0, 48.0, 48.0, 61.0, 32.0, 11.0, 23.0, 23.0] is not in the language.
+membershipQuery: [2.0, 55.0, 55.0, 15.0, 15.0, 37.0, 2.0, 2.0, 4.0, 15.0, 37.0, 2.0, 2.0] is in the language.
+membershipQuery: [11.0, 0.0, 0.0, 12.0, 12.0, 5.0, 11.0, 11.0, 61.0, 12.0, 5.0, 61.0, 61.0] is in the language.
+membershipQuery: [16.0, 46.0, 46.0, 57.0, 57.0, 44.0, 16.0, 16.0, 61.0, 57.0, 44.0, 46.0, 46.0] is in the language.
+membershipQuery: [40.0, 17.0, 17.0, 18.0, 18.0, 51.0, 40.0, 40.0, 35.0, 18.0, 51.0, 18.0, 18.0] is in the language.
+membershipQuery: [36.0, 2.0, 2.0, 20.0, 20.0, 22.0, 36.0, 36.0, 28.0, 20.0, 22.0, 22.0, 22.0] is not in the language.
+membershipQuery: [19.0, 32.0, 32.0, 4.0, 4.0, 55.0, 55.0, 4.0, 17.0, 19.0] is in the language.
+membershipQuery: [55.0, 6.0, 6.0, 59.0, 59.0, 50.0, 50.0, 59.0, 9.0, 55.0] is in the language.
+membershipQuery: [28.0, 29.0, 29.0, 37.0, 37.0, 35.0, 35.0, 37.0, 22.0, 29.0] is in the language.
+membershipQuery: [17.0, 37.0, 37.0, 52.0, 52.0, 19.0, 19.0, 52.0, 2.0, 52.0] is in the language.
+membershipQuery: [42.0, 22.0, 22.0, 24.0, 24.0, 35.0, 35.0, 24.0, 44.0, 35.0] is in the language.
+membershipQuery: [30.0, 4.0, 4.0, 13.0, 13.0, 22.0, 22.0, 13.0, 43.0, 35.0, 35.0] is in the language.
+membershipQuery: [0.0, 55.0, 55.0, 24.0, 24.0, 58.0, 58.0, 24.0, 43.0, 0.0, 0.0] is in the language.
+membershipQuery: [23.0, 24.0, 24.0, 47.0, 47.0, 48.0, 48.0, 47.0, 9.0, 9.0, 9.0] is not in the language.
+membershipQuery: [40.0, 40.0, 40.0, 47.0, 47.0, 24.0, 24.0, 47.0, 59.0, 40.0, 40.0] is not in the language.
+membershipQuery: [47.0, 30.0, 30.0, 45.0, 45.0, 28.0, 28.0, 45.0, 54.0, 45.0, 45.0] is in the language.
+membershipQuery: [1.0, 37.0, 37.0, 53.0, 53.0, 36.0, 36.0, 53.0, 30.0, 36.0, 36.0] is in the language.
+membershipQuery: [28.0, 23.0, 23.0, 34.0, 34.0, 4.0, 4.0, 34.0, 28.0, 8.0] is in the language.
+membershipQuery: [30.0, 26.0, 26.0, 6.0, 6.0, 32.0, 32.0, 6.0, 30.0, 32.0] is in the language.
+membershipQuery: [49.0, 21.0, 21.0, 24.0, 24.0, 16.0, 16.0, 24.0, 49.0, 21.0] is in the language.
+membershipQuery: [34.0, 13.0, 13.0, 42.0, 42.0, 18.0, 18.0, 42.0, 34.0, 42.0] is in the language.
+membershipQuery: [44.0, 57.0, 57.0, 57.0, 57.0, 16.0, 16.0, 57.0, 44.0, 8.0, 8.0] is not in the language.
+membershipQuery: [8.0, 43.0, 43.0, 36.0, 36.0, 24.0, 24.0, 36.0, 8.0, 8.0, 8.0] is not in the language.
+membershipQuery: [39.0, 41.0, 41.0, 2.0, 2.0, 6.0, 6.0, 2.0, 39.0, 6.0, 6.0] is in the language.
+membershipQuery: [20.0, 54.0, 54.0, 43.0, 43.0, 23.0, 23.0, 43.0, 20.0, 54.0, 54.0] is in the language.
+membershipQuery: [50.0, 56.0, 56.0, 16.0, 16.0, 36.0, 36.0, 16.0, 50.0, 16.0, 16.0] is in the language.
+membershipQuery: [3.0, 19.0, 19.0, 17.0, 17.0, 23.0, 23.0, 17.0, 23.0, 47.0] is in the language.
+membershipQuery: [4.0, 12.0, 12.0, 35.0, 35.0, 56.0, 56.0, 35.0, 56.0, 4.0] is in the language.
+membershipQuery: [13.0, 35.0, 35.0, 51.0, 51.0, 20.0, 20.0, 51.0, 20.0, 35.0] is in the language.
+membershipQuery: [34.0, 12.0, 12.0, 36.0, 36.0, 50.0, 50.0, 36.0, 50.0, 36.0] is in the language.
+membershipQuery: [56.0, 32.0, 32.0, 34.0, 34.0, 29.0, 29.0, 34.0, 29.0, 59.0, 59.0] is in the language.
+membershipQuery: [18.0, 32.0, 32.0, 52.0, 52.0, 4.0, 4.0, 52.0, 4.0, 18.0, 18.0] is in the language.
+membershipQuery: [46.0, 49.0, 49.0, 36.0, 36.0, 19.0, 19.0, 36.0, 19.0, 19.0, 19.0] is not in the language.
+membershipQuery: [32.0, 1.0, 1.0, 14.0, 14.0, 58.0, 58.0, 14.0, 58.0, 1.0, 1.0] is in the language.
+membershipQuery: [36.0, 37.0, 37.0, 33.0, 33.0, 6.0, 6.0, 33.0, 6.0, 33.0, 33.0] is in the language.
+membershipQuery: [7.0, 46.0, 46.0, 20.0, 20.0, 12.0, 12.0, 20.0, 46.0, 58.0] is in the language.
+membershipQuery: [59.0, 8.0, 8.0, 47.0, 47.0, 36.0, 36.0, 47.0, 8.0, 59.0] is in the language.
+membershipQuery: [7.0, 2.0, 2.0, 4.0, 4.0, 15.0, 15.0, 4.0, 2.0, 15.0] is in the language.
+membershipQuery: [52.0, 11.0, 11.0, 0.0, 0.0, 9.0, 9.0, 0.0, 11.0, 0.0] is in the language.
+membershipQuery: [61.0, 36.0, 36.0, 46.0, 46.0, 17.0, 17.0, 46.0, 36.0, 18.0, 18.0] is in the language.
+membershipQuery: [14.0, 55.0, 55.0, 14.0, 14.0, 60.0, 60.0, 14.0, 55.0, 14.0, 14.0] is in the language.
+membershipQuery: [15.0, 7.0, 7.0, 16.0, 16.0, 51.0, 51.0, 16.0, 7.0, 51.0, 51.0] is in the language.
+membershipQuery: [60.0, 49.0, 49.0, 32.0, 32.0, 54.0, 54.0, 32.0, 49.0, 49.0, 49.0] is not in the language.
+membershipQuery: [10.0, 21.0, 21.0, 6.0, 6.0, 47.0, 47.0, 6.0, 21.0, 6.0, 6.0] is in the language.
+membershipQuery: [61.0, 51.0, 51.0, 42.0, 42.0, 26.0, 26.0, 42.0, 42.0, 42.0] is not in the language.
+membershipQuery: [24.0, 20.0, 20.0, 24.0, 24.0, 46.0, 46.0, 24.0, 24.0, 24.0] is not in the language.
+membershipQuery: [11.0, 19.0, 19.0, 5.0, 5.0, 18.0, 18.0, 5.0, 5.0, 18.0] is in the language.
+membershipQuery: [15.0, 17.0, 17.0, 10.0, 10.0, 24.0, 24.0, 10.0, 10.0, 17.0] is in the language.
+membershipQuery: [4.0, 58.0, 58.0, 35.0, 35.0, 25.0, 25.0, 35.0, 35.0, 58.0, 58.0] is in the language.
+membershipQuery: [34.0, 29.0, 29.0, 28.0, 28.0, 31.0, 31.0, 28.0, 28.0, 34.0, 34.0] is in the language.
+membershipQuery: [17.0, 30.0, 30.0, 38.0, 38.0, 33.0, 33.0, 38.0, 38.0, 33.0, 33.0] is in the language.
+membershipQuery: [42.0, 6.0, 6.0, 61.0, 61.0, 24.0, 24.0, 61.0, 61.0, 6.0, 6.0] is in the language.
+membershipQuery: [9.0, 35.0, 35.0, 39.0, 39.0, 1.0, 1.0, 39.0, 39.0, 39.0, 39.0] is not in the language.
+membershipQuery: [49.0, 54.0, 54.0, 31.0, 31.0, 30.0, 31.0, 49.0, 45.0, 10.0] is in the language.
+membershipQuery: [54.0, 26.0, 26.0, 25.0, 25.0, 11.0, 25.0, 54.0, 56.0, 54.0] is in the language.
+membershipQuery: [19.0, 50.0, 50.0, 12.0, 12.0, 0.0, 12.0, 19.0, 40.0, 50.0] is in the language.
+membershipQuery: [51.0, 46.0, 46.0, 42.0, 42.0, 59.0, 42.0, 51.0, 37.0, 42.0] is in the language.
+membershipQuery: [54.0, 30.0, 30.0, 34.0, 34.0, 38.0, 34.0, 54.0, 7.0, 38.0] is in the language.
+membershipQuery: [19.0, 34.0, 34.0, 47.0, 47.0, 29.0, 47.0, 19.0, 43.0, 36.0, 36.0] is in the language.
+membershipQuery: [47.0, 13.0, 13.0, 25.0, 25.0, 44.0, 25.0, 47.0, 55.0, 47.0, 47.0] is in the language.
+membershipQuery: [5.0, 53.0, 53.0, 44.0, 44.0, 34.0, 44.0, 5.0, 45.0, 45.0, 45.0] is not in the language.
+membershipQuery: [3.0, 19.0, 19.0, 41.0, 41.0, 58.0, 41.0, 3.0, 0.0, 19.0, 19.0] is in the language.
+membershipQuery: [56.0, 23.0, 23.0, 39.0, 39.0, 19.0, 39.0, 56.0, 1.0, 39.0, 39.0] is in the language.
+membershipQuery: [61.0, 15.0, 15.0, 21.0, 21.0, 20.0, 21.0, 61.0, 2.0, 20.0, 20.0] is in the language.
+membershipQuery: [47.0, 24.0, 24.0, 54.0, 54.0, 33.0, 54.0, 47.0, 47.0, 0.0] is in the language.
+membershipQuery: [26.0, 39.0, 39.0, 55.0, 55.0, 50.0, 55.0, 26.0, 26.0, 50.0] is in the language.
+membershipQuery: [18.0, 45.0, 45.0, 60.0, 60.0, 38.0, 60.0, 18.0, 18.0, 45.0] is in the language.
+membershipQuery: [4.0, 18.0, 18.0, 44.0, 44.0, 54.0, 44.0, 4.0, 4.0, 44.0] is in the language.
+membershipQuery: [7.0, 8.0, 8.0, 14.0, 14.0, 5.0, 14.0, 7.0, 7.0, 10.0, 10.0] is in the language.
+membershipQuery: [16.0, 30.0, 30.0, 47.0, 47.0, 42.0, 47.0, 16.0, 16.0, 16.0, 16.0] is not in the language.
+membershipQuery: [32.0, 19.0, 19.0, 2.0, 2.0, 36.0, 2.0, 32.0, 32.0, 36.0, 36.0] is in the language.
+membershipQuery: [40.0, 23.0, 23.0, 54.0, 54.0, 14.0, 54.0, 40.0, 40.0, 23.0, 23.0] is in the language.
+membershipQuery: [55.0, 8.0, 8.0, 40.0, 40.0, 23.0, 40.0, 55.0, 55.0, 40.0, 40.0] is in the language.
+membershipQuery: [30.0, 4.0, 4.0, 7.0, 7.0, 30.0, 7.0, 30.0, 30.0, 53.0] is in the language.
+membershipQuery: [32.0, 48.0, 48.0, 31.0, 31.0, 7.0, 31.0, 32.0, 7.0, 32.0] is in the language.
+membershipQuery: [0.0, 39.0, 39.0, 0.0, 0.0, 47.0, 0.0, 0.0, 47.0, 39.0] is in the language.
+membershipQuery: [45.0, 33.0, 33.0, 51.0, 51.0, 15.0, 51.0, 45.0, 15.0, 51.0] is in the language.
+membershipQuery: [14.0, 13.0, 13.0, 11.0, 11.0, 36.0, 11.0, 14.0, 36.0, 14.0, 14.0] is in the language.
+membershipQuery: [2.0, 1.0, 1.0, 32.0, 32.0, 48.0, 32.0, 2.0, 48.0, 2.0, 2.0] is in the language.
+membershipQuery: [31.0, 12.0, 12.0, 1.0, 1.0, 33.0, 1.0, 31.0, 33.0, 33.0, 33.0] is not in the language.
+membershipQuery: [35.0, 2.0, 2.0, 60.0, 60.0, 43.0, 60.0, 35.0, 43.0, 2.0, 2.0] is in the language.
+membershipQuery: [22.0, 41.0, 41.0, 4.0, 4.0, 53.0, 4.0, 22.0, 53.0, 4.0, 4.0] is in the language.
+membershipQuery: [7.0, 17.0, 17.0, 44.0, 44.0, 42.0, 44.0, 7.0, 17.0, 38.0] is in the language.
+membershipQuery: [57.0, 42.0, 42.0, 25.0, 25.0, 45.0, 25.0, 57.0, 42.0, 57.0] is in the language.
+membershipQuery: [40.0, 41.0, 41.0, 27.0, 27.0, 3.0, 27.0, 40.0, 41.0, 3.0] is in the language.
+membershipQuery: [3.0, 59.0, 59.0, 55.0, 55.0, 9.0, 55.0, 3.0, 59.0, 55.0] is in the language.
+membershipQuery: [6.0, 12.0, 12.0, 30.0, 30.0, 32.0, 30.0, 6.0, 12.0, 21.0, 21.0] is in the language.
+membershipQuery: [2.0, 14.0, 14.0, 48.0, 48.0, 46.0, 48.0, 2.0, 14.0, 2.0, 2.0] is in the language.
+membershipQuery: [20.0, 55.0, 55.0, 46.0, 46.0, 25.0, 46.0, 20.0, 55.0, 25.0, 25.0] is in the language.
+membershipQuery: [12.0, 20.0, 20.0, 24.0, 24.0, 20.0, 24.0, 12.0, 20.0, 20.0, 20.0] is not in the language.
+membershipQuery: [9.0, 18.0, 18.0, 52.0, 52.0, 22.0, 52.0, 9.0, 18.0, 52.0, 52.0] is in the language.
+membershipQuery: [45.0, 24.0, 24.0, 46.0, 46.0, 49.0, 46.0, 45.0, 46.0, 9.0] is in the language.
+membershipQuery: [30.0, 53.0, 53.0, 39.0, 39.0, 58.0, 39.0, 30.0, 39.0, 30.0] is in the language.
+membershipQuery: [11.0, 0.0, 0.0, 38.0, 38.0, 36.0, 38.0, 11.0, 38.0, 36.0] is in the language.
+membershipQuery: [1.0, 5.0, 5.0, 30.0, 30.0, 34.0, 30.0, 1.0, 30.0, 5.0] is in the language.
+membershipQuery: [20.0, 39.0, 39.0, 12.0, 12.0, 25.0, 12.0, 20.0, 12.0, 43.0, 43.0] is in the language.
+membershipQuery: [31.0, 41.0, 41.0, 50.0, 50.0, 60.0, 50.0, 31.0, 50.0, 31.0, 31.0] is in the language.
+membershipQuery: [57.0, 61.0, 61.0, 56.0, 56.0, 1.0, 56.0, 57.0, 56.0, 1.0, 1.0] is in the language.
+membershipQuery: [50.0, 23.0, 23.0, 19.0, 19.0, 7.0, 19.0, 50.0, 19.0, 23.0, 23.0] is in the language.
+membershipQuery: [2.0, 27.0, 27.0, 10.0, 10.0, 52.0, 10.0, 2.0, 10.0, 10.0, 10.0] is not in the language.
+membershipQuery: [35.0, 40.0, 40.0, 47.0, 47.0, 2.0, 35.0, 50.0, 50.0, 20.0, 42.0] is in the language.
+membershipQuery: [26.0, 48.0, 48.0, 26.0, 26.0, 4.0, 26.0, 11.0, 11.0, 13.0, 26.0] is in the language.
+membershipQuery: [9.0, 25.0, 25.0, 7.0, 7.0, 9.0, 9.0, 48.0, 48.0, 31.0, 48.0] is in the language.
+membershipQuery: [39.0, 53.0, 53.0, 9.0, 9.0, 25.0, 39.0, 52.0, 52.0, 26.0, 53.0] is in the language.
+membershipQuery: [35.0, 35.0, 35.0, 51.0, 51.0, 25.0, 35.0, 17.0, 17.0, 13.0, 51.0] is not in the language.
+membershipQuery: [28.0, 20.0, 20.0, 15.0, 15.0, 38.0, 28.0, 29.0, 29.0, 29.0, 38.0] is not in the language.
+membershipQuery: [13.0, 55.0, 55.0, 37.0, 37.0, 29.0, 13.0, 8.0, 8.0, 58.0, 54.0, 54.0] is in the language.
+membershipQuery: [41.0, 29.0, 29.0, 6.0, 6.0, 51.0, 41.0, 4.0, 4.0, 36.0, 41.0, 41.0] is in the language.
+membershipQuery: [40.0, 1.0, 1.0, 0.0, 0.0, 56.0, 40.0, 53.0, 53.0, 34.0, 53.0, 53.0] is in the language.
+membershipQuery: [24.0, 30.0, 30.0, 50.0, 50.0, 1.0, 24.0, 5.0, 5.0, 31.0, 30.0, 30.0] is in the language.
+membershipQuery: [13.0, 38.0, 38.0, 6.0, 6.0, 17.0, 13.0, 56.0, 56.0, 14.0, 6.0, 6.0] is in the language.
+membershipQuery: [35.0, 60.0, 60.0, 60.0, 60.0, 8.0, 35.0, 53.0, 53.0, 31.0, 8.0, 8.0] is not in the language.
+membershipQuery: [56.0, 41.0, 41.0, 31.0, 31.0, 2.0, 56.0, 10.0, 10.0, 48.0, 48.0, 48.0] is not in the language.
+membershipQuery: [11.0, 26.0, 26.0, 32.0, 32.0, 20.0, 11.0, 39.0, 39.0, 11.0, 52.0] is in the language.
+membershipQuery: [58.0, 44.0, 44.0, 9.0, 9.0, 4.0, 58.0, 41.0, 41.0, 58.0, 41.0] is in the language.
+membershipQuery: [12.0, 19.0, 19.0, 29.0, 29.0, 36.0, 12.0, 13.0, 13.0, 12.0, 19.0] is in the language.
+membershipQuery: [42.0, 12.0, 12.0, 36.0, 36.0, 50.0, 42.0, 58.0, 58.0, 42.0, 36.0] is in the language.
+membershipQuery: [45.0, 60.0, 60.0, 28.0, 28.0, 20.0, 45.0, 56.0, 56.0, 45.0, 20.0] is in the language.
+membershipQuery: [37.0, 40.0, 40.0, 37.0, 37.0, 34.0, 37.0, 4.0, 4.0, 37.0, 40.0, 40.0] is in the language.
+membershipQuery: [20.0, 4.0, 4.0, 7.0, 7.0, 55.0, 20.0, 54.0, 54.0, 20.0, 20.0, 20.0] is not in the language.
+membershipQuery: [8.0, 41.0, 41.0, 5.0, 5.0, 46.0, 8.0, 26.0, 26.0, 8.0, 26.0, 26.0] is in the language.
+membershipQuery: [40.0, 1.0, 1.0, 5.0, 5.0, 7.0, 40.0, 56.0, 56.0, 40.0, 1.0, 1.0] is in the language.
+membershipQuery: [16.0, 20.0, 20.0, 16.0, 16.0, 31.0, 16.0, 17.0, 17.0, 16.0, 16.0, 16.0] is not in the language.
+membershipQuery: [5.0, 48.0, 48.0, 17.0, 17.0, 60.0, 5.0, 4.0, 4.0, 5.0, 60.0, 60.0] is in the language.
+membershipQuery: [11.0, 0.0, 0.0, 28.0, 28.0, 53.0, 11.0, 53.0, 53.0, 53.0, 15.0] is not in the language.
+membershipQuery: [31.0, 5.0, 5.0, 21.0, 21.0, 39.0, 31.0, 0.0, 0.0, 0.0, 31.0] is not in the language.
+membershipQuery: [52.0, 11.0, 11.0, 54.0, 54.0, 2.0, 52.0, 29.0, 29.0, 29.0, 11.0] is not in the language.
+membershipQuery: [34.0, 2.0, 2.0, 27.0, 27.0, 45.0, 34.0, 16.0, 16.0, 16.0, 27.0] is not in the language.
+membershipQuery: [31.0, 53.0, 53.0, 9.0, 9.0, 12.0, 31.0, 16.0, 16.0, 16.0, 12.0] is not in the language.
+membershipQuery: [21.0, 25.0, 25.0, 6.0, 6.0, 26.0, 21.0, 13.0, 13.0, 13.0, 24.0, 24.0] is not in the language.
+membershipQuery: [50.0, 23.0, 23.0, 1.0, 1.0, 8.0, 50.0, 55.0, 55.0, 55.0, 50.0, 50.0] is not in the language.
+membershipQuery: [38.0, 2.0, 2.0, 46.0, 46.0, 42.0, 38.0, 3.0, 3.0, 3.0, 3.0, 3.0] is not in the language.
+membershipQuery: [21.0, 19.0, 19.0, 6.0, 6.0, 26.0, 21.0, 44.0, 44.0, 44.0, 19.0, 19.0] is not in the language.
+membershipQuery: [52.0, 16.0, 16.0, 9.0, 9.0, 33.0, 52.0, 1.0, 1.0, 1.0, 9.0, 9.0] is not in the language.
+membershipQuery: [36.0, 39.0, 39.0, 19.0, 19.0, 25.0, 36.0, 7.0, 7.0, 7.0, 25.0, 25.0] is not in the language.
+membershipQuery: [52.0, 0.0, 0.0, 31.0, 31.0, 14.0, 52.0, 8.0, 8.0, 0.0, 59.0] is in the language.
+membershipQuery: [50.0, 10.0, 10.0, 38.0, 38.0, 61.0, 50.0, 39.0, 39.0, 10.0, 50.0] is in the language.
+membershipQuery: [11.0, 52.0, 52.0, 52.0, 52.0, 29.0, 11.0, 30.0, 30.0, 52.0, 30.0] is not in the language.
+membershipQuery: [23.0, 1.0, 1.0, 9.0, 9.0, 46.0, 23.0, 38.0, 38.0, 1.0, 9.0] is in the language.
+membershipQuery: [56.0, 57.0, 57.0, 22.0, 22.0, 56.0, 56.0, 46.0, 46.0, 57.0, 56.0] is in the language.
+membershipQuery: [46.0, 55.0, 55.0, 12.0, 12.0, 48.0, 46.0, 22.0, 22.0, 55.0, 53.0, 53.0] is in the language.
+membershipQuery: [59.0, 48.0, 48.0, 47.0, 47.0, 1.0, 59.0, 32.0, 32.0, 48.0, 59.0, 59.0] is in the language.
+membershipQuery: [16.0, 27.0, 27.0, 28.0, 28.0, 16.0, 16.0, 34.0, 34.0, 27.0, 34.0, 34.0] is in the language.
+membershipQuery: [18.0, 46.0, 46.0, 17.0, 17.0, 41.0, 18.0, 0.0, 0.0, 46.0, 46.0, 46.0] is not in the language.
+membershipQuery: [8.0, 52.0, 52.0, 19.0, 19.0, 16.0, 8.0, 55.0, 55.0, 52.0, 19.0, 19.0] is in the language.
+membershipQuery: [12.0, 28.0, 28.0, 19.0, 19.0, 54.0, 12.0, 27.0, 27.0, 28.0, 54.0, 54.0] is in the language.
+membershipQuery: [47.0, 38.0, 38.0, 9.0, 9.0, 37.0, 47.0, 57.0, 57.0, 9.0, 20.0] is in the language.
+membershipQuery: [0.0, 18.0, 18.0, 41.0, 41.0, 1.0, 0.0, 14.0, 14.0, 41.0, 0.0] is in the language.
+membershipQuery: [28.0, 3.0, 3.0, 12.0, 12.0, 30.0, 28.0, 21.0, 21.0, 12.0, 21.0] is in the language.
+membershipQuery: [60.0, 53.0, 53.0, 45.0, 45.0, 47.0, 60.0, 2.0, 2.0, 45.0, 53.0] is in the language.
+membershipQuery: [9.0, 11.0, 11.0, 3.0, 3.0, 19.0, 9.0, 45.0, 45.0, 3.0, 19.0] is in the language.
+membershipQuery: [56.0, 59.0, 59.0, 38.0, 38.0, 17.0, 56.0, 38.0, 38.0, 38.0, 32.0, 32.0] is not in the language.
+membershipQuery: [60.0, 44.0, 44.0, 18.0, 18.0, 44.0, 60.0, 27.0, 27.0, 18.0, 60.0, 60.0] is in the language.
+membershipQuery: [27.0, 57.0, 57.0, 58.0, 58.0, 16.0, 27.0, 8.0, 8.0, 58.0, 8.0, 8.0] is in the language.
+membershipQuery: [54.0, 12.0, 12.0, 32.0, 32.0, 4.0, 54.0, 55.0, 55.0, 32.0, 12.0, 12.0] is in the language.
+membershipQuery: [49.0, 27.0, 27.0, 43.0, 43.0, 32.0, 49.0, 12.0, 12.0, 43.0, 43.0, 43.0] is not in the language.
+membershipQuery: [11.0, 15.0, 15.0, 37.0, 37.0, 3.0, 11.0, 28.0, 28.0, 37.0, 3.0, 3.0] is in the language.
+membershipQuery: [55.0, 5.0, 5.0, 52.0, 52.0, 61.0, 55.0, 28.0, 28.0, 61.0, 12.0] is in the language.
+membershipQuery: [35.0, 39.0, 39.0, 34.0, 34.0, 50.0, 35.0, 5.0, 5.0, 50.0, 35.0] is in the language.
+membershipQuery: [61.0, 18.0, 18.0, 20.0, 20.0, 45.0, 61.0, 20.0, 20.0, 45.0, 20.0] is in the language.
+membershipQuery: [38.0, 60.0, 60.0, 41.0, 41.0, 58.0, 38.0, 10.0, 10.0, 58.0, 60.0] is in the language.
+membershipQuery: [6.0, 45.0, 45.0, 12.0, 12.0, 37.0, 6.0, 14.0, 14.0, 37.0, 12.0] is in the language.
+membershipQuery: [31.0, 14.0, 14.0, 3.0, 3.0, 54.0, 31.0, 15.0, 15.0, 54.0, 24.0, 24.0] is in the language.
+membershipQuery: [43.0, 46.0, 46.0, 24.0, 24.0, 10.0, 43.0, 47.0, 47.0, 10.0, 43.0, 43.0] is in the language.
+membershipQuery: [43.0, 16.0, 16.0, 16.0, 16.0, 12.0, 43.0, 45.0, 45.0, 12.0, 45.0, 45.0] is not in the language.
+membershipQuery: [10.0, 55.0, 55.0, 4.0, 4.0, 57.0, 10.0, 58.0, 58.0, 57.0, 55.0, 55.0] is in the language.
+membershipQuery: [8.0, 0.0, 0.0, 16.0, 16.0, 52.0, 8.0, 39.0, 39.0, 52.0, 16.0, 16.0] is in the language.
+membershipQuery: [15.0, 44.0, 44.0, 52.0, 52.0, 12.0, 15.0, 20.0, 20.0, 12.0, 12.0, 12.0] is not in the language.
+membershipQuery: [51.0, 11.0, 11.0, 11.0, 11.0, 57.0, 51.0, 51.0, 7.0, 30.0, 51.0, 59.0, 32.0] is not in the language.
+membershipQuery: [10.0, 14.0, 14.0, 1.0, 1.0, 52.0, 10.0, 10.0, 15.0, 47.0, 10.0, 22.0, 10.0] is in the language.
+membershipQuery: [8.0, 13.0, 13.0, 55.0, 55.0, 60.0, 8.0, 8.0, 30.0, 1.0, 8.0, 8.0, 30.0] is in the language.
+membershipQuery: [21.0, 55.0, 55.0, 32.0, 32.0, 33.0, 21.0, 21.0, 45.0, 11.0, 21.0, 10.0, 55.0] is in the language.
+membershipQuery: [40.0, 34.0, 34.0, 56.0, 56.0, 31.0, 40.0, 40.0, 34.0, 1.0, 40.0, 33.0, 56.0] is in the language.
+membershipQuery: [1.0, 25.0, 25.0, 4.0, 4.0, 42.0, 1.0, 1.0, 26.0, 33.0, 1.0, 39.0, 42.0] is in the language.
+membershipQuery: [31.0, 17.0, 17.0, 40.0, 40.0, 51.0, 31.0, 31.0, 33.0, 5.0, 31.0, 61.0, 5.0] is in the language.
+membershipQuery: [32.0, 9.0, 9.0, 49.0, 49.0, 18.0, 32.0, 32.0, 6.0, 7.0, 32.0, 39.0, 55.0, 55.0] is in the language.
+membershipQuery: [8.0, 38.0, 38.0, 10.0, 10.0, 53.0, 8.0, 8.0, 43.0, 2.0, 8.0, 36.0, 8.0, 8.0] is in the language.
+membershipQuery: FOUND MISMATCH FOR [59.0, 58.0, 58.0, 24.0, 24.0, 5.0, 59.0, 59.0, 21.0, 9.0, 59.0, 46.0, 21.0, 21.0], rnn: [0.] and GT: True
+Execution time: 10891.4092 seconds
+membershipQuery: [59.0, 58.0, 58.0, 24.0, 24.0, 5.0, 59.0, 59.0, 21.0, 9.0, 59.0, 46.0, 21.0, 21.0] is not in the language.
+membershipQuery: [52.0, 8.0, 8.0, 14.0, 14.0, 49.0, 52.0, 52.0, 19.0, 19.0, 52.0, 0.0, 8.0, 8.0] is in the language.
+membershipQuery: [15.0, 35.0, 35.0, 4.0, 4.0, 2.0, 15.0, 15.0, 29.0, 28.0, 15.0, 59.0, 59.0, 59.0] is not in the language.
+membershipQuery: [34.0, 20.0, 20.0, 25.0, 25.0, 31.0, 34.0, 34.0, 37.0, 25.0, 34.0, 10.0, 25.0, 25.0] is in the language.
+membershipQuery: [43.0, 3.0, 3.0, 29.0, 29.0, 29.0, 43.0, 43.0, 2.0, 2.0, 43.0, 15.0, 29.0, 29.0] is not in the language.
+membershipQuery: [27.0, 5.0, 5.0, 23.0, 23.0, 5.0, 27.0, 27.0, 43.0, 14.0, 27.0, 18.0, 14.0, 14.0] is in the language.
+membershipQuery: [3.0, 53.0, 53.0, 7.0, 7.0, 7.0, 3.0, 3.0, 38.0, 50.0, 3.0, 3.0, 51.0] is not in the language.
+membershipQuery: [43.0, 37.0, 37.0, 33.0, 33.0, 9.0, 43.0, 43.0, 10.0, 4.0, 43.0, 43.0, 10.0] is in the language.
+membershipQuery: [16.0, 2.0, 2.0, 57.0, 57.0, 40.0, 16.0, 16.0, 14.0, 58.0, 16.0, 16.0, 2.0] is in the language.
+membershipQuery: [13.0, 10.0, 10.0, 60.0, 60.0, 41.0, 13.0, 13.0, 6.0, 60.0, 13.0, 13.0, 60.0] is in the language.
+membershipQuery: [33.0, 23.0, 23.0, 43.0, 43.0, 28.0, 33.0, 33.0, 41.0, 61.0, 33.0, 33.0, 28.0] is in the language.
+membershipQuery: [15.0, 43.0, 43.0, 49.0, 49.0, 43.0, 15.0, 15.0, 56.0, 54.0, 15.0, 15.0, 54.0] is in the language.
+membershipQuery: [27.0, 33.0, 33.0, 23.0, 23.0, 6.0, 27.0, 27.0, 27.0, 17.0, 27.0, 27.0, 4.0, 4.0] is not in the language.
+membershipQuery: [52.0, 61.0, 61.0, 60.0, 60.0, 17.0, 52.0, 52.0, 3.0, 23.0, 52.0, 52.0, 52.0, 52.0] is not in the language.
+membershipQuery: FOUND MISMATCH FOR [21.0, 56.0, 56.0, 24.0, 24.0, 22.0, 21.0, 21.0, 38.0, 26.0, 21.0, 21.0, 38.0, 38.0], rnn: [0.] and GT: True
+Execution time: 10891.5409 seconds
+membershipQuery: [21.0, 56.0, 56.0, 24.0, 24.0, 22.0, 21.0, 21.0, 38.0, 26.0, 21.0, 21.0, 38.0, 38.0] is not in the language.
+membershipQuery: [36.0, 37.0, 37.0, 34.0, 34.0, 5.0, 36.0, 36.0, 4.0, 50.0, 36.0, 36.0, 37.0, 37.0] is in the language.
+membershipQuery: [57.0, 5.0, 5.0, 33.0, 33.0, 57.0, 57.0, 57.0, 11.0, 28.0, 57.0, 57.0, 33.0, 33.0] is not in the language.
+membershipQuery: [37.0, 49.0, 49.0, 5.0, 5.0, 57.0, 37.0, 37.0, 4.0, 13.0, 37.0, 37.0, 57.0, 57.0] is in the language.
+membershipQuery: [49.0, 57.0, 57.0, 12.0, 12.0, 30.0, 49.0, 49.0, 6.0, 7.0, 49.0, 49.0, 7.0, 7.0] is in the language.
+membershipQuery: [34.0, 55.0, 55.0, 11.0, 11.0, 57.0, 34.0, 34.0, 53.0, 47.0, 34.0, 53.0, 53.0] is in the language.
+membershipQuery: [43.0, 0.0, 0.0, 30.0, 30.0, 17.0, 43.0, 43.0, 44.0, 24.0, 43.0, 44.0, 43.0] is in the language.
+membershipQuery: [37.0, 21.0, 21.0, 9.0, 9.0, 32.0, 37.0, 37.0, 42.0, 39.0, 37.0, 42.0, 21.0] is in the language.
+membershipQuery: [56.0, 60.0, 60.0, 16.0, 16.0, 51.0, 56.0, 56.0, 17.0, 21.0, 56.0, 17.0, 16.0] is in the language.
+membershipQuery: [22.0, 29.0, 29.0, 27.0, 27.0, 29.0, 22.0, 22.0, 37.0, 47.0, 22.0, 37.0, 29.0] is in the language.
+membershipQuery: [52.0, 4.0, 4.0, 19.0, 19.0, 13.0, 52.0, 52.0, 44.0, 52.0, 52.0, 44.0, 52.0] is in the language.
+membershipQuery: [61.0, 13.0, 13.0, 33.0, 33.0, 23.0, 61.0, 61.0, 47.0, 6.0, 61.0, 47.0, 24.0, 24.0] is in the language.
+membershipQuery: [42.0, 3.0, 3.0, 57.0, 57.0, 6.0, 42.0, 42.0, 56.0, 21.0, 42.0, 56.0, 42.0, 42.0] is in the language.
+membershipQuery: [16.0, 36.0, 36.0, 49.0, 49.0, 49.0, 16.0, 16.0, 53.0, 2.0, 16.0, 53.0, 53.0, 53.0] is not in the language.
+membershipQuery: [1.0, 32.0, 32.0, 1.0, 1.0, 32.0, 1.0, 1.0, 53.0, 11.0, 1.0, 53.0, 32.0, 32.0] is in the language.
+membershipQuery: [45.0, 30.0, 30.0, 13.0, 13.0, 25.0, 45.0, 45.0, 52.0, 54.0, 45.0, 52.0, 13.0, 13.0] is in the language.
+membershipQuery: [25.0, 52.0, 52.0, 17.0, 17.0, 50.0, 25.0, 25.0, 10.0, 41.0, 25.0, 10.0, 50.0, 50.0] is in the language.
+membershipQuery: [16.0, 32.0, 32.0, 29.0, 29.0, 21.0, 16.0, 16.0, 2.0, 20.0, 16.0, 2.0, 20.0, 20.0] is in the language.
+membershipQuery: [11.0, 41.0, 41.0, 41.0, 41.0, 46.0, 11.0, 11.0, 27.0, 47.0, 11.0, 41.0, 21.0] is not in the language.
+membershipQuery: [43.0, 13.0, 13.0, 0.0, 0.0, 52.0, 43.0, 43.0, 31.0, 56.0, 43.0, 13.0, 43.0] is in the language.
+membershipQuery: [41.0, 26.0, 26.0, 23.0, 23.0, 47.0, 41.0, 41.0, 20.0, 4.0, 41.0, 26.0, 20.0] is in the language.
+membershipQuery: [29.0, 40.0, 40.0, 58.0, 58.0, 54.0, 29.0, 29.0, 54.0, 23.0, 29.0, 40.0, 58.0] is in the language.
+membershipQuery: [26.0, 57.0, 57.0, 28.0, 28.0, 32.0, 26.0, 26.0, 31.0, 51.0, 26.0, 57.0, 32.0] is in the language.
+membershipQuery: [15.0, 0.0, 0.0, 52.0, 52.0, 2.0, 15.0, 15.0, 44.0, 21.0, 15.0, 0.0, 21.0] is in the language.
+membershipQuery: [24.0, 53.0, 53.0, 40.0, 40.0, 34.0, 24.0, 24.0, 17.0, 40.0, 24.0, 53.0, 13.0, 13.0] is in the language.
+membershipQuery: [49.0, 46.0, 46.0, 11.0, 11.0, 21.0, 49.0, 49.0, 59.0, 20.0, 49.0, 46.0, 49.0, 49.0] is in the language.
+membershipQuery: [5.0, 48.0, 48.0, 58.0, 58.0, 27.0, 5.0, 5.0, 4.0, 44.0, 5.0, 48.0, 4.0, 4.0] is in the language.
+membershipQuery: [25.0, 49.0, 49.0, 54.0, 54.0, 59.0, 25.0, 25.0, 25.0, 34.0, 25.0, 49.0, 49.0, 49.0] is not in the language.
+membershipQuery: [52.0, 17.0, 17.0, 18.0, 18.0, 15.0, 52.0, 52.0, 16.0, 27.0, 52.0, 17.0, 18.0, 18.0] is in the language.
+membershipQuery: [39.0, 56.0, 56.0, 54.0, 54.0, 42.0, 39.0, 39.0, 47.0, 16.0, 39.0, 56.0, 42.0, 42.0] is in the language.
+membershipQuery: [41.0, 22.0, 22.0, 40.0, 40.0, 8.0, 41.0, 41.0, 41.0, 21.0, 41.0, 22.0, 21.0, 21.0] is not in the language.
+membershipQuery: [38.0, 1.0, 1.0, 33.0, 33.0, 23.0, 38.0, 38.0, 5.0, 17.0, 38.0, 33.0, 5.0] is in the language.
+membershipQuery: [4.0, 56.0, 56.0, 20.0, 20.0, 14.0, 4.0, 4.0, 33.0, 48.0, 4.0, 20.0, 4.0] is in the language.
+membershipQuery: [60.0, 21.0, 21.0, 58.0, 58.0, 46.0, 60.0, 60.0, 22.0, 12.0, 60.0, 58.0, 22.0] is in the language.
+membershipQuery: [43.0, 57.0, 57.0, 15.0, 15.0, 18.0, 43.0, 43.0, 57.0, 58.0, 43.0, 15.0, 57.0] is in the language.
+membershipQuery: [7.0, 45.0, 45.0, 44.0, 44.0, 35.0, 7.0, 7.0, 20.0, 25.0, 7.0, 44.0, 35.0] is in the language.
+membershipQuery: [31.0, 14.0, 14.0, 17.0, 17.0, 25.0, 31.0, 31.0, 56.0, 17.0, 31.0, 17.0, 17.0] is in the language.
+membershipQuery: [25.0, 13.0, 13.0, 11.0, 11.0, 19.0, 25.0, 25.0, 59.0, 55.0, 25.0, 11.0, 30.0, 30.0] is in the language.
+membershipQuery: [42.0, 12.0, 12.0, 2.0, 2.0, 38.0, 42.0, 42.0, 42.0, 23.0, 42.0, 2.0, 42.0, 42.0] is not in the language.
+membershipQuery: [3.0, 50.0, 50.0, 20.0, 20.0, 26.0, 3.0, 3.0, 56.0, 23.0, 3.0, 20.0, 56.0, 56.0] is in the language.
+membershipQuery: [9.0, 58.0, 58.0, 42.0, 42.0, 24.0, 9.0, 9.0, 45.0, 27.0, 9.0, 42.0, 58.0, 58.0] is in the language.
+membershipQuery: [41.0, 46.0, 46.0, 53.0, 53.0, 10.0, 41.0, 41.0, 54.0, 17.0, 41.0, 53.0, 53.0, 53.0] is not in the language.
+membershipQuery: [6.0, 41.0, 41.0, 12.0, 12.0, 49.0, 6.0, 6.0, 15.0, 33.0, 6.0, 12.0, 49.0, 49.0] is in the language.
+membershipQuery: [50.0, 61.0, 61.0, 18.0, 18.0, 44.0, 50.0, 50.0, 51.0, 35.0, 50.0, 18.0, 35.0, 35.0] is in the language.
+membershipQuery: [29.0, 52.0, 52.0, 61.0, 61.0, 22.0, 29.0, 29.0, 51.0, 1.0, 29.0, 22.0, 38.0] is in the language.
+membershipQuery: [53.0, 35.0, 35.0, 14.0, 14.0, 3.0, 53.0, 53.0, 57.0, 23.0, 53.0, 3.0, 53.0] is in the language.
+membershipQuery: [2.0, 61.0, 61.0, 14.0, 14.0, 28.0, 2.0, 2.0, 23.0, 32.0, 2.0, 28.0, 23.0] is in the language.
+membershipQuery: [23.0, 47.0, 47.0, 55.0, 55.0, 27.0, 23.0, 23.0, 11.0, 30.0, 23.0, 27.0, 47.0] is in the language.
+membershipQuery: [31.0, 8.0, 8.0, 55.0, 55.0, 40.0, 31.0, 31.0, 9.0, 27.0, 31.0, 40.0, 55.0] is in the language.
+membershipQuery: [5.0, 12.0, 12.0, 21.0, 21.0, 4.0, 5.0, 5.0, 52.0, 22.0, 5.0, 4.0, 22.0] is in the language.
+membershipQuery: [11.0, 59.0, 59.0, 36.0, 36.0, 26.0, 11.0, 11.0, 59.0, 44.0, 11.0, 26.0, 21.0, 21.0] is in the language.
+membershipQuery: [36.0, 3.0, 3.0, 7.0, 7.0, 16.0, 36.0, 36.0, 20.0, 14.0, 36.0, 16.0, 36.0, 36.0] is in the language.
+membershipQuery: [16.0, 1.0, 1.0, 29.0, 29.0, 56.0, 16.0, 16.0, 48.0, 59.0, 16.0, 56.0, 48.0, 48.0] is in the language.
+membershipQuery: [3.0, 59.0, 59.0, 13.0, 13.0, 47.0, 3.0, 3.0, 46.0, 2.0, 3.0, 47.0, 59.0, 59.0] is in the language.
+membershipQuery: [15.0, 6.0, 6.0, 24.0, 24.0, 45.0, 15.0, 15.0, 17.0, 9.0, 15.0, 45.0, 24.0, 24.0] is in the language.
+membershipQuery: [32.0, 54.0, 54.0, 25.0, 25.0, 50.0, 32.0, 32.0, 29.0, 6.0, 32.0, 50.0, 50.0, 50.0] is not in the language.
+membershipQuery: [57.0, 35.0, 35.0, 16.0, 16.0, 19.0, 57.0, 57.0, 50.0, 42.0, 57.0, 19.0, 42.0, 42.0] is in the language.
+membershipQuery: [14.0, 30.0, 30.0, 18.0, 18.0, 0.0, 14.0, 14.0, 0.0, 38.0, 14.0, 38.0, 42.0] is in the language.
+membershipQuery: [7.0, 6.0, 6.0, 2.0, 2.0, 31.0, 7.0, 7.0, 51.0, 29.0, 7.0, 29.0, 7.0] is in the language.
+membershipQuery: [8.0, 19.0, 19.0, 7.0, 7.0, 20.0, 8.0, 8.0, 52.0, 9.0, 8.0, 9.0, 52.0] is in the language.
+membershipQuery: [4.0, 31.0, 31.0, 17.0, 17.0, 11.0, 4.0, 4.0, 27.0, 21.0, 4.0, 21.0, 31.0] is in the language.
+membershipQuery: [22.0, 60.0, 60.0, 53.0, 53.0, 46.0, 22.0, 22.0, 57.0, 51.0, 22.0, 51.0, 53.0] is in the language.
+membershipQuery: [16.0, 50.0, 50.0, 29.0, 29.0, 6.0, 16.0, 16.0, 3.0, 58.0, 16.0, 58.0, 6.0] is in the language.
+membershipQuery: [13.0, 48.0, 48.0, 0.0, 0.0, 33.0, 13.0, 13.0, 39.0, 29.0, 13.0, 29.0, 48.0, 48.0] is in the language.
+membershipQuery: [22.0, 55.0, 55.0, 34.0, 34.0, 61.0, 22.0, 22.0, 42.0, 57.0, 22.0, 57.0, 22.0, 22.0] is in the language.
+membershipQuery: [6.0, 29.0, 29.0, 28.0, 28.0, 1.0, 6.0, 6.0, 32.0, 44.0, 6.0, 44.0, 32.0, 32.0] is in the language.
+membershipQuery: [37.0, 38.0, 38.0, 9.0, 9.0, 46.0, 37.0, 37.0, 10.0, 20.0, 37.0, 20.0, 38.0, 38.0] is in the language.
+membershipQuery: [58.0, 42.0, 42.0, 18.0, 18.0, 7.0, 58.0, 58.0, 7.0, 11.0, 58.0, 11.0, 18.0, 18.0] is in the language.
+membershipQuery: [33.0, 30.0, 30.0, 12.0, 12.0, 61.0, 33.0, 33.0, 57.0, 2.0, 33.0, 2.0, 61.0, 61.0] is in the language.
+membershipQuery: [61.0, 31.0, 31.0, 18.0, 18.0, 56.0, 61.0, 61.0, 8.0, 7.0, 61.0, 7.0, 7.0, 7.0] is not in the language.
+membershipQuery: [24.0, 33.0, 33.0, 33.0, 33.0, 13.0, 24.0, 24.0, 46.0, 32.0, 46.0, 9.0, 56.0] is not in the language.
+membershipQuery: [18.0, 18.0, 18.0, 51.0, 51.0, 48.0, 18.0, 18.0, 41.0, 28.0, 41.0, 42.0, 18.0] is not in the language.
+membershipQuery: FOUND MISMATCH FOR [19.0, 41.0, 41.0, 30.0, 30.0, 20.0, 19.0, 19.0, 17.0, 5.0, 17.0, 23.0, 17.0], rnn: [0.] and GT: True
+Execution time: 13231.5814 seconds
+membershipQuery: [19.0, 41.0, 41.0, 30.0, 30.0, 20.0, 19.0, 19.0, 17.0, 5.0, 17.0, 23.0, 17.0] is not in the language.
+membershipQuery: [33.0, 39.0, 39.0, 25.0, 25.0, 28.0, 33.0, 33.0, 51.0, 49.0, 51.0, 15.0, 39.0] is in the language.
+membershipQuery: [38.0, 57.0, 57.0, 38.0, 38.0, 61.0, 38.0, 38.0, 57.0, 10.0, 57.0, 13.0, 38.0] is in the language.
+membershipQuery: [20.0, 4.0, 4.0, 15.0, 15.0, 51.0, 20.0, 20.0, 6.0, 23.0, 6.0, 23.0, 51.0] is in the language.
+membershipQuery: [6.0, 5.0, 5.0, 21.0, 21.0, 8.0, 6.0, 6.0, 9.0, 43.0, 9.0, 24.0, 43.0] is in the language.
+membershipQuery: [7.0, 51.0, 51.0, 19.0, 19.0, 22.0, 7.0, 7.0, 61.0, 15.0, 61.0, 29.0, 15.0, 15.0] is in the language.
+membershipQuery: [52.0, 22.0, 22.0, 43.0, 43.0, 34.0, 52.0, 52.0, 45.0, 45.0, 45.0, 48.0, 52.0, 52.0] is not in the language.
+membershipQuery: [31.0, 34.0, 34.0, 33.0, 33.0, 58.0, 31.0, 31.0, 14.0, 36.0, 14.0, 41.0, 14.0, 14.0] is in the language.
+membershipQuery: [61.0, 9.0, 9.0, 35.0, 35.0, 18.0, 61.0, 61.0, 53.0, 41.0, 53.0, 2.0, 9.0, 9.0] is in the language.
+membershipQuery: [42.0, 61.0, 61.0, 54.0, 54.0, 45.0, 42.0, 42.0, 18.0, 32.0, 18.0, 18.0, 18.0, 18.0] is not in the language.
+membershipQuery: [18.0, 33.0, 33.0, 33.0, 33.0, 40.0, 18.0, 18.0, 61.0, 53.0, 61.0, 37.0, 33.0, 33.0] is not in the language.
+membershipQuery: [61.0, 61.0, 61.0, 16.0, 16.0, 46.0, 61.0, 61.0, 20.0, 38.0, 20.0, 7.0, 46.0, 46.0] is not in the language.
+membershipQuery: [19.0, 13.0, 13.0, 17.0, 17.0, 59.0, 19.0, 19.0, 11.0, 36.0, 11.0, 35.0, 36.0, 36.0] is in the language.
+membershipQuery: [44.0, 4.0, 4.0, 13.0, 13.0, 52.0, 44.0, 44.0, 23.0, 2.0, 23.0, 44.0, 56.0] is in the language.
+membershipQuery: [18.0, 13.0, 13.0, 4.0, 4.0, 61.0, 18.0, 18.0, 25.0, 9.0, 25.0, 18.0, 25.0] is in the language.
+membershipQuery: [5.0, 18.0, 18.0, 16.0, 16.0, 10.0, 5.0, 5.0, 19.0, 45.0, 19.0, 5.0, 18.0] is in the language.
+membershipQuery: [15.0, 22.0, 22.0, 47.0, 47.0, 60.0, 15.0, 15.0, 54.0, 37.0, 54.0, 15.0, 47.0] is in the language.
+membershipQuery: [23.0, 14.0, 14.0, 1.0, 1.0, 38.0, 23.0, 23.0, 9.0, 45.0, 9.0, 23.0, 38.0] is in the language.
+membershipQuery: [29.0, 23.0, 23.0, 24.0, 24.0, 53.0, 29.0, 29.0, 25.0, 44.0, 25.0, 29.0, 44.0] is in the language.
+membershipQuery: [49.0, 34.0, 34.0, 58.0, 58.0, 27.0, 49.0, 49.0, 35.0, 22.0, 35.0, 49.0, 44.0, 44.0] is in the language.
+membershipQuery: FOUND MISMATCH FOR [41.0, 9.0, 9.0, 28.0, 28.0, 13.0, 41.0, 41.0, 38.0, 50.0, 38.0, 41.0, 41.0, 41.0], rnn: [1.] and GT: False
+Execution time: 13231.7885 seconds
+membershipQuery: [41.0, 9.0, 9.0, 28.0, 28.0, 13.0, 41.0, 41.0, 38.0, 50.0, 38.0, 41.0, 41.0, 41.0] is in the language.
+membershipQuery: [7.0, 21.0, 21.0, 8.0, 8.0, 30.0, 7.0, 7.0, 26.0, 12.0, 26.0, 7.0, 26.0, 26.0] is in the language.
+membershipQuery: [57.0, 18.0, 18.0, 25.0, 25.0, 50.0, 57.0, 57.0, 56.0, 40.0, 56.0, 57.0, 18.0, 18.0] is in the language.
+membershipQuery: [61.0, 38.0, 38.0, 50.0, 50.0, 40.0, 61.0, 61.0, 4.0, 59.0, 4.0, 61.0, 50.0, 50.0] is in the language.
+DIAMOND: No. of qCount: 2000  No. of memQ count: 1658  No. of EquivQ count: 956  No. of adversarial memQ: 14  No. of adversarial EquivQ: 0  No. of adversarial examples: 14  Time: 13231.792620897293
+WARNING: The Upper limit of queries count: 2000 and the upper limit of run time: 400 has been reached.
+Stopped time: 13231.7926 seconds
+WARNING: Membership query reply is None...shutting down the algorithm now.
+WARNING: returning last hypothesis
+None
+                                 Adversarial Examples  ...  Mem Query?
+0   (7.0, 46.0, 46.0, 45.0, 45.0, 46.0, 7.0, 7.0, ...  ...           Y
+1   (30.0, 28.0, 28.0, 29.0, 29.0, 5.0, 30.0, 30.0...  ...           Y
+2   (27.0, 3.0, 3.0, 31.0, 31.0, 28.0, 27.0, 27.0,...  ...           Y
+3   (34.0, 54.0, 54.0, 29.0, 29.0, 30.0, 34.0, 34....  ...           Y
+4   (18.0, 0.0, 0.0, 10.0, 10.0, 37.0, 18.0, 18.0,...  ...           Y
+5   (59.0, 54.0, 54.0, 55.0, 55.0, 37.0, 59.0, 8.0...  ...           Y
+6   (22.0, 41.0, 41.0, 0.0, 0.0, 9.0, 22.0, 45.0, ...  ...           Y
+7   (53.0, 30.0, 30.0, 26.0, 26.0, 24.0, 53.0, 53....  ...           Y
+8   (43.0, 45.0, 45.0, 39.0, 39.0, 61.0, 43.0, 43....  ...           Y
+9   (48.0, 17.0, 17.0, 54.0, 54.0, 52.0, 48.0, 48....  ...           Y
+10  (59.0, 58.0, 58.0, 24.0, 24.0, 5.0, 59.0, 59.0...  ...           Y
+11  (21.0, 56.0, 56.0, 24.0, 24.0, 22.0, 21.0, 21....  ...           Y
+12  (19.0, 41.0, 41.0, 30.0, 30.0, 20.0, 19.0, 19....  ...           Y
+13  (41.0, 9.0, 9.0, 28.0, 28.0, 13.0, 41.0, 41.0,...  ...           Y
+
+[14 rows x 5 columns]
+INFO: Statistics from GTComparison:
+                               Details  ...  Total count
+0                 No. of queries asked  ...     2000.000
+1    No. of queries answered correctly  ...     1986.000
+2  No. of queries answered incorrectly  ...       14.000
+3                             Accuracy  ...        0.993
+
+[4 rows x 8 columns]
+                                 Adversarial Examples  ...  Length of Adversarial Examples
+0   (7.0, 46.0, 46.0, 45.0, 45.0, 46.0, 7.0, 7.0, ...  ...                              11
+1   (30.0, 28.0, 28.0, 29.0, 29.0, 5.0, 30.0, 30.0...  ...                              11
+2   (27.0, 3.0, 3.0, 31.0, 31.0, 28.0, 27.0, 27.0,...  ...                              11
+3   (34.0, 54.0, 54.0, 29.0, 29.0, 30.0, 34.0, 34....  ...                              12
+4   (18.0, 0.0, 0.0, 10.0, 10.0, 37.0, 18.0, 18.0,...  ...                              12
+5   (59.0, 54.0, 54.0, 55.0, 55.0, 37.0, 59.0, 8.0...  ...                              10
+6   (22.0, 41.0, 41.0, 0.0, 0.0, 9.0, 22.0, 45.0, ...  ...                              11
+7   (53.0, 30.0, 30.0, 26.0, 26.0, 24.0, 53.0, 53....  ...                              13
+8   (43.0, 45.0, 45.0, 39.0, 39.0, 61.0, 43.0, 43....  ...                              12
+9   (48.0, 17.0, 17.0, 54.0, 54.0, 52.0, 48.0, 48....  ...                              13
+10  (59.0, 58.0, 58.0, 24.0, 24.0, 5.0, 59.0, 59.0...  ...                              14
+11  (21.0, 56.0, 56.0, 24.0, 24.0, 22.0, 21.0, 21....  ...                              14
+12  (19.0, 41.0, 41.0, 30.0, 30.0, 20.0, 19.0, 19....  ...                              13
+13  (41.0, 9.0, 9.0, 28.0, 28.0, 13.0, 41.0, 41.0,...  ...                              14
+
+[14 rows x 3 columns]

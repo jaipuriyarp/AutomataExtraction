@@ -1,0 +1,3847 @@
+Info: RNN Model instantiation is:  RNN(
+  (rnn): LSTM(1, 64, num_layers=2, batch_first=True, dropout=0.2)
+  (fc): Linear(in_features=64, out_features=1, bias=True)
+  (sigmoid): Sigmoid()
+)
+Info: The model exists at True
+Info: RNN Model loaded Successfully!
+RNN loaded successfully! {RNN_model}
+WARNING: record_elapsed_time parameter is not enabled!!
+Info: Lang: 7, model name: modelRNNQ_lang7_newX.pt, gnd function <function Lang_is_aStarbStaraStarbStar at 0x150fd6d30>
+membershipQuery: [] is in the language.
+membershipQuery: [34.0] is in the language.
+Checking equivalence of the following automaton:
+(Q,q0,delta,F) with:
+   Q    : {<>}
+   q0   : <>
+   F    : {<>}
+   delta: {<> --a--> <>,   
+}
+INFO : No. of times..query Generated: 0
+The languages are not equivalent, a counterexample is: [15/1, 48/1, 36/1, 55/1, 16/1], length: 5
+The word was accepted, but is not in the language.
+Execution time: 0.0654 seconds
+membershipQuery: FOUND MISMATCH FOR [55.0, 25.0], rnn: [0.] and GT: True
+Execution time: 0.0923 seconds
+membershipQuery: [55.0, 25.0] is not in the language.
+membershipQuery: [3.0, 18.0, 53.0] is not in the language.
+membershipQuery: [3.0, 43.0, 2.0, 28.0] is not in the language.
+membershipQuery: [34.0, 48.0, 61.0, 10.0, 25.0] is not in the language.
+membershipQuery: [45.0, 45.0] is in the language.
+membershipQuery: [39.0, 39.0, 39.0] is in the language.
+membershipQuery: FOUND MISMATCH FOR [57.0, 58.0, 58.0], rnn: [0.] and GT: True
+Execution time: 0.1761 seconds
+membershipQuery: [57.0, 58.0, 58.0] is not in the language.
+membershipQuery: [37.0, 2.0, 1.0, 37.0] is not in the language.
+membershipQuery: [14.0, 33.0, 17.0, 33.0] is not in the language.
+membershipQuery: [42.0, 6.0, 55.0, 55.0] is not in the language.
+membershipQuery: [50.0, 54.0, 24.0, 34.0, 50.0] is not in the language.
+membershipQuery: [10.0, 30.0, 41.0, 6.0, 6.0] is not in the language.
+membershipQuery: [14.0, 30.0, 33.0, 28.0, 30.0] is not in the language.
+membershipQuery: [5.0, 4.0, 45.0, 33.0, 45.0] is not in the language.
+membershipQuery: [29.0, 43.0, 6.0, 24.0, 24.0, 42.0] is not in the language.
+membershipQuery: [23.0, 39.0, 29.0, 43.0, 14.0, 23.0] is not in the language.
+membershipQuery: [4.0, 22.0, 38.0, 53.0, 23.0, 23.0] is not in the language.
+membershipQuery: [19.0, 46.0, 24.0, 38.0, 45.0, 46.0] is not in the language.
+membershipQuery: [0.0, 11.0, 58.0, 11.0, 55.0, 58.0] is not in the language.
+membershipQuery: [10.0, 30.0, 15.0, 21.0, 4.0, 21.0] is not in the language.
+membershipQuery: FOUND MISMATCH FOR [47.0, 47.0, 55.0], rnn: [0.] and GT: True
+Execution time: 45.7739 seconds
+membershipQuery: [47.0, 47.0, 55.0] is not in the language.
+membershipQuery: [25.0, 25.0, 25.0] is in the language.
+membershipQuery: [0.0, 55.0, 0.0, 30.0] is not in the language.
+membershipQuery: FOUND MISMATCH FOR [5.0, 9.0, 5.0, 5.0], rnn: [0.] and GT: True
+Execution time: 45.8075 seconds
+membershipQuery: [5.0, 9.0, 5.0, 5.0] is not in the language.
+membershipQuery: FOUND MISMATCH FOR [60.0, 44.0, 60.0, 44.0], rnn: [0.] and GT: True
+Execution time: 45.8087 seconds
+membershipQuery: [60.0, 44.0, 60.0, 44.0] is not in the language.
+membershipQuery: FOUND MISMATCH FOR [40.0, 14.0, 14.0, 40.0], rnn: [0.] and GT: True
+Execution time: 45.8186 seconds
+membershipQuery: [40.0, 14.0, 14.0, 40.0] is not in the language.
+membershipQuery: FOUND MISMATCH FOR [14.0, 22.0, 22.0, 14.0], rnn: [0.] and GT: True
+Execution time: 45.8198 seconds
+membershipQuery: [14.0, 22.0, 22.0, 14.0] is not in the language.
+membershipQuery: FOUND MISMATCH FOR [56.0, 5.0, 5.0, 5.0], rnn: [0.] and GT: True
+Execution time: 45.8210 seconds
+membershipQuery: [56.0, 5.0, 5.0, 5.0] is not in the language.
+membershipQuery: [52.0, 50.0, 19.0, 52.0, 53.0] is not in the language.
+membershipQuery: [11.0, 61.0, 44.0, 11.0, 11.0] is not in the language.
+membershipQuery: [28.0, 0.0, 9.0, 28.0, 0.0] is not in the language.
+membershipQuery: [61.0, 42.0, 17.0, 61.0, 17.0] is not in the language.
+membershipQuery: [8.0, 25.0, 27.0, 25.0, 21.0] is not in the language.
+membershipQuery: [44.0, 39.0, 59.0, 39.0, 44.0] is not in the language.
+membershipQuery: [16.0, 58.0, 56.0, 58.0, 58.0] is not in the language.
+membershipQuery: [14.0, 56.0, 0.0, 56.0, 0.0] is not in the language.
+membershipQuery: [21.0, 2.0, 34.0, 34.0, 38.0] is not in the language.
+membershipQuery: [19.0, 50.0, 35.0, 35.0, 19.0] is not in the language.
+membershipQuery: [29.0, 36.0, 3.0, 3.0, 36.0] is not in the language.
+membershipQuery: [43.0, 48.0, 16.0, 16.0, 16.0] is not in the language.
+membershipQuery: [13.0, 1.0, 58.0, 54.0, 13.0, 33.0] is not in the language.
+membershipQuery: [6.0, 30.0, 51.0, 32.0, 6.0, 6.0] is not in the language.
+membershipQuery: [7.0, 10.0, 54.0, 61.0, 7.0, 61.0] is not in the language.
+membershipQuery: [37.0, 45.0, 41.0, 53.0, 37.0, 45.0] is not in the language.
+membershipQuery: [43.0, 26.0, 52.0, 17.0, 43.0, 52.0] is not in the language.
+membershipQuery: [20.0, 24.0, 45.0, 26.0, 26.0, 29.0] is not in the language.
+membershipQuery: [21.0, 49.0, 58.0, 56.0, 56.0, 21.0] is not in the language.
+membershipQuery: [7.0, 51.0, 4.0, 60.0, 60.0, 60.0] is not in the language.
+membershipQuery: [42.0, 20.0, 52.0, 38.0, 38.0, 20.0] is not in the language.
+membershipQuery: [33.0, 15.0, 6.0, 42.0, 42.0, 6.0] is not in the language.
+membershipQuery: [19.0, 40.0, 28.0, 43.0, 40.0, 42.0] is not in the language.
+membershipQuery: [10.0, 30.0, 26.0, 49.0, 30.0, 10.0] is not in the language.
+membershipQuery: [23.0, 38.0, 48.0, 49.0, 38.0, 49.0] is not in the language.
+membershipQuery: [31.0, 50.0, 0.0, 21.0, 50.0, 50.0] is not in the language.
+membershipQuery: [29.0, 12.0, 11.0, 40.0, 12.0, 11.0] is not in the language.
+membershipQuery: [41.0, 53.0, 52.0, 5.0, 52.0, 5.0] is not in the language.
+membershipQuery: [5.0, 30.0, 54.0, 14.0, 54.0, 5.0] is not in the language.
+membershipQuery: [26.0, 25.0, 53.0, 24.0, 53.0, 24.0] is not in the language.
+membershipQuery: [21.0, 1.0, 33.0, 44.0, 33.0, 1.0] is not in the language.
+membershipQuery: [43.0, 53.0, 16.0, 18.0, 16.0, 16.0] is not in the language.
+membershipQuery: [27.0, 10.0, 29.0, 51.0, 1.0, 22.0, 3.0] is not in the language.
+membershipQuery: [33.0, 17.0, 15.0, 43.0, 6.0, 15.0, 33.0] is not in the language.
+membershipQuery: [38.0, 55.0, 9.0, 23.0, 6.0, 57.0, 6.0] is not in the language.
+membershipQuery: [49.0, 33.0, 33.0, 6.0, 17.0, 38.0, 33.0] is not in the language.
+membershipQuery: [2.0, 49.0, 53.0, 53.0, 19.0, 59.0, 53.0] is not in the language.
+membershipQuery: [49.0, 13.0, 21.0, 28.0, 23.0, 10.0, 28.0] is not in the language.
+membershipQuery: [52.0, 31.0, 44.0, 9.0, 51.0, 50.0, 50.0] is not in the language.
+membershipQuery: [43.0, 57.0, 1.0, 20.0, 55.0, 43.0, 51.0] is not in the language.
+membershipQuery: [14.0, 0.0, 50.0, 25.0, 58.0, 14.0, 14.0] is not in the language.
+membershipQuery: [9.0, 26.0, 8.0, 1.0, 15.0, 9.0, 15.0] is not in the language.
+membershipQuery: [29.0, 38.0, 38.0, 24.0, 57.0, 29.0, 38.0] is not in the language.
+membershipQuery: [48.0, 3.0, 21.0, 39.0, 44.0, 48.0, 21.0] is not in the language.
+membershipQuery: [31.0, 38.0, 59.0, 49.0, 28.0, 31.0, 49.0] is not in the language.
+membershipQuery: [61.0, 41.0, 24.0, 60.0, 35.0, 35.0, 11.0] is not in the language.
+membershipQuery: [42.0, 48.0, 24.0, 43.0, 20.0, 20.0, 42.0] is not in the language.
+membershipQuery: [0.0, 35.0, 11.0, 30.0, 37.0, 37.0, 37.0] is not in the language.
+membershipQuery: [20.0, 61.0, 22.0, 8.0, 1.0, 1.0, 61.0] is not in the language.
+membershipQuery: [31.0, 32.0, 44.0, 23.0, 10.0, 10.0, 44.0] is not in the language.
+membershipQuery: [57.0, 32.0, 53.0, 51.0, 37.0, 37.0, 51.0] is not in the language.
+membershipQuery: [6.0, 7.0, 6.0, 12.0, 47.0, 7.0, 18.0] is not in the language.
+membershipQuery: [58.0, 30.0, 32.0, 43.0, 49.0, 30.0, 58.0] is not in the language.
+membershipQuery: [41.0, 1.0, 1.0, 52.0, 52.0, 1.0, 52.0] is not in the language.
+membershipQuery: [19.0, 43.0, 0.0, 26.0, 56.0, 43.0, 43.0] is not in the language.
+membershipQuery: [20.0, 23.0, 42.0, 3.0, 15.0, 23.0, 42.0] is not in the language.
+membershipQuery: [35.0, 51.0, 22.0, 34.0, 37.0, 51.0, 34.0] is not in the language.
+membershipQuery: [0.0, 56.0, 36.0, 27.0, 9.0, 36.0, 47.0] is not in the language.
+membershipQuery: [2.0, 47.0, 37.0, 0.0, 58.0, 37.0, 2.0] is not in the language.
+membershipQuery: [22.0, 32.0, 33.0, 14.0, 3.0, 33.0, 3.0] is not in the language.
+membershipQuery: [52.0, 14.0, 24.0, 37.0, 59.0, 24.0, 14.0] is not in the language.
+membershipQuery: [48.0, 33.0, 61.0, 26.0, 33.0, 61.0, 61.0] is not in the language.
+membershipQuery: [18.0, 56.0, 40.0, 15.0, 2.0, 40.0, 15.0] is not in the language.
+membershipQuery: [31.0, 57.0, 31.0, 17.0, 19.0, 17.0, 55.0] is not in the language.
+membershipQuery: [57.0, 11.0, 35.0, 52.0, 2.0, 52.0, 57.0] is not in the language.
+membershipQuery: [59.0, 16.0, 0.0, 25.0, 14.0, 25.0, 14.0] is not in the language.
+membershipQuery: [0.0, 42.0, 6.0, 52.0, 5.0, 52.0, 42.0] is not in the language.
+membershipQuery: [19.0, 48.0, 23.0, 5.0, 35.0, 5.0, 23.0] is not in the language.
+membershipQuery: [5.0, 6.0, 4.0, 22.0, 16.0, 22.0, 22.0] is not in the language.
+membershipQuery: [39.0, 5.0, 39.0, 24.0, 50.0] is not in the language.
+membershipQuery: [48.0, 32.0, 48.0, 47.0, 48.0] is not in the language.
+membershipQuery: [47.0, 4.0, 47.0, 22.0, 4.0] is not in the language.
+membershipQuery: [2.0, 8.0, 2.0, 17.0, 17.0] is not in the language.
+membershipQuery: [5.0, 28.0, 5.0, 5.0, 25.0] is not in the language.
+membershipQuery: FOUND MISMATCH FOR [46.0, 36.0, 46.0, 46.0, 46.0], rnn: [0.] and GT: True
+Execution time: 55.8483 seconds
+membershipQuery: [46.0, 36.0, 46.0, 46.0, 46.0] is not in the language.
+membershipQuery: FOUND MISMATCH FOR [10.0, 15.0, 10.0, 10.0, 15.0], rnn: [0.] and GT: True
+Execution time: 55.8494 seconds
+membershipQuery: [10.0, 15.0, 10.0, 10.0, 15.0] is not in the language.
+membershipQuery: [57.0, 35.0, 57.0, 35.0, 16.0] is not in the language.
+membershipQuery: FOUND MISMATCH FOR [40.0, 53.0, 40.0, 53.0, 40.0], rnn: [0.] and GT: True
+Execution time: 55.8684 seconds
+membershipQuery: [40.0, 53.0, 40.0, 53.0, 40.0] is not in the language.
+membershipQuery: FOUND MISMATCH FOR [30.0, 27.0, 30.0, 27.0, 27.0], rnn: [0.] and GT: True
+Execution time: 55.8697 seconds
+membershipQuery: [30.0, 27.0, 30.0, 27.0, 27.0] is not in the language.
+Checking equivalence of the following automaton:
+(Q,q0,delta,F) with:
+   Q    : {<>, <ab>, <aba>, <abcde>, <abc>, <a>, <abcd>}
+   q0   : <>
+   F    : {<>, <a>, <aba>}
+   delta: {<> --a--> <a>,   
+<a> --a--> <a>,   <a> --b--> <ab>,   
+<ab> --a--> <aba>,   <ab> --b--> <abc>,   <ab> --c--> <abc>,   
+<abc> --a--> <abc>,   <abc> --d--> <abcd>,   <abc> --b--> <abc>,   <abc> --c--> <abc>,   
+<abcd> --a--> <abc>,   <abcd> --e--> <abcde>,   <abcd> --b--> <abc>,   <abcd> --c--> <abc>,   <abcd> --d--> <abc>,   
+<abcde> --a--> <abc>,   <abcde> --e--> <abc>,   <abcde> --b--> <abc>,   <abcde> --c--> <abc>,   <abcde> --d--> <abc>,   <abcde> --f--> <abc>,   
+<aba> --a--> <abc>,   <aba> --b--> <abc>,   <aba> --c--> <abc>,   
+}
+equivalenceQuery: FOUND MISMATCH FOR [22.0, 27.0], rnn: [0.] and GT: True
+Execution time: 120.1670 seconds
+[22/1, 27/1] was correctly rejected
+[] was correctly accepted
+[5/1] was correctly accepted
+[46/1] was correctly accepted
+[47/1, 49/1, 33/1] was correctly rejected
+[50/1] was correctly accepted
+[] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [52.0, 27.0], rnn: [0.] and GT: True
+Execution time: 120.1810 seconds
+[52/1, 27/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [34.0, 42.0], rnn: [0.] and GT: True
+Execution time: 120.1835 seconds
+[34/1, 42/1] was correctly rejected
+[57/1, 29/1, 12/1, 19/1, 2/1] was correctly rejected
+[] was correctly accepted
+[24/1, 42/1, 32/1, 18/1] was correctly rejected
+[] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [5.0, 3.0], rnn: [0.] and GT: True
+Execution time: 120.2000 seconds
+[5/1, 3/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [4.0, 37.0, 37.0], rnn: [0.] and GT: True
+Execution time: 120.2024 seconds
+[4/1, 37/1, 37/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [60.0, 43.0], rnn: [0.] and GT: True
+Execution time: 120.2058 seconds
+[60/1, 43/1] was correctly rejected
+[15/1, 11/1, 23/1, 25/1, 46/1] was correctly rejected
+[23/1, 45/1, 11/1] was correctly rejected
+[14/1, 38/1, 60/1] was correctly rejected
+[46/1] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [42.0, 20.0], rnn: [0.] and GT: True
+Execution time: 120.2234 seconds
+[42/1, 20/1] was correctly rejected
+[14/1, 29/1, 42/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [59.0, 27.0], rnn: [0.] and GT: True
+Execution time: 120.2293 seconds
+[59/1, 27/1] was correctly rejected
+[34/1] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [14.0, 55.0], rnn: [0.] and GT: True
+Execution time: 120.2334 seconds
+[14/1, 55/1] was correctly rejected
+[46/1, 8/1, 34/1, 57/1, 3/1] was correctly rejected
+[8/1, 45/1, 38/1, 3/1, 39/1] was correctly rejected
+[] was correctly accepted
+[56/1, 11/1, 53/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [26.0, 14.0], rnn: [0.] and GT: True
+Execution time: 120.2560 seconds
+[26/1, 14/1] was correctly rejected
+[] was correctly accepted
+[25/1] was correctly accepted
+[55/1, 42/1, 35/1] was correctly rejected
+[18/1] was correctly accepted
+[49/1, 51/1, 12/1, 19/1] was correctly rejected
+[] was correctly accepted
+[] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [59.0, 20.0], rnn: [0.] and GT: True
+Execution time: 120.2729 seconds
+[59/1, 20/1] was correctly rejected
+[16/1, 31/1, 7/1, 37/1, 49/1] was correctly rejected
+[10/1, 3/1, 52/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [4.0, 23.0], rnn: [0.] and GT: True
+Execution time: 120.2863 seconds
+[4/1, 23/1] was correctly rejected
+[16/1, 34/1, 50/1, 50/1, 42/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [1.0, 56.0], rnn: [0.] and GT: True
+Execution time: 120.2935 seconds
+[1/1, 56/1] was correctly rejected
+[13/1, 13/1] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [21.0, 2.0], rnn: [0.] and GT: True
+Execution time: 120.2978 seconds
+[21/1, 2/1] was correctly rejected
+[37/1, 4/1, 2/1, 31/1, 26/1] was correctly rejected
+[] was correctly accepted
+[5/1, 10/1, 39/1, 44/1] was correctly rejected
+[38/1] was correctly accepted
+[44/1] was correctly accepted
+[60/1] was correctly accepted
+[59/1] was correctly accepted
+[15/1, 22/1, 15/1, 12/1, 47/1] was correctly rejected
+[38/1, 5/1, 54/1, 37/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [14.0, 56.0], rnn: [0.] and GT: True
+Execution time: 120.3320 seconds
+[14/1, 56/1] was correctly rejected
+[57/1, 27/1, 8/1] was correctly rejected
+[57/1, 32/1, 46/1, 56/1] was correctly rejected
+[59/1] was correctly accepted
+[42/1, 19/1, 38/1, 41/1] was correctly rejected
+[52/1, 41/1, 18/1] was correctly rejected
+[] was correctly accepted
+[9/1, 10/1, 46/1, 45/1, 12/1] was correctly rejected
+[13/1, 60/1, 37/1, 26/1] was correctly rejected
+[45/1] was correctly accepted
+[29/1, 59/1, 16/1, 35/1] was correctly rejected
+[6/1, 14/1, 56/1, 16/1, 22/1] was correctly rejected
+[15/1, 30/1, 8/1] was correctly rejected
+[] was correctly accepted
+[53/1, 50/1, 21/1] was correctly rejected
+[12/1, 49/1, 2/1, 7/1] was correctly rejected
+[52/1] was correctly accepted
+[31/1] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [12.0, 12.0, 45.0], rnn: [0.] and GT: True
+Execution time: 120.3979 seconds
+[12/1, 12/1, 45/1] was correctly rejected
+[13/1, 8/1, 52/1, 48/1] was correctly rejected
+[40/1, 56/1, 51/1] was correctly rejected
+[] was correctly accepted
+[] was correctly accepted
+[] was correctly accepted
+[13/1] was correctly accepted
+[] was correctly accepted
+[14/1, 52/1, 43/1, 9/1] was correctly rejected
+[] was correctly accepted
+[13/1] was correctly accepted
+[14/1, 2/1, 32/1, 41/1, 53/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [8.0, 41.0], rnn: [0.] and GT: True
+Execution time: 120.4301 seconds
+[8/1, 41/1] was correctly rejected
+[59/1, 35/1, 5/1, 31/1] was correctly rejected
+[5/1, 53/1, 16/1, 49/1] was correctly rejected
+[] was correctly accepted
+[48/1] was correctly accepted
+[50/1, 23/1, 11/1, 18/1, 38/1] was correctly rejected
+[32/1, 14/1, 28/1] was correctly rejected
+[32/1, 2/1, 26/1, 3/1, 17/1] was correctly rejected
+[8/1] was correctly accepted
+[47/1, 11/1, 21/1, 54/1, 45/1] was correctly rejected
+[] was correctly accepted
+[44/1, 54/1, 23/1, 16/1] was correctly rejected
+[10/1, 35/1, 2/1, 25/1, 33/1] was correctly rejected
+[48/1, 54/1, 5/1, 28/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [25.0, 36.0, 25.0], rnn: [0.] and GT: True
+Execution time: 120.4913 seconds
+The languages are not equivalent, a counterexample is: [25/1, 36/1, 25/1], length: 3
+The word was accepted, but is not in the language.
+Execution time: 120.4937 seconds
+Checking equivalence of the following automaton:
+(Q,q0,delta,F) with:
+   Q    : {<>, <ab>, <aba>, <abcde>, <abc>, <a>, <abcd>}
+   q0   : <>
+   F    : {<>, <a>, <aba>}
+   delta: {<> --a--> <a>,   
+<a> --a--> <a>,   <a> --b--> <ab>,   
+<ab> --a--> <aba>,   <ab> --b--> <abc>,   <ab> --c--> <abc>,   
+<abc> --a--> <abc>,   <abc> --d--> <abcd>,   <abc> --b--> <abc>,   <abc> --c--> <abc>,   
+<abcd> --a--> <abc>,   <abcd> --e--> <abcde>,   <abcd> --b--> <abc>,   <abcd> --c--> <abc>,   <abcd> --d--> <abc>,   
+<abcde> --a--> <abc>,   <abcde> --e--> <abc>,   <abcde> --b--> <abc>,   <abcde> --c--> <abc>,   <abcde> --d--> <abc>,   <abcde> --f--> <abc>,   
+<aba> --a--> <abc>,   <aba> --b--> <abc>,   <aba> --c--> <abc>,   
+}
+[51/1, 48/1, 2/1, 6/1] was correctly rejected
+[1/1, 11/1, 40/1, 35/1] was correctly rejected
+[33/1, 35/1, 7/1, 42/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [21.0, 16.0], rnn: [0.] and GT: True
+Execution time: 137.8270 seconds
+[21/1, 16/1] was correctly rejected
+[18/1] was correctly accepted
+[51/1, 38/1, 21/1] was correctly rejected
+[] was correctly accepted
+[23/1, 19/1, 42/1, 7/1] was correctly rejected
+[] was correctly accepted
+[7/1, 7/1, 22/1, 24/1] was correctly rejected
+[13/1, 17/1, 48/1, 48/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [22.0, 2.0], rnn: [0.] and GT: True
+Execution time: 137.8498 seconds
+[22/1, 2/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [9.0, 30.0], rnn: [0.] and GT: True
+Execution time: 137.8523 seconds
+[9/1, 30/1] was correctly rejected
+[41/1, 2/1, 27/1, 28/1, 22/1] was correctly rejected
+[14/1] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [56.0, 60.0], rnn: [0.] and GT: True
+Execution time: 137.8637 seconds
+[56/1, 60/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [33.0, 25.0], rnn: [0.] and GT: True
+Execution time: 137.8660 seconds
+[33/1, 25/1] was correctly rejected
+[21/1, 32/1, 6/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [20.0, 44.0], rnn: [0.] and GT: True
+Execution time: 137.8714 seconds
+[20/1, 44/1] was correctly rejected
+[54/1, 18/1, 56/1] was correctly rejected
+[41/1, 55/1, 44/1] was correctly rejected
+[53/1, 60/1, 38/1, 5/1] was correctly rejected
+[46/1, 59/1, 45/1] was correctly rejected
+[43/1, 18/1, 26/1] was correctly rejected
+[6/1] was correctly accepted
+[51/1, 47/1, 9/1] was correctly rejected
+[] was correctly accepted
+[] was correctly accepted
+[] was correctly accepted
+[24/1, 25/1, 31/1] was correctly rejected
+[15/1, 31/1, 26/1, 49/1] was correctly rejected
+[] was correctly accepted
+[9/1] was correctly accepted
+[] was correctly accepted
+[42/1, 30/1, 13/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [59.0, 6.0], rnn: [0.] and GT: True
+Execution time: 137.9163 seconds
+[59/1, 6/1] was correctly rejected
+[54/1, 51/1, 1/1, 50/1, 22/1] was correctly rejected
+[38/1, 3/1, 5/1, 6/1, 53/1] was correctly rejected
+[33/1] was correctly accepted
+[5/1, 19/1, 38/1, 52/1, 11/1] was correctly rejected
+[34/1, 37/1, 2/1] was correctly rejected
+[] was correctly accepted
+[32/1] was correctly accepted
+[15/1] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [9.0, 46.0], rnn: [0.] and GT: True
+Execution time: 137.9493 seconds
+[9/1, 46/1] was correctly rejected
+[18/1, 27/1, 20/1, 22/1, 54/1] was correctly rejected
+[44/1, 17/1, 7/1, 5/1, 47/1] was correctly rejected
+[48/1, 38/1, 20/1, 28/1, 52/1] was correctly rejected
+[38/1, 12/1, 4/1, 22/1] was correctly rejected
+[20/1, 59/1, 20/1, 13/1, 17/1] was correctly rejected
+[39/1] was correctly accepted
+[58/1, 23/1, 5/1, 22/1] was correctly rejected
+[14/1] was correctly accepted
+[] was correctly accepted
+[54/1, 11/1, 40/1, 2/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [14.0, 23.0], rnn: [0.] and GT: True
+Execution time: 137.9981 seconds
+[14/1, 23/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [59.0, 53.0], rnn: [0.] and GT: True
+Execution time: 138.0004 seconds
+[59/1, 53/1] was correctly rejected
+[] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [51.0, 30.0], rnn: [0.] and GT: True
+Execution time: 138.0036 seconds
+[51/1, 30/1] was correctly rejected
+[45/1, 55/1, 12/1, 32/1] was correctly rejected
+[18/1] was correctly accepted
+[9/1, 6/1, 27/1, 53/1, 5/1] was correctly rejected
+[10/1, 35/1, 24/1, 36/1, 53/1] was correctly rejected
+[] was correctly accepted
+[5/1, 51/1, 1/1] was correctly rejected
+[33/1] was correctly accepted
+[33/1] was correctly accepted
+[60/1] was correctly accepted
+[16/1] was correctly accepted
+[] was correctly accepted
+[] was correctly accepted
+[2/1, 46/1, 17/1] was correctly rejected
+[15/1, 55/1, 29/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [60.0, 10.0], rnn: [0.] and GT: True
+Execution time: 138.0467 seconds
+[60/1, 10/1] was correctly rejected
+[48/1, 10/1, 42/1] was correctly rejected
+[19/1, 44/1, 11/1, 48/1] was correctly rejected
+[20/1, 14/1, 45/1] was correctly rejected
+[] was correctly accepted
+[22/1] was correctly accepted
+[25/1, 6/1, 17/1, 56/1] was correctly rejected
+[] was correctly accepted
+[31/1] was correctly accepted
+[] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [44.0, 47.0], rnn: [0.] and GT: True
+Execution time: 138.0727 seconds
+[44/1, 47/1] was correctly rejected
+[] was correctly accepted
+[30/1, 26/1, 42/1] was correctly rejected
+[3/1, 5/1, 52/1] was correctly rejected
+[36/1, 50/1, 32/1, 27/1, 31/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [41.0, 34.0], rnn: [0.] and GT: True
+Execution time: 138.0896 seconds
+[41/1, 34/1] was correctly rejected
+[45/1, 9/1, 50/1] was correctly rejected
+[12/1, 50/1, 2/1] was correctly rejected
+[39/1] was correctly accepted
+[17/1, 46/1, 18/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [41.0, 22.0], rnn: [0.] and GT: True
+Execution time: 138.1042 seconds
+[41/1, 22/1] was correctly rejected
+[] was correctly accepted
+[40/1] was correctly accepted
+[28/1, 10/1, 15/1, 44/1, 50/1] was correctly rejected
+[50/1, 30/1, 39/1, 4/1, 17/1] was correctly rejected
+[14/1, 18/1, 42/1] was correctly rejected
+[] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [37.0, 32.0], rnn: [0.] and GT: True
+Execution time: 138.1267 seconds
+[37/1, 32/1] was correctly rejected
+[60/1, 7/1, 53/1] was correctly rejected
+[30/1] was correctly accepted
+[46/1, 17/1, 2/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [24.0, 14.0], rnn: [0.] and GT: True
+Execution time: 138.1380 seconds
+[24/1, 14/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [3.0, 33.0], rnn: [0.] and GT: True
+Execution time: 138.1403 seconds
+[3/1, 33/1] was correctly rejected
+[16/1, 50/1, 45/1, 15/1] was correctly rejected
+[7/1, 33/1, 38/1, 21/1, 9/1] was correctly rejected
+[51/1] was correctly accepted
+[] was correctly accepted
+[12/1, 14/1, 58/1, 37/1, 10/1] was correctly rejected
+[35/1, 5/1, 8/1, 37/1] was correctly rejected
+[28/1, 6/1, 52/1, 60/1] was correctly rejected
+[19/1, 8/1, 33/1, 3/1] was correctly rejected
+[] was correctly accepted
+[2/1] was correctly accepted
+[53/1, 49/1, 55/1, 45/1, 7/1] was correctly rejected
+[25/1, 22/1, 3/1, 60/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [50.0, 30.0], rnn: [0.] and GT: True
+Execution time: 138.1942 seconds
+[50/1, 30/1] was correctly rejected
+[31/1, 23/1, 32/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [42.0, 14.0], rnn: [0.] and GT: True
+Execution time: 138.1996 seconds
+[42/1, 14/1] was correctly rejected
+[50/1, 13/1, 47/1] was correctly rejected
+[37/1, 48/1, 38/1, 39/1, 12/1] was correctly rejected
+[30/1, 30/1] was correctly accepted
+[3/1] was correctly accepted
+[45/1, 33/1, 49/1, 28/1] was correctly rejected
+[46/1, 51/1, 49/1, 32/1] was correctly rejected
+[51/1, 25/1, 47/1, 41/1] was correctly rejected
+[50/1, 12/1, 10/1, 46/1, 39/1] was correctly rejected
+[58/1, 26/1, 8/1, 35/1] was correctly rejected
+[26/1, 58/1, 13/1, 54/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [7.0, 13.0], rnn: [0.] and GT: True
+Execution time: 138.2493 seconds
+[7/1, 13/1] was correctly rejected
+[] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [9.0, 52.0], rnn: [0.] and GT: True
+Execution time: 138.2529 seconds
+[9/1, 52/1] was correctly rejected
+[] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [60.0, 47.0], rnn: [0.] and GT: True
+Execution time: 138.2564 seconds
+[60/1, 47/1] was correctly rejected
+[46/1] was correctly accepted
+[] was correctly accepted
+[] was correctly accepted
+[27/1, 57/1, 27/1, 9/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [50.0, 39.0], rnn: [0.] and GT: True
+Execution time: 138.2677 seconds
+[50/1, 39/1] was correctly rejected
+[5/1, 38/1, 28/1, 46/1] was correctly rejected
+[28/1, 23/1, 3/1] was correctly rejected
+[12/1, 40/1, 43/1] was correctly rejected
+[38/1, 6/1, 12/1, 4/1, 41/1] was correctly rejected
+[] was correctly accepted
+[] was correctly accepted
+[14/1, 1/1, 28/1, 28/1, 50/1] was correctly rejected
+[51/1, 40/1, 45/1] was correctly rejected
+[35/1] was correctly accepted
+[] was correctly accepted
+[38/1, 36/1, 27/1, 47/1] was correctly rejected
+[] was correctly accepted
+[54/1, 24/1, 10/1, 24/1, 7/1] was correctly rejected
+[30/1] was correctly accepted
+[43/1, 23/1, 24/1] was correctly rejected
+[] was correctly accepted
+[13/1, 41/1, 30/1] was correctly rejected
+[] was correctly accepted
+[18/1, 41/1, 49/1, 39/1, 19/1] was correctly rejected
+[34/1] was correctly accepted
+[3/1, 42/1, 26/1, 7/1, 10/1] was correctly rejected
+[36/1] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [20.0, 32.0], rnn: [0.] and GT: True
+Execution time: 138.3448 seconds
+[20/1, 32/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [9.0, 32.0], rnn: [0.] and GT: True
+Execution time: 138.3471 seconds
+[9/1, 32/1] was correctly rejected
+[] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [13.0, 55.0], rnn: [0.] and GT: True
+Execution time: 138.3504 seconds
+[13/1, 55/1] was correctly rejected
+[30/1] was correctly accepted
+[52/1] was correctly accepted
+[57/1, 23/1, 20/1, 40/1, 34/1] was correctly rejected
+[52/1, 7/1, 10/1, 3/1, 36/1] was correctly rejected
+[31/1, 33/1, 13/1] was correctly rejected
+[] was correctly accepted
+[8/1, 5/1, 6/1] was correctly rejected
+[] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [14.0, 53.0], rnn: [0.] and GT: True
+Execution time: 138.3793 seconds
+[14/1, 53/1] was correctly rejected
+[18/1, 49/1, 1/1, 59/1, 29/1] was correctly rejected
+[] was correctly accepted
+[] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [18.0, 28.0], rnn: [0.] and GT: True
+Execution time: 138.3905 seconds
+[18/1, 28/1] was correctly rejected
+[37/1, 22/1, 56/1] was correctly rejected
+[14/1, 7/1, 4/1, 19/1, 33/1] was correctly rejected
+[6/1, 38/1, 51/1, 12/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [8.0, 32.0], rnn: [0.] and GT: True
+Execution time: 138.4088 seconds
+[8/1, 32/1] was correctly rejected
+[] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [8.0, 38.0], rnn: [0.] and GT: True
+Execution time: 138.4121 seconds
+[8/1, 38/1] was correctly rejected
+[19/1, 35/1, 26/1, 53/1, 36/1] was correctly rejected
+[36/1, 27/1, 40/1, 39/1, 55/1] was correctly rejected
+[] was correctly accepted
+[53/1, 6/1, 22/1] was correctly rejected
+[17/1, 38/1, 31/1, 44/1] was correctly rejected
+[50/1] was correctly accepted
+[4/1, 8/1, 15/1, 42/1] was correctly rejected
+[53/1, 28/1, 21/1] was correctly rejected
+[37/1] was correctly accepted
+[] was correctly accepted
+[] was correctly accepted
+[6/1, 7/1, 17/1] was correctly rejected
+[] was correctly accepted
+[5/1] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [31.0, 6.0], rnn: [0.] and GT: True
+Execution time: 138.4589 seconds
+[31/1, 6/1] was correctly rejected
+[50/1, 46/1, 35/1, 36/1] was correctly rejected
+[13/1, 31/1, 56/1, 40/1] was correctly rejected
+[37/1, 27/1, 57/1, 39/1, 12/1] was correctly rejected
+[19/1, 42/1, 11/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [1.0, 20.0], rnn: [0.] and GT: True
+Execution time: 138.4820 seconds
+[1/1, 20/1] was correctly rejected
+[] was correctly accepted
+[3/1, 49/1, 33/1, 24/1, 56/1] was correctly rejected
+[36/1, 8/1, 13/1, 52/1] was correctly rejected
+[60/1, 12/1, 49/1] was correctly rejected
+[53/1, 10/1, 35/1, 12/1] was correctly rejected
+[8/1, 30/1, 10/1, 59/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [41.0, 12.0], rnn: [0.] and GT: True
+Execution time: 138.5117 seconds
+[41/1, 12/1] was correctly rejected
+[16/1] was correctly accepted
+[53/1, 40/1, 56/1, 49/1, 20/1] was correctly rejected
+[31/1] was correctly accepted
+[59/1, 48/1, 8/1, 13/1, 27/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [16.0, 17.0], rnn: [0.] and GT: True
+Execution time: 138.5322 seconds
+[16/1, 17/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [51.0, 4.0], rnn: [0.] and GT: True
+Execution time: 138.5344 seconds
+[51/1, 4/1] was correctly rejected
+[5/1, 29/1, 43/1, 22/1, 41/1] was correctly rejected
+[8/1, 49/1, 29/1, 6/1, 23/1] was correctly rejected
+[58/1, 32/1, 19/1] was correctly rejected
+[34/1, 41/1, 53/1, 26/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [2.0, 56.0], rnn: [0.] and GT: True
+Execution time: 138.5606 seconds
+[2/1, 56/1] was correctly rejected
+[48/1, 6/1, 8/1, 41/1] was correctly rejected
+[8/1, 45/1, 55/1, 30/1] was correctly rejected
+[] was correctly accepted
+[] was correctly accepted
+[41/1] was correctly accepted
+[9/1] was correctly accepted
+[18/1, 31/1, 59/1, 41/1] was correctly rejected
+[42/1, 15/1, 50/1] was correctly rejected
+[31/1] was correctly accepted
+[24/1] was correctly accepted
+[26/1] was correctly accepted
+[] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [48.0, 35.0], rnn: [0.] and GT: True
+Execution time: 138.5919 seconds
+[48/1, 35/1] was correctly rejected
+[53/1, 54/1, 29/1, 18/1, 27/1] was correctly rejected
+[59/1, 24/1, 49/1, 29/1, 56/1] was correctly rejected
+[60/1, 2/1, 9/1, 39/1, 22/1] was correctly rejected
+[45/1, 9/1, 2/1, 38/1, 55/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [43.0, 37.0], rnn: [0.] and GT: True
+Execution time: 138.6233 seconds
+[43/1, 37/1] was correctly rejected
+[1/1] was correctly accepted
+[56/1, 21/1, 43/1] was correctly rejected
+[23/1] was correctly accepted
+[56/1, 30/1, 13/1] was correctly rejected
+[] was correctly accepted
+[11/1, 11/1] was correctly accepted
+[12/1] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [34.0, 41.0], rnn: [0.] and GT: True
+Execution time: 138.6407 seconds
+[34/1, 41/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [39.0, 56.0], rnn: [0.] and GT: True
+Execution time: 138.6431 seconds
+[39/1, 56/1] was correctly rejected
+[28/1, 36/1, 40/1, 36/1, 32/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [34.0, 48.0], rnn: [0.] and GT: True
+Execution time: 138.6503 seconds
+[34/1, 48/1] was correctly rejected
+[6/1, 44/1, 17/1, 31/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [16.0, 9.0], rnn: [0.] and GT: True
+Execution time: 138.6575 seconds
+[16/1, 9/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [56.0, 3.0], rnn: [0.] and GT: True
+Execution time: 138.6597 seconds
+[56/1, 3/1] was correctly rejected
+[8/1, 35/1, 35/1, 39/1] was correctly rejected
+[35/1, 11/1, 18/1, 57/1, 6/1] was correctly rejected
+[11/1] was correctly accepted
+[47/1, 35/1, 51/1, 51/1, 4/1] was correctly rejected
+[39/1, 1/1, 55/1] was correctly rejected
+[57/1, 46/1, 51/1, 13/1, 33/1] was correctly rejected
+[10/1, 20/1, 51/1, 41/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [38.0, 47.0], rnn: [0.] and GT: True
+Execution time: 138.6961 seconds
+[38/1, 47/1] was correctly rejected
+[] was correctly accepted
+[48/1, 17/1, 50/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [10.0, 33.0], rnn: [0.] and GT: True
+Execution time: 138.7026 seconds
+[10/1, 33/1] was correctly rejected
+[] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [49.0, 55.0], rnn: [0.] and GT: True
+Execution time: 138.7059 seconds
+[49/1, 55/1] was correctly rejected
+[35/1, 23/1, 52/1, 16/1] was correctly rejected
+[53/1, 7/1, 41/1, 2/1, 39/1] was correctly rejected
+[57/1, 12/1, 22/1] was correctly rejected
+[55/1] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [55.0, 26.0], rnn: [0.] and GT: True
+Execution time: 138.7261 seconds
+[55/1, 26/1] was correctly rejected
+[28/1, 42/1, 25/1, 52/1] was correctly rejected
+[58/1, 58/1, 22/1, 48/1] was correctly rejected
+[32/1, 4/1, 18/1, 41/1, 54/1] was correctly rejected
+[5/1] was correctly accepted
+[31/1, 32/1, 47/1, 29/1, 56/1] was correctly rejected
+[] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [39.0, 44.0], rnn: [0.] and GT: True
+Execution time: 138.7538 seconds
+[39/1, 44/1] was correctly rejected
+[57/1] was correctly accepted
+[7/1, 10/1, 2/1, 52/1, 48/1] was correctly rejected
+[18/1, 41/1, 40/1, 57/1] was correctly rejected
+[50/1, 59/1, 2/1, 4/1, 10/1] was correctly rejected
+[48/1, 18/1, 56/1, 15/1, 23/1] was correctly rejected
+[34/1, 16/1, 15/1, 58/1, 45/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [36.0, 33.0], rnn: [0.] and GT: True
+Execution time: 138.7923 seconds
+[36/1, 33/1] was correctly rejected
+[58/1] was correctly accepted
+[15/1, 51/1, 35/1, 29/1] was correctly rejected
+[40/1, 31/1, 32/1, 19/1] was correctly rejected
+[16/1] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [3.0, 46.0], rnn: [0.] and GT: True
+Execution time: 138.8090 seconds
+[3/1, 46/1] was correctly rejected
+[54/1, 6/1, 40/1, 32/1, 3/1] was correctly rejected
+[14/1, 14/1] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [18.0, 7.0], rnn: [0.] and GT: True
+Execution time: 138.8199 seconds
+[18/1, 7/1] was correctly rejected
+[11/1] was correctly accepted
+[39/1] was correctly accepted
+[23/1, 29/1, 13/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [36.0, 16.0], rnn: [0.] and GT: True
+Execution time: 138.8285 seconds
+[36/1, 16/1] was correctly rejected
+[24/1] was correctly accepted
+[52/1, 24/1, 33/1] was correctly rejected
+[13/1] was correctly accepted
+[16/1] was correctly accepted
+[54/1, 47/1, 55/1] was correctly rejected
+[] was correctly accepted
+[32/1, 4/1, 49/1, 36/1] was correctly rejected
+[37/1] was correctly accepted
+[31/1, 37/1, 59/1, 8/1, 14/1] was correctly rejected
+[24/1, 33/1, 58/1, 33/1, 41/1] was correctly rejected
+[1/1] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [39.0, 25.0], rnn: [0.] and GT: True
+Execution time: 138.8637 seconds
+[39/1, 25/1] was correctly rejected
+[50/1, 6/1, 39/1, 13/1] was correctly rejected
+[11/1] was correctly accepted
+[] was correctly accepted
+[42/1, 7/1, 20/1, 24/1, 17/1] was correctly rejected
+[] was correctly accepted
+[27/1, 43/1, 59/1, 49/1] was correctly rejected
+[8/1, 38/1, 52/1] was correctly rejected
+[14/1, 36/1, 33/1, 44/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [26.0, 11.0], rnn: [0.] and GT: True
+Execution time: 138.8955 seconds
+[26/1, 11/1] was correctly rejected
+[29/1, 18/1, 26/1] was correctly rejected
+[5/1, 53/1, 50/1, 35/1, 21/1] was correctly rejected
+[59/1, 21/1, 7/1] was correctly rejected
+[1/1] was correctly accepted
+[42/1] was correctly accepted
+[56/1] was correctly accepted
+[] was correctly accepted
+[31/1] was correctly accepted
+[35/1, 57/1, 41/1, 21/1] was correctly rejected
+[53/1, 26/1, 14/1, 54/1, 5/1] was correctly rejected
+[45/1, 31/1, 28/1, 29/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [6.0, 11.0], rnn: [0.] and GT: True
+Execution time: 138.9361 seconds
+[6/1, 11/1] was correctly rejected
+[40/1, 48/1, 28/1] was correctly rejected
+[29/1] was correctly accepted
+[8/1, 18/1, 24/1, 1/1, 48/1] was correctly rejected
+[8/1] was correctly accepted
+[22/1, 45/1, 36/1, 60/1, 9/1] was correctly rejected
+[] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [43.0, 5.0], rnn: [0.] and GT: True
+Execution time: 138.9602 seconds
+[43/1, 5/1] was correctly rejected
+[52/1, 8/1, 53/1, 29/1, 11/1] was correctly rejected
+[54/1, 31/1, 14/1, 56/1] was correctly rejected
+[] was correctly accepted
+[] was correctly accepted
+[] was correctly accepted
+[31/1, 2/1, 52/1, 26/1, 46/1] was correctly rejected
+[44/1, 46/1, 60/1, 16/1] was correctly rejected
+[48/1, 51/1, 9/1, 38/1, 12/1] was correctly rejected
+[] was correctly accepted
+[18/1, 50/1, 25/1, 32/1] was correctly rejected
+[7/1, 27/1, 40/1, 34/1, 1/1] was correctly rejected
+[13/1, 53/1, 28/1, 36/1, 14/1] was correctly rejected
+[8/1, 9/1, 34/1, 59/1, 55/1] was correctly rejected
+[] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [30.0, 54.0], rnn: [0.] and GT: True
+Execution time: 139.0264 seconds
+[30/1, 54/1] was correctly rejected
+[34/1] was correctly accepted
+[23/1, 53/1, 42/1, 47/1, 23/1] was correctly rejected
+[38/1] was correctly accepted
+[28/1, 41/1, 51/1] was correctly rejected
+[24/1, 40/1, 19/1] was correctly rejected
+[32/1, 42/1, 34/1, 60/1] was correctly rejected
+[2/1, 39/1, 57/1, 17/1] was correctly rejected
+[41/1, 6/1, 37/1, 57/1] was correctly rejected
+[] was correctly accepted
+[20/1, 32/1, 20/1, 60/1, 37/1] was correctly rejected
+[2/1] was correctly accepted
+[] was correctly accepted
+[4/1, 21/1, 24/1, 33/1, 5/1] was correctly rejected
+[40/1] was correctly accepted
+[] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [33.0, 12.0], rnn: [0.] and GT: True
+Execution time: 139.0783 seconds
+[33/1, 12/1] was correctly rejected
+[52/1, 13/1, 44/1, 38/1, 22/1] was correctly rejected
+[60/1, 45/1, 28/1] was correctly rejected
+[23/1, 29/1, 22/1, 14/1, 40/1] was correctly rejected
+[46/1, 4/1, 23/1, 6/1, 37/1] was correctly rejected
+[] was correctly accepted
+[2/1, 23/1, 31/1] was correctly rejected
+[] was correctly accepted
+[39/1, 9/1, 6/1, 34/1, 31/1] was correctly rejected
+[2/1] was correctly accepted
+[31/1, 37/1, 8/1, 7/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [3.0, 7.0], rnn: [0.] and GT: True
+Execution time: 139.1250 seconds
+[3/1, 7/1] was correctly rejected
+[34/1, 25/1, 24/1] was correctly rejected
+[6/1, 57/1, 8/1, 57/1] was correctly rejected
+[3/1, 4/1, 28/1, 16/1] was correctly rejected
+[1/1, 57/1, 10/1] was correctly rejected
+[37/1, 49/1, 1/1, 18/1, 21/1] was correctly rejected
+[34/1, 48/1, 3/1, 10/1, 36/1] was correctly rejected
+[10/1, 6/1, 38/1, 33/1] was correctly rejected
+[] was correctly accepted
+[42/1, 22/1, 54/1, 45/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [23.0, 39.0], rnn: [0.] and GT: True
+Execution time: 139.1693 seconds
+[23/1, 39/1] was correctly rejected
+[34/1, 43/1, 41/1] was correctly rejected
+[36/1, 13/1, 35/1] was correctly rejected
+[] was correctly accepted
+[7/1, 24/1, 53/1, 41/1] was correctly rejected
+[44/1] was correctly accepted
+[47/1] was correctly accepted
+[] was correctly accepted
+[56/1, 34/1, 10/1, 39/1, 42/1] was correctly rejected
+[26/1, 28/1, 34/1, 42/1, 20/1] was correctly rejected
+[] was correctly accepted
+[6/1, 52/1, 35/1] was correctly rejected
+[8/1] was correctly accepted
+[18/1, 39/1, 58/1, 37/1] was correctly rejected
+[8/1, 38/1, 4/1, 46/1] was correctly rejected
+[5/1, 20/1, 44/1, 46/1] was correctly rejected
+[] was correctly accepted
+[3/1, 28/1, 36/1] was correctly rejected
+[8/1, 11/1, 8/1, 20/1, 39/1] was correctly rejected
+[28/1, 29/1, 24/1] was correctly rejected
+[] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [46.0, 52.0], rnn: [0.] and GT: True
+Execution time: 139.2379 seconds
+[46/1, 52/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [29.0, 41.0], rnn: [0.] and GT: True
+Execution time: 139.2402 seconds
+[29/1, 41/1] was correctly rejected
+[8/1, 30/1, 47/1, 59/1, 1/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [42.0, 16.0], rnn: [0.] and GT: True
+Execution time: 139.2501 seconds
+[42/1, 16/1] was correctly rejected
+[37/1, 15/1, 3/1] was correctly rejected
+[37/1, 17/1, 40/1, 8/1] was correctly rejected
+[] was correctly accepted
+[10/1, 28/1, 44/1, 57/1, 52/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [23.0, 25.0], rnn: [0.] and GT: True
+Execution time: 139.2686 seconds
+[23/1, 25/1] was correctly rejected
+[15/1, 18/1, 30/1, 14/1] was correctly rejected
+[37/1, 31/1, 54/1] was correctly rejected
+[52/1] was correctly accepted
+[48/1, 26/1, 36/1, 22/1] was correctly rejected
+[32/1] was correctly accepted
+[53/1] was correctly accepted
+[] was correctly accepted
+[29/1, 9/1, 56/1, 2/1] was correctly rejected
+[] was correctly accepted
+[4/1] was correctly accepted
+[] was correctly accepted
+[] was correctly accepted
+[13/1] was correctly accepted
+[44/1, 55/1, 4/1, 5/1, 15/1] was correctly rejected
+[40/1, 51/1, 2/1, 60/1, 48/1] was correctly rejected
+[46/1, 58/1, 9/1, 60/1] was correctly rejected
+[38/1, 13/1, 31/1, 26/1, 44/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [33.0, 52.0], rnn: [0.] and GT: True
+Execution time: 139.3277 seconds
+[33/1, 52/1] was correctly rejected
+[26/1, 57/1, 13/1, 11/1] was correctly rejected
+[39/1, 52/1, 45/1] was correctly rejected
+[] was correctly accepted
+[9/1, 51/1, 52/1, 54/1, 15/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [15.0, 38.0], rnn: [0.] and GT: True
+Execution time: 139.3478 seconds
+[15/1, 38/1] was correctly rejected
+[60/1, 6/1, 19/1] was correctly rejected
+[33/1, 46/1, 37/1, 24/1] was correctly rejected
+[51/1, 53/1, 19/1, 59/1, 3/1] was correctly rejected
+[43/1] was correctly accepted
+[7/1] was correctly accepted
+[10/1, 49/1, 33/1] was correctly rejected
+[13/1, 58/1, 32/1] was correctly rejected
+[48/1, 42/1, 36/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [17.0, 6.0], rnn: [0.] and GT: True
+Execution time: 139.3790 seconds
+[17/1, 6/1] was correctly rejected
+[5/1, 56/1, 59/1, 31/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [55.0, 25.0], rnn: [0.] and GT: True
+Execution time: 139.3857 seconds
+[55/1, 25/1] was correctly rejected
+[35/1] was correctly accepted
+[34/1] was correctly accepted
+[59/1] was correctly accepted
+[26/1, 34/1, 20/1, 20/1] was correctly rejected
+[2/1, 26/1, 23/1, 34/1, 56/1] was correctly rejected
+[29/1, 1/1, 32/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [36.0, 59.0], rnn: [0.] and GT: True
+Execution time: 139.4108 seconds
+[36/1, 59/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [9.0, 17.0], rnn: [0.] and GT: True
+Execution time: 139.4133 seconds
+[9/1, 17/1] was correctly rejected
+[58/1, 53/1, 12/1, 19/1] was correctly rejected
+[30/1] was correctly accepted
+[16/1] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [16.0, 32.0], rnn: [0.] and GT: True
+Execution time: 139.4238 seconds
+[16/1, 32/1] was correctly rejected
+[54/1, 15/1, 45/1, 6/1] was correctly rejected
+[9/1, 5/1, 32/1] was correctly rejected
+[49/1] was correctly accepted
+[45/1] was correctly accepted
+[31/1, 58/1, 39/1, 49/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [12.0, 10.0], rnn: [0.] and GT: True
+Execution time: 139.4432 seconds
+[12/1, 10/1] was correctly rejected
+[22/1, 9/1, 12/1] was correctly rejected
+[] was correctly accepted
+[] was correctly accepted
+[43/1, 19/1, 13/1] was correctly rejected
+[] was correctly accepted
+[4/1, 38/1, 10/1, 32/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [16.0, 19.0], rnn: [0.] and GT: True
+Execution time: 139.4606 seconds
+[16/1, 19/1] was correctly rejected
+[58/1] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [3.0, 36.0], rnn: [0.] and GT: True
+Execution time: 139.4644 seconds
+[3/1, 36/1] was correctly rejected
+[36/1, 45/1, 30/1, 23/1] was correctly rejected
+[5/1] was correctly accepted
+[] was correctly accepted
+[25/1, 17/1, 7/1, 51/1] was correctly rejected
+[3/1, 9/1, 38/1, 41/1, 5/1] was correctly rejected
+[] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [11.0, 11.0, 48.0], rnn: [0.] and GT: True
+Execution time: 139.4882 seconds
+[11/1, 11/1, 48/1] was correctly rejected
+[] was correctly accepted
+[28/1, 37/1, 51/1, 27/1, 25/1] was correctly rejected
+[3/1, 47/1, 38/1, 49/1] was correctly rejected
+[45/1, 25/1, 33/1] was correctly rejected
+[46/1, 60/1, 11/1, 60/1, 60/1] was correctly rejected
+[14/1] was correctly accepted
+[] was correctly accepted
+[55/1, 31/1, 41/1, 27/1, 47/1] was correctly rejected
+[10/1, 26/1, 55/1] was correctly rejected
+[15/1, 20/1, 8/1, 53/1, 36/1] was correctly rejected
+[18/1, 9/1, 8/1] was correctly rejected
+[] was correctly accepted
+[10/1, 47/1, 17/1] was correctly rejected
+[] was correctly accepted
+[25/1, 27/1, 10/1, 15/1] was correctly rejected
+[41/1, 8/1, 6/1] was correctly rejected
+[] was correctly accepted
+[] was correctly accepted
+[10/1, 19/1, 2/1, 37/1, 37/1] was correctly rejected
+[5/1] was correctly accepted
+[14/1] was correctly accepted
+[5/1, 40/1, 23/1, 57/1] was correctly rejected
+[28/1, 31/1, 51/1] was correctly rejected
+[29/1, 20/1, 39/1, 16/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [32.0, 60.0], rnn: [0.] and GT: True
+Execution time: 139.5752 seconds
+[32/1, 60/1] was correctly rejected
+[23/1, 8/1, 49/1, 8/1, 13/1] was correctly rejected
+[] was correctly accepted
+[] was correctly accepted
+[37/1, 33/1, 55/1] was correctly rejected
+[34/1, 53/1, 19/1] was correctly rejected
+[] was correctly accepted
+[18/1, 60/1, 28/1, 36/1, 38/1] was correctly rejected
+[38/1, 14/1, 57/1, 33/1, 32/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [54.0, 60.0], rnn: [0.] and GT: True
+Execution time: 139.6065 seconds
+[54/1, 60/1] was correctly rejected
+[25/1, 51/1, 49/1, 50/1] was correctly rejected
+[23/1, 27/1, 15/1, 21/1, 17/1] was correctly rejected
+[] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [20.0, 37.0], rnn: [0.] and GT: True
+Execution time: 139.6239 seconds
+[20/1, 37/1] was correctly rejected
+[10/1, 44/1, 39/1] was correctly rejected
+[48/1] was correctly accepted
+[] was correctly accepted
+[50/1] was correctly accepted
+[38/1, 13/1, 32/1, 12/1] was correctly rejected
+[48/1, 32/1, 9/1, 24/1, 23/1] was correctly rejected
+[] was correctly accepted
+[28/1, 22/1, 40/1, 50/1, 38/1] was correctly rejected
+[25/1, 60/1, 47/1, 50/1, 42/1] was correctly rejected
+[8/1, 33/1, 51/1, 42/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [35.0, 46.0], rnn: [0.] and GT: True
+Execution time: 139.6661 seconds
+[35/1, 46/1] was correctly rejected
+[60/1, 40/1, 1/1, 24/1] was correctly rejected
+[26/1, 45/1, 39/1, 55/1, 6/1] was correctly rejected
+[3/1, 21/1, 47/1] was correctly rejected
+[60/1] was correctly accepted
+[] was correctly accepted
+[7/1, 32/1, 8/1, 33/1] was correctly rejected
+[18/1, 29/1, 8/1] was correctly rejected
+The languages are not equivalent, a counterexample is: [34/1, 33/1], length: 2
+The word was rejected, but is in the language.
+Execution time: 139.6969 seconds
+Checking equivalence of the following automaton:
+(Q,q0,delta,F) with:
+   Q    : {<>, <ab>, <aba>, <abcde>, <abc>, <a>, <abcd>}
+   q0   : <>
+   F    : {<>, <a>, <aba>}
+   delta: {<> --a--> <a>,   
+<a> --a--> <a>,   <a> --b--> <ab>,   
+<ab> --a--> <aba>,   <ab> --b--> <abc>,   <ab> --c--> <abc>,   
+<abc> --a--> <abc>,   <abc> --d--> <abcd>,   <abc> --b--> <abc>,   <abc> --c--> <abc>,   
+<abcd> --a--> <abc>,   <abcd> --e--> <abcde>,   <abcd> --b--> <abc>,   <abcd> --c--> <abc>,   <abcd> --d--> <abc>,   
+<abcde> --a--> <abc>,   <abcde> --e--> <abc>,   <abcde> --b--> <abc>,   <abcde> --c--> <abc>,   <abcde> --d--> <abc>,   <abcde> --f--> <abc>,   
+<aba> --a--> <abc>,   <aba> --b--> <abc>,   <aba> --c--> <abc>,   
+}
+[] was correctly accepted
+[49/1, 51/1, 46/1, 6/1, 54/1] was correctly rejected
+[32/1] was correctly accepted
+[11/1, 18/1, 49/1, 45/1, 48/1] was correctly rejected
+[43/1, 11/1, 30/1, 10/1, 58/1] was correctly rejected
+[11/1, 2/1, 5/1] was correctly rejected
+[54/1] was correctly accepted
+[59/1, 40/1, 33/1] was correctly rejected
+The languages are not equivalent, a counterexample is: [3/1, 2/1], length: 2
+The word was rejected, but is in the language.
+Execution time: 155.5058 seconds
+Checking equivalence of the following automaton:
+(Q,q0,delta,F) with:
+   Q    : {<>, <ab>, <aba>, <abcde>, <abc>, <a>, <abcd>}
+   q0   : <>
+   F    : {<>, <a>, <aba>}
+   delta: {<> --a--> <a>,   
+<a> --a--> <a>,   <a> --b--> <ab>,   
+<ab> --a--> <aba>,   <ab> --b--> <abc>,   <ab> --c--> <abc>,   
+<abc> --a--> <abc>,   <abc> --d--> <abcd>,   <abc> --b--> <abc>,   <abc> --c--> <abc>,   
+<abcd> --a--> <abc>,   <abcd> --e--> <abcde>,   <abcd> --b--> <abc>,   <abcd> --c--> <abc>,   <abcd> --d--> <abc>,   
+<abcde> --a--> <abc>,   <abcde> --e--> <abc>,   <abcde> --b--> <abc>,   <abcde> --c--> <abc>,   <abcde> --d--> <abc>,   <abcde> --f--> <abc>,   
+<aba> --a--> <abc>,   <aba> --b--> <abc>,   <aba> --c--> <abc>,   
+}
+[39/1, 19/1, 28/1, 40/1, 43/1] was correctly rejected
+[23/1, 38/1, 45/1] was correctly rejected
+[3/1] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [54.0, 38.0], rnn: [0.] and GT: True
+Execution time: 171.2131 seconds
+[54/1, 38/1] was correctly rejected
+[45/1, 14/1, 42/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [57.0, 22.0], rnn: [0.] and GT: True
+Execution time: 171.2187 seconds
+[57/1, 22/1] was correctly rejected
+[19/1, 54/1, 41/1, 45/1] was correctly rejected
+[31/1, 14/1, 55/1] was correctly rejected
+[41/1, 50/1, 16/1, 15/1] was correctly rejected
+[56/1] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [51.0, 31.0], rnn: [0.] and GT: True
+Execution time: 171.2346 seconds
+[51/1, 31/1] was correctly rejected
+[] was correctly accepted
+[31/1, 51/1, 56/1, 18/1, 52/1] was correctly rejected
+[53/1] was correctly accepted
+[42/1, 19/1, 36/1, 43/1] was correctly rejected
+[57/1, 16/1, 38/1, 32/1] was correctly rejected
+[] was correctly accepted
+[3/1, 52/1, 24/1] was correctly rejected
+[44/1, 37/1, 8/1] was correctly rejected
+[20/1, 3/1, 10/1, 42/1] was correctly rejected
+[54/1] was correctly accepted
+[] was correctly accepted
+[23/1, 56/1, 42/1, 35/1, 12/1] was correctly rejected
+[39/1] was correctly accepted
+[] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [29.0, 8.0], rnn: [0.] and GT: True
+Execution time: 171.2795 seconds
+[29/1, 8/1] was correctly rejected
+[12/1, 57/1, 49/1, 37/1, 16/1] was correctly rejected
+[] was correctly accepted
+[48/1, 60/1, 32/1] was correctly rejected
+[25/1, 6/1, 19/1, 1/1] was correctly rejected
+[] was correctly accepted
+[] was correctly accepted
+[10/1, 15/1, 12/1, 32/1, 52/1] was correctly rejected
+[59/1, 8/1, 36/1, 4/1] was correctly rejected
+[8/1, 48/1, 7/1, 24/1] was correctly rejected
+[22/1] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [60.0, 23.0], rnn: [0.] and GT: True
+Execution time: 171.3169 seconds
+[60/1, 23/1] was correctly rejected
+[5/1, 37/1, 20/1, 33/1, 32/1] was correctly rejected
+[46/1, 39/1, 44/1, 1/1] was correctly rejected
+[36/1, 44/1, 55/1, 27/1] was correctly rejected
+[55/1, 49/1, 60/1] was correctly rejected
+[15/1, 34/1, 60/1] was correctly rejected
+[39/1, 4/1, 58/1] was correctly rejected
+[4/1, 11/1, 55/1] was correctly rejected
+[51/1, 60/1, 32/1, 56/1] was correctly rejected
+[54/1] was correctly accepted
+[20/1, 26/1, 15/1, 60/1] was correctly rejected
+[19/1, 39/1, 47/1] was correctly rejected
+[54/1] was correctly accepted
+[7/1] was correctly accepted
+[45/1, 25/1, 27/1, 41/1, 60/1] was correctly rejected
+[] was correctly accepted
+[42/1, 54/1, 33/1, 27/1] was correctly rejected
+[49/1, 8/1, 42/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [45.0, 3.0], rnn: [0.] and GT: True
+Execution time: 171.3793 seconds
+[45/1, 3/1] was correctly rejected
+[56/1, 60/1, 8/1, 39/1, 57/1] was correctly rejected
+[] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [21.0, 26.0], rnn: [0.] and GT: True
+Execution time: 171.3898 seconds
+[21/1, 26/1] was correctly rejected
+[32/1] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [56.0, 46.0], rnn: [0.] and GT: True
+Execution time: 171.3935 seconds
+[56/1, 46/1] was correctly rejected
+[23/1, 7/1, 5/1] was correctly rejected
+[34/1, 55/1, 51/1, 25/1] was correctly rejected
+[11/1, 40/1, 15/1, 3/1] was correctly rejected
+[5/1] was correctly accepted
+[27/1, 17/1, 11/1, 50/1] was correctly rejected
+[] was correctly accepted
+[43/1] was correctly accepted
+[17/1] was correctly accepted
+[37/1, 40/1, 27/1] was correctly rejected
+[14/1] was correctly accepted
+[15/1, 49/1, 12/1, 14/1, 53/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [5.0, 11.0], rnn: [0.] and GT: True
+Execution time: 171.4292 seconds
+[5/1, 11/1] was correctly rejected
+[12/1, 53/1, 25/1, 48/1, 35/1] was correctly rejected
+[] was correctly accepted
+[35/1] was correctly accepted
+[] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [12.0, 58.0], rnn: [0.] and GT: True
+Execution time: 171.4413 seconds
+[12/1, 58/1] was correctly rejected
+[35/1, 30/1, 32/1] was correctly rejected
+[55/1, 55/1, 58/1, 49/1, 18/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [32.0, 8.0], rnn: [0.] and GT: True
+Execution time: 171.4521 seconds
+[32/1, 8/1] was correctly rejected
+[45/1, 50/1, 3/1, 23/1] was correctly rejected
+[17/1, 5/1, 27/1, 34/1, 26/1] was correctly rejected
+[26/1, 60/1, 52/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [9.0, 50.0], rnn: [0.] and GT: True
+Execution time: 171.4681 seconds
+[9/1, 50/1] was correctly rejected
+[44/1, 16/1, 52/1, 54/1] was correctly rejected
+[45/1, 2/1, 2/1, 1/1] was correctly rejected
+[] was correctly accepted
+[23/1, 22/1, 57/1, 1/1] was correctly rejected
+[34/1, 20/1, 18/1, 38/1, 57/1] was correctly rejected
+[43/1, 32/1, 19/1] was correctly rejected
+[] was correctly accepted
+[54/1, 50/1, 60/1, 51/1] was correctly rejected
+The languages are not equivalent, a counterexample is: [17/1, 16/1], length: 2
+The word was rejected, but is in the language.
+Execution time: 171.5007 seconds
+Checking equivalence of the following automaton:
+(Q,q0,delta,F) with:
+   Q    : {<>, <ab>, <aba>, <abcde>, <abc>, <a>, <abcd>}
+   q0   : <>
+   F    : {<>, <a>, <aba>}
+   delta: {<> --a--> <a>,   
+<a> --a--> <a>,   <a> --b--> <ab>,   
+<ab> --a--> <aba>,   <ab> --b--> <abc>,   <ab> --c--> <abc>,   
+<abc> --a--> <abc>,   <abc> --d--> <abcd>,   <abc> --b--> <abc>,   <abc> --c--> <abc>,   
+<abcd> --a--> <abc>,   <abcd> --e--> <abcde>,   <abcd> --b--> <abc>,   <abcd> --c--> <abc>,   <abcd> --d--> <abc>,   
+<abcde> --a--> <abc>,   <abcde> --e--> <abc>,   <abcde> --b--> <abc>,   <abcde> --c--> <abc>,   <abcde> --d--> <abc>,   <abcde> --f--> <abc>,   
+<aba> --a--> <abc>,   <aba> --b--> <abc>,   <aba> --c--> <abc>,   
+}
+[] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [31.0, 15.0], rnn: [0.] and GT: True
+Execution time: 187.6955 seconds
+[31/1, 15/1] was correctly rejected
+[10/1, 8/1, 27/1, 57/1, 5/1] was correctly rejected
+[6/1, 1/1, 50/1] was correctly rejected
+[3/1, 57/1, 44/1, 31/1, 57/1] was correctly rejected
+[4/1, 31/1, 45/1] was correctly rejected
+[] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [11.0, 46.0], rnn: [0.] and GT: True
+Execution time: 187.7189 seconds
+[11/1, 46/1] was correctly rejected
+[] was correctly accepted
+[27/1] was correctly accepted
+[8/1, 42/1, 60/1, 17/1, 40/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [29.0, 33.0], rnn: [0.] and GT: True
+Execution time: 187.7309 seconds
+[29/1, 33/1] was correctly rejected
+[21/1] was correctly accepted
+[46/1, 48/1, 39/1, 15/1] was correctly rejected
+[56/1, 38/1, 22/1] was correctly rejected
+[45/1, 22/1, 9/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [41.0, 20.0], rnn: [0.] and GT: True
+Execution time: 187.7459 seconds
+[41/1, 20/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [39.0, 47.0], rnn: [0.] and GT: True
+Execution time: 187.7479 seconds
+[39/1, 47/1] was correctly rejected
+[37/1, 41/1, 56/1, 2/1] was correctly rejected
+[49/1] was correctly accepted
+[27/1, 14/1, 20/1] was correctly rejected
+[16/1, 3/1, 22/1, 50/1, 14/1] was correctly rejected
+[5/1, 42/1, 15/1, 17/1, 58/1] was correctly rejected
+[23/1] was correctly accepted
+[34/1, 47/1, 25/1, 52/1, 40/1] was correctly rejected
+[33/1, 7/1, 56/1, 35/1] was correctly rejected
+[40/1, 29/1, 10/1] was correctly rejected
+[49/1] was correctly accepted
+[5/1, 50/1, 28/1, 51/1, 37/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [36.0, 50.0], rnn: [0.] and GT: True
+Execution time: 187.7989 seconds
+[36/1, 50/1] was correctly rejected
+[] was correctly accepted
+[] was correctly accepted
+[50/1, 20/1, 48/1, 23/1, 15/1] was correctly rejected
+[] was correctly accepted
+[47/1] was correctly accepted
+[6/1, 25/1, 59/1, 3/1, 37/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [12.0, 28.0], rnn: [0.] and GT: True
+Execution time: 187.8190 seconds
+[12/1, 28/1] was correctly rejected
+[31/1, 12/1, 6/1, 13/1] was correctly rejected
+[47/1, 28/1, 50/1, 58/1] was correctly rejected
+[39/1, 48/1, 53/1, 53/1, 45/1] was correctly rejected
+[] was correctly accepted
+[] was correctly accepted
+[17/1, 26/1, 1/1, 25/1] was correctly rejected
+[26/1, 40/1, 15/1, 51/1] was correctly rejected
+[] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [21.0, 23.0], rnn: [0.] and GT: True
+Execution time: 187.8488 seconds
+[21/1, 23/1] was correctly rejected
+[54/1] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [56.0, 43.0], rnn: [0.] and GT: True
+Execution time: 187.8522 seconds
+[56/1, 43/1] was correctly rejected
+[] was correctly accepted
+[] was correctly accepted
+[] was correctly accepted
+[] was correctly accepted
+[50/1, 1/1, 35/1, 32/1] was correctly rejected
+[47/1, 10/1, 32/1, 10/1] was correctly rejected
+[50/1, 13/1, 10/1, 50/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [47.0, 23.0], rnn: [0.] and GT: True
+Execution time: 187.8721 seconds
+[47/1, 23/1] was correctly rejected
+[46/1] was correctly accepted
+[10/1, 22/1, 54/1, 24/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [24.0, 59.0], rnn: [0.] and GT: True
+Execution time: 187.8803 seconds
+[24/1, 59/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [33.0, 14.0], rnn: [0.] and GT: True
+Execution time: 187.8823 seconds
+[33/1, 14/1] was correctly rejected
+[50/1, 60/1, 45/1, 44/1, 24/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [41.0, 58.0], rnn: [0.] and GT: True
+Execution time: 187.8917 seconds
+[41/1, 58/1] was correctly rejected
+[11/1] was correctly accepted
+[16/1] was correctly accepted
+[] was correctly accepted
+[35/1, 38/1, 25/1, 16/1, 24/1] was correctly rejected
+[31/1, 46/1, 32/1, 19/1] was correctly rejected
+[60/1, 27/1, 5/1, 12/1, 60/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [58.0, 15.0], rnn: [0.] and GT: True
+Execution time: 187.9149 seconds
+[58/1, 15/1] was correctly rejected
+[48/1, 25/1, 21/1, 47/1, 20/1] was correctly rejected
+[] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [3.0, 13.0], rnn: [0.] and GT: True
+Execution time: 187.9256 seconds
+[3/1, 13/1] was correctly rejected
+[12/1, 9/1, 39/1, 48/1] was correctly rejected
+[25/1] was correctly accepted
+[11/1, 16/1, 45/1, 44/1, 56/1] was correctly rejected
+[59/1, 39/1, 26/1, 43/1] was correctly rejected
+[14/1, 12/1, 13/1, 17/1, 25/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [50.0, 58.0], rnn: [0.] and GT: True
+Execution time: 187.9537 seconds
+[50/1, 58/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [40.0, 17.0], rnn: [0.] and GT: True
+Execution time: 187.9567 seconds
+[40/1, 17/1] was correctly rejected
+[21/1, 15/1, 10/1, 54/1] was correctly rejected
+[36/1, 27/1, 33/1] was correctly rejected
+[] was correctly accepted
+[49/1, 8/1, 53/1, 25/1, 45/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [51.0, 27.0], rnn: [0.] and GT: True
+Execution time: 187.9765 seconds
+[51/1, 27/1] was correctly rejected
+[42/1, 39/1, 34/1] was correctly rejected
+[46/1, 19/1, 10/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [19.0, 16.0, 19.0], rnn: [0.] and GT: True
+Execution time: 187.9907 seconds
+The languages are not equivalent, a counterexample is: [19/1, 16/1, 19/1], length: 3
+The word was accepted, but is not in the language.
+Execution time: 187.9936 seconds
+Checking equivalence of the following automaton:
+(Q,q0,delta,F) with:
+   Q    : {<>, <ab>, <aba>, <abcde>, <abc>, <a>, <abcd>}
+   q0   : <>
+   F    : {<>, <a>, <aba>}
+   delta: {<> --a--> <a>,   
+<a> --a--> <a>,   <a> --b--> <ab>,   
+<ab> --a--> <aba>,   <ab> --b--> <abc>,   <ab> --c--> <abc>,   
+<abc> --a--> <abc>,   <abc> --d--> <abcd>,   <abc> --b--> <abc>,   <abc> --c--> <abc>,   
+<abcd> --a--> <abc>,   <abcd> --e--> <abcde>,   <abcd> --b--> <abc>,   <abcd> --c--> <abc>,   <abcd> --d--> <abc>,   
+<abcde> --a--> <abc>,   <abcde> --e--> <abc>,   <abcde> --b--> <abc>,   <abcde> --c--> <abc>,   <abcde> --d--> <abc>,   <abcde> --f--> <abc>,   
+<aba> --a--> <abc>,   <aba> --b--> <abc>,   <aba> --c--> <abc>,   
+}
+[53/1, 47/1, 47/1, 19/1, 56/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [14.0, 6.0], rnn: [0.] and GT: True
+Execution time: 205.2406 seconds
+[14/1, 6/1] was correctly rejected
+[10/1, 3/1, 22/1] was correctly rejected
+[4/1] was correctly accepted
+[58/1, 47/1, 45/1, 57/1] was correctly rejected
+[17/1] was correctly accepted
+[35/1, 33/1, 53/1] was correctly rejected
+[] was correctly accepted
+[14/1] was correctly accepted
+[12/1, 13/1, 39/1, 3/1] was correctly rejected
+[11/1, 3/1, 26/1, 9/1, 32/1] was correctly rejected
+[31/1, 3/1, 51/1] was correctly rejected
+[52/1] was correctly accepted
+[52/1, 34/1, 35/1] was correctly rejected
+[60/1, 3/1, 42/1] was correctly rejected
+[13/1, 57/1, 43/1, 39/1] was correctly rejected
+[26/1, 36/1, 24/1, 24/1, 10/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [7.0, 2.0], rnn: [0.] and GT: True
+Execution time: 205.2946 seconds
+[7/1, 2/1] was correctly rejected
+[42/1, 11/1, 23/1] was correctly rejected
+[] was correctly accepted
+[34/1] was correctly accepted
+[] was correctly accepted
+[41/1, 39/1, 12/1, 31/1] was correctly rejected
+[37/1, 32/1, 15/1] was correctly rejected
+[50/1, 60/1, 55/1] was correctly rejected
+[43/1, 2/1, 25/1] was correctly rejected
+[12/1, 57/1, 31/1] was correctly rejected
+[19/1, 53/1, 31/1, 4/1, 59/1] was correctly rejected
+[50/1] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [10.0, 49.0], rnn: [0.] and GT: True
+Execution time: 205.3316 seconds
+[10/1, 49/1] was correctly rejected
+[7/1, 6/1, 38/1, 37/1] was correctly rejected
+[18/1, 21/1, 35/1, 3/1, 25/1] was correctly rejected
+[] was correctly accepted
+The languages are not equivalent, a counterexample is: [20/1, 19/1], length: 2
+The word was rejected, but is in the language.
+Execution time: 205.3483 seconds
+Checking equivalence of the following automaton:
+(Q,q0,delta,F) with:
+   Q    : {<>, <ab>, <aba>, <abcde>, <abc>, <a>, <abcd>}
+   q0   : <>
+   F    : {<>, <a>, <aba>}
+   delta: {<> --a--> <a>,   
+<a> --a--> <a>,   <a> --b--> <ab>,   
+<ab> --a--> <aba>,   <ab> --b--> <abc>,   <ab> --c--> <abc>,   
+<abc> --a--> <abc>,   <abc> --d--> <abcd>,   <abc> --b--> <abc>,   <abc> --c--> <abc>,   
+<abcd> --a--> <abc>,   <abcd> --e--> <abcde>,   <abcd> --b--> <abc>,   <abcd> --c--> <abc>,   <abcd> --d--> <abc>,   
+<abcde> --a--> <abc>,   <abcde> --e--> <abc>,   <abcde> --b--> <abc>,   <abcde> --c--> <abc>,   <abcde> --d--> <abc>,   <abcde> --f--> <abc>,   
+<aba> --a--> <abc>,   <aba> --b--> <abc>,   <aba> --c--> <abc>,   
+}
+The languages are not equivalent, a counterexample is: [40/1, 41/1], length: 2
+The word was rejected, but is in the language.
+Execution time: 222.1747 seconds
+Checking equivalence of the following automaton:
+(Q,q0,delta,F) with:
+   Q    : {<>, <ab>, <aba>, <abcde>, <abc>, <a>, <abcd>}
+   q0   : <>
+   F    : {<>, <a>, <aba>}
+   delta: {<> --a--> <a>,   
+<a> --a--> <a>,   <a> --b--> <ab>,   
+<ab> --a--> <aba>,   <ab> --b--> <abc>,   <ab> --c--> <abc>,   
+<abc> --a--> <abc>,   <abc> --d--> <abcd>,   <abc> --b--> <abc>,   <abc> --c--> <abc>,   
+<abcd> --a--> <abc>,   <abcd> --e--> <abcde>,   <abcd> --b--> <abc>,   <abcd> --c--> <abc>,   <abcd> --d--> <abc>,   
+<abcde> --a--> <abc>,   <abcde> --e--> <abc>,   <abcde> --b--> <abc>,   <abcde> --c--> <abc>,   <abcde> --d--> <abc>,   <abcde> --f--> <abc>,   
+<aba> --a--> <abc>,   <aba> --b--> <abc>,   <aba> --c--> <abc>,   
+}
+[] was correctly accepted
+[] was correctly accepted
+[53/1] was correctly accepted
+[20/1, 13/1, 31/1] was correctly rejected
+[] was correctly accepted
+[55/1, 45/1, 35/1, 45/1] was correctly rejected
+[54/1, 21/1, 36/1] was correctly rejected
+[32/1] was correctly accepted
+[54/1, 4/1, 24/1, 21/1] was correctly rejected
+[2/1, 34/1, 56/1] was correctly rejected
+[43/1, 6/1, 44/1, 11/1] was correctly rejected
+[48/1] was correctly accepted
+[33/1] was correctly accepted
+[53/1, 35/1, 14/1, 38/1, 48/1] was correctly rejected
+[19/1, 21/1, 50/1, 18/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [20.0, 60.0], rnn: [0.] and GT: True
+Execution time: 239.2953 seconds
+[20/1, 60/1] was correctly rejected
+[46/1] was correctly accepted
+[4/1, 39/1, 28/1, 25/1] was correctly rejected
+[6/1, 47/1, 34/1] was correctly rejected
+[] was correctly accepted
+[] was correctly accepted
+[18/1] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [21.0, 44.0], rnn: [0.] and GT: True
+Execution time: 239.3133 seconds
+[21/1, 44/1] was correctly rejected
+[28/1] was correctly accepted
+[26/1, 17/1, 1/1, 2/1] was correctly rejected
+[41/1, 8/1, 14/1] was correctly rejected
+[] was correctly accepted
+[1/1] was correctly accepted
+[50/1] was correctly accepted
+[] was correctly accepted
+[3/1] was correctly accepted
+[18/1] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [57.0, 44.0], rnn: [0.] and GT: True
+Execution time: 239.3340 seconds
+[57/1, 44/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [53.0, 25.0], rnn: [0.] and GT: True
+Execution time: 239.3365 seconds
+[53/1, 25/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [50.0, 31.0], rnn: [0.] and GT: True
+Execution time: 239.3390 seconds
+[50/1, 31/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [18.0, 55.0], rnn: [0.] and GT: True
+Execution time: 239.3414 seconds
+[18/1, 55/1] was correctly rejected
+[52/1, 12/1, 5/1, 29/1, 21/1] was correctly rejected
+[32/1, 44/1, 60/1, 22/1] was correctly rejected
+[] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [6.0, 55.0], rnn: [0.] and GT: True
+Execution time: 239.3570 seconds
+[6/1, 55/1] was correctly rejected
+[59/1] was correctly accepted
+[21/1, 46/1, 13/1] was correctly rejected
+[43/1, 24/1, 24/1, 42/1] was correctly rejected
+[16/1, 60/1, 39/1, 60/1, 53/1] was correctly rejected
+[44/1, 31/1, 60/1, 47/1, 31/1] was correctly rejected
+[60/1, 19/1, 6/1, 52/1] was correctly rejected
+[] was correctly accepted
+[] was correctly accepted
+[27/1, 3/1, 46/1, 2/1, 44/1] was correctly rejected
+The languages are not equivalent, a counterexample is: [13/1, 12/1], length: 2
+The word was rejected, but is in the language.
+Execution time: 239.3941 seconds
+Checking equivalence of the following automaton:
+(Q,q0,delta,F) with:
+   Q    : {<>, <ab>, <aba>, <abcde>, <abc>, <a>, <abcd>}
+   q0   : <>
+   F    : {<>, <a>, <aba>}
+   delta: {<> --a--> <a>,   
+<a> --a--> <a>,   <a> --b--> <ab>,   
+<ab> --a--> <aba>,   <ab> --b--> <abc>,   <ab> --c--> <abc>,   
+<abc> --a--> <abc>,   <abc> --d--> <abcd>,   <abc> --b--> <abc>,   <abc> --c--> <abc>,   
+<abcd> --a--> <abc>,   <abcd> --e--> <abcde>,   <abcd> --b--> <abc>,   <abcd> --c--> <abc>,   <abcd> --d--> <abc>,   
+<abcde> --a--> <abc>,   <abcde> --e--> <abc>,   <abcde> --b--> <abc>,   <abcde> --c--> <abc>,   <abcde> --d--> <abc>,   <abcde> --f--> <abc>,   
+<aba> --a--> <abc>,   <aba> --b--> <abc>,   <aba> --c--> <abc>,   
+}
+equivalenceQuery: FOUND MISMATCH FOR [56.0, 47.0], rnn: [0.] and GT: True
+Execution time: 255.9402 seconds
+[56/1, 47/1] was correctly rejected
+[27/1, 31/1, 26/1, 14/1] was correctly rejected
+[34/1, 59/1, 32/1, 7/1, 30/1] was correctly rejected
+[39/1, 14/1, 19/1, 4/1] was correctly rejected
+[] was correctly accepted
+[55/1, 51/1, 54/1] was correctly rejected
+[48/1] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [45.0, 55.0], rnn: [0.] and GT: True
+Execution time: 255.9655 seconds
+[45/1, 55/1] was correctly rejected
+[4/1, 26/1, 20/1] was correctly rejected
+[58/1, 12/1, 48/1] was correctly rejected
+[26/1, 50/1, 5/1, 20/1, 32/1] was correctly rejected
+[] was correctly accepted
+[45/1, 13/1, 10/1, 51/1, 46/1] was correctly rejected
+[58/1, 13/1, 10/1, 31/1, 51/1] was correctly rejected
+[] was correctly accepted
+[15/1, 54/1, 7/1, 40/1] was correctly rejected
+[27/1] was correctly accepted
+[] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [1.0, 45.0], rnn: [0.] and GT: True
+Execution time: 256.0062 seconds
+[1/1, 45/1] was correctly rejected
+[13/1, 6/1, 2/1, 13/1] was correctly rejected
+[27/1, 46/1, 50/1] was correctly rejected
+[14/1, 47/1, 56/1] was correctly rejected
+[] was correctly accepted
+[27/1, 57/1, 21/1, 14/1, 31/1] was correctly rejected
+[15/1] was correctly accepted
+[33/1, 60/1, 5/1] was correctly rejected
+[60/1] was correctly accepted
+[] was correctly accepted
+[59/1, 9/1, 36/1, 4/1] was correctly rejected
+[] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [14.0, 43.0], rnn: [0.] and GT: True
+Execution time: 256.0411 seconds
+[14/1, 43/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [23.0, 12.0], rnn: [0.] and GT: True
+Execution time: 256.0432 seconds
+[23/1, 12/1] was correctly rejected
+[1/1, 36/1, 15/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [47.0, 54.0], rnn: [0.] and GT: True
+Execution time: 256.0487 seconds
+[47/1, 54/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [45.0, 8.0], rnn: [0.] and GT: True
+Execution time: 256.0511 seconds
+[45/1, 8/1] was correctly rejected
+[28/1, 8/1, 58/1] was correctly rejected
+[] was correctly accepted
+[3/1] was correctly accepted
+[51/1, 7/1, 4/1, 52/1, 9/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [36.0, 58.0], rnn: [0.] and GT: True
+Execution time: 256.0670 seconds
+[36/1, 58/1] was correctly rejected
+[58/1, 2/1, 32/1, 3/1, 23/1] was correctly rejected
+[42/1, 32/1, 28/1, 29/1, 8/1] was correctly rejected
+[41/1, 20/1, 10/1] was correctly rejected
+[] was correctly accepted
+[54/1, 1/1, 2/1] was correctly rejected
+[48/1] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [47.0, 59.0], rnn: [0.] and GT: True
+Execution time: 256.0926 seconds
+[47/1, 59/1] was correctly rejected
+[35/1, 19/1, 57/1, 26/1, 2/1] was correctly rejected
+[23/1] was correctly accepted
+[29/1, 43/1, 21/1, 27/1, 11/1] was correctly rejected
+[] was correctly accepted
+[21/1, 21/1, 41/1, 53/1] was correctly rejected
+[7/1, 49/1, 13/1] was correctly rejected
+[18/1, 18/1, 21/1, 15/1] was correctly rejected
+[29/1] was correctly accepted
+[54/1, 32/1, 56/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [33.0, 49.0], rnn: [0.] and GT: True
+Execution time: 256.1268 seconds
+[33/1, 49/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [38.0, 3.0], rnn: [0.] and GT: True
+Execution time: 256.1292 seconds
+[38/1, 3/1] was correctly rejected
+[37/1, 38/1, 41/1, 20/1, 34/1] was correctly rejected
+[56/1, 55/1, 39/1] was correctly rejected
+[34/1, 4/1, 26/1, 35/1, 21/1] was correctly rejected
+[32/1] was correctly accepted
+[59/1, 32/1, 46/1] was correctly rejected
+[48/1, 15/1, 17/1, 3/1] was correctly rejected
+[47/1, 51/1, 26/1, 24/1, 16/1] was correctly rejected
+[33/1, 17/1, 4/1, 13/1, 42/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [49.0, 30.0], rnn: [0.] and GT: True
+Execution time: 256.1726 seconds
+[49/1, 30/1] was correctly rejected
+[25/1, 44/1, 17/1, 23/1, 7/1] was correctly rejected
+[7/1, 49/1, 46/1, 42/1, 47/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [34.0, 21.0], rnn: [0.] and GT: True
+Execution time: 256.1898 seconds
+[34/1, 21/1] was correctly rejected
+[] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [51.0, 49.0], rnn: [0.] and GT: True
+Execution time: 256.1934 seconds
+[51/1, 49/1] was correctly rejected
+[18/1, 34/1, 22/1, 39/1] was correctly rejected
+[39/1, 56/1, 1/1, 35/1] was correctly rejected
+[9/1, 1/1, 19/1, 5/1, 9/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [4.0, 44.0], rnn: [0.] and GT: True
+Execution time: 256.2108 seconds
+[4/1, 44/1] was correctly rejected
+[41/1, 58/1, 2/1, 5/1, 38/1] was correctly rejected
+[] was correctly accepted
+[19/1, 51/1, 24/1, 10/1, 44/1] was correctly rejected
+[60/1, 25/1, 51/1] was correctly rejected
+INFO : No. of times..query Generated: 1000
+[58/1, 38/1, 46/1, 54/1, 40/1, 36/1, 13/1] was correctly rejected
+[11/1, 1/1, 9/1, 56/1] was correctly rejected
+[27/1, 40/1, 35/1, 33/1, 11/1, 56/1, 25/1, 43/1, 29/1, 49/1] was correctly rejected
+[18/1, 29/1, 57/1, 31/1, 14/1, 6/1, 23/1, 11/1] was correctly rejected
+[60/1, 7/1, 10/1, 57/1, 23/1] was correctly rejected
+[] was correctly accepted
+[4/1, 13/1, 39/1, 49/1] was correctly rejected
+[28/1, 32/1, 48/1, 38/1, 25/1, 38/1, 43/1, 46/1, 60/1, 46/1] was correctly rejected
+[17/1, 27/1, 18/1, 9/1, 7/1] was correctly rejected
+[1/1, 28/1, 36/1, 11/1, 38/1, 28/1, 48/1, 2/1, 11/1] was correctly rejected
+[16/1, 57/1, 32/1, 27/1, 31/1, 10/1] was correctly rejected
+[48/1, 38/1, 38/1, 45/1, 31/1, 16/1, 60/1, 7/1] was correctly rejected
+[] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [38.0, 21.0], rnn: [0.] and GT: True
+Execution time: 256.3416 seconds
+[38/1, 21/1] was correctly rejected
+[57/1, 18/1, 42/1, 52/1, 33/1, 36/1, 34/1] was correctly rejected
+[25/1, 48/1, 55/1, 13/1, 28/1] was correctly rejected
+[] was correctly accepted
+[56/1, 16/1, 22/1, 52/1] was correctly rejected
+[] was correctly accepted
+[35/1, 6/1, 14/1] was correctly rejected
+[40/1, 33/1, 52/1, 35/1, 15/1] was correctly rejected
+[59/1, 34/1, 4/1, 13/1, 6/1] was correctly rejected
+[31/1, 53/1, 3/1, 13/1] was correctly rejected
+[59/1, 24/1, 26/1, 31/1, 34/1, 16/1] was correctly rejected
+[24/1, 56/1, 12/1, 18/1] was correctly rejected
+[53/1, 43/1, 52/1, 54/1, 24/1, 31/1, 24/1, 29/1, 26/1, 26/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [7.0, 32.0], rnn: [0.] and GT: True
+Execution time: 256.4192 seconds
+[7/1, 32/1] was correctly rejected
+[11/1, 37/1, 49/1, 32/1] was correctly rejected
+[45/1, 16/1, 14/1, 26/1, 59/1, 48/1] was correctly rejected
+[] was correctly accepted
+[36/1, 35/1, 37/1, 12/1, 14/1] was correctly rejected
+[36/1, 29/1, 32/1, 29/1] was correctly rejected
+[56/1, 36/1, 59/1, 60/1] was correctly rejected
+[45/1, 11/1, 16/1, 29/1, 35/1, 51/1] was correctly rejected
+[49/1, 48/1, 19/1, 43/1, 19/1, 11/1, 23/1, 21/1, 22/1] was correctly rejected
+[46/1, 45/1, 35/1, 38/1, 56/1, 37/1] was correctly rejected
+[33/1, 28/1, 29/1, 30/1, 34/1, 18/1] was correctly rejected
+[35/1, 15/1, 37/1, 28/1, 6/1] was correctly rejected
+[7/1, 47/1, 52/1, 58/1, 37/1] was correctly rejected
+[] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [49.0, 25.0], rnn: [0.] and GT: True
+Execution time: 256.5084 seconds
+[49/1, 25/1] was correctly rejected
+[42/1, 24/1, 45/1, 32/1, 9/1] was correctly rejected
+[45/1, 38/1, 13/1, 14/1, 59/1, 12/1, 54/1, 26/1, 60/1] was correctly rejected
+[16/1, 46/1, 38/1, 39/1] was correctly rejected
+[59/1, 35/1, 20/1, 41/1, 20/1, 47/1, 34/1, 39/1, 29/1, 40/1] was correctly rejected
+[36/1, 20/1, 29/1] was correctly rejected
+[19/1, 50/1, 15/1, 12/1, 38/1, 3/1, 11/1] was correctly rejected
+[40/1, 14/1, 17/1, 50/1, 54/1, 50/1, 16/1, 8/1, 44/1, 16/1] was correctly rejected
+[30/1, 38/1, 21/1] was correctly rejected
+[58/1, 19/1, 37/1, 15/1] was correctly rejected
+[35/1, 59/1, 36/1, 14/1] was correctly rejected
+[] was correctly accepted
+[] was correctly accepted
+[36/1, 27/1, 33/1] was correctly rejected
+[59/1, 46/1, 10/1, 39/1, 42/1] was correctly rejected
+[55/1, 48/1, 41/1, 19/1] was correctly rejected
+[] was correctly accepted
+[11/1, 37/1, 54/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [10.0, 33.0], rnn: [0.] and GT: True
+Execution time: 256.6124 seconds
+[10/1, 33/1] was correctly rejected
+[15/1, 25/1, 20/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [59.0, 16.0], rnn: [0.] and GT: True
+Execution time: 256.6177 seconds
+[59/1, 16/1] was correctly rejected
+[30/1] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [50.0, 5.0], rnn: [0.] and GT: True
+Execution time: 256.6216 seconds
+[50/1, 5/1] was correctly rejected
+[4/1, 22/1, 59/1] was correctly rejected
+[60/1, 34/1, 45/1, 37/1, 28/1, 1/1, 7/1, 23/1, 2/1] was correctly rejected
+[27/1, 42/1, 36/1, 38/1, 60/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [60.0, 1.0], rnn: [0.] and GT: True
+Execution time: 256.6487 seconds
+[60/1, 1/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [34.0, 56.0], rnn: [0.] and GT: True
+Execution time: 256.6508 seconds
+[34/1, 56/1] was correctly rejected
+[44/1, 30/1, 3/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [47.0, 40.0], rnn: [0.] and GT: True
+Execution time: 256.6563 seconds
+[47/1, 40/1] was correctly rejected
+[39/1, 35/1, 3/1] was correctly rejected
+[40/1, 25/1, 13/1, 34/1, 4/1, 24/1, 33/1, 28/1, 8/1, 34/1] was correctly rejected
+[47/1, 50/1, 31/1] was correctly rejected
+[20/1, 49/1, 5/1, 51/1, 5/1] was correctly rejected
+[] was correctly accepted
+[34/1, 42/1, 17/1, 45/1, 43/1, 53/1, 15/1] was correctly rejected
+[5/1, 57/1, 56/1, 35/1, 19/1] was correctly rejected
+[6/1, 41/1, 1/1, 53/1, 49/1, 37/1, 25/1, 1/1, 52/1, 47/1] was correctly rejected
+[5/1, 58/1, 54/1, 26/1, 15/1, 5/1, 43/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [24.0, 13.0], rnn: [0.] and GT: True
+Execution time: 256.7252 seconds
+[24/1, 13/1] was correctly rejected
+[41/1, 24/1, 45/1, 13/1, 3/1, 54/1, 60/1] was correctly rejected
+[49/1, 59/1, 47/1, 35/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [21.0, 27.0], rnn: [0.] and GT: True
+Execution time: 256.7425 seconds
+[21/1, 27/1] was correctly rejected
+[33/1] was correctly accepted
+[58/1] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [49.0, 26.0], rnn: [0.] and GT: True
+Execution time: 256.7476 seconds
+[49/1, 26/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [57.0, 7.0], rnn: [0.] and GT: True
+Execution time: 256.7497 seconds
+[57/1, 7/1] was correctly rejected
+[53/1, 58/1, 46/1, 38/1, 12/1, 44/1, 58/1, 17/1, 17/1, 32/1] was correctly rejected
+[] was correctly accepted
+[27/1, 19/1, 51/1] was correctly rejected
+[52/1, 38/1, 2/1] was correctly rejected
+[13/1, 13/1, 11/1, 51/1, 33/1, 4/1, 51/1, 26/1, 15/1] was correctly rejected
+[37/1] was correctly accepted
+[41/1, 34/1, 60/1, 29/1, 28/1, 34/1, 3/1, 58/1, 28/1, 27/1] was correctly rejected
+[] was correctly accepted
+[] was correctly accepted
+[37/1, 12/1, 45/1, 4/1, 49/1, 8/1, 16/1, 42/1, 12/1, 59/1] was correctly rejected
+[49/1, 21/1, 32/1, 43/1, 35/1, 16/1, 57/1, 13/1] was correctly rejected
+[17/1, 4/1, 16/1, 35/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [22.0, 27.0], rnn: [0.] and GT: True
+Execution time: 256.8302 seconds
+[22/1, 27/1] was correctly rejected
+[9/1, 49/1, 30/1] was correctly rejected
+[34/1, 57/1, 59/1] was correctly rejected
+[29/1, 28/1, 48/1, 43/1, 8/1, 17/1, 31/1, 21/1] was correctly rejected
+[29/1] was correctly accepted
+[46/1, 29/1, 45/1, 21/1, 40/1, 37/1, 59/1] was correctly rejected
+[56/1, 38/1, 33/1, 30/1, 49/1, 42/1, 20/1] was correctly rejected
+[38/1, 8/1, 24/1, 36/1, 60/1, 1/1, 50/1, 38/1] was correctly rejected
+[48/1, 2/1, 43/1, 8/1, 45/1, 50/1, 59/1] was correctly rejected
+[10/1, 28/1, 41/1, 32/1, 19/1, 17/1, 8/1, 25/1, 48/1] was correctly rejected
+[21/1, 41/1, 48/1, 36/1, 41/1] was correctly rejected
+[36/1] was correctly accepted
+[3/1, 31/1, 5/1, 48/1, 58/1] was correctly rejected
+[55/1, 6/1, 34/1, 33/1, 58/1, 11/1, 42/1, 59/1, 4/1, 43/1] was correctly rejected
+[15/1, 10/1, 50/1, 60/1, 45/1] was correctly rejected
+[] was correctly accepted
+[17/1, 42/1, 3/1] was correctly rejected
+[56/1, 47/1, 30/1] was correctly rejected
+[59/1, 56/1, 55/1, 26/1, 60/1, 3/1, 25/1, 17/1, 24/1, 20/1] was correctly rejected
+[45/1, 5/1, 45/1, 38/1, 19/1, 27/1, 40/1, 18/1, 59/1, 11/1] was correctly rejected
+[27/1, 39/1, 49/1, 24/1, 9/1, 52/1, 49/1, 25/1] was correctly rejected
+[35/1, 2/1, 53/1] was correctly rejected
+[22/1, 13/1, 31/1, 49/1] was correctly rejected
+[] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [46.0, 43.0], rnn: [0.] and GT: True
+Execution time: 256.9984 seconds
+[46/1, 43/1] was correctly rejected
+[44/1, 8/1, 47/1, 44/1] was correctly rejected
+[] was correctly accepted
+[44/1, 17/1, 5/1, 18/1, 45/1, 49/1, 48/1, 31/1, 30/1, 32/1] was correctly rejected
+[41/1, 20/1, 4/1] was correctly rejected
+[5/1, 56/1, 6/1, 35/1, 10/1, 19/1, 36/1, 38/1] was correctly rejected
+[59/1] was correctly accepted
+[22/1, 60/1, 8/1, 37/1, 58/1] was correctly rejected
+[50/1, 10/1, 41/1, 31/1, 51/1, 23/1, 47/1, 2/1, 2/1, 37/1] was correctly rejected
+[9/1, 4/1, 35/1, 37/1, 45/1, 16/1, 43/1, 40/1, 1/1] was correctly rejected
+[53/1] was correctly accepted
+[26/1, 9/1, 32/1, 46/1, 50/1] was correctly rejected
+[15/1, 10/1, 51/1, 31/1, 18/1, 17/1, 4/1, 17/1, 50/1] was correctly rejected
+[48/1, 41/1, 13/1, 11/1, 38/1] was correctly rejected
+[11/1, 22/1, 54/1, 58/1] was correctly rejected
+[9/1, 26/1, 18/1, 42/1] was correctly rejected
+[57/1, 10/1, 42/1, 6/1, 52/1, 1/1] was correctly rejected
+[54/1, 41/1, 13/1, 36/1, 13/1, 44/1, 23/1, 37/1] was correctly rejected
+[] was correctly accepted
+[2/1] was correctly accepted
+[36/1, 27/1, 53/1, 15/1, 14/1, 5/1, 18/1, 1/1, 53/1] was correctly rejected
+[18/1, 39/1, 20/1, 51/1, 53/1, 33/1, 20/1] was correctly rejected
+[46/1, 25/1, 13/1, 23/1] was correctly rejected
+[34/1, 16/1, 52/1, 20/1, 30/1, 15/1, 10/1, 48/1, 3/1, 23/1] was correctly rejected
+[44/1, 59/1, 17/1] was correctly rejected
+[31/1, 25/1, 45/1, 13/1, 19/1, 45/1, 16/1] was correctly rejected
+[38/1, 11/1, 51/1, 35/1, 10/1, 7/1, 47/1] was correctly rejected
+[43/1, 47/1, 51/1, 37/1, 27/1, 51/1, 51/1, 49/1, 60/1, 29/1] was correctly rejected
+[17/1, 58/1, 17/1, 10/1, 50/1] was correctly rejected
+[21/1, 14/1, 60/1, 16/1, 57/1, 8/1] was correctly rejected
+[31/1, 19/1, 25/1, 38/1, 31/1, 47/1, 16/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [45.0, 54.0], rnn: [0.] and GT: True
+Execution time: 257.2316 seconds
+[45/1, 54/1] was correctly rejected
+[11/1, 12/1, 5/1, 35/1, 4/1] was correctly rejected
+[56/1, 60/1, 8/1, 53/1, 32/1, 12/1, 41/1, 30/1, 34/1] was correctly rejected
+[49/1, 34/1, 44/1, 19/1, 38/1, 5/1, 46/1, 48/1, 60/1, 46/1] was correctly rejected
+[11/1, 43/1, 30/1, 46/1, 41/1] was correctly rejected
+[56/1, 6/1, 36/1] was correctly rejected
+[31/1, 35/1, 31/1, 22/1] was correctly rejected
+[27/1, 37/1, 10/1, 34/1, 57/1, 26/1, 6/1, 35/1] was correctly rejected
+[46/1] was correctly accepted
+[16/1, 29/1, 43/1, 53/1, 55/1, 34/1] was correctly rejected
+[24/1, 9/1, 24/1, 10/1] was correctly rejected
+[46/1, 17/1, 35/1, 26/1, 44/1, 28/1, 26/1, 40/1, 4/1] was correctly rejected
+[31/1, 39/1, 6/1] was correctly rejected
+[57/1, 56/1, 21/1, 45/1, 21/1, 45/1, 13/1] was correctly rejected
+[50/1, 25/1, 39/1, 56/1, 5/1, 33/1] was correctly rejected
+[1/1] was correctly accepted
+[43/1] was correctly accepted
+[1/1, 55/1, 43/1, 36/1, 12/1, 52/1, 25/1] was correctly rejected
+[6/1, 26/1, 29/1, 5/1, 46/1] was correctly rejected
+[25/1, 8/1, 54/1, 52/1, 3/1, 18/1, 16/1, 3/1, 27/1, 14/1] was correctly rejected
+[45/1, 46/1, 38/1, 60/1, 26/1, 15/1, 51/1, 45/1] was correctly rejected
+[31/1, 2/1, 44/1, 32/1, 45/1, 34/1, 53/1, 40/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [4.0, 46.0, 46.0], rnn: [0.] and GT: True
+Execution time: 257.4031 seconds
+[4/1, 46/1, 46/1] was correctly rejected
+[38/1, 32/1, 57/1, 44/1, 41/1, 21/1, 47/1, 36/1] was correctly rejected
+[] was correctly accepted
+[51/1, 16/1, 6/1, 2/1, 41/1, 25/1] was correctly rejected
+[32/1, 11/1, 24/1, 42/1, 60/1] was correctly rejected
+[17/1] was correctly accepted
+[42/1, 42/1, 9/1, 56/1, 7/1] was correctly rejected
+[21/1, 13/1, 8/1, 60/1] was correctly rejected
+[52/1, 8/1, 39/1, 47/1, 13/1, 37/1, 57/1, 4/1, 60/1, 2/1] was correctly rejected
+[48/1] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [43.0, 1.0], rnn: [0.] and GT: True
+Execution time: 257.4627 seconds
+[43/1, 1/1] was correctly rejected
+[51/1] was correctly accepted
+[36/1, 11/1, 40/1] was correctly rejected
+[4/1, 1/1, 58/1, 1/1, 6/1, 17/1, 54/1, 34/1] was correctly rejected
+[13/1, 55/1, 24/1, 47/1, 34/1, 36/1, 12/1, 51/1, 1/1, 23/1] was correctly rejected
+[25/1, 46/1, 3/1, 44/1, 40/1, 56/1] was correctly rejected
+[21/1, 3/1, 15/1, 6/1, 25/1, 53/1] was correctly rejected
+[60/1, 16/1, 18/1, 39/1, 5/1, 40/1, 45/1] was correctly rejected
+[49/1] was correctly accepted
+[7/1, 25/1, 32/1] was correctly rejected
+[2/1, 5/1, 52/1, 43/1, 28/1, 56/1, 57/1, 3/1, 19/1, 17/1] was correctly rejected
+[9/1, 17/1, 13/1, 15/1, 55/1, 58/1, 4/1] was correctly rejected
+[42/1, 23/1, 25/1] was correctly rejected
+[20/1, 54/1, 53/1, 26/1, 24/1, 52/1, 32/1, 30/1] was correctly rejected
+[57/1, 60/1, 30/1, 23/1, 35/1, 13/1, 58/1] was correctly rejected
+[46/1] was correctly accepted
+[41/1, 26/1, 6/1, 33/1, 24/1, 50/1, 55/1, 31/1, 36/1, 4/1] was correctly rejected
+[50/1, 32/1, 39/1, 11/1, 13/1, 44/1, 22/1] was correctly rejected
+[56/1] was correctly accepted
+[13/1] was correctly accepted
+[36/1] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [2.0, 35.0], rnn: [0.] and GT: True
+Execution time: 257.6028 seconds
+[2/1, 35/1] was correctly rejected
+[7/1, 50/1, 53/1, 13/1, 21/1, 22/1, 4/1, 24/1] was correctly rejected
+[48/1, 59/1, 60/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [42.0, 5.0], rnn: [0.] and GT: True
+Execution time: 257.6198 seconds
+[42/1, 5/1] was correctly rejected
+[54/1, 14/1, 36/1, 9/1, 11/1, 20/1, 10/1, 23/1, 12/1] was correctly rejected
+[18/1, 37/1, 43/1, 52/1, 3/1, 50/1, 17/1, 20/1, 57/1] was correctly rejected
+[] was correctly accepted
+[9/1, 58/1, 26/1, 36/1, 36/1, 14/1, 7/1, 40/1] was correctly rejected
+[31/1, 58/1, 8/1, 4/1, 29/1, 45/1] was correctly rejected
+[6/1, 40/1, 38/1, 54/1, 15/1, 21/1, 60/1] was correctly rejected
+[23/1, 31/1, 60/1, 9/1, 57/1] was correctly rejected
+[4/1, 40/1, 50/1, 40/1, 24/1, 39/1, 11/1, 30/1] was correctly rejected
+[] was correctly accepted
+[58/1, 37/1, 45/1, 24/1, 55/1, 44/1, 39/1, 2/1, 34/1, 31/1] was correctly rejected
+[10/1, 58/1, 25/1, 6/1, 29/1, 15/1, 7/1] was correctly rejected
+[16/1, 35/1, 31/1] was correctly rejected
+[22/1, 15/1, 52/1] was correctly rejected
+[17/1, 31/1, 38/1] was correctly rejected
+[58/1, 5/1, 5/1, 20/1, 10/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [45.0, 45.0, 19.0], rnn: [0.] and GT: True
+Execution time: 257.7372 seconds
+[45/1, 45/1, 19/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [17.0, 21.0], rnn: [0.] and GT: True
+Execution time: 257.7396 seconds
+[17/1, 21/1] was correctly rejected
+[29/1, 50/1, 35/1, 29/1, 44/1] was correctly rejected
+[16/1, 47/1, 50/1, 59/1, 48/1, 36/1, 4/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [53.0, 12.0], rnn: [0.] and GT: True
+Execution time: 257.7556 seconds
+[53/1, 12/1] was correctly rejected
+[53/1, 13/1, 37/1, 27/1, 22/1, 52/1, 10/1, 48/1, 53/1, 19/1] was correctly rejected
+[] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [53.0, 47.0], rnn: [0.] and GT: True
+Execution time: 257.7729 seconds
+[53/1, 47/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [50.0, 21.0], rnn: [0.] and GT: True
+Execution time: 257.7751 seconds
+[50/1, 21/1] was correctly rejected
+[26/1, 1/1, 35/1, 47/1, 43/1] was correctly rejected
+[23/1, 57/1, 33/1] was correctly rejected
+[57/1] was correctly accepted
+[31/1, 32/1, 46/1, 16/1, 32/1, 48/1, 33/1, 39/1, 2/1] was correctly rejected
+[5/1, 47/1, 10/1, 43/1, 54/1] was correctly rejected
+[17/1, 24/1, 10/1, 37/1, 43/1, 47/1, 42/1, 44/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [1.0, 25.0], rnn: [0.] and GT: True
+Execution time: 257.8187 seconds
+[1/1, 25/1] was correctly rejected
+[] was correctly accepted
+[57/1, 14/1, 55/1, 41/1, 54/1, 43/1, 38/1, 22/1, 17/1] was correctly rejected
+[10/1, 59/1, 50/1] was correctly rejected
+[36/1, 25/1, 56/1, 54/1, 49/1, 18/1, 29/1] was correctly rejected
+[31/1] was correctly accepted
+[27/1, 56/1, 36/1, 51/1, 55/1] was correctly rejected
+[2/1, 5/1, 52/1, 31/1, 56/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [32.0, 6.0], rnn: [0.] and GT: True
+Execution time: 257.8641 seconds
+[32/1, 6/1] was correctly rejected
+[9/1, 28/1, 20/1, 56/1, 59/1, 4/1, 5/1] was correctly rejected
+[24/1, 27/1, 13/1, 53/1, 26/1, 30/1, 22/1] was correctly rejected
+[40/1, 48/1, 4/1, 3/1] was correctly rejected
+[7/1, 39/1, 8/1] was correctly rejected
+[59/1, 48/1, 26/1, 29/1, 11/1, 8/1, 19/1, 43/1, 49/1] was correctly rejected
+[60/1, 31/1, 49/1, 58/1, 52/1, 23/1, 31/1] was correctly rejected
+[33/1, 20/1, 58/1, 1/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [48.0, 42.0], rnn: [0.] and GT: True
+Execution time: 257.9224 seconds
+[48/1, 42/1] was correctly rejected
+[2/1, 36/1, 38/1, 38/1] was correctly rejected
+[21/1, 36/1, 52/1, 5/1, 46/1, 17/1] was correctly rejected
+[44/1, 41/1, 46/1] was correctly rejected
+[31/1, 26/1, 23/1, 29/1, 48/1, 15/1, 43/1, 18/1, 46/1] was correctly rejected
+[45/1, 50/1, 10/1, 60/1, 27/1, 56/1, 46/1, 8/1, 53/1, 30/1] was correctly rejected
+[58/1, 26/1, 24/1, 19/1, 16/1, 53/1, 55/1, 49/1, 13/1] was correctly rejected
+[22/1] was correctly accepted
+[] was correctly accepted
+[11/1, 6/1, 54/1, 58/1, 6/1, 44/1, 23/1, 8/1] was correctly rejected
+[57/1, 53/1, 52/1, 33/1, 57/1, 51/1, 1/1] was correctly rejected
+[24/1, 1/1, 50/1, 2/1, 36/1] was correctly rejected
+[34/1, 12/1, 37/1, 42/1, 7/1, 53/1] was correctly rejected
+[45/1, 18/1, 24/1, 11/1, 9/1, 26/1, 49/1, 12/1, 34/1, 3/1] was correctly rejected
+[11/1] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [6.0, 48.0], rnn: [0.] and GT: True
+Execution time: 258.0394 seconds
+[6/1, 48/1] was correctly rejected
+[5/1, 10/1, 35/1, 47/1, 57/1] was correctly rejected
+[15/1, 7/1, 33/1, 12/1, 37/1, 55/1, 57/1, 18/1] was correctly rejected
+[11/1, 49/1, 35/1, 60/1, 57/1, 19/1, 39/1, 33/1, 31/1, 2/1] was correctly rejected
+[53/1, 2/1, 32/1, 17/1, 18/1, 23/1, 3/1, 40/1, 8/1, 57/1] was correctly rejected
+[12/1, 13/1, 11/1, 7/1, 37/1, 14/1] was correctly rejected
+[40/1, 54/1, 28/1, 36/1, 47/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [46.0, 6.0], rnn: [0.] and GT: True
+Execution time: 258.1229 seconds
+[46/1, 6/1] was correctly rejected
+[36/1, 4/1, 44/1, 11/1, 38/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [38.0, 36.0], rnn: [0.] and GT: True
+Execution time: 258.1331 seconds
+[38/1, 36/1] was correctly rejected
+[] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [37.0, 2.0], rnn: [0.] and GT: True
+Execution time: 258.1364 seconds
+[37/1, 2/1] was correctly rejected
+[41/1, 59/1, 23/1, 33/1, 39/1, 44/1, 47/1, 24/1] was correctly rejected
+[18/1, 20/1, 58/1, 5/1, 10/1, 44/1] was correctly rejected
+[56/1, 31/1, 21/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [46.0, 8.0], rnn: [0.] and GT: True
+Execution time: 258.1623 seconds
+[46/1, 8/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [60.0, 25.0], rnn: [0.] and GT: True
+Execution time: 258.1648 seconds
+[60/1, 25/1] was correctly rejected
+[51/1, 57/1, 11/1, 59/1, 25/1, 11/1, 30/1, 41/1] was correctly rejected
+[1/1, 7/1, 28/1, 5/1, 26/1, 2/1, 48/1, 29/1, 10/1] was correctly rejected
+[] was correctly accepted
+[24/1, 32/1, 3/1, 25/1] was correctly rejected
+[45/1, 16/1, 20/1, 58/1, 20/1, 31/1, 15/1, 40/1] was correctly rejected
+[3/1, 18/1, 42/1, 17/1, 13/1, 18/1, 40/1, 10/1, 54/1, 39/1] was correctly rejected
+[] was correctly accepted
+[14/1, 15/1, 15/1, 46/1, 41/1, 56/1] was correctly rejected
+[] was correctly accepted
+[44/1, 49/1, 12/1, 42/1, 56/1] was correctly rejected
+[20/1, 56/1, 43/1, 47/1] was correctly rejected
+[36/1, 58/1, 57/1, 57/1, 21/1, 37/1, 49/1, 10/1, 41/1, 53/1] was correctly rejected
+[14/1, 39/1, 3/1, 29/1, 26/1, 28/1] was correctly rejected
+[16/1, 18/1, 1/1, 12/1, 32/1, 22/1, 37/1, 44/1, 57/1, 60/1] was correctly rejected
+[7/1, 56/1, 42/1, 25/1, 36/1, 4/1, 13/1, 22/1, 48/1, 53/1] was correctly rejected
+[52/1, 55/1, 59/1, 31/1, 9/1, 59/1] was correctly rejected
+[15/1, 50/1, 57/1, 44/1, 30/1, 30/1, 35/1] was correctly rejected
+[50/1, 1/1, 50/1, 5/1, 35/1, 11/1] was correctly rejected
+[53/1, 31/1, 37/1, 42/1, 30/1, 31/1, 45/1, 35/1, 5/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [36.0, 59.0], rnn: [0.] and GT: True
+Execution time: 258.3952 seconds
+[36/1, 59/1] was correctly rejected
+[2/1, 50/1, 17/1, 2/1, 29/1, 55/1] was correctly rejected
+[37/1, 58/1, 31/1, 2/1, 15/1] was correctly rejected
+[45/1] was correctly accepted
+[19/1, 7/1, 14/1, 25/1, 35/1, 48/1, 11/1] was correctly rejected
+[50/1, 55/1, 25/1] was correctly rejected
+[] was correctly accepted
+[33/1, 1/1, 24/1, 45/1, 5/1, 6/1, 42/1, 44/1] was correctly rejected
+[8/1] was correctly accepted
+[24/1, 34/1, 31/1, 28/1] was correctly rejected
+[27/1, 16/1, 14/1, 21/1, 40/1] was correctly rejected
+[41/1, 13/1, 1/1, 16/1, 8/1, 51/1, 4/1, 11/1] was correctly rejected
+[24/1, 56/1, 7/1, 33/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [3.0, 26.0], rnn: [0.] and GT: True
+Execution time: 258.4694 seconds
+[3/1, 26/1] was correctly rejected
+[22/1] was correctly accepted
+[] was correctly accepted
+[57/1, 25/1, 4/1, 31/1, 4/1, 24/1, 60/1, 3/1, 6/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [29.0, 14.0], rnn: [0.] and GT: True
+Execution time: 258.4855 seconds
+[29/1, 14/1] was correctly rejected
+[34/1, 21/1, 53/1, 11/1, 24/1, 23/1, 43/1, 40/1] was correctly rejected
+[] was correctly accepted
+[19/1, 4/1, 17/1] was correctly rejected
+[24/1, 26/1, 16/1, 43/1, 8/1, 54/1, 17/1, 17/1, 46/1, 37/1] was correctly rejected
+[] was correctly accepted
+[45/1, 43/1, 14/1] was correctly rejected
+[51/1, 40/1, 30/1, 2/1, 60/1, 43/1, 31/1] was correctly rejected
+[46/1, 47/1, 52/1, 47/1, 34/1, 2/1, 46/1, 7/1] was correctly rejected
+[12/1, 49/1, 42/1, 42/1, 7/1, 38/1, 34/1, 32/1] was correctly rejected
+[26/1, 22/1, 34/1, 57/1, 37/1] was correctly rejected
+[] was correctly accepted
+[52/1, 21/1, 48/1, 24/1, 24/1, 18/1] was correctly rejected
+[39/1, 34/1, 43/1, 22/1] was correctly rejected
+[50/1, 2/1, 17/1, 25/1, 30/1] was correctly rejected
+[11/1] was correctly accepted
+[35/1] was correctly accepted
+[34/1, 47/1, 16/1, 36/1, 27/1, 24/1] was correctly rejected
+[16/1, 33/1, 8/1, 12/1, 54/1, 28/1, 50/1, 2/1] was correctly rejected
+The languages are not equivalent, a counterexample is: [18/1, 17/1], length: 2
+The word was rejected, but is in the language.
+Execution time: 258.6003 seconds
+Checking equivalence of the following automaton:
+(Q,q0,delta,F) with:
+   Q    : {<>, <ab>, <aba>, <abcde>, <abc>, <a>, <abcd>}
+   q0   : <>
+   F    : {<>, <a>, <aba>}
+   delta: {<> --a--> <a>,   
+<a> --a--> <a>,   <a> --b--> <ab>,   
+<ab> --a--> <aba>,   <ab> --b--> <abc>,   <ab> --c--> <abc>,   
+<abc> --a--> <abc>,   <abc> --d--> <abcd>,   <abc> --b--> <abc>,   <abc> --c--> <abc>,   
+<abcd> --a--> <abc>,   <abcd> --e--> <abcde>,   <abcd> --b--> <abc>,   <abcd> --c--> <abc>,   <abcd> --d--> <abc>,   
+<abcde> --a--> <abc>,   <abcde> --e--> <abc>,   <abcde> --b--> <abc>,   <abcde> --c--> <abc>,   <abcde> --d--> <abc>,   <abcde> --f--> <abc>,   
+<aba> --a--> <abc>,   <aba> --b--> <abc>,   <aba> --c--> <abc>,   
+}
+[47/1, 34/1, 43/1, 50/1, 27/1, 18/1, 55/1, 25/1, 55/1] was correctly rejected
+[23/1, 22/1, 59/1, 5/1, 17/1, 16/1, 14/1, 29/1, 57/1, 1/1] was correctly rejected
+[3/1] was correctly accepted
+[14/1, 47/1, 21/1] was correctly rejected
+[36/1, 57/1, 13/1, 42/1, 8/1] was correctly rejected
+[57/1, 16/1, 12/1, 3/1, 25/1, 16/1, 19/1, 42/1] was correctly rejected
+[34/1, 28/1, 27/1, 15/1, 8/1, 19/1, 7/1, 6/1] was correctly rejected
+[5/1, 26/1, 31/1] was correctly rejected
+[21/1, 59/1, 43/1, 44/1] was correctly rejected
+[16/1, 25/1, 24/1] was correctly rejected
+[60/1, 25/1, 47/1, 34/1, 20/1, 18/1, 53/1, 48/1, 8/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [4.0, 28.0], rnn: [0.] and GT: True
+Execution time: 275.1543 seconds
+[4/1, 28/1] was correctly rejected
+[3/1, 54/1, 49/1] was correctly rejected
+[25/1] was correctly accepted
+[39/1, 45/1, 6/1, 58/1, 16/1, 45/1, 41/1] was correctly rejected
+[2/1, 34/1, 41/1] was correctly rejected
+[22/1, 23/1, 55/1, 4/1, 50/1, 24/1, 50/1] was correctly rejected
+[32/1, 23/1, 33/1, 28/1, 2/1, 14/1, 53/1, 27/1, 24/1] was correctly rejected
+[19/1, 42/1, 9/1, 2/1] was correctly rejected
+[] was correctly accepted
+[15/1] was correctly accepted
+[49/1] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [18.0, 60.0], rnn: [0.] and GT: True
+Execution time: 275.2070 seconds
+[18/1, 60/1] was correctly rejected
+[30/1, 3/1, 32/1] was correctly rejected
+[51/1] was correctly accepted
+[34/1, 8/1, 24/1] was correctly rejected
+[5/1, 42/1, 39/1, 33/1, 9/1, 58/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [5.0, 49.0], rnn: [0.] and GT: True
+Execution time: 275.2264 seconds
+[5/1, 49/1] was correctly rejected
+[32/1, 45/1, 9/1, 23/1, 43/1, 3/1, 22/1, 23/1, 11/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [48.0, 3.0], rnn: [0.] and GT: True
+Execution time: 275.2429 seconds
+[48/1, 3/1] was correctly rejected
+[18/1, 11/1, 58/1, 12/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [53.0, 36.0], rnn: [0.] and GT: True
+Execution time: 275.2498 seconds
+[53/1, 36/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [58.0, 25.0], rnn: [0.] and GT: True
+Execution time: 275.2522 seconds
+[58/1, 25/1] was correctly rejected
+[19/1, 23/1, 4/1, 24/1, 21/1, 41/1, 20/1, 22/1, 39/1, 30/1] was correctly rejected
+[27/1, 19/1, 5/1, 17/1, 13/1, 19/1, 34/1, 43/1, 53/1] was correctly rejected
+[3/1, 7/1, 43/1, 16/1] was correctly rejected
+[14/1, 5/1, 4/1, 20/1, 54/1, 43/1, 57/1, 52/1] was correctly rejected
+[52/1, 40/1, 46/1, 33/1, 44/1, 9/1] was correctly rejected
+[19/1, 43/1, 8/1, 52/1] was correctly rejected
+[30/1, 43/1, 20/1, 49/1, 18/1, 43/1] was correctly rejected
+[13/1, 14/1, 59/1, 22/1, 55/1, 16/1] was correctly rejected
+[60/1, 58/1, 13/1, 25/1, 24/1, 24/1, 24/1, 56/1, 30/1, 17/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [60.0, 60.0, 1.0], rnn: [0.] and GT: True
+Execution time: 275.3471 seconds
+[60/1, 60/1, 1/1] was correctly rejected
+[] was correctly accepted
+[16/1, 49/1, 19/1, 39/1, 34/1, 27/1] was correctly rejected
+[59/1, 44/1, 45/1, 9/1, 50/1, 29/1, 56/1, 39/1, 54/1] was correctly rejected
+[28/1] was correctly accepted
+[32/1, 11/1, 58/1, 41/1, 48/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [42.0, 27.0], rnn: [0.] and GT: True
+Execution time: 275.3817 seconds
+[42/1, 27/1] was correctly rejected
+[57/1, 57/1, 24/1, 59/1, 9/1] was correctly rejected
+[29/1, 53/1, 25/1, 34/1] was correctly rejected
+[58/1, 59/1, 55/1, 55/1, 3/1, 43/1, 53/1, 31/1] was correctly rejected
+[58/1, 1/1, 3/1, 7/1, 36/1, 30/1, 13/1, 7/1, 45/1, 14/1] was correctly rejected
+[19/1] was correctly accepted
+[21/1] was correctly accepted
+[13/1, 34/1, 9/1] was correctly rejected
+[29/1, 37/1, 30/1, 25/1, 33/1] was correctly rejected
+[28/1, 30/1, 1/1, 36/1, 49/1, 43/1] was correctly rejected
+[53/1] was correctly accepted
+[17/1, 43/1, 48/1, 57/1, 33/1, 40/1, 50/1, 4/1, 33/1] was correctly rejected
+[17/1, 27/1, 8/1, 13/1, 54/1] was correctly rejected
+[36/1, 51/1, 13/1, 55/1, 17/1, 37/1, 46/1, 29/1] was correctly rejected
+[39/1, 60/1, 54/1, 58/1, 36/1, 56/1, 51/1, 60/1] was correctly rejected
+[] was correctly accepted
+[48/1] was correctly accepted
+[57/1, 59/1, 14/1, 46/1, 54/1, 50/1, 56/1, 30/1, 13/1, 12/1] was correctly rejected
+[23/1, 6/1, 44/1, 60/1, 26/1, 16/1, 3/1, 22/1] was correctly rejected
+[35/1] was correctly accepted
+[45/1, 5/1, 60/1, 25/1, 17/1, 41/1, 50/1, 2/1] was correctly rejected
+[] was correctly accepted
+[23/1, 42/1, 41/1, 45/1, 12/1, 59/1, 34/1] was correctly rejected
+[33/1, 50/1, 3/1, 5/1, 1/1, 26/1] was correctly rejected
+[12/1, 24/1, 6/1, 14/1] was correctly rejected
+[18/1] was correctly accepted
+[] was correctly accepted
+[27/1] was correctly accepted
+[52/1, 43/1, 16/1, 5/1, 13/1, 18/1, 42/1, 19/1, 46/1, 3/1] was correctly rejected
+[18/1] was correctly accepted
+[18/1, 27/1, 28/1, 7/1, 12/1, 56/1] was correctly rejected
+[24/1, 21/1, 22/1, 24/1] was correctly rejected
+[] was correctly accepted
+[12/1, 56/1, 52/1, 42/1, 27/1, 12/1, 28/1, 26/1, 27/1] was correctly rejected
+[1/1, 48/1, 41/1, 7/1] was correctly rejected
+[17/1, 11/1, 44/1, 17/1, 19/1, 43/1, 2/1, 53/1, 1/1, 11/1] was correctly rejected
+[4/1, 37/1, 5/1, 16/1, 20/1, 25/1, 60/1, 15/1, 2/1, 44/1] was correctly rejected
+[3/1, 22/1, 59/1, 41/1, 38/1] was correctly rejected
+[27/1, 45/1, 60/1, 4/1, 22/1] was correctly rejected
+[51/1] was correctly accepted
+[12/1, 21/1, 2/1] was correctly rejected
+[49/1, 38/1, 45/1, 17/1, 51/1, 46/1] was correctly rejected
+[22/1, 41/1, 51/1, 53/1, 50/1, 3/1] was correctly rejected
+[60/1, 18/1, 60/1, 33/1, 19/1, 43/1, 3/1, 50/1] was correctly rejected
+[2/1, 20/1, 27/1, 3/1, 16/1, 5/1, 23/1, 24/1, 13/1, 50/1] was correctly rejected
+[60/1] was correctly accepted
+[13/1, 38/1, 13/1, 9/1, 41/1, 45/1, 18/1] was correctly rejected
+[44/1, 48/1, 28/1, 47/1, 3/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [39.0, 29.0], rnn: [0.] and GT: True
+Execution time: 275.7180 seconds
+[39/1, 29/1] was correctly rejected
+[13/1, 52/1, 22/1, 27/1] was correctly rejected
+[] was correctly accepted
+[40/1, 59/1, 16/1] was correctly rejected
+[53/1, 18/1, 36/1, 24/1, 13/1, 35/1, 58/1] was correctly rejected
+[45/1, 48/1, 59/1, 11/1, 18/1, 47/1, 56/1, 22/1] was correctly rejected
+[54/1] was correctly accepted
+[36/1, 52/1, 40/1, 42/1, 7/1, 60/1] was correctly rejected
+[33/1, 39/1, 60/1, 14/1, 47/1, 15/1, 39/1, 19/1, 36/1] was correctly rejected
+[18/1, 31/1, 37/1, 4/1, 2/1, 16/1, 49/1, 41/1] was correctly rejected
+[14/1] was correctly accepted
+[19/1] was correctly accepted
+[1/1, 2/1, 46/1, 30/1, 48/1] was correctly rejected
+[31/1, 48/1, 28/1, 16/1, 32/1, 3/1, 35/1, 29/1, 4/1, 46/1] was correctly rejected
+[25/1, 13/1, 17/1, 13/1, 8/1, 33/1] was correctly rejected
+[10/1, 31/1, 21/1, 54/1] was correctly rejected
+[57/1, 33/1, 28/1] was correctly rejected
+[34/1, 58/1, 24/1, 27/1, 26/1, 53/1, 50/1] was correctly rejected
+[34/1, 53/1, 31/1, 54/1, 15/1, 22/1, 41/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [37.0, 50.0], rnn: [0.] and GT: True
+Execution time: 275.8450 seconds
+[37/1, 50/1] was correctly rejected
+[27/1, 4/1, 43/1, 27/1, 48/1, 21/1, 55/1, 2/1] was correctly rejected
+[52/1, 12/1, 44/1, 9/1, 46/1, 2/1, 3/1] was correctly rejected
+[24/1, 38/1, 22/1, 41/1, 33/1, 50/1, 45/1, 19/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [20.0, 41.0], rnn: [0.] and GT: True
+Execution time: 275.8790 seconds
+[20/1, 41/1] was correctly rejected
+[48/1] was correctly accepted
+[55/1, 60/1, 28/1, 21/1, 50/1, 25/1] was correctly rejected
+[44/1] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [4.0, 46.0], rnn: [0.] and GT: True
+Execution time: 275.8929 seconds
+[4/1, 46/1] was correctly rejected
+[31/1, 3/1, 57/1, 31/1, 32/1, 42/1, 40/1, 51/1, 56/1] was correctly rejected
+[54/1, 44/1, 46/1, 18/1, 56/1, 44/1] was correctly rejected
+[39/1, 37/1, 55/1, 9/1, 37/1, 29/1, 35/1, 52/1] was correctly rejected
+[26/1, 9/1, 16/1, 21/1] was correctly rejected
+[23/1] was correctly accepted
+[13/1, 60/1, 12/1] was correctly rejected
+[27/1, 44/1, 45/1, 10/1, 25/1, 17/1, 39/1] was correctly rejected
+[] was correctly accepted
+[52/1, 2/1, 44/1] was correctly rejected
+[] was correctly accepted
+[51/1, 52/1, 32/1, 18/1] was correctly rejected
+[] was correctly accepted
+[57/1, 55/1, 24/1, 41/1, 45/1, 32/1, 3/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [47.0, 54.0], rnn: [0.] and GT: True
+Execution time: 275.9663 seconds
+[47/1, 54/1] was correctly rejected
+[48/1, 21/1, 55/1, 55/1] was correctly rejected
+[6/1, 28/1, 46/1, 36/1, 30/1, 4/1, 43/1, 3/1] was correctly rejected
+[47/1, 23/1, 47/1, 1/1] was correctly rejected
+[] was correctly accepted
+[27/1, 42/1, 37/1, 47/1, 22/1, 20/1, 2/1] was correctly rejected
+[50/1] was correctly accepted
+[58/1, 48/1, 28/1, 9/1, 8/1, 40/1, 15/1] was correctly rejected
+[30/1, 22/1, 17/1, 33/1, 23/1, 36/1, 34/1, 28/1] was correctly rejected
+[1/1, 22/1, 24/1, 32/1, 60/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [47.0, 4.0], rnn: [0.] and GT: True
+Execution time: 276.0309 seconds
+[47/1, 4/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [48.0, 53.0], rnn: [0.] and GT: True
+Execution time: 276.0334 seconds
+[48/1, 53/1] was correctly rejected
+[31/1, 58/1, 37/1] was correctly rejected
+[59/1, 31/1, 31/1, 40/1, 44/1] was correctly rejected
+[] was correctly accepted
+[37/1, 23/1, 14/1, 56/1, 45/1, 15/1, 60/1, 39/1, 12/1] was correctly rejected
+[36/1, 43/1, 34/1, 6/1, 38/1, 56/1, 5/1, 50/1, 14/1, 31/1] was correctly rejected
+[35/1, 49/1, 26/1, 43/1, 53/1, 54/1, 30/1] was correctly rejected
+[22/1, 26/1, 42/1, 21/1, 3/1] was correctly rejected
+[21/1, 20/1, 10/1] was correctly rejected
+[33/1, 42/1, 38/1, 21/1, 11/1, 2/1, 30/1, 29/1, 32/1, 17/1] was correctly rejected
+[45/1] was correctly accepted
+[18/1, 49/1, 33/1, 4/1, 6/1, 46/1, 1/1, 28/1] was correctly rejected
+[55/1, 11/1, 33/1, 44/1, 19/1, 8/1, 15/1, 39/1] was correctly rejected
+[38/1, 39/1, 52/1] was correctly rejected
+[50/1, 22/1, 7/1, 18/1] was correctly rejected
+[37/1, 17/1, 51/1, 22/1, 25/1, 32/1, 54/1, 29/1] was correctly rejected
+[2/1, 27/1, 22/1, 48/1, 5/1, 40/1, 22/1, 17/1, 27/1] was correctly rejected
+[] was correctly accepted
+[37/1, 40/1, 23/1, 43/1, 58/1, 28/1, 22/1, 6/1, 44/1, 12/1] was correctly rejected
+[36/1] was correctly accepted
+[5/1, 15/1, 23/1, 4/1, 14/1] was correctly rejected
+[18/1, 19/1, 36/1] was correctly rejected
+[30/1, 36/1, 5/1, 51/1, 54/1] was correctly rejected
+[31/1, 45/1, 36/1, 4/1, 13/1, 7/1, 16/1, 29/1, 50/1, 14/1] was correctly rejected
+[41/1, 51/1, 10/1, 60/1, 56/1, 59/1, 44/1, 8/1, 8/1] was correctly rejected
+[] was correctly accepted
+[49/1, 55/1, 9/1] was correctly rejected
+[3/1] was correctly accepted
+[43/1, 29/1, 47/1, 2/1] was correctly rejected
+[13/1, 20/1, 34/1, 48/1, 42/1, 45/1, 46/1, 36/1, 5/1] was correctly rejected
+[32/1, 19/1, 36/1, 20/1, 34/1, 60/1, 35/1, 54/1, 14/1] was correctly rejected
+[15/1, 4/1, 33/1, 56/1, 44/1, 27/1, 53/1, 37/1, 43/1, 37/1] was correctly rejected
+[12/1, 48/1, 50/1] was correctly rejected
+[12/1, 43/1, 55/1, 4/1, 5/1] was correctly rejected
+[12/1, 56/1, 26/1, 36/1, 11/1, 52/1, 14/1, 48/1] was correctly rejected
+[23/1, 3/1, 58/1, 30/1, 22/1, 51/1, 48/1, 45/1, 40/1] was correctly rejected
+[35/1, 21/1, 21/1, 30/1, 35/1] was correctly rejected
+[52/1, 34/1, 37/1, 32/1] was correctly rejected
+[11/1] was correctly accepted
+[53/1, 18/1, 47/1, 8/1, 33/1, 60/1] was correctly rejected
+[50/1, 59/1, 37/1, 18/1, 11/1, 17/1, 59/1, 25/1, 24/1] was correctly rejected
+[] was correctly accepted
+[28/1, 29/1, 7/1, 15/1] was correctly rejected
+[34/1, 34/1, 58/1, 18/1, 48/1, 41/1, 19/1, 49/1, 39/1, 6/1] was correctly rejected
+[42/1, 2/1, 6/1, 3/1, 41/1, 48/1, 12/1, 38/1, 19/1, 52/1] was correctly rejected
+[41/1, 24/1, 20/1, 48/1, 5/1, 24/1] was correctly rejected
+[42/1, 45/1, 30/1, 10/1, 30/1, 27/1, 18/1, 32/1, 37/1] was correctly rejected
+[] was correctly accepted
+[60/1, 18/1, 23/1, 45/1, 24/1, 17/1, 6/1, 32/1, 13/1] was correctly rejected
+[15/1, 21/1, 9/1, 17/1, 33/1, 3/1, 22/1, 9/1, 19/1, 45/1] was correctly rejected
+[8/1, 59/1, 59/1, 50/1, 47/1] was correctly rejected
+[19/1] was correctly accepted
+[5/1, 19/1, 24/1, 14/1, 30/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [14.0, 60.0], rnn: [0.] and GT: True
+Execution time: 276.4429 seconds
+[14/1, 60/1] was correctly rejected
+[16/1, 14/1, 51/1, 5/1] was correctly rejected
+[54/1, 43/1, 50/1] was correctly rejected
+[21/1, 32/1, 58/1, 57/1, 52/1] was correctly rejected
+[20/1, 57/1, 15/1, 33/1, 5/1] was correctly rejected
+[35/1] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [40.0, 60.0], rnn: [0.] and GT: True
+Execution time: 276.4693 seconds
+[40/1, 60/1] was correctly rejected
+[19/1, 21/1, 43/1] was correctly rejected
+[54/1, 46/1, 20/1, 50/1, 57/1, 46/1, 25/1] was correctly rejected
+[2/1, 60/1, 44/1, 48/1, 27/1, 15/1, 17/1, 20/1, 5/1, 58/1] was correctly rejected
+[25/1, 11/1, 43/1, 31/1, 12/1, 58/1, 45/1] was correctly rejected
+[48/1, 23/1, 7/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [14.0, 18.0], rnn: [0.] and GT: True
+Execution time: 276.5109 seconds
+[14/1, 18/1] was correctly rejected
+[46/1, 17/1, 49/1, 42/1, 50/1, 16/1] was correctly rejected
+[23/1] was correctly accepted
+[22/1, 6/1, 36/1, 55/1, 35/1, 41/1, 14/1] was correctly rejected
+[19/1, 52/1, 39/1, 47/1, 29/1, 30/1, 54/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [3.0, 55.0], rnn: [0.] and GT: True
+Execution time: 276.5429 seconds
+[3/1, 55/1] was correctly rejected
+[50/1, 29/1, 36/1, 58/1, 6/1, 58/1, 44/1] was correctly rejected
+[36/1, 4/1, 34/1, 46/1, 24/1, 26/1, 34/1] was correctly rejected
+[12/1, 5/1, 20/1, 34/1, 27/1, 37/1, 26/1, 16/1, 13/1, 6/1] was correctly rejected
+[30/1, 12/1, 29/1, 15/1, 55/1, 43/1, 18/1] was correctly rejected
+[21/1, 25/1, 22/1, 39/1, 27/1, 48/1, 14/1] was correctly rejected
+[47/1, 39/1, 35/1, 28/1, 44/1, 4/1] was correctly rejected
+[38/1, 16/1, 42/1, 16/1, 56/1] was correctly rejected
+[3/1, 36/1, 45/1, 36/1] was correctly rejected
+[44/1, 44/1, 46/1, 24/1, 37/1, 11/1, 14/1, 33/1, 48/1] was correctly rejected
+[16/1, 1/1, 49/1] was correctly rejected
+[18/1, 49/1, 30/1, 21/1] was correctly rejected
+[] was correctly accepted
+[39/1, 37/1, 59/1, 41/1, 31/1, 49/1, 42/1, 54/1] was correctly rejected
+[50/1, 15/1, 27/1, 8/1, 2/1, 15/1, 14/1] was correctly rejected
+[17/1, 33/1, 54/1, 36/1, 7/1, 35/1] was correctly rejected
+[48/1, 11/1, 55/1, 56/1] was correctly rejected
+[53/1, 59/1, 28/1, 53/1, 28/1, 46/1, 52/1] was correctly rejected
+[6/1] was correctly accepted
+[14/1, 29/1, 5/1, 32/1] was correctly rejected
+[47/1, 21/1, 14/1] was correctly rejected
+[30/1, 5/1, 18/1, 19/1, 28/1, 51/1] was correctly rejected
+[] was correctly accepted
+[7/1, 29/1, 30/1] was correctly rejected
+[8/1, 13/1, 7/1, 22/1, 47/1, 40/1, 14/1, 28/1, 21/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [30.0, 28.0], rnn: [0.] and GT: True
+Execution time: 276.7157 seconds
+[30/1, 28/1] was correctly rejected
+[] was correctly accepted
+[5/1, 7/1, 57/1, 6/1, 24/1, 13/1, 60/1, 5/1] was correctly rejected
+[17/1, 10/1, 10/1, 28/1, 34/1, 38/1] was correctly rejected
+[11/1, 20/1, 56/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [32.0, 43.0, 43.0], rnn: [0.] and GT: True
+Execution time: 276.7406 seconds
+[32/1, 43/1, 43/1] was correctly rejected
+[30/1, 9/1, 49/1, 45/1] was correctly rejected
+[] was correctly accepted
+[11/1] was correctly accepted
+The languages are not equivalent, a counterexample is: [23/1, 22/1], length: 2
+The word was rejected, but is in the language.
+Execution time: 276.7529 seconds
+Checking equivalence of the following automaton:
+(Q,q0,delta,F) with:
+   Q    : {<>, <ab>, <aba>, <abcde>, <abc>, <a>, <abcd>}
+   q0   : <>
+   F    : {<>, <a>, <aba>}
+   delta: {<> --a--> <a>,   
+<a> --a--> <a>,   <a> --b--> <ab>,   
+<ab> --a--> <aba>,   <ab> --b--> <abc>,   <ab> --c--> <abc>,   
+<abc> --a--> <abc>,   <abc> --d--> <abcd>,   <abc> --b--> <abc>,   <abc> --c--> <abc>,   
+<abcd> --a--> <abc>,   <abcd> --e--> <abcde>,   <abcd> --b--> <abc>,   <abcd> --c--> <abc>,   <abcd> --d--> <abc>,   
+<abcde> --a--> <abc>,   <abcde> --e--> <abc>,   <abcde> --b--> <abc>,   <abcde> --c--> <abc>,   <abcde> --d--> <abc>,   <abcde> --f--> <abc>,   
+<aba> --a--> <abc>,   <aba> --b--> <abc>,   <aba> --c--> <abc>,   
+}
+[50/1, 55/1, 28/1, 8/1, 32/1, 52/1, 1/1, 55/1, 46/1] was correctly rejected
+[29/1, 45/1, 21/1, 18/1, 3/1, 35/1, 53/1] was correctly rejected
+[37/1, 55/1, 7/1, 34/1, 52/1] was correctly rejected
+[37/1] was correctly accepted
+[12/1] was correctly accepted
+[12/1, 45/1, 5/1] was correctly rejected
+[27/1] was correctly accepted
+[4/1, 28/1, 26/1, 8/1, 36/1, 22/1, 37/1, 15/1, 43/1] was correctly rejected
+[29/1, 19/1, 3/1, 37/1, 13/1, 12/1, 46/1, 3/1, 35/1] was correctly rejected
+[31/1, 37/1, 53/1] was correctly rejected
+[] was correctly accepted
+[32/1, 52/1, 13/1, 20/1, 17/1, 60/1, 48/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [32.0, 29.0], rnn: [0.] and GT: True
+Execution time: 294.1316 seconds
+[32/1, 29/1] was correctly rejected
+[] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [54.0, 15.0], rnn: [0.] and GT: True
+Execution time: 294.1360 seconds
+[54/1, 15/1] was correctly rejected
+[28/1, 18/1, 7/1, 23/1, 11/1, 29/1, 42/1, 33/1, 44/1, 37/1] was correctly rejected
+[23/1, 13/1, 39/1, 36/1, 48/1, 45/1, 49/1, 33/1, 42/1, 14/1] was correctly rejected
+[58/1, 9/1, 28/1, 59/1] was correctly rejected
+[46/1, 50/1, 34/1, 32/1, 21/1, 28/1, 22/1, 29/1, 14/1, 36/1] was correctly rejected
+[16/1, 36/1, 45/1, 17/1, 4/1, 32/1, 2/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [51.0, 53.0], rnn: [0.] and GT: True
+Execution time: 294.2214 seconds
+[51/1, 53/1] was correctly rejected
+[] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [56.0, 53.0], rnn: [0.] and GT: True
+Execution time: 294.2251 seconds
+[56/1, 53/1] was correctly rejected
+[26/1, 16/1, 59/1, 11/1, 10/1, 27/1, 42/1, 48/1] was correctly rejected
+[11/1, 22/1, 19/1, 57/1] was correctly rejected
+[53/1, 14/1, 25/1, 35/1, 47/1, 3/1, 52/1, 53/1, 52/1, 1/1] was correctly rejected
+[51/1, 9/1, 36/1, 44/1, 60/1, 55/1, 22/1, 3/1] was correctly rejected
+[37/1, 14/1, 1/1, 34/1, 48/1, 46/1, 1/1, 13/1, 41/1] was correctly rejected
+[19/1, 46/1, 2/1, 6/1, 1/1, 33/1, 50/1, 20/1, 2/1] was correctly rejected
+[27/1, 13/1, 40/1, 39/1, 3/1, 7/1, 29/1, 52/1, 27/1, 2/1] was correctly rejected
+[54/1, 34/1, 31/1, 23/1] was correctly rejected
+[31/1] was correctly accepted
+[47/1, 3/1, 20/1, 32/1, 8/1, 10/1, 19/1] was correctly rejected
+[27/1, 30/1, 15/1, 38/1, 20/1, 8/1, 8/1, 8/1] was correctly rejected
+[39/1, 46/1, 25/1, 38/1, 2/1, 48/1, 50/1, 14/1, 1/1] was correctly rejected
+[25/1, 24/1, 48/1] was correctly rejected
+[46/1, 53/1, 7/1, 2/1, 51/1, 18/1, 17/1, 42/1, 49/1, 3/1] was correctly rejected
+[31/1, 15/1, 36/1, 52/1] was correctly rejected
+[1/1] was correctly accepted
+[41/1, 17/1, 49/1, 39/1, 33/1, 31/1, 28/1] was correctly rejected
+[32/1, 44/1, 6/1, 38/1, 54/1, 56/1, 30/1] was correctly rejected
+[17/1] was correctly accepted
+[13/1, 58/1, 50/1, 36/1, 48/1, 55/1, 40/1] was correctly rejected
+[5/1, 32/1, 26/1, 19/1] was correctly rejected
+[1/1, 44/1, 31/1, 35/1, 52/1, 12/1, 1/1, 25/1, 18/1] was correctly rejected
+[29/1, 20/1, 31/1] was correctly rejected
+[53/1, 31/1, 14/1, 8/1, 11/1, 3/1] was correctly rejected
+[] was correctly accepted
+[16/1, 9/1, 53/1] was correctly rejected
+[12/1] was correctly accepted
+[51/1, 35/1, 34/1, 58/1, 39/1, 24/1, 12/1] was correctly rejected
+[42/1, 48/1, 12/1, 50/1, 6/1, 33/1] was correctly rejected
+[46/1, 2/1, 35/1, 18/1, 5/1, 13/1] was correctly rejected
+[4/1, 19/1, 58/1, 16/1, 39/1, 11/1, 54/1, 55/1, 4/1, 10/1] was correctly rejected
+[40/1, 23/1, 31/1, 23/1, 11/1, 42/1] was correctly rejected
+[33/1, 26/1, 56/1, 57/1, 44/1, 35/1] was correctly rejected
+[17/1, 39/1, 1/1, 51/1, 6/1, 51/1, 40/1] was correctly rejected
+[50/1, 6/1, 13/1, 49/1, 48/1, 28/1, 17/1, 46/1, 38/1] was correctly rejected
+[10/1, 5/1, 17/1, 11/1, 31/1, 58/1] was correctly rejected
+[53/1, 4/1, 17/1, 1/1, 13/1, 31/1, 22/1, 34/1, 54/1] was correctly rejected
+[] was correctly accepted
+[5/1, 8/1, 1/1, 60/1, 30/1] was correctly rejected
+[27/1, 24/1, 26/1, 55/1, 51/1, 54/1] was correctly rejected
+[34/1, 35/1, 54/1, 29/1, 4/1, 21/1, 19/1, 19/1, 54/1] was correctly rejected
+[24/1, 25/1, 23/1, 17/1, 32/1, 55/1] was correctly rejected
+[47/1, 56/1, 47/1, 51/1, 36/1, 32/1, 10/1, 36/1, 54/1] was correctly rejected
+[] was correctly accepted
+[15/1, 57/1, 15/1, 3/1, 48/1, 43/1, 21/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [26.0, 32.0], rnn: [0.] and GT: True
+Execution time: 294.6769 seconds
+[26/1, 32/1] was correctly rejected
+[56/1, 5/1, 36/1, 14/1, 27/1, 40/1, 22/1, 36/1, 20/1, 9/1] was correctly rejected
+[42/1, 38/1, 18/1] was correctly rejected
+[25/1, 15/1, 6/1, 44/1, 3/1, 40/1, 27/1] was correctly rejected
+[43/1, 31/1, 39/1, 27/1, 47/1, 34/1, 50/1] was correctly rejected
+[60/1] was correctly accepted
+[60/1, 54/1, 4/1, 20/1, 19/1, 47/1, 42/1, 32/1] was correctly rejected
+[25/1, 22/1, 39/1, 15/1, 60/1, 43/1, 42/1, 38/1] was correctly rejected
+[60/1] was correctly accepted
+[7/1, 19/1, 44/1, 56/1, 14/1] was correctly rejected
+[32/1, 46/1, 25/1, 38/1, 8/1, 13/1, 55/1, 12/1, 17/1] was correctly rejected
+[5/1, 42/1, 58/1, 13/1, 43/1, 51/1, 27/1, 8/1] was correctly rejected
+[14/1, 20/1, 47/1, 34/1, 18/1, 33/1, 15/1, 8/1, 7/1, 51/1] was correctly rejected
+[3/1, 31/1, 39/1, 51/1, 54/1, 10/1, 16/1, 57/1, 20/1] was correctly rejected
+[24/1, 48/1, 21/1, 16/1, 24/1, 3/1, 31/1] was correctly rejected
+[10/1, 5/1, 17/1, 47/1, 30/1, 26/1, 7/1, 51/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [5.0, 33.0], rnn: [0.] and GT: True
+Execution time: 294.8537 seconds
+[5/1, 33/1] was correctly rejected
+[34/1, 30/1, 3/1, 37/1] was correctly rejected
+[14/1, 37/1, 10/1, 58/1, 33/1] was correctly rejected
+[27/1, 9/1, 15/1, 41/1, 32/1, 55/1, 33/1, 11/1, 2/1, 32/1] was correctly rejected
+[17/1, 19/1, 4/1, 41/1, 39/1, 1/1, 1/1, 54/1, 29/1] was correctly rejected
+[35/1, 37/1, 17/1, 51/1, 7/1, 29/1, 19/1] was correctly rejected
+[50/1, 19/1, 14/1, 22/1, 43/1, 37/1] was correctly rejected
+[58/1, 47/1, 16/1, 16/1, 30/1, 17/1, 19/1, 44/1] was correctly rejected
+[45/1] was correctly accepted
+[57/1, 4/1, 52/1, 41/1, 27/1, 18/1, 7/1, 16/1] was correctly rejected
+[58/1, 44/1, 25/1, 7/1, 50/1, 49/1, 5/1] was correctly rejected
+[53/1, 19/1, 14/1] was correctly rejected
+[47/1, 52/1, 51/1, 35/1, 32/1, 40/1] was correctly rejected
+[23/1, 15/1, 34/1] was correctly rejected
+[15/1, 2/1, 40/1, 35/1, 26/1, 33/1, 56/1, 17/1, 59/1, 29/1] was correctly rejected
+[1/1, 7/1, 56/1, 49/1] was correctly rejected
+[54/1, 57/1, 41/1, 9/1, 3/1, 7/1] was correctly rejected
+[25/1] was correctly accepted
+[27/1, 6/1, 41/1, 35/1, 21/1, 26/1, 36/1] was correctly rejected
+[4/1, 25/1, 50/1, 24/1, 21/1, 53/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [28.0, 12.0], rnn: [0.] and GT: True
+Execution time: 295.0256 seconds
+[28/1, 12/1] was correctly rejected
+[16/1] was correctly accepted
+[11/1, 34/1, 1/1, 12/1, 2/1] was correctly rejected
+[9/1, 16/1, 55/1, 26/1] was correctly rejected
+[] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [20.0, 2.0], rnn: [0.] and GT: True
+Execution time: 295.0445 seconds
+[20/1, 2/1] was correctly rejected
+[46/1, 30/1, 18/1, 8/1] was correctly rejected
+[24/1, 27/1, 26/1, 36/1, 12/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [55.0, 60.0], rnn: [0.] and GT: True
+Execution time: 295.0588 seconds
+[55/1, 60/1] was correctly rejected
+[44/1] was correctly accepted
+[34/1, 32/1, 28/1, 19/1, 25/1, 50/1, 3/1] was correctly rejected
+[15/1, 17/1, 56/1, 60/1, 55/1, 51/1, 11/1, 35/1, 11/1, 38/1] was correctly rejected
+[] was correctly accepted
+[] was correctly accepted
+[17/1, 54/1, 31/1, 35/1, 12/1, 54/1, 15/1, 39/1, 44/1, 25/1] was correctly rejected
+[42/1, 14/1, 42/1, 32/1, 58/1] was correctly rejected
+[49/1, 23/1, 19/1] was correctly rejected
+[59/1, 9/1, 49/1, 43/1, 1/1] was correctly rejected
+[52/1, 40/1, 11/1, 47/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [11.0, 46.0], rnn: [0.] and GT: True
+Execution time: 295.1341 seconds
+[11/1, 46/1] was correctly rejected
+[6/1, 53/1, 51/1, 51/1, 12/1, 45/1, 58/1, 3/1, 9/1] was correctly rejected
+[40/1, 58/1, 10/1, 14/1, 43/1, 29/1] was correctly rejected
+[37/1, 49/1, 19/1, 28/1, 34/1, 29/1] was correctly rejected
+[12/1, 39/1, 14/1, 20/1, 35/1, 55/1, 57/1] was correctly rejected
+[49/1, 32/1, 41/1, 28/1] was correctly rejected
+[32/1, 48/1, 2/1, 19/1, 35/1, 52/1] was correctly rejected
+[30/1, 10/1, 34/1, 29/1, 56/1, 23/1, 16/1, 52/1, 57/1, 23/1] was correctly rejected
+[] was correctly accepted
+[] was correctly accepted
+[53/1] was correctly accepted
+[55/1, 46/1, 57/1, 30/1, 18/1, 31/1, 49/1, 13/1, 22/1] was correctly rejected
+[39/1, 18/1, 33/1, 44/1, 5/1, 51/1] was correctly rejected
+[12/1] was correctly accepted
+[20/1, 17/1, 11/1] was correctly rejected
+[10/1, 52/1, 10/1, 8/1, 23/1, 39/1, 16/1] was correctly rejected
+[5/1, 23/1, 34/1] was correctly rejected
+[48/1, 6/1, 10/1, 43/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [24.0, 41.0, 24.0], rnn: [0.] and GT: True
+Execution time: 295.2659 seconds
+The languages are not equivalent, a counterexample is: [24/1, 41/1, 24/1], length: 3
+The word was accepted, but is not in the language.
+Execution time: 295.2681 seconds
+Checking equivalence of the following automaton:
+(Q,q0,delta,F) with:
+   Q    : {<>, <ab>, <aba>, <abcde>, <abc>, <a>, <abcd>}
+   q0   : <>
+   F    : {<>, <a>, <aba>}
+   delta: {<> --a--> <a>,   
+<a> --a--> <a>,   <a> --b--> <ab>,   
+<ab> --a--> <aba>,   <ab> --b--> <abc>,   <ab> --c--> <abc>,   
+<abc> --a--> <abc>,   <abc> --d--> <abcd>,   <abc> --b--> <abc>,   <abc> --c--> <abc>,   
+<abcd> --a--> <abc>,   <abcd> --e--> <abcde>,   <abcd> --b--> <abc>,   <abcd> --c--> <abc>,   <abcd> --d--> <abc>,   
+<abcde> --a--> <abc>,   <abcde> --e--> <abc>,   <abcde> --b--> <abc>,   <abcde> --c--> <abc>,   <abcde> --d--> <abc>,   <abcde> --f--> <abc>,   
+<aba> --a--> <abc>,   <aba> --b--> <abc>,   <aba> --c--> <abc>,   
+}
+[60/1, 35/1, 8/1, 23/1, 34/1, 54/1, 19/1, 34/1, 29/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [14.0, 36.0], rnn: [0.] and GT: True
+Execution time: 313.1087 seconds
+[14/1, 36/1] was correctly rejected
+[28/1, 16/1, 16/1, 39/1, 18/1, 47/1] was correctly rejected
+[25/1, 28/1, 51/1, 48/1] was correctly rejected
+[37/1] was correctly accepted
+[57/1, 17/1, 1/1, 2/1, 50/1, 49/1, 52/1, 5/1, 27/1, 51/1] was correctly rejected
+[43/1, 46/1, 54/1, 7/1, 60/1, 20/1, 10/1, 30/1] was correctly rejected
+[1/1, 16/1, 18/1, 43/1, 52/1, 47/1, 16/1] was correctly rejected
+[] was correctly accepted
+[35/1, 52/1, 55/1, 28/1, 3/1] was correctly rejected
+[30/1, 44/1, 43/1, 10/1, 40/1, 28/1, 24/1, 57/1] was correctly rejected
+[35/1, 35/1, 5/1, 19/1, 16/1, 60/1, 14/1, 19/1, 57/1, 7/1] was correctly rejected
+[31/1, 3/1, 13/1] was correctly rejected
+[] was correctly accepted
+[53/1, 30/1, 44/1, 26/1] was correctly rejected
+[44/1] was correctly accepted
+[56/1, 26/1, 51/1, 46/1, 24/1, 56/1, 47/1, 26/1, 30/1] was correctly rejected
+[25/1] was correctly accepted
+[16/1, 15/1, 20/1, 49/1, 17/1, 36/1, 49/1] was correctly rejected
+[] was correctly accepted
+[15/1, 16/1, 1/1, 60/1, 2/1, 29/1, 32/1, 43/1, 22/1] was correctly rejected
+[58/1, 54/1, 52/1, 27/1, 14/1, 18/1, 7/1, 53/1, 48/1, 48/1] was correctly rejected
+[30/1, 21/1, 39/1, 53/1, 12/1, 29/1, 43/1] was correctly rejected
+[31/1, 49/1, 40/1, 5/1, 11/1, 5/1, 21/1] was correctly rejected
+[] was correctly accepted
+[24/1, 38/1, 36/1, 22/1, 55/1] was correctly rejected
+[52/1, 43/1, 19/1, 60/1, 49/1] was correctly rejected
+[47/1, 3/1, 20/1, 11/1, 28/1] was correctly rejected
+[57/1, 21/1, 19/1, 9/1, 13/1, 35/1, 44/1, 44/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [41.0, 3.0], rnn: [0.] and GT: True
+Execution time: 313.3142 seconds
+[41/1, 3/1] was correctly rejected
+[] was correctly accepted
+[32/1, 18/1, 2/1] was correctly rejected
+[52/1, 51/1, 9/1, 16/1, 23/1, 34/1, 12/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [57.0, 50.0], rnn: [0.] and GT: True
+Execution time: 313.3321 seconds
+[57/1, 50/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [9.0, 16.0], rnn: [0.] and GT: True
+Execution time: 313.3346 seconds
+[9/1, 16/1] was correctly rejected
+[12/1] was correctly accepted
+[] was correctly accepted
+[] was correctly accepted
+[36/1, 52/1, 37/1, 50/1, 12/1, 25/1, 17/1, 42/1] was correctly rejected
+[6/1] was correctly accepted
+[39/1, 9/1, 1/1, 34/1, 22/1, 24/1] was correctly rejected
+[28/1, 12/1, 23/1, 59/1] was correctly rejected
+[] was correctly accepted
+[46/1, 24/1, 23/1, 19/1, 39/1, 36/1] was correctly rejected
+[] was correctly accepted
+[] was correctly accepted
+[40/1, 10/1, 36/1, 39/1] was correctly rejected
+[54/1, 48/1, 38/1] was correctly rejected
+[1/1, 52/1, 34/1, 12/1, 60/1, 15/1] was correctly rejected
+[29/1, 43/1, 27/1, 34/1, 59/1, 5/1, 36/1, 51/1, 23/1] was correctly rejected
+[2/1, 11/1, 54/1, 48/1, 16/1, 25/1, 55/1] was correctly rejected
+[36/1, 31/1, 5/1, 7/1, 18/1, 3/1, 52/1, 11/1] was correctly rejected
+[43/1, 43/1, 4/1, 14/1, 25/1, 22/1, 22/1, 1/1, 27/1] was correctly rejected
+[20/1] was correctly accepted
+[55/1] was correctly accepted
+[33/1] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [28.0, 7.0], rnn: [0.] and GT: True
+Execution time: 313.4541 seconds
+[28/1, 7/1] was correctly rejected
+[7/1] was correctly accepted
+[7/1] was correctly accepted
+[58/1, 16/1, 45/1, 18/1, 54/1, 60/1] was correctly rejected
+[17/1, 52/1, 30/1, 5/1] was correctly rejected
+[] was correctly accepted
+[23/1, 47/1, 36/1] was correctly rejected
+[46/1, 55/1, 54/1, 27/1, 42/1, 14/1] was correctly rejected
+[4/1, 37/1, 58/1, 51/1] was correctly rejected
+[23/1, 50/1, 26/1, 18/1, 8/1] was correctly rejected
+[44/1, 57/1, 1/1, 20/1] was correctly rejected
+[37/1, 57/1, 51/1, 34/1, 28/1, 41/1, 48/1] was correctly rejected
+[12/1, 2/1, 6/1, 9/1, 35/1, 57/1, 23/1, 29/1, 25/1, 6/1] was correctly rejected
+[46/1, 55/1, 60/1, 40/1, 9/1, 23/1] was correctly rejected
+[42/1, 47/1, 1/1, 56/1, 56/1] was correctly rejected
+[42/1, 22/1, 14/1, 53/1, 32/1, 15/1, 40/1, 30/1, 6/1, 37/1] was correctly rejected
+[3/1, 32/1, 35/1, 6/1, 16/1, 48/1, 46/1, 24/1, 42/1] was correctly rejected
+[44/1, 8/1, 44/1, 44/1, 18/1, 41/1, 16/1, 57/1, 49/1] was correctly rejected
+[20/1, 19/1, 4/1, 48/1, 16/1, 1/1, 40/1, 24/1, 8/1, 21/1] was correctly rejected
+[26/1, 8/1, 58/1, 32/1, 24/1, 51/1, 46/1, 35/1, 26/1] was correctly rejected
+[9/1, 43/1, 14/1] was correctly rejected
+[28/1, 34/1, 43/1, 8/1, 44/1, 50/1, 32/1, 40/1] was correctly rejected
+[21/1, 41/1, 14/1, 4/1, 25/1, 51/1, 30/1, 12/1] was correctly rejected
+[55/1] was correctly accepted
+[46/1, 56/1, 36/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [45.0, 9.0], rnn: [0.] and GT: True
+Execution time: 313.6477 seconds
+[45/1, 9/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [14.0, 39.0], rnn: [0.] and GT: True
+Execution time: 313.6501 seconds
+[14/1, 39/1] was correctly rejected
+[38/1, 28/1, 5/1] was correctly rejected
+[52/1, 9/1, 26/1, 5/1, 7/1, 45/1, 2/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [48.0, 52.0], rnn: [0.] and GT: True
+Execution time: 313.6662 seconds
+[48/1, 52/1] was correctly rejected
+[] was correctly accepted
+[] was correctly accepted
+[13/1, 40/1, 58/1, 19/1] was correctly rejected
+[3/1, 21/1, 15/1, 7/1, 46/1, 30/1, 34/1, 37/1, 14/1, 42/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [34.0, 46.0], rnn: [0.] and GT: True
+Execution time: 313.6902 seconds
+[34/1, 46/1] was correctly rejected
+[28/1, 54/1, 27/1, 52/1, 19/1, 15/1, 44/1] was correctly rejected
+[54/1, 58/1, 23/1] was correctly rejected
+[52/1, 35/1, 41/1, 21/1, 30/1, 33/1, 12/1, 51/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [43.0, 41.0], rnn: [0.] and GT: True
+Execution time: 313.7184 seconds
+[43/1, 41/1] was correctly rejected
+[54/1, 30/1, 6/1, 20/1, 54/1, 52/1, 16/1, 35/1, 46/1, 15/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [24.0, 59.0], rnn: [0.] and GT: True
+Execution time: 313.7336 seconds
+[24/1, 59/1] was correctly rejected
+[9/1, 59/1, 46/1, 42/1, 1/1, 30/1, 58/1, 54/1, 10/1, 58/1] was correctly rejected
+[13/1, 5/1, 17/1, 6/1, 57/1, 51/1, 30/1, 43/1, 26/1] was correctly rejected
+[43/1] was correctly accepted
+[33/1, 23/1, 29/1, 20/1, 51/1, 4/1, 57/1] was correctly rejected
+[59/1, 10/1, 31/1, 32/1, 2/1] was correctly rejected
+[30/1, 33/1, 29/1, 18/1, 49/1, 47/1, 41/1] was correctly rejected
+[42/1, 40/1, 58/1, 31/1, 51/1, 46/1, 49/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [39.0, 14.0], rnn: [0.] and GT: True
+Execution time: 313.8037 seconds
+[39/1, 14/1] was correctly rejected
+[27/1, 50/1, 59/1, 2/1, 46/1, 46/1, 8/1, 6/1, 24/1, 40/1] was correctly rejected
+[22/1, 51/1, 41/1, 28/1] was correctly rejected
+[2/1, 57/1, 51/1, 5/1, 47/1, 27/1] was correctly rejected
+[24/1, 16/1, 28/1, 43/1, 35/1, 21/1, 49/1, 46/1, 44/1] was correctly rejected
+[] was correctly accepted
+[23/1, 54/1, 4/1, 24/1, 55/1, 28/1, 18/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [33.0, 42.0], rnn: [0.] and GT: True
+Execution time: 313.8602 seconds
+[33/1, 42/1] was correctly rejected
+[49/1] was correctly accepted
+[27/1, 35/1, 34/1, 57/1, 43/1, 16/1, 16/1, 32/1, 39/1] was correctly rejected
+[51/1, 33/1, 52/1] was correctly rejected
+[38/1, 29/1, 15/1, 39/1, 33/1, 48/1, 14/1, 8/1] was correctly rejected
+[1/1, 13/1, 30/1] was correctly rejected
+[9/1, 29/1, 17/1, 49/1, 17/1, 27/1, 43/1, 7/1, 12/1, 57/1] was correctly rejected
+[] was correctly accepted
+[53/1, 47/1, 8/1, 59/1, 58/1, 45/1, 49/1, 34/1, 18/1, 30/1] was correctly rejected
+[9/1, 6/1, 35/1, 5/1, 1/1, 23/1, 38/1, 18/1, 37/1, 9/1] was correctly rejected
+[17/1, 1/1, 56/1, 41/1, 50/1, 9/1, 60/1, 4/1] was correctly rejected
+[54/1, 26/1, 54/1, 59/1, 1/1] was correctly rejected
+[22/1, 55/1, 12/1, 12/1, 32/1, 58/1] was correctly rejected
+[35/1, 4/1, 48/1, 46/1, 10/1, 21/1, 18/1, 50/1, 6/1] was correctly rejected
+[9/1, 20/1, 36/1, 4/1, 31/1, 31/1, 26/1, 5/1, 35/1, 50/1] was correctly rejected
+[40/1, 57/1, 46/1] was correctly rejected
+[47/1, 31/1, 40/1, 15/1, 21/1] was correctly rejected
+[15/1, 17/1, 17/1, 40/1, 18/1, 11/1, 24/1, 60/1, 44/1] was correctly rejected
+[29/1, 8/1, 36/1, 49/1, 21/1, 58/1, 34/1, 55/1] was correctly rejected
+[9/1] was correctly accepted
+[12/1, 5/1, 9/1, 39/1, 47/1, 42/1, 31/1, 34/1, 54/1, 34/1] was correctly rejected
+[13/1, 44/1, 26/1, 18/1, 8/1] was correctly rejected
+[55/1, 41/1, 4/1, 43/1] was correctly rejected
+[15/1, 27/1, 39/1, 43/1, 39/1, 35/1, 8/1, 42/1] was correctly rejected
+[32/1, 31/1, 52/1, 8/1, 53/1, 35/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [1.0, 10.0], rnn: [0.] and GT: True
+Execution time: 314.0779 seconds
+[1/1, 10/1] was correctly rejected
+[18/1] was correctly accepted
+[21/1, 27/1, 51/1, 34/1, 26/1, 14/1, 41/1, 2/1] was correctly rejected
+[3/1, 17/1, 40/1, 22/1, 43/1] was correctly rejected
+[52/1, 49/1, 44/1] was correctly rejected
+[57/1, 49/1, 19/1, 20/1, 34/1, 15/1, 48/1, 58/1, 54/1, 24/1] was correctly rejected
+[14/1, 17/1, 40/1, 44/1, 37/1, 29/1, 27/1, 18/1, 2/1, 49/1] was correctly rejected
+[42/1, 15/1, 45/1, 11/1, 32/1, 27/1, 48/1, 39/1, 12/1, 48/1] was correctly rejected
+[31/1, 32/1, 44/1, 45/1, 50/1, 53/1, 57/1, 14/1, 55/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [7.0, 26.0], rnn: [0.] and GT: True
+Execution time: 314.1639 seconds
+[7/1, 26/1] was correctly rejected
+[17/1, 3/1, 25/1] was correctly rejected
+[48/1, 59/1, 39/1, 36/1] was correctly rejected
+[15/1, 22/1, 6/1, 57/1, 59/1, 2/1, 45/1] was correctly rejected
+[7/1, 54/1, 60/1, 7/1, 7/1, 60/1, 26/1] was correctly rejected
+[45/1, 30/1, 24/1, 41/1] was correctly rejected
+DIAMOND: No. of qCount: 2000  No. of memQ count: 34  No. of EquivQ count: 1891  No. of adversarial memQ: 12  No. of adversarial EquivQ: 238  No. of adversarial examples: 250  Time: 314.1947212219238
+equivalenceQuery: FOUND MISMATCH FOR [28.0, 26.0], rnn: [0.] and GT: True
+Execution time: 314.1962 seconds
+[28/1, 26/1] was correctly rejected
+[46/1, 48/1, 21/1, 23/1] was correctly rejected
+[23/1, 47/1, 30/1, 40/1, 50/1, 10/1, 42/1, 3/1, 7/1, 51/1] was correctly rejected
+[3/1, 28/1, 18/1, 41/1, 55/1, 11/1] was correctly rejected
+[54/1, 28/1, 27/1, 3/1, 11/1, 43/1] was correctly rejected
+[45/1, 44/1, 43/1, 59/1, 44/1, 10/1, 4/1, 33/1] was correctly rejected
+[15/1, 46/1, 51/1, 8/1, 15/1, 2/1, 28/1, 44/1, 19/1, 7/1] was correctly rejected
+[57/1, 43/1, 8/1, 33/1, 10/1] was correctly rejected
+[19/1, 30/1, 11/1, 15/1, 1/1, 6/1] was correctly rejected
+[21/1] was correctly accepted
+[19/1, 15/1, 47/1, 50/1, 40/1] was correctly rejected
+[8/1, 10/1, 44/1, 22/1, 11/1, 2/1, 35/1, 18/1] was correctly rejected
+The languages are not equivalent, a counterexample is: [18/1, 17/1], length: 2
+The word was rejected, but is in the language.
+Execution time: 314.3005 seconds
+Checking equivalence of the following automaton:
+(Q,q0,delta,F) with:
+   Q    : {<>, <ab>, <aba>, <abcde>, <abc>, <a>, <abcd>}
+   q0   : <>
+   F    : {<>, <a>, <aba>}
+   delta: {<> --a--> <a>,   
+<a> --a--> <a>,   <a> --b--> <ab>,   
+<ab> --a--> <aba>,   <ab> --b--> <abc>,   <ab> --c--> <abc>,   
+<abc> --a--> <abc>,   <abc> --d--> <abcd>,   <abc> --b--> <abc>,   <abc> --c--> <abc>,   
+<abcd> --a--> <abc>,   <abcd> --e--> <abcde>,   <abcd> --b--> <abc>,   <abcd> --c--> <abc>,   <abcd> --d--> <abc>,   
+<abcde> --a--> <abc>,   <abcde> --e--> <abc>,   <abcde> --b--> <abc>,   <abcde> --c--> <abc>,   <abcde> --d--> <abc>,   <abcde> --f--> <abc>,   
+<aba> --a--> <abc>,   <aba> --b--> <abc>,   <aba> --c--> <abc>,   
+}
+[20/1, 39/1, 1/1, 52/1, 2/1, 31/1, 26/1, 4/1, 44/1] was correctly rejected
+[44/1, 33/1, 56/1, 26/1, 34/1, 6/1] was correctly rejected
+[48/1, 34/1, 53/1, 10/1] was correctly rejected
+[26/1, 32/1, 15/1] was correctly rejected
+[15/1, 20/1, 57/1, 13/1, 8/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [26.0, 44.0], rnn: [0.] and GT: True
+Execution time: 331.5442 seconds
+[26/1, 44/1] was correctly rejected
+[18/1, 55/1, 57/1, 50/1, 17/1, 16/1, 39/1, 6/1] was correctly rejected
+[] was correctly accepted
+[13/1, 56/1, 13/1, 52/1, 22/1, 18/1, 59/1, 6/1, 9/1] was correctly rejected
+[52/1, 56/1, 46/1, 10/1, 13/1] was correctly rejected
+[16/1, 54/1, 19/1, 42/1, 44/1] was correctly rejected
+[33/1, 25/1, 6/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [19.0, 25.0], rnn: [0.] and GT: True
+Execution time: 331.5902 seconds
+[19/1, 25/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [12.0, 32.0], rnn: [0.] and GT: True
+Execution time: 331.5927 seconds
+[12/1, 32/1] was correctly rejected
+[50/1, 28/1, 35/1, 9/1, 31/1, 33/1, 6/1, 10/1, 47/1] was correctly rejected
+[24/1] was correctly accepted
+[] was correctly accepted
+[17/1, 23/1, 60/1, 25/1, 32/1, 8/1, 50/1] was correctly rejected
+[49/1] was correctly accepted
+[52/1, 41/1, 3/1, 50/1, 19/1, 33/1] was correctly rejected
+[11/1, 35/1, 34/1, 40/1] was correctly rejected
+[6/1, 16/1, 44/1, 51/1] was correctly rejected
+[8/1, 58/1, 13/1, 44/1, 54/1] was correctly rejected
+[40/1, 57/1, 2/1, 51/1, 10/1, 24/1] was correctly rejected
+[20/1, 1/1, 5/1, 39/1, 60/1, 21/1] was correctly rejected
+[47/1, 60/1, 21/1, 47/1] was correctly rejected
+[2/1, 38/1, 3/1, 38/1, 14/1, 6/1, 39/1] was correctly rejected
+[16/1, 17/1, 20/1, 41/1, 4/1, 55/1] was correctly rejected
+[53/1] was correctly accepted
+[56/1, 37/1, 28/1] was correctly rejected
+[] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [43.0, 16.0], rnn: [0.] and GT: True
+Execution time: 331.6956 seconds
+[43/1, 16/1] was correctly rejected
+[13/1] was correctly accepted
+[36/1, 36/1, 50/1, 15/1] was correctly rejected
+[60/1, 48/1, 24/1, 27/1, 13/1, 7/1, 23/1, 34/1, 60/1, 11/1] was correctly rejected
+[35/1, 40/1, 27/1, 35/1, 38/1, 48/1, 32/1, 17/1, 55/1] was correctly rejected
+[] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [1.0, 2.0], rnn: [0.] and GT: True
+Execution time: 331.7306 seconds
+[1/1, 2/1] was correctly rejected
+[1/1, 54/1, 49/1, 5/1] was correctly rejected
+[60/1, 22/1, 57/1] was correctly rejected
+[35/1, 3/1, 23/1, 20/1, 53/1, 7/1, 10/1, 39/1, 17/1] was correctly rejected
+[4/1] was correctly accepted
+[] was correctly accepted
+[40/1, 5/1, 36/1, 26/1, 47/1] was correctly rejected
+[] was correctly accepted
+[20/1, 1/1, 14/1] was correctly rejected
+[46/1, 59/1, 6/1, 15/1, 41/1, 45/1] was correctly rejected
+[49/1] was correctly accepted
+[16/1, 18/1, 31/1, 41/1, 42/1] was correctly rejected
+[30/1, 30/1, 49/1, 28/1, 25/1, 38/1, 44/1, 57/1] was correctly rejected
+[39/1, 8/1, 22/1, 14/1, 52/1] was correctly rejected
+[5/1, 27/1, 38/1] was correctly rejected
+[50/1, 6/1, 59/1, 52/1, 8/1, 42/1] was correctly rejected
+[9/1, 2/1, 46/1, 25/1, 23/1, 38/1, 47/1, 50/1, 25/1] was correctly rejected
+[31/1, 37/1, 27/1, 53/1, 47/1] was correctly rejected
+[16/1, 9/1, 14/1, 36/1, 30/1] was correctly rejected
+[59/1, 51/1, 39/1, 6/1, 49/1, 5/1] was correctly rejected
+[14/1, 54/1, 53/1, 40/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [28.0, 19.0], rnn: [0.] and GT: True
+Execution time: 331.8605 seconds
+[28/1, 19/1] was correctly rejected
+[29/1, 49/1, 57/1, 21/1, 56/1, 4/1] was correctly rejected
+[45/1, 18/1, 57/1, 21/1, 25/1, 53/1, 21/1, 17/1, 27/1] was correctly rejected
+[22/1, 34/1, 42/1, 40/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [3.0, 46.0], rnn: [0.] and GT: True
+Execution time: 331.8904 seconds
+[3/1, 46/1] was correctly rejected
+[13/1, 23/1, 11/1, 5/1, 48/1, 35/1] was correctly rejected
+[34/1, 17/1, 32/1, 10/1] was correctly rejected
+[51/1, 19/1, 16/1, 41/1, 33/1, 25/1, 47/1, 26/1, 51/1, 30/1] was correctly rejected
+[18/1] was correctly accepted
+[4/1, 49/1, 55/1] was correctly rejected
+[11/1, 8/1, 24/1, 30/1, 27/1, 2/1] was correctly rejected
+[] was correctly accepted
+[59/1] was correctly accepted
+[3/1, 17/1, 1/1, 38/1, 27/1] was correctly rejected
+[34/1, 36/1, 7/1, 52/1, 26/1, 35/1, 51/1, 44/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [15.0, 60.0], rnn: [0.] and GT: True
+Execution time: 331.9574 seconds
+[15/1, 60/1] was correctly rejected
+[38/1, 21/1, 45/1, 5/1, 54/1] was correctly rejected
+[48/1, 20/1, 23/1] was correctly rejected
+[36/1, 1/1, 17/1, 13/1, 51/1, 26/1, 8/1] was correctly rejected
+[32/1, 40/1, 28/1, 57/1, 7/1, 33/1, 12/1] was correctly rejected
+[30/1, 22/1, 18/1, 53/1, 36/1, 14/1] was correctly rejected
+[43/1, 16/1, 32/1, 52/1, 11/1, 48/1, 38/1, 25/1, 13/1] was correctly rejected
+[17/1, 57/1, 54/1, 33/1, 59/1, 7/1] was correctly rejected
+[35/1] was correctly accepted
+[28/1, 15/1, 56/1, 15/1, 35/1, 30/1, 37/1, 52/1, 12/1, 27/1] was correctly rejected
+[] was correctly accepted
+[] was correctly accepted
+[10/1, 47/1, 25/1, 53/1, 44/1, 43/1, 24/1] was correctly rejected
+[20/1, 48/1, 38/1, 31/1, 1/1, 32/1, 13/1, 1/1, 14/1, 14/1] was correctly rejected
+[48/1, 8/1, 32/1, 8/1, 49/1, 46/1, 10/1, 20/1, 7/1, 53/1] was correctly rejected
+[53/1, 13/1, 9/1] was correctly rejected
+[46/1, 21/1, 60/1, 23/1, 24/1, 57/1, 30/1, 6/1, 44/1] was correctly rejected
+[24/1, 6/1, 17/1, 27/1, 11/1, 60/1, 19/1, 29/1, 32/1] was correctly rejected
+[27/1, 27/1, 22/1, 20/1, 53/1, 11/1, 55/1, 20/1, 11/1] was correctly rejected
+[13/1, 33/1, 40/1, 46/1, 7/1] was correctly rejected
+[41/1, 5/1, 36/1] was correctly rejected
+[4/1, 8/1, 19/1, 54/1, 18/1, 53/1, 48/1] was correctly rejected
+[19/1, 45/1, 2/1, 38/1, 5/1, 58/1, 52/1, 47/1, 58/1] was correctly rejected
+INFO : No. of times..query Generated: 2000
+[] was correctly accepted
+[40/1, 49/1, 11/1, 7/1, 2/1, 24/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [12.0, 37.0], rnn: [0.] and GT: True
+Execution time: 332.1727 seconds
+[12/1, 37/1] was correctly rejected
+[4/1, 32/1, 15/1, 19/1] was correctly rejected
+[] was correctly accepted
+[5/1, 10/1, 54/1, 34/1, 6/1] was correctly rejected
+[48/1, 54/1, 38/1] was correctly rejected
+[7/1, 56/1, 18/1, 25/1, 59/1, 4/1, 39/1, 40/1] was correctly rejected
+[33/1, 44/1, 35/1, 4/1] was correctly rejected
+[] was correctly accepted
+[20/1] was correctly accepted
+[5/1, 13/1, 46/1, 37/1, 15/1, 31/1, 60/1, 45/1, 10/1] was correctly rejected
+[5/1, 14/1, 58/1, 37/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [50.0, 45.0], rnn: [0.] and GT: True
+Execution time: 332.2312 seconds
+[50/1, 45/1] was correctly rejected
+[16/1, 44/1, 42/1, 43/1, 26/1, 20/1, 19/1, 16/1] was correctly rejected
+[38/1, 26/1, 33/1, 43/1, 12/1] was correctly rejected
+[40/1, 34/1, 50/1, 20/1, 49/1] was correctly rejected
+[19/1, 52/1, 52/1, 51/1, 15/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [9.0, 11.0], rnn: [0.] and GT: True
+Execution time: 332.2644 seconds
+[9/1, 11/1] was correctly rejected
+[38/1] was correctly accepted
+[] was correctly accepted
+[50/1, 30/1, 37/1, 25/1, 38/1, 22/1, 6/1, 23/1, 2/1] was correctly rejected
+[49/1, 46/1, 21/1, 51/1, 3/1, 24/1, 23/1, 28/1, 52/1] was correctly rejected
+[11/1, 55/1, 58/1, 59/1, 11/1, 42/1, 8/1] was correctly rejected
+[] was correctly accepted
+[32/1, 49/1, 42/1, 43/1, 37/1, 38/1, 26/1, 13/1, 30/1] was correctly rejected
+[15/1, 36/1, 25/1, 56/1, 50/1, 17/1, 27/1, 25/1] was correctly rejected
+[8/1, 54/1, 49/1] was correctly rejected
+[17/1, 27/1, 14/1, 41/1, 49/1, 4/1, 33/1, 48/1, 29/1] was correctly rejected
+[2/1, 7/1, 22/1, 56/1] was correctly rejected
+[59/1, 20/1, 55/1, 42/1, 42/1, 3/1] was correctly rejected
+[] was correctly accepted
+[25/1, 4/1, 52/1, 41/1, 5/1, 16/1, 12/1, 41/1, 23/1, 14/1] was correctly rejected
+[29/1, 48/1, 30/1, 17/1, 10/1] was correctly rejected
+[] was correctly accepted
+[52/1] was correctly accepted
+[48/1, 27/1, 58/1, 13/1, 44/1, 37/1, 31/1, 43/1] was correctly rejected
+[] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [50.0, 29.0], rnn: [0.] and GT: True
+Execution time: 332.3991 seconds
+[50/1, 29/1] was correctly rejected
+[10/1, 22/1, 39/1, 47/1, 5/1, 15/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [60.0, 32.0], rnn: [0.] and GT: True
+Execution time: 332.4109 seconds
+[60/1, 32/1] was correctly rejected
+[8/1, 37/1, 40/1, 51/1, 20/1, 11/1, 41/1] was correctly rejected
+[55/1, 37/1, 48/1, 47/1, 44/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [6.0, 9.0], rnn: [0.] and GT: True
+Execution time: 332.4304 seconds
+[6/1, 9/1] was correctly rejected
+[] was correctly accepted
+[18/1, 45/1, 12/1] was correctly rejected
+[35/1, 51/1, 41/1, 46/1, 52/1, 55/1] was correctly rejected
+[2/1, 34/1, 22/1, 13/1, 7/1, 14/1, 24/1, 41/1, 4/1] was correctly rejected
+[57/1, 31/1, 30/1, 51/1, 25/1, 17/1, 27/1] was correctly rejected
+[44/1, 35/1, 48/1, 36/1] was correctly rejected
+[33/1, 13/1, 59/1, 52/1, 38/1, 25/1, 49/1, 28/1, 41/1, 53/1] was correctly rejected
+[28/1, 41/1, 32/1, 40/1, 2/1, 6/1, 30/1, 41/1, 60/1, 1/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [26.0, 42.0], rnn: [0.] and GT: True
+Execution time: 332.5058 seconds
+[26/1, 42/1] was correctly rejected
+[26/1, 9/1, 49/1, 10/1] was correctly rejected
+[41/1] was correctly accepted
+[20/1, 24/1, 12/1, 21/1, 60/1, 46/1] was correctly rejected
+[27/1, 44/1, 21/1] was correctly rejected
+[52/1, 40/1, 38/1, 8/1] was correctly rejected
+[22/1, 54/1, 37/1, 33/1, 26/1, 10/1, 39/1] was correctly rejected
+[] was correctly accepted
+[7/1, 7/1, 56/1, 34/1, 47/1, 51/1, 24/1, 58/1] was correctly rejected
+[46/1, 20/1, 35/1, 12/1, 29/1, 59/1, 49/1] was correctly rejected
+[57/1, 40/1, 12/1] was correctly rejected
+[8/1, 30/1, 2/1, 33/1, 19/1, 56/1] was correctly rejected
+[9/1, 42/1, 11/1] was correctly rejected
+[19/1, 60/1, 30/1, 59/1, 3/1, 35/1, 36/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [44.0, 11.0], rnn: [0.] and GT: True
+Execution time: 332.5903 seconds
+[44/1, 11/1] was correctly rejected
+[24/1, 33/1, 34/1, 4/1, 18/1, 27/1, 57/1, 27/1, 57/1] was correctly rejected
+[27/1] was correctly accepted
+[10/1, 46/1, 37/1, 33/1, 51/1, 38/1, 51/1, 36/1, 3/1] was correctly rejected
+[22/1, 37/1, 40/1, 19/1] was correctly rejected
+[32/1, 34/1, 58/1, 50/1, 19/1, 31/1, 54/1, 21/1] was correctly rejected
+[36/1, 22/1, 47/1, 19/1, 8/1, 53/1, 29/1, 10/1, 29/1, 29/1] was correctly rejected
+[16/1, 14/1, 37/1, 15/1] was correctly rejected
+[33/1, 2/1, 41/1, 37/1, 53/1, 20/1, 46/1] was correctly rejected
+[28/1, 43/1, 7/1, 25/1, 33/1, 36/1, 54/1, 57/1, 5/1, 7/1] was correctly rejected
+[41/1, 50/1, 37/1, 58/1] was correctly rejected
+[15/1, 13/1, 4/1, 7/1, 4/1, 32/1] was correctly rejected
+[52/1] was correctly accepted
+[52/1, 28/1, 18/1, 5/1, 10/1] was correctly rejected
+[3/1, 12/1, 1/1, 39/1, 11/1, 57/1, 3/1, 23/1, 16/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [43.0, 17.0], rnn: [0.] and GT: True
+Execution time: 332.7163 seconds
+[43/1, 17/1] was correctly rejected
+[24/1, 21/1, 53/1, 11/1] was correctly rejected
+[27/1, 22/1, 53/1, 44/1, 36/1, 15/1, 28/1] was correctly rejected
+[22/1, 39/1, 14/1, 48/1] was correctly rejected
+[54/1, 56/1, 15/1, 28/1, 7/1] was correctly rejected
+[5/1, 4/1, 55/1, 52/1, 59/1, 35/1, 51/1, 38/1, 36/1, 38/1] was correctly rejected
+[31/1, 41/1, 39/1] was correctly rejected
+[7/1, 14/1, 44/1, 5/1, 8/1, 32/1, 44/1, 7/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [22.0, 29.0], rnn: [0.] and GT: True
+Execution time: 332.7731 seconds
+[22/1, 29/1] was correctly rejected
+[49/1, 59/1, 58/1, 52/1, 2/1, 42/1, 40/1, 35/1, 19/1, 57/1] was correctly rejected
+[14/1, 23/1, 23/1, 8/1, 40/1, 58/1, 58/1] was correctly rejected
+[] was correctly accepted
+[50/1, 5/1, 30/1, 49/1] was correctly rejected
+[2/1] was correctly accepted
+[20/1, 17/1, 37/1, 32/1, 42/1] was correctly rejected
+[26/1, 49/1, 6/1, 39/1, 13/1, 13/1, 23/1, 29/1, 20/1] was correctly rejected
+[44/1, 22/1, 3/1, 45/1, 55/1, 41/1, 7/1, 10/1] was correctly rejected
+[58/1, 26/1, 51/1, 50/1, 34/1, 42/1] was correctly rejected
+[29/1] was correctly accepted
+[21/1, 13/1, 58/1, 45/1, 56/1, 46/1, 53/1, 40/1, 34/1, 4/1] was correctly rejected
+[13/1, 17/1, 26/1, 43/1, 54/1] was correctly rejected
+[7/1, 30/1, 31/1, 18/1, 35/1, 48/1, 15/1] was correctly rejected
+[38/1, 27/1, 5/1, 42/1, 48/1, 39/1, 40/1, 46/1, 24/1] was correctly rejected
+[3/1, 34/1, 42/1, 41/1, 8/1, 32/1, 14/1, 45/1] was correctly rejected
+[43/1, 46/1, 39/1, 60/1, 15/1] was correctly rejected
+[23/1, 10/1, 25/1, 3/1, 45/1, 36/1] was correctly rejected
+[56/1, 3/1, 13/1, 51/1, 18/1, 60/1, 19/1, 55/1, 50/1] was correctly rejected
+[53/1, 6/1, 27/1, 7/1, 18/1, 55/1, 8/1, 24/1] was correctly rejected
+[39/1, 55/1, 44/1, 40/1, 45/1, 44/1] was correctly rejected
+[11/1, 42/1, 6/1, 44/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [24.0, 51.0], rnn: [0.] and GT: True
+Execution time: 332.9679 seconds
+[24/1, 51/1] was correctly rejected
+[5/1, 4/1, 25/1, 53/1, 51/1, 31/1, 49/1, 55/1] was correctly rejected
+[14/1, 27/1, 31/1, 17/1, 5/1, 4/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [23.0, 45.0, 23.0], rnn: [0.] and GT: True
+Execution time: 332.9924 seconds
+The languages are not equivalent, a counterexample is: [23/1, 45/1, 23/1], length: 3
+The word was accepted, but is not in the language.
+Execution time: 332.9948 seconds
+Checking equivalence of the following automaton:
+(Q,q0,delta,F) with:
+   Q    : {<>, <ab>, <aba>, <abcde>, <abc>, <a>, <abcd>}
+   q0   : <>
+   F    : {<>, <a>, <aba>}
+   delta: {<> --a--> <a>,   
+<a> --a--> <a>,   <a> --b--> <ab>,   
+<ab> --a--> <aba>,   <ab> --b--> <abc>,   <ab> --c--> <abc>,   
+<abc> --a--> <abc>,   <abc> --d--> <abcd>,   <abc> --b--> <abc>,   <abc> --c--> <abc>,   
+<abcd> --a--> <abc>,   <abcd> --e--> <abcde>,   <abcd> --b--> <abc>,   <abcd> --c--> <abc>,   <abcd> --d--> <abc>,   
+<abcde> --a--> <abc>,   <abcde> --e--> <abc>,   <abcde> --b--> <abc>,   <abcde> --c--> <abc>,   <abcde> --d--> <abc>,   <abcde> --f--> <abc>,   
+<aba> --a--> <abc>,   <aba> --b--> <abc>,   <aba> --c--> <abc>,   
+}
+[58/1, 20/1, 49/1] was correctly rejected
+[11/1, 34/1, 58/1, 31/1, 58/1, 11/1, 23/1, 48/1] was correctly rejected
+[49/1, 5/1, 48/1, 22/1, 36/1, 3/1, 39/1] was correctly rejected
+[] was correctly accepted
+[36/1, 42/1, 30/1, 49/1, 40/1, 20/1, 30/1, 4/1, 56/1] was correctly rejected
+[14/1] was correctly accepted
+[49/1, 8/1, 41/1, 58/1, 48/1, 14/1, 43/1, 51/1, 43/1] was correctly rejected
+[] was correctly accepted
+[23/1, 51/1, 58/1, 33/1] was correctly rejected
+[] was correctly accepted
+[18/1] was correctly accepted
+[22/1, 40/1, 45/1, 37/1, 22/1, 54/1, 7/1] was correctly rejected
+[39/1, 15/1, 9/1, 39/1, 3/1, 33/1, 26/1] was correctly rejected
+[29/1, 33/1, 39/1] was correctly rejected
+[57/1, 29/1, 1/1, 35/1, 6/1, 53/1, 50/1] was correctly rejected
+[19/1, 49/1, 23/1, 2/1, 28/1, 35/1, 26/1, 24/1] was correctly rejected
+[32/1, 32/1, 34/1, 14/1] was correctly rejected
+[11/1] was correctly accepted
+[33/1, 43/1, 15/1, 50/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [58.0, 25.0, 58.0], rnn: [0.] and GT: True
+Execution time: 350.9916 seconds
+The languages are not equivalent, a counterexample is: [58/1, 25/1, 58/1], length: 3
+The word was accepted, but is not in the language.
+Execution time: 350.9939 seconds
+Checking equivalence of the following automaton:
+(Q,q0,delta,F) with:
+   Q    : {<>, <ab>, <aba>, <abcde>, <abc>, <a>, <abcd>}
+   q0   : <>
+   F    : {<>, <a>, <aba>}
+   delta: {<> --a--> <a>,   
+<a> --a--> <a>,   <a> --b--> <ab>,   
+<ab> --a--> <aba>,   <ab> --b--> <abc>,   <ab> --c--> <abc>,   
+<abc> --a--> <abc>,   <abc> --d--> <abcd>,   <abc> --b--> <abc>,   <abc> --c--> <abc>,   
+<abcd> --a--> <abc>,   <abcd> --e--> <abcde>,   <abcd> --b--> <abc>,   <abcd> --c--> <abc>,   <abcd> --d--> <abc>,   
+<abcde> --a--> <abc>,   <abcde> --e--> <abc>,   <abcde> --b--> <abc>,   <abcde> --c--> <abc>,   <abcde> --d--> <abc>,   <abcde> --f--> <abc>,   
+<aba> --a--> <abc>,   <aba> --b--> <abc>,   <aba> --c--> <abc>,   
+}
+[] was correctly accepted
+[16/1, 7/1, 39/1, 49/1, 25/1, 32/1, 33/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [3.0, 54.0], rnn: [0.] and GT: True
+Execution time: 367.6403 seconds
+[3/1, 54/1] was correctly rejected
+[13/1, 38/1, 47/1, 57/1, 24/1, 59/1, 13/1, 33/1, 27/1, 22/1] was correctly rejected
+[13/1, 47/1, 31/1, 31/1, 51/1] was correctly rejected
+[58/1] was correctly accepted
+[11/1, 11/1, 39/1, 25/1, 14/1, 2/1, 57/1, 19/1] was correctly rejected
+[19/1, 36/1, 28/1, 53/1, 3/1, 25/1] was correctly rejected
+[31/1, 3/1, 58/1] was correctly rejected
+[18/1, 47/1, 19/1, 16/1, 46/1, 36/1, 18/1, 19/1] was correctly rejected
+[1/1, 37/1, 12/1, 2/1, 5/1, 3/1, 32/1, 3/1, 38/1] was correctly rejected
+[13/1, 51/1, 14/1, 20/1, 40/1, 28/1, 11/1, 1/1, 29/1] was correctly rejected
+[60/1, 30/1, 58/1, 54/1, 13/1, 20/1, 26/1, 47/1, 34/1] was correctly rejected
+[14/1, 18/1, 11/1, 16/1, 42/1, 3/1, 28/1] was correctly rejected
+[] was correctly accepted
+[5/1, 45/1, 29/1, 3/1, 59/1, 45/1] was correctly rejected
+[52/1, 41/1, 23/1, 18/1, 34/1, 36/1, 40/1] was correctly rejected
+[42/1, 34/1, 47/1, 40/1, 48/1, 57/1, 4/1, 1/1, 38/1] was correctly rejected
+[38/1, 32/1, 10/1, 34/1, 17/1, 45/1, 47/1, 3/1, 53/1] was correctly rejected
+[35/1] was correctly accepted
+[] was correctly accepted
+[34/1, 48/1, 3/1, 10/1, 5/1, 5/1, 33/1, 31/1] was correctly rejected
+[28/1, 39/1, 7/1, 33/1, 54/1, 52/1] was correctly rejected
+[22/1, 46/1, 58/1] was correctly rejected
+[] was correctly accepted
+[26/1, 47/1, 30/1, 52/1, 13/1, 8/1, 1/1] was correctly rejected
+[23/1, 6/1, 46/1, 32/1, 56/1, 16/1, 8/1] was correctly rejected
+[] was correctly accepted
+[8/1, 20/1, 20/1, 41/1, 12/1, 37/1, 2/1, 3/1, 40/1] was correctly rejected
+[9/1, 48/1, 49/1, 54/1] was correctly rejected
+[8/1] was correctly accepted
+[40/1, 33/1, 13/1] was correctly rejected
+[7/1, 7/1, 29/1, 17/1, 47/1, 42/1, 47/1, 18/1, 20/1, 44/1] was correctly rejected
+[37/1, 19/1, 52/1, 24/1, 1/1, 13/1, 43/1] was correctly rejected
+[17/1, 4/1, 10/1, 29/1, 54/1] was correctly rejected
+[38/1, 46/1, 22/1, 10/1, 34/1, 6/1] was correctly rejected
+[10/1, 51/1, 24/1, 33/1] was correctly rejected
+[44/1] was correctly accepted
+[26/1, 56/1, 4/1, 11/1, 15/1, 17/1, 47/1, 52/1] was correctly rejected
+[17/1, 42/1, 45/1, 28/1] was correctly rejected
+[35/1] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [4.0, 43.0], rnn: [0.] and GT: True
+Execution time: 367.9384 seconds
+[4/1, 43/1] was correctly rejected
+[37/1, 48/1, 1/1, 28/1, 48/1, 23/1, 24/1, 18/1, 24/1, 21/1] was correctly rejected
+[48/1, 49/1, 40/1, 29/1, 34/1, 42/1, 51/1, 46/1, 40/1] was correctly rejected
+[7/1, 27/1, 27/1, 31/1, 30/1, 33/1, 4/1, 17/1, 49/1, 43/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [39.0, 57.0], rnn: [0.] and GT: True
+Execution time: 367.9809 seconds
+[39/1, 57/1] was correctly rejected
+[36/1, 38/1, 54/1, 36/1, 36/1, 27/1, 10/1] was correctly rejected
+[6/1, 22/1, 7/1, 2/1, 10/1, 36/1, 35/1, 8/1, 16/1, 30/1] was correctly rejected
+[22/1, 16/1, 4/1, 20/1, 57/1, 36/1] was correctly rejected
+[] was correctly accepted
+[20/1, 8/1, 13/1, 37/1] was correctly rejected
+[55/1, 21/1, 46/1, 15/1, 3/1, 18/1] was correctly rejected
+[33/1, 53/1, 27/1, 41/1] was correctly rejected
+[50/1, 53/1, 55/1, 14/1, 41/1, 59/1, 22/1, 25/1] was correctly rejected
+[8/1, 18/1, 9/1, 31/1, 57/1, 37/1, 53/1, 43/1] was correctly rejected
+[] was correctly accepted
+[51/1, 40/1, 28/1, 21/1, 43/1, 7/1, 31/1, 50/1, 42/1, 60/1] was correctly rejected
+[13/1, 12/1, 3/1, 12/1, 12/1, 3/1, 45/1, 1/1] was correctly rejected
+[21/1, 37/1, 46/1, 25/1] was correctly rejected
+[13/1, 13/1, 18/1, 56/1, 29/1, 55/1, 38/1, 56/1, 58/1, 40/1] was correctly rejected
+[12/1, 37/1, 41/1, 43/1, 50/1, 60/1, 23/1] was correctly rejected
+[] was correctly accepted
+[16/1, 53/1, 43/1, 46/1, 4/1, 56/1, 45/1] was correctly rejected
+[24/1, 8/1, 43/1, 5/1, 13/1, 10/1] was correctly rejected
+[23/1, 25/1, 25/1, 38/1, 27/1, 18/1, 8/1, 18/1, 48/1, 42/1] was correctly rejected
+[] was correctly accepted
+[55/1, 59/1, 41/1, 53/1, 37/1, 42/1, 5/1, 48/1, 9/1, 36/1] was correctly rejected
+[1/1, 41/1, 48/1, 41/1, 34/1, 4/1, 43/1, 56/1, 14/1, 7/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [34.0, 50.0], rnn: [0.] and GT: True
+Execution time: 368.1779 seconds
+[34/1, 50/1] was correctly rejected
+[] was correctly accepted
+[17/1] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [13.0, 40.0], rnn: [0.] and GT: True
+Execution time: 368.1832 seconds
+[13/1, 40/1] was correctly rejected
+[] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [36.0, 24.0], rnn: [0.] and GT: True
+Execution time: 368.1869 seconds
+[36/1, 24/1] was correctly rejected
+[57/1, 12/1, 53/1, 26/1, 27/1, 17/1, 2/1, 50/1, 26/1] was correctly rejected
+[47/1, 55/1, 25/1, 52/1, 15/1, 24/1, 19/1, 6/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [58.0, 48.0], rnn: [0.] and GT: True
+Execution time: 368.2151 seconds
+[58/1, 48/1] was correctly rejected
+[10/1, 13/1, 32/1, 40/1, 44/1, 10/1] was correctly rejected
+[43/1, 43/1, 11/1, 2/1, 4/1, 20/1] was correctly rejected
+[22/1, 3/1, 45/1, 38/1, 17/1, 18/1, 30/1, 17/1, 12/1, 14/1] was correctly rejected
+[7/1, 39/1, 59/1, 21/1, 40/1, 39/1, 56/1, 13/1, 49/1] was correctly rejected
+[29/1, 50/1, 3/1, 14/1, 54/1, 43/1, 38/1, 8/1] was correctly rejected
+[1/1, 43/1, 52/1, 31/1, 47/1] was correctly rejected
+[47/1, 30/1, 46/1, 33/1, 30/1, 17/1] was correctly rejected
+[26/1] was correctly accepted
+[16/1, 36/1, 57/1] was correctly rejected
+[59/1, 52/1, 13/1, 53/1, 2/1, 44/1, 11/1, 28/1, 8/1] was correctly rejected
+[57/1, 6/1, 37/1, 43/1, 59/1, 58/1, 26/1, 8/1, 8/1] was correctly rejected
+[] was correctly accepted
+[60/1, 54/1, 38/1, 14/1] was correctly rejected
+[40/1, 21/1, 45/1, 53/1] was correctly rejected
+[] was correctly accepted
+[35/1] was correctly accepted
+[55/1, 25/1, 56/1, 14/1, 60/1, 26/1, 30/1] was correctly rejected
+[13/1, 1/1, 42/1, 16/1, 2/1] was correctly rejected
+[30/1, 22/1, 26/1, 4/1, 19/1, 40/1, 48/1, 29/1] was correctly rejected
+[18/1, 15/1, 59/1] was correctly rejected
+[34/1, 36/1, 47/1, 50/1, 51/1, 34/1] was correctly rejected
+[38/1, 41/1, 23/1, 3/1, 41/1, 2/1, 34/1] was correctly rejected
+[39/1, 22/1, 6/1, 35/1, 42/1, 7/1, 25/1, 9/1, 21/1] was correctly rejected
+[9/1, 50/1, 41/1, 27/1, 19/1, 22/1, 13/1, 1/1, 36/1, 1/1] was correctly rejected
+[22/1, 46/1, 51/1] was correctly rejected
+[47/1, 14/1, 39/1, 52/1, 54/1, 35/1, 16/1] was correctly rejected
+[29/1, 25/1, 2/1, 23/1, 20/1, 59/1, 55/1, 21/1, 35/1, 20/1] was correctly rejected
+[55/1, 51/1, 49/1, 2/1, 5/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [51.0, 40.0], rnn: [0.] and GT: True
+Execution time: 368.4484 seconds
+[51/1, 40/1] was correctly rejected
+[57/1, 3/1, 56/1, 57/1, 35/1, 49/1, 44/1] was correctly rejected
+[22/1, 25/1, 60/1, 18/1, 11/1, 27/1, 30/1, 14/1, 27/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [53.0, 46.0], rnn: [0.] and GT: True
+Execution time: 368.4745 seconds
+[53/1, 46/1] was correctly rejected
+[25/1, 6/1, 13/1] was correctly rejected
+[38/1, 56/1, 50/1, 37/1] was correctly rejected
+[60/1, 51/1, 7/1, 21/1, 6/1, 4/1, 55/1, 22/1, 47/1] was correctly rejected
+[36/1, 30/1, 6/1, 49/1, 48/1, 8/1, 36/1, 22/1, 49/1] was correctly rejected
+[13/1, 4/1, 48/1, 9/1, 60/1, 36/1] was correctly rejected
+[22/1, 33/1, 1/1, 22/1, 43/1, 24/1, 4/1] was correctly rejected
+[25/1, 33/1, 8/1, 39/1] was correctly rejected
+[28/1, 44/1, 51/1, 53/1, 30/1, 31/1, 25/1, 58/1, 47/1, 25/1] was correctly rejected
+[17/1, 53/1, 38/1] was correctly rejected
+[6/1, 52/1, 12/1, 42/1, 2/1, 6/1] was correctly rejected
+[16/1, 14/1, 52/1, 13/1, 2/1] was correctly rejected
+[25/1] was correctly accepted
+[] was correctly accepted
+[57/1, 53/1, 55/1, 26/1, 47/1, 43/1, 21/1, 52/1] was correctly rejected
+[42/1, 28/1, 42/1, 54/1, 48/1, 30/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [56.0, 33.0], rnn: [0.] and GT: True
+Execution time: 368.5904 seconds
+[56/1, 33/1] was correctly rejected
+[21/1] was correctly accepted
+[18/1, 47/1, 31/1, 54/1, 24/1] was correctly rejected
+[6/1, 30/1, 34/1, 22/1, 46/1, 52/1, 13/1, 29/1, 38/1, 14/1] was correctly rejected
+[36/1, 6/1, 8/1, 10/1] was correctly rejected
+[49/1, 4/1, 9/1, 43/1, 18/1, 27/1, 41/1, 33/1, 1/1, 22/1] was correctly rejected
+[25/1] was correctly accepted
+[48/1, 24/1, 42/1, 52/1, 6/1, 32/1, 15/1, 37/1, 9/1, 24/1] was correctly rejected
+[24/1, 4/1, 33/1, 15/1, 1/1, 45/1, 32/1] was correctly rejected
+[58/1, 42/1, 43/1, 45/1, 24/1, 18/1, 53/1] was correctly rejected
+[55/1, 46/1, 42/1, 13/1, 11/1, 4/1, 55/1, 14/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [1.0, 58.0], rnn: [0.] and GT: True
+Execution time: 368.6839 seconds
+[1/1, 58/1] was correctly rejected
+[39/1, 24/1, 50/1, 35/1, 15/1, 40/1, 44/1, 21/1, 48/1] was correctly rejected
+[17/1, 60/1, 14/1, 31/1, 7/1, 13/1, 60/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [53.0, 33.0], rnn: [0.] and GT: True
+Execution time: 368.7107 seconds
+[53/1, 33/1] was correctly rejected
+[34/1, 23/1, 53/1, 31/1, 51/1, 11/1, 23/1, 6/1] was correctly rejected
+[26/1, 15/1, 1/1, 52/1, 32/1] was correctly rejected
+[15/1, 25/1, 46/1, 2/1, 7/1, 60/1, 23/1] was correctly rejected
+[20/1, 37/1, 47/1, 55/1] was correctly rejected
+[44/1, 48/1, 36/1, 10/1, 53/1, 2/1] was correctly rejected
+[56/1] was correctly accepted
+[] was correctly accepted
+[] was correctly accepted
+[19/1, 20/1, 22/1, 34/1] was correctly rejected
+[14/1, 57/1, 27/1, 17/1, 25/1, 53/1, 50/1, 5/1, 43/1] was correctly rejected
+[30/1, 60/1, 39/1, 7/1, 32/1, 49/1] was correctly rejected
+[55/1, 19/1, 20/1, 15/1, 36/1, 3/1, 26/1, 47/1, 2/1, 17/1] was correctly rejected
+[14/1, 2/1, 9/1] was correctly rejected
+[26/1, 45/1, 28/1, 23/1, 27/1, 33/1, 28/1, 4/1, 26/1] was correctly rejected
+[30/1, 46/1, 58/1, 40/1, 6/1, 51/1, 2/1, 51/1, 8/1, 24/1] was correctly rejected
+[53/1] was correctly accepted
+[46/1, 56/1, 15/1, 52/1, 13/1, 38/1, 58/1, 5/1, 40/1, 32/1] was correctly rejected
+[25/1, 6/1, 16/1, 44/1, 26/1, 30/1] was correctly rejected
+[13/1, 45/1, 17/1, 45/1, 14/1] was correctly rejected
+[46/1] was correctly accepted
+[13/1, 18/1, 12/1, 33/1, 16/1, 59/1, 29/1, 42/1, 9/1, 15/1] was correctly rejected
+[40/1, 33/1, 11/1, 25/1, 3/1, 21/1, 26/1, 22/1] was correctly rejected
+[46/1, 54/1, 2/1, 36/1, 3/1, 2/1, 49/1] was correctly rejected
+[7/1, 34/1, 50/1, 52/1, 10/1, 53/1, 28/1, 41/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [27.0, 60.0], rnn: [0.] and GT: True
+Execution time: 368.9143 seconds
+[27/1, 60/1] was correctly rejected
+[28/1, 20/1, 49/1, 31/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [8.0, 36.0], rnn: [0.] and GT: True
+Execution time: 368.9222 seconds
+[8/1, 36/1] was correctly rejected
+[4/1, 54/1, 40/1, 3/1, 31/1] was correctly rejected
+[16/1, 47/1, 8/1, 3/1, 47/1] was correctly rejected
+[40/1, 22/1, 59/1, 11/1, 43/1] was correctly rejected
+[51/1, 42/1, 48/1] was correctly rejected
+[8/1, 54/1, 23/1, 24/1, 47/1, 35/1, 38/1] was correctly rejected
+[27/1, 53/1, 54/1] was correctly rejected
+[7/1] was correctly accepted
+[40/1, 1/1, 29/1, 18/1, 30/1, 14/1, 27/1, 42/1, 28/1] was correctly rejected
+[19/1, 41/1, 4/1, 6/1, 21/1, 10/1, 52/1] was correctly rejected
+[23/1, 52/1, 10/1, 53/1, 39/1] was correctly rejected
+[] was correctly accepted
+[16/1, 55/1, 19/1, 29/1, 24/1, 43/1, 27/1, 35/1] was correctly rejected
+[32/1, 54/1, 38/1, 37/1, 53/1] was correctly rejected
+[26/1, 18/1, 51/1, 54/1] was correctly rejected
+[5/1, 7/1, 17/1] was correctly rejected
+[3/1, 55/1, 45/1, 8/1, 46/1] was correctly rejected
+[16/1, 8/1, 59/1] was correctly rejected
+[46/1, 15/1, 1/1, 19/1, 57/1, 51/1, 4/1] was correctly rejected
+[34/1, 56/1, 30/1, 19/1, 50/1, 50/1, 55/1, 18/1] was correctly rejected
+[42/1, 17/1, 42/1, 20/1, 25/1, 2/1, 17/1, 3/1] was correctly rejected
+[] was correctly accepted
+[9/1, 28/1, 22/1, 15/1, 37/1, 8/1, 40/1, 52/1] was correctly rejected
+[25/1, 17/1, 13/1, 39/1, 31/1, 11/1] was correctly rejected
+[19/1, 43/1, 37/1, 24/1, 31/1, 55/1, 23/1, 1/1] was correctly rejected
+[48/1, 1/1, 55/1, 26/1, 30/1] was correctly rejected
+[13/1, 12/1, 56/1] was correctly rejected
+[53/1, 54/1, 5/1, 1/1, 50/1] was correctly rejected
+[52/1, 54/1, 55/1, 27/1, 24/1, 24/1, 26/1, 39/1] was correctly rejected
+[60/1, 34/1, 20/1, 7/1] was correctly rejected
+[36/1, 27/1, 60/1, 60/1, 49/1, 49/1, 56/1, 41/1, 15/1] was correctly rejected
+[50/1, 55/1, 14/1, 22/1, 25/1, 25/1, 10/1, 34/1] was correctly rejected
+[1/1] was correctly accepted
+[49/1, 60/1, 60/1, 14/1, 16/1, 4/1, 28/1, 27/1, 57/1] was correctly rejected
+[34/1, 15/1, 39/1] was correctly rejected
+[58/1, 30/1, 43/1, 41/1] was correctly rejected
+[53/1, 5/1, 57/1, 48/1] was correctly rejected
+[39/1, 39/1, 35/1, 14/1, 45/1, 58/1] was correctly rejected
+[7/1, 3/1, 29/1, 30/1, 53/1, 2/1, 50/1, 43/1, 21/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [39.0, 16.0], rnn: [0.] and GT: True
+Execution time: 369.2056 seconds
+[39/1, 16/1] was correctly rejected
+[9/1, 9/1, 48/1, 17/1, 43/1] was correctly rejected
+[27/1, 59/1, 33/1, 8/1, 55/1, 24/1, 20/1, 4/1, 11/1] was correctly rejected
+[36/1, 48/1, 21/1, 16/1, 41/1, 11/1, 51/1, 60/1] was correctly rejected
+[29/1, 1/1, 39/1, 53/1, 46/1, 47/1, 14/1, 31/1, 7/1] was correctly rejected
+[3/1, 36/1, 53/1] was correctly rejected
+[43/1, 25/1, 42/1, 42/1, 50/1, 37/1, 46/1, 60/1, 8/1, 33/1] was correctly rejected
+[4/1, 9/1, 20/1, 6/1, 38/1, 9/1] was correctly rejected
+[60/1, 43/1, 56/1, 27/1, 1/1, 14/1, 39/1, 27/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [41.0, 45.0], rnn: [0.] and GT: True
+Execution time: 369.2924 seconds
+[41/1, 45/1] was correctly rejected
+[23/1, 40/1, 2/1, 6/1, 17/1] was correctly rejected
+[47/1] was correctly accepted
+[35/1, 47/1, 58/1, 7/1, 23/1, 43/1, 37/1, 9/1, 6/1, 12/1] was correctly rejected
+[36/1, 56/1, 56/1, 54/1] was correctly rejected
+[38/1] was correctly accepted
+[35/1, 19/1, 51/1, 21/1, 57/1, 33/1, 55/1, 27/1, 53/1] was correctly rejected
+[15/1, 36/1, 11/1, 52/1, 38/1, 35/1] was correctly rejected
+[25/1, 40/1, 10/1, 55/1, 9/1, 8/1, 5/1, 55/1, 28/1] was correctly rejected
+[38/1, 3/1, 47/1, 22/1, 35/1, 5/1, 7/1, 2/1, 22/1] was correctly rejected
+[15/1, 22/1, 29/1, 11/1, 4/1] was correctly rejected
+[10/1, 25/1, 22/1, 60/1] was correctly rejected
+[39/1, 17/1, 20/1, 3/1, 23/1, 22/1, 43/1, 30/1, 33/1] was correctly rejected
+[19/1, 8/1, 21/1, 22/1, 37/1, 50/1, 6/1, 60/1, 19/1, 7/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [43.0, 28.0], rnn: [0.] and GT: True
+Execution time: 369.4159 seconds
+[43/1, 28/1] was correctly rejected
+[56/1] was correctly accepted
+[30/1, 51/1, 9/1, 22/1] was correctly rejected
+[9/1, 4/1, 24/1] was correctly rejected
+[39/1, 2/1, 15/1, 48/1, 32/1, 24/1, 13/1, 12/1, 34/1, 14/1] was correctly rejected
+[5/1, 27/1, 60/1] was correctly rejected
+[27/1, 17/1, 7/1, 34/1, 25/1] was correctly rejected
+[23/1, 13/1, 35/1, 31/1, 28/1, 30/1] was correctly rejected
+[18/1, 12/1, 24/1, 20/1, 11/1, 32/1] was correctly rejected
+[44/1, 26/1, 13/1, 36/1, 59/1, 7/1] was correctly rejected
+[] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [21.0, 32.0], rnn: [0.] and GT: True
+Execution time: 369.4820 seconds
+[21/1, 32/1] was correctly rejected
+[42/1, 59/1, 33/1, 25/1] was correctly rejected
+[2/1, 53/1, 27/1, 39/1, 8/1, 10/1, 11/1, 3/1, 38/1] was correctly rejected
+[46/1, 54/1, 43/1, 50/1, 18/1, 17/1, 13/1, 53/1, 12/1, 11/1] was correctly rejected
+[53/1, 55/1, 42/1, 60/1, 14/1] was correctly rejected
+[16/1, 4/1, 50/1, 24/1, 51/1, 9/1] was correctly rejected
+[38/1, 21/1, 11/1, 23/1, 3/1, 51/1, 5/1, 39/1] was correctly rejected
+[45/1, 36/1, 17/1, 45/1, 2/1, 46/1, 25/1, 16/1, 37/1] was correctly rejected
+[49/1, 60/1, 48/1, 20/1, 8/1, 47/1, 59/1, 14/1, 35/1, 42/1] was correctly rejected
+[38/1, 46/1, 58/1, 6/1, 22/1, 11/1] was correctly rejected
+[5/1, 50/1, 51/1, 25/1, 39/1, 57/1, 49/1] was correctly rejected
+[] was correctly accepted
+[45/1, 25/1, 28/1, 13/1, 27/1, 13/1, 12/1, 39/1, 39/1] was correctly rejected
+[54/1] was correctly accepted
+[14/1, 60/1, 20/1, 41/1] was correctly rejected
+[51/1, 14/1, 7/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [45.0, 3.0], rnn: [0.] and GT: True
+Execution time: 369.6164 seconds
+[45/1, 3/1] was correctly rejected
+[] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [45.0, 16.0], rnn: [0.] and GT: True
+Execution time: 369.6198 seconds
+[45/1, 16/1] was correctly rejected
+[14/1, 2/1, 2/1, 50/1] was correctly rejected
+[58/1, 46/1, 25/1, 31/1, 19/1, 58/1] was correctly rejected
+[2/1, 14/1, 57/1, 60/1, 5/1, 47/1, 30/1] was correctly rejected
+[36/1, 30/1, 40/1, 57/1, 27/1, 16/1, 50/1, 25/1, 37/1] was correctly rejected
+[15/1, 43/1, 24/1] was correctly rejected
+[20/1, 9/1, 39/1, 53/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [34.0, 11.0], rnn: [0.] and GT: True
+Execution time: 369.6666 seconds
+[34/1, 11/1] was correctly rejected
+[59/1, 36/1, 51/1, 60/1, 35/1, 18/1, 23/1] was correctly rejected
+[34/1, 1/1, 56/1, 36/1, 48/1, 37/1, 57/1, 5/1] was correctly rejected
+[37/1, 48/1, 25/1, 48/1, 59/1] was correctly rejected
+[] was correctly accepted
+[18/1, 35/1, 57/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [58.0, 36.0], rnn: [0.] and GT: True
+Execution time: 369.7017 seconds
+[58/1, 36/1] was correctly rejected
+[13/1, 51/1, 49/1, 11/1, 50/1, 13/1, 38/1, 29/1, 4/1, 54/1] was correctly rejected
+[41/1] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [53.0, 46.0], rnn: [0.] and GT: True
+Execution time: 369.7191 seconds
+[53/1, 46/1] was correctly rejected
+[43/1, 52/1, 26/1, 6/1, 41/1, 2/1] was correctly rejected
+[30/1, 53/1, 38/1, 24/1, 16/1, 27/1, 20/1] was correctly rejected
+[51/1, 42/1, 25/1, 60/1, 17/1, 44/1, 23/1, 5/1, 7/1, 26/1] was correctly rejected
+[14/1, 43/1, 41/1, 7/1, 12/1, 19/1, 56/1, 26/1, 35/1, 39/1] was correctly rejected
+[24/1, 31/1, 19/1] was correctly rejected
+[39/1] was correctly accepted
+[26/1, 45/1, 44/1, 37/1, 23/1, 10/1, 24/1, 25/1] was correctly rejected
+[50/1, 59/1, 1/1, 43/1, 38/1, 54/1, 4/1, 9/1, 22/1] was correctly rejected
+[53/1, 18/1, 1/1, 14/1, 57/1] was correctly rejected
+[14/1, 1/1, 41/1, 3/1, 46/1] was correctly rejected
+[25/1, 38/1, 39/1] was correctly rejected
+[44/1, 28/1, 12/1] was correctly rejected
+[] was correctly accepted
+[31/1, 36/1, 34/1, 11/1, 25/1, 59/1, 20/1, 49/1] was correctly rejected
+[] was correctly accepted
+[46/1, 56/1, 38/1, 2/1, 45/1, 36/1, 2/1, 24/1, 25/1, 8/1] was correctly rejected
+[25/1, 58/1, 16/1, 8/1, 43/1, 36/1] was correctly rejected
+[48/1, 55/1, 23/1, 22/1, 4/1, 51/1] was correctly rejected
+[24/1, 10/1, 45/1] was correctly rejected
+[15/1, 59/1, 4/1, 19/1, 34/1, 27/1, 39/1, 20/1, 14/1, 41/1] was correctly rejected
+[] was correctly accepted
+[58/1, 51/1, 12/1, 9/1, 38/1, 28/1, 11/1, 48/1, 57/1, 14/1] was correctly rejected
+The languages are not equivalent, a counterexample is: [55/1, 54/1], length: 2
+The word was rejected, but is in the language.
+Execution time: 369.9074 seconds
+Checking equivalence of the following automaton:
+(Q,q0,delta,F) with:
+   Q    : {<>, <ab>, <aba>, <abcde>, <abc>, <a>, <abcd>}
+   q0   : <>
+   F    : {<>, <a>, <aba>}
+   delta: {<> --a--> <a>,   
+<a> --a--> <a>,   <a> --b--> <ab>,   
+<ab> --a--> <aba>,   <ab> --b--> <abc>,   <ab> --c--> <abc>,   
+<abc> --a--> <abc>,   <abc> --d--> <abcd>,   <abc> --b--> <abc>,   <abc> --c--> <abc>,   
+<abcd> --a--> <abc>,   <abcd> --e--> <abcde>,   <abcd> --b--> <abc>,   <abcd> --c--> <abc>,   <abcd> --d--> <abc>,   
+<abcde> --a--> <abc>,   <abcde> --e--> <abc>,   <abcde> --b--> <abc>,   <abcde> --c--> <abc>,   <abcde> --d--> <abc>,   <abcde> --f--> <abc>,   
+<aba> --a--> <abc>,   <aba> --b--> <abc>,   <aba> --c--> <abc>,   
+}
+equivalenceQuery: FOUND MISMATCH FOR [25.0, 36.0], rnn: [0.] and GT: True
+Execution time: 386.2645 seconds
+[25/1, 36/1] was correctly rejected
+[6/1, 55/1, 10/1, 36/1, 4/1, 6/1, 15/1, 59/1] was correctly rejected
+[57/1, 6/1, 58/1, 29/1] was correctly rejected
+[45/1, 5/1, 47/1, 27/1, 37/1, 15/1, 50/1, 56/1, 11/1] was correctly rejected
+[46/1, 41/1, 40/1, 10/1, 9/1, 35/1, 37/1, 32/1, 39/1] was correctly rejected
+[57/1, 30/1, 58/1, 39/1, 43/1] was correctly rejected
+[19/1, 58/1, 43/1, 43/1] was correctly rejected
+[33/1, 14/1, 48/1, 55/1, 58/1] was correctly rejected
+[10/1, 47/1, 18/1, 26/1] was correctly rejected
+[32/1, 18/1, 53/1, 20/1, 54/1] was correctly rejected
+[2/1, 54/1, 41/1, 55/1, 42/1, 13/1, 56/1, 1/1] was correctly rejected
+[18/1, 31/1, 1/1, 47/1, 60/1, 26/1, 26/1, 5/1, 35/1] was correctly rejected
+[7/1, 44/1, 37/1, 6/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [6.0, 40.0], rnn: [0.] and GT: True
+Execution time: 386.3757 seconds
+[6/1, 40/1] was correctly rejected
+[41/1, 43/1, 40/1] was correctly rejected
+[7/1, 48/1, 37/1] was correctly rejected
+[50/1, 33/1, 4/1, 52/1, 6/1, 39/1, 22/1, 48/1] was correctly rejected
+[19/1] was correctly accepted
+[12/1] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [15.0, 2.0], rnn: [0.] and GT: True
+Execution time: 386.4009 seconds
+[15/1, 2/1] was correctly rejected
+[27/1, 34/1, 2/1, 33/1, 55/1, 10/1, 7/1, 14/1, 12/1, 20/1] was correctly rejected
+[54/1, 19/1, 29/1, 54/1, 31/1] was correctly rejected
+[48/1, 4/1, 1/1, 2/1, 41/1, 35/1, 16/1, 30/1, 26/1, 46/1] was correctly rejected
+[55/1, 19/1, 1/1, 32/1, 43/1, 24/1, 59/1] was correctly rejected
+[22/1, 22/1, 11/1, 51/1, 29/1] was correctly rejected
+[31/1, 57/1, 28/1, 39/1, 18/1, 27/1, 39/1, 29/1, 58/1, 24/1] was correctly rejected
+[27/1, 21/1, 22/1, 28/1, 54/1] was correctly rejected
+[14/1, 6/1, 3/1, 45/1, 59/1, 29/1, 21/1, 31/1, 54/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [9.0, 49.0], rnn: [0.] and GT: True
+Execution time: 386.4898 seconds
+[9/1, 49/1] was correctly rejected
+[47/1, 6/1, 57/1, 26/1, 55/1, 47/1, 13/1, 10/1, 25/1] was correctly rejected
+[26/1, 23/1, 40/1, 46/1, 56/1, 31/1, 1/1, 13/1, 10/1, 1/1] was correctly rejected
+[46/1, 6/1, 12/1, 46/1, 37/1, 19/1, 28/1, 2/1] was correctly rejected
+[48/1, 11/1, 27/1, 13/1, 11/1, 20/1, 17/1, 27/1, 29/1, 5/1] was correctly rejected
+[5/1, 50/1, 43/1, 55/1, 17/1, 24/1, 12/1, 3/1, 33/1] was correctly rejected
+[44/1, 56/1, 43/1, 51/1, 17/1, 28/1] was correctly rejected
+[8/1, 54/1, 52/1, 31/1, 17/1, 34/1, 57/1, 20/1, 12/1] was correctly rejected
+[] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [8.0, 22.0], rnn: [0.] and GT: True
+Execution time: 386.5848 seconds
+[8/1, 22/1] was correctly rejected
+[4/1, 38/1, 44/1, 56/1, 13/1, 49/1, 15/1, 43/1] was correctly rejected
+[43/1] was correctly accepted
+[57/1, 14/1, 14/1, 39/1, 6/1, 37/1, 32/1] was correctly rejected
+[55/1, 48/1, 11/1, 37/1, 15/1, 3/1, 10/1, 59/1] was correctly rejected
+[52/1, 58/1, 44/1, 12/1, 23/1, 33/1, 57/1] was correctly rejected
+[14/1, 30/1, 13/1, 7/1] was correctly rejected
+[25/1] was correctly accepted
+[21/1, 53/1, 10/1, 18/1, 23/1, 29/1] was correctly rejected
+[] was correctly accepted
+[4/1, 2/1, 17/1] was correctly rejected
+[1/1, 36/1, 7/1, 37/1, 20/1, 34/1, 1/1, 1/1, 46/1, 1/1] was correctly rejected
+[26/1, 56/1, 24/1, 30/1, 9/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [50.0, 7.0], rnn: [0.] and GT: True
+Execution time: 386.6768 seconds
+[50/1, 7/1] was correctly rejected
+[43/1, 15/1, 4/1, 54/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [13.0, 31.0], rnn: [0.] and GT: True
+Execution time: 386.6863 seconds
+[13/1, 31/1] was correctly rejected
+[] was correctly accepted
+[39/1, 48/1, 43/1, 12/1] was correctly rejected
+[10/1, 60/1, 17/1, 54/1, 2/1, 48/1, 44/1, 1/1, 41/1, 25/1] was correctly rejected
+[60/1, 33/1, 46/1, 30/1, 43/1, 29/1, 58/1, 33/1] was correctly rejected
+[30/1, 54/1, 36/1, 26/1, 39/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [19.0, 39.0], rnn: [0.] and GT: True
+Execution time: 386.7331 seconds
+[19/1, 39/1] was correctly rejected
+[6/1, 44/1, 40/1, 7/1, 13/1, 4/1, 3/1, 21/1, 49/1, 54/1] was correctly rejected
+[18/1, 45/1, 28/1, 2/1, 42/1, 54/1, 21/1] was correctly rejected
+[53/1, 7/1, 9/1, 58/1, 3/1] was correctly rejected
+[] was correctly accepted
+[19/1, 11/1, 49/1] was correctly rejected
+[54/1, 14/1, 5/1] was correctly rejected
+[9/1] was correctly accepted
+[40/1, 22/1, 31/1, 37/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [58.0, 10.0], rnn: [0.] and GT: True
+Execution time: 386.7870 seconds
+[58/1, 10/1] was correctly rejected
+[56/1, 55/1, 24/1, 56/1, 58/1, 47/1, 40/1] was correctly rejected
+[53/1] was correctly accepted
+[19/1, 59/1, 38/1, 21/1, 4/1] was correctly rejected
+[14/1, 23/1, 15/1, 10/1, 42/1, 25/1, 45/1, 14/1] was correctly rejected
+[6/1, 40/1, 11/1, 32/1, 7/1, 20/1] was correctly rejected
+[] was correctly accepted
+[9/1, 22/1, 37/1, 38/1, 4/1] was correctly rejected
+[6/1, 25/1, 30/1, 58/1] was correctly rejected
+[24/1, 19/1, 58/1, 2/1, 39/1, 5/1, 7/1] was correctly rejected
+[28/1] was correctly accepted
+[32/1, 60/1, 23/1, 13/1, 33/1, 11/1, 50/1, 3/1] was correctly rejected
+[47/1, 57/1, 40/1, 16/1, 30/1, 4/1, 14/1] was correctly rejected
+[38/1, 35/1, 12/1] was correctly rejected
+[] was correctly accepted
+[1/1, 4/1, 35/1, 28/1] was correctly rejected
+[2/1, 33/1, 39/1, 56/1] was correctly rejected
+[50/1, 48/1, 12/1, 26/1] was correctly rejected
+[31/1, 22/1, 8/1, 56/1] was correctly rejected
+[57/1, 13/1, 48/1, 35/1, 29/1, 24/1] was correctly rejected
+[] was correctly accepted
+[1/1, 17/1, 4/1, 6/1, 25/1, 48/1, 15/1, 35/1, 7/1, 32/1] was correctly rejected
+[7/1, 37/1, 47/1] was correctly rejected
+[33/1, 24/1, 3/1, 3/1, 59/1, 37/1, 12/1, 13/1] was correctly rejected
+[11/1, 10/1, 1/1, 54/1] was correctly rejected
+[44/1, 50/1, 60/1, 4/1, 50/1, 2/1] was correctly rejected
+[40/1, 57/1, 57/1, 57/1, 13/1, 34/1] was correctly rejected
+[] was correctly accepted
+[2/1, 49/1, 12/1, 25/1, 39/1, 53/1, 25/1, 5/1, 8/1, 3/1] was correctly rejected
+[42/1, 4/1, 51/1] was correctly rejected
+[19/1, 42/1, 5/1, 4/1, 45/1, 50/1, 21/1] was correctly rejected
+[49/1] was correctly accepted
+[3/1, 51/1, 39/1, 49/1, 23/1, 32/1, 1/1] was correctly rejected
+[20/1, 36/1, 38/1, 37/1, 2/1, 56/1, 27/1, 49/1, 15/1, 50/1] was correctly rejected
+[14/1, 28/1, 35/1] was correctly rejected
+[15/1, 35/1, 54/1, 13/1, 46/1, 60/1, 52/1, 34/1, 54/1] was correctly rejected
+[8/1, 29/1, 38/1, 47/1, 18/1, 37/1, 49/1, 29/1, 56/1] was correctly rejected
+[17/1, 47/1, 59/1, 1/1, 44/1, 37/1] was correctly rejected
+[33/1, 20/1, 38/1, 24/1] was correctly rejected
+[8/1, 22/1, 26/1, 33/1, 18/1, 30/1, 31/1, 30/1, 11/1, 14/1] was correctly rejected
+[52/1, 33/1, 51/1, 14/1, 4/1, 60/1] was correctly rejected
+[] was correctly accepted
+[41/1, 34/1, 11/1] was correctly rejected
+[60/1, 31/1, 12/1, 8/1] was correctly rejected
+[8/1] was correctly accepted
+[47/1, 34/1, 13/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [10.0, 2.0], rnn: [0.] and GT: True
+Execution time: 387.1082 seconds
+[10/1, 2/1] was correctly rejected
+[31/1, 44/1, 55/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [33.0, 35.0], rnn: [0.] and GT: True
+Execution time: 387.1143 seconds
+[33/1, 35/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [35.0, 12.0], rnn: [0.] and GT: True
+Execution time: 387.1169 seconds
+[35/1, 12/1] was correctly rejected
+[23/1, 8/1, 3/1, 45/1, 24/1, 59/1] was correctly rejected
+[12/1, 11/1, 34/1, 20/1] was correctly rejected
+[13/1, 55/1, 13/1, 28/1, 3/1] was correctly rejected
+[47/1, 20/1, 36/1] was correctly rejected
+[31/1, 25/1, 23/1, 52/1, 47/1, 9/1, 28/1, 59/1, 40/1] was correctly rejected
+[52/1] was correctly accepted
+[57/1, 10/1, 37/1, 51/1, 52/1, 10/1, 32/1, 47/1] was correctly rejected
+[6/1, 17/1, 17/1, 40/1, 23/1, 52/1] was correctly rejected
+[56/1, 47/1, 42/1, 19/1, 32/1, 39/1, 4/1] was correctly rejected
+[38/1, 37/1, 55/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [13.0, 34.0], rnn: [0.] and GT: True
+Execution time: 387.1924 seconds
+[13/1, 34/1] was correctly rejected
+[33/1, 60/1, 59/1, 27/1, 37/1, 38/1, 7/1, 60/1] was correctly rejected
+[23/1, 12/1, 8/1] was correctly rejected
+[42/1, 14/1, 50/1, 57/1, 56/1, 3/1] was correctly rejected
+[24/1, 41/1, 58/1, 55/1] was correctly rejected
+[30/1, 17/1, 50/1, 32/1] was correctly rejected
+[39/1, 12/1, 29/1, 38/1, 14/1, 21/1, 17/1] was correctly rejected
+[54/1, 18/1, 49/1, 11/1, 13/1, 55/1] was correctly rejected
+[18/1, 13/1, 12/1, 25/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [14.0, 18.0], rnn: [0.] and GT: True
+Execution time: 387.2521 seconds
+[14/1, 18/1] was correctly rejected
+[43/1, 14/1, 27/1, 41/1, 54/1, 36/1, 8/1, 10/1] was correctly rejected
+[12/1, 50/1, 27/1] was correctly rejected
+[58/1] was correctly accepted
+[41/1, 51/1, 35/1, 2/1] was correctly rejected
+[] was correctly accepted
+[44/1, 59/1, 9/1, 22/1] was correctly rejected
+[40/1, 31/1, 38/1, 1/1, 19/1, 27/1, 56/1, 53/1, 53/1, 11/1] was correctly rejected
+[21/1, 14/1, 16/1, 3/1, 37/1, 51/1] was correctly rejected
+[14/1, 52/1, 33/1, 23/1] was correctly rejected
+[12/1] was correctly accepted
+[35/1, 22/1, 54/1] was correctly rejected
+[28/1, 41/1, 17/1, 1/1, 37/1, 11/1, 37/1] was correctly rejected
+[48/1, 60/1, 48/1, 9/1, 50/1, 45/1, 14/1, 21/1, 3/1, 44/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [47.0, 1.0], rnn: [0.] and GT: True
+Execution time: 387.3397 seconds
+[47/1, 1/1] was correctly rejected
+[19/1, 60/1, 6/1, 29/1, 37/1, 33/1, 20/1] was correctly rejected
+[] was correctly accepted
+[7/1, 3/1, 28/1, 27/1, 23/1, 38/1, 18/1, 41/1, 57/1] was correctly rejected
+[12/1, 21/1, 59/1, 21/1, 53/1, 43/1, 40/1] was correctly rejected
+[55/1, 5/1, 2/1, 8/1, 52/1] was correctly rejected
+[57/1, 22/1, 44/1, 1/1, 11/1, 18/1, 31/1] was correctly rejected
+[32/1, 26/1, 14/1] was correctly rejected
+[33/1, 54/1, 31/1, 40/1, 37/1, 57/1, 40/1, 34/1, 59/1] was correctly rejected
+[32/1, 23/1, 2/1, 25/1, 10/1] was correctly rejected
+[1/1, 8/1, 36/1, 41/1, 52/1, 21/1, 28/1, 32/1, 57/1] was correctly rejected
+[2/1, 39/1, 29/1, 53/1] was correctly rejected
+[54/1, 6/1, 25/1] was correctly rejected
+[37/1, 52/1, 40/1] was correctly rejected
+[53/1, 3/1, 42/1, 42/1, 52/1, 36/1] was correctly rejected
+[9/1, 15/1, 28/1, 51/1] was correctly rejected
+[40/1, 32/1, 48/1, 34/1] was correctly rejected
+[51/1, 6/1, 33/1, 11/1, 53/1, 17/1] was correctly rejected
+[] was correctly accepted
+[24/1, 4/1, 26/1] was correctly rejected
+[37/1, 48/1, 58/1, 57/1, 17/1, 45/1, 13/1, 3/1, 11/1] was correctly rejected
+[15/1, 35/1, 2/1] was correctly rejected
+[59/1, 37/1, 47/1, 42/1, 9/1, 18/1] was correctly rejected
+[21/1, 20/1, 58/1, 19/1, 36/1, 59/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [23.0, 37.0], rnn: [0.] and GT: True
+Execution time: 387.5134 seconds
+[23/1, 37/1] was correctly rejected
+[52/1, 6/1, 46/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [21.0, 6.0], rnn: [0.] and GT: True
+Execution time: 387.5196 seconds
+[21/1, 6/1] was correctly rejected
+[33/1, 4/1, 59/1, 13/1, 41/1, 6/1, 11/1, 9/1, 44/1] was correctly rejected
+[23/1, 42/1, 20/1] was correctly rejected
+[] was correctly accepted
+[49/1, 11/1, 34/1, 13/1, 15/1, 46/1, 15/1, 18/1, 10/1, 41/1] was correctly rejected
+[] was correctly accepted
+[53/1, 19/1, 34/1, 49/1, 12/1, 49/1] was correctly rejected
+[27/1, 17/1, 46/1] was correctly rejected
+[60/1, 33/1, 49/1, 32/1, 11/1, 6/1, 18/1, 6/1, 51/1, 17/1] was correctly rejected
+[7/1] was correctly accepted
+[37/1, 34/1, 40/1, 35/1, 40/1, 24/1, 26/1, 2/1, 9/1, 3/1] was correctly rejected
+[] was correctly accepted
+[47/1, 7/1, 58/1] was correctly rejected
+[27/1, 46/1, 49/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [6.0, 60.0], rnn: [0.] and GT: True
+Execution time: 387.6070 seconds
+[6/1, 60/1] was correctly rejected
+[2/1, 2/1, 12/1, 44/1, 57/1, 53/1] was correctly rejected
+[56/1, 24/1, 52/1, 6/1, 36/1] was correctly rejected
+[54/1, 45/1, 28/1, 37/1, 9/1, 29/1, 29/1, 19/1] was correctly rejected
+[44/1, 45/1, 8/1] was correctly rejected
+[] was correctly accepted
+[39/1, 44/1, 29/1, 50/1, 36/1, 28/1, 14/1, 59/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [3.0, 38.0], rnn: [0.] and GT: True
+Execution time: 387.6519 seconds
+[3/1, 38/1] was correctly rejected
+[58/1] was correctly accepted
+[21/1, 35/1, 51/1, 47/1] was correctly rejected
+[19/1, 24/1, 45/1, 54/1, 51/1, 59/1, 42/1, 51/1] was correctly rejected
+[48/1, 47/1, 12/1, 53/1, 37/1] was correctly rejected
+[19/1, 58/1, 13/1, 17/1, 37/1] was correctly rejected
+[] was correctly accepted
+[33/1, 27/1, 15/1, 49/1, 10/1, 17/1, 45/1] was correctly rejected
+[29/1, 26/1, 4/1, 12/1, 58/1, 1/1, 59/1, 26/1, 44/1] was correctly rejected
+[] was correctly accepted
+[19/1, 29/1, 46/1, 8/1, 36/1] was correctly rejected
+[14/1] was correctly accepted
+[3/1, 49/1, 16/1, 11/1, 35/1] was correctly rejected
+[1/1, 21/1, 52/1, 7/1, 46/1, 57/1, 52/1] was correctly rejected
+[38/1, 29/1, 20/1] was correctly rejected
+[] was correctly accepted
+[16/1, 45/1, 45/1, 45/1, 50/1] was correctly rejected
+[44/1, 46/1, 16/1, 20/1, 35/1, 31/1, 59/1] was correctly rejected
+[5/1, 48/1, 34/1, 12/1, 19/1, 25/1, 20/1, 11/1] was correctly rejected
+[48/1, 35/1, 14/1, 35/1, 4/1, 54/1, 48/1, 28/1] was correctly rejected
+[56/1, 26/1, 6/1] was correctly rejected
+[45/1, 15/1, 6/1, 48/1, 28/1, 42/1, 56/1, 31/1, 24/1, 14/1] was correctly rejected
+[40/1] was correctly accepted
+[22/1, 40/1, 18/1] was correctly rejected
+[16/1, 41/1, 57/1, 22/1, 43/1, 9/1, 12/1, 40/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [49.0, 56.0], rnn: [0.] and GT: True
+Execution time: 387.8133 seconds
+[49/1, 56/1] was correctly rejected
+[19/1] was correctly accepted
+[58/1, 47/1, 42/1, 40/1, 5/1] was correctly rejected
+[44/1, 33/1, 44/1, 37/1, 23/1, 51/1, 39/1, 11/1, 5/1, 21/1] was correctly rejected
+[58/1, 7/1, 52/1] was correctly rejected
+[38/1, 24/1, 21/1, 14/1, 48/1] was correctly rejected
+[36/1, 36/1, 48/1, 45/1, 18/1, 19/1, 29/1] was correctly rejected
+[38/1, 43/1, 42/1, 47/1, 50/1, 22/1, 29/1, 16/1] was correctly rejected
+[11/1, 19/1, 47/1] was correctly rejected
+[20/1, 28/1, 35/1, 14/1, 9/1, 14/1] was correctly rejected
+[20/1] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [21.0, 44.0], rnn: [0.] and GT: True
+Execution time: 387.8874 seconds
+[21/1, 44/1] was correctly rejected
+[40/1, 46/1, 46/1, 59/1, 41/1, 31/1] was correctly rejected
+[41/1, 54/1, 43/1] was correctly rejected
+[25/1, 6/1, 60/1, 2/1, 52/1, 24/1, 47/1, 22/1] was correctly rejected
+[5/1, 49/1, 27/1, 35/1, 26/1] was correctly rejected
+[] was correctly accepted
+[15/1, 13/1, 2/1] was correctly rejected
+[53/1, 15/1, 56/1, 19/1, 49/1, 12/1, 26/1, 25/1, 27/1, 32/1] was correctly rejected
+[2/1, 48/1, 60/1, 50/1] was correctly rejected
+[16/1, 53/1, 22/1, 44/1, 4/1, 42/1, 1/1, 46/1, 41/1, 60/1] was correctly rejected
+[40/1, 8/1, 4/1, 12/1, 51/1, 45/1, 12/1, 22/1, 37/1, 58/1] was correctly rejected
+[10/1, 39/1, 10/1, 4/1, 38/1, 45/1, 19/1] was correctly rejected
+[39/1, 8/1, 49/1, 53/1, 54/1, 2/1] was correctly rejected
+[27/1, 28/1, 6/1] was correctly rejected
+[17/1] was correctly accepted
+[28/1, 32/1, 35/1, 43/1, 16/1, 47/1, 39/1] was correctly rejected
+[38/1, 9/1, 55/1, 5/1, 17/1] was correctly rejected
+[36/1, 26/1, 33/1, 13/1, 26/1, 46/1, 19/1, 38/1] was correctly rejected
+[58/1, 38/1, 7/1, 39/1, 49/1, 12/1, 25/1, 13/1] was correctly rejected
+[21/1, 16/1, 46/1, 52/1, 57/1, 4/1] was correctly rejected
+[40/1, 46/1, 3/1, 45/1, 60/1, 17/1, 36/1, 55/1] was correctly rejected
+[] was correctly accepted
+[22/1, 38/1, 15/1, 52/1, 17/1, 13/1] was correctly rejected
+[34/1, 8/1, 3/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [56.0, 3.0], rnn: [0.] and GT: True
+Execution time: 388.0872 seconds
+[56/1, 3/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [6.0, 10.0], rnn: [0.] and GT: True
+Execution time: 388.0895 seconds
+[6/1, 10/1] was correctly rejected
+[] was correctly accepted
+[] was correctly accepted
+[11/1] was correctly accepted
+[38/1, 8/1, 54/1, 36/1, 3/1, 32/1, 44/1, 35/1] was correctly rejected
+[3/1, 8/1, 53/1, 29/1, 59/1, 31/1, 57/1] was correctly rejected
+[14/1, 18/1, 9/1, 59/1, 1/1, 21/1, 47/1, 23/1] was correctly rejected
+[16/1, 19/1, 57/1, 58/1, 32/1, 29/1, 60/1, 47/1, 42/1, 12/1] was correctly rejected
+[46/1, 55/1, 47/1] was correctly rejected
+[20/1, 40/1, 44/1, 42/1, 43/1, 19/1, 41/1, 59/1, 46/1] was correctly rejected
+[8/1, 42/1, 12/1, 11/1] was correctly rejected
+[4/1] was correctly accepted
+[41/1] was correctly accepted
+[45/1, 3/1, 3/1, 12/1, 39/1, 3/1, 33/1] was correctly rejected
+[46/1, 21/1, 50/1, 18/1] was correctly rejected
+[60/1, 40/1, 1/1, 5/1, 56/1, 12/1, 43/1, 37/1, 58/1, 27/1] was correctly rejected
+[4/1, 18/1, 31/1, 27/1, 12/1] was correctly rejected
+[21/1, 54/1, 9/1, 47/1, 46/1, 13/1, 52/1] was correctly rejected
+[57/1, 13/1, 38/1] was correctly rejected
+[20/1, 37/1, 23/1, 47/1, 15/1, 32/1] was correctly rejected
+[19/1, 59/1, 58/1] was correctly rejected
+[3/1] was correctly accepted
+[40/1, 37/1, 19/1, 16/1, 24/1, 40/1, 59/1] was correctly rejected
+[16/1, 24/1, 19/1, 22/1, 32/1] was correctly rejected
+[22/1, 28/1, 9/1, 19/1, 40/1, 13/1, 43/1] was correctly rejected
+[16/1, 24/1, 50/1, 43/1, 16/1, 39/1, 37/1, 24/1, 25/1, 44/1] was correctly rejected
+[] was correctly accepted
+[3/1, 22/1, 52/1, 7/1] was correctly rejected
+[5/1, 22/1, 51/1, 11/1, 20/1, 54/1, 22/1, 16/1] was correctly rejected
+[31/1, 11/1, 52/1, 40/1, 58/1, 28/1, 57/1, 55/1] was correctly rejected
+[46/1, 29/1, 29/1, 11/1, 59/1, 10/1] was correctly rejected
+[7/1, 6/1, 31/1, 34/1] was correctly rejected
+[16/1, 29/1, 60/1, 45/1, 21/1, 15/1, 13/1, 6/1, 29/1] was correctly rejected
+[31/1, 25/1, 2/1, 19/1] was correctly rejected
+[47/1, 59/1, 18/1, 23/1, 58/1, 36/1, 27/1, 42/1] was correctly rejected
+[20/1, 50/1, 53/1, 23/1, 33/1, 41/1, 35/1, 21/1] was correctly rejected
+[16/1, 34/1, 37/1, 56/1, 25/1, 13/1, 27/1, 32/1, 31/1] was correctly rejected
+[23/1, 15/1, 49/1, 26/1, 40/1, 3/1, 35/1, 38/1] was correctly rejected
+[58/1, 23/1, 17/1] was correctly rejected
+[] was correctly accepted
+equivalenceQuery: FOUND MISMATCH FOR [23.0, 53.0], rnn: [0.] and GT: True
+Execution time: 388.4024 seconds
+[23/1, 53/1] was correctly rejected
+equivalenceQuery: FOUND MISMATCH FOR [60.0, 19.0], rnn: [0.] and GT: True
+Execution time: 388.4051 seconds
+[60/1, 19/1] was correctly rejected
+[47/1] was correctly accepted
+The languages are not equivalent, a counterexample is: [33/1, 1/1], length: 2
+The word was rejected, but is in the language.
+Execution time: 388.4102 seconds
+Checking equivalence of the following automaton:
+(Q,q0,delta,F) with:
+   Q    : {<>, <ab>, <aba>, <abcde>, <abc>, <a>, <abcd>}
+   q0   : <>
+   F    : {<>, <a>, <aba>}
+   delta: {<> --a--> <a>,   
+<a> --a--> <a>,   <a> --b--> <ab>,   
+<ab> --a--> <aba>,   <ab> --b--> <abc>,   <ab> --c--> <abc>,   
+<abc> --a--> <abc>,   <abc> --d--> <abcd>,   <abc> --b--> <abc>,   <abc> --c--> <abc>,   
+<abcd> --a--> <abc>,   <abcd> --e--> <abcde>,   <abcd> --b--> <abc>,   <abcd> --c--> <abc>,   <abcd> --d--> <abc>,   
+<abcde> --a--> <abc>,   <abcde> --e--> <abc>,   <abcde> --b--> <abc>,   <abcde> --c--> <abc>,   <abcde> --d--> <abc>,   <abcde> --f--> <abc>,   
+<aba> --a--> <abc>,   <aba> --b--> <abc>,   <aba> --c--> <abc>,   
+}
+Stopped time: 404.8885 seconds
+DIAMOND: No. of qCount: 2842  No. of memQ count: 34  No. of EquivQ count: 2733  No. of adversarial memQ: 12  No. of adversarial EquivQ: 308  No. of adversarial examples: 320  Time: 404.888530254364
+The equivalence Query is passed and total number of queries count is 2842
+The finished table:
+__StoRow:
+dict_keys([<>, <a>, <ab>, <abc>, <abcd>, <abcde>, <aba>])
+<>:{<>': True, <a'>: True}
+<a>:{<>': True, <a'>: Or(v0' == v0)}
+<ab>:{<>': False, <a'>: Or(v0' == v0)}
+<abc>:{<>': False, <a'>: False}
+<abcd>:{<>': False, <a'>: False}
+<abcde>:{<>': False, <a'>: False}
+<aba>:{<>': True, <a'>: False}
+__SAtoRow:
+dict_keys([<a>, <ab>, <aa>, <abc>, <aba>, <abb>, <abcd>, <abca>, <abcb>, <abcc>, <abcde>, <abcda>, <abcdd>, <abcdb>, <abcdc>, <abcdef>, <abcdea>, <abcdee>, <abcdeb>, <abcdec>, <abcded>, <abac>, <abaa>, <abab>])
+<a>:{<>': True, <a'>: Or(v0' == v0)}
+<ab>:{<>': False, <a'>: Or(v0' == v0)}
+<aa>:{<>': True, <a'>: Or(v0' == v0)}
+<abc>:{<>': False, <a'>: False}
+<aba>:{<>': True, <a'>: False}
+<abb>:{<>': False, <a'>: False}
+<abcd>:{<>': False, <a'>: False}
+<abca>:{<>': False, <a'>: False}
+<abcb>:{<>': False, <a'>: False}
+<abcc>:{<>': False, <a'>: False}
+<abcde>:{<>': False, <a'>: False}
+<abcda>:{<>': False, <a'>: False}
+<abcdd>:{<>': False, <a'>: False}
+<abcdb>:{<>': False, <a'>: False}
+<abcdc>:{<>': False, <a'>: False}
+<abcdef>:{<>': False, <a'>: False}
+<abcdea>:{<>': False, <a'>: False}
+<abcdee>:{<>': False, <a'>: False}
+<abcdeb>:{<>': False, <a'>: False}
+<abcdec>:{<>': False, <a'>: False}
+<abcded>:{<>': False, <a'>: False}
+<abac>:{<>': False, <a'>: False}
+<abaa>:{<>': False, <a'>: False}
+<abab>:{<>': False, <a'>: False}
+__E:
+[<>', <a'>]
+(Q,q0,delta,F) with:
+   Q    : {<>, <ab>, <aba>, <abcde>, <abc>, <a>, <abcd>}
+   q0   : <>
+   F    : {<>, <a>, <aba>}
+   delta: {<> --a--> <a>,   
+<a> --a--> <a>,   <a> --b--> <ab>,   
+<ab> --a--> <aba>,   <ab> --b--> <abc>,   <ab> --c--> <abc>,   
+<abc> --a--> <abc>,   <abc> --d--> <abcd>,   <abc> --b--> <abc>,   <abc> --c--> <abc>,   
+<abcd> --a--> <abc>,   <abcd> --e--> <abcde>,   <abcd> --b--> <abc>,   <abcd> --c--> <abc>,   <abcd> --d--> <abc>,   
+<abcde> --a--> <abc>,   <abcde> --e--> <abc>,   <abcde> --b--> <abc>,   <abcde> --c--> <abc>,   <abcde> --d--> <abc>,   <abcde> --f--> <abc>,   
+<aba> --a--> <abc>,   <aba> --b--> <abc>,   <aba> --c--> <abc>,   
+}
+         Adversarial Examples  Time(s)  ...  Total sequences asked before  Mem Query?
+0                (55.0, 25.0)    0.092  ...                             3           Y
+1          (57.0, 58.0, 58.0)    0.176  ...                             9           Y
+2          (47.0, 47.0, 55.0)   45.774  ...                            23           Y
+3        (5.0, 9.0, 5.0, 5.0)   45.807  ...                            26           Y
+4    (60.0, 44.0, 60.0, 44.0)   45.809  ...                            27           Y
+..                        ...      ...  ...                           ...         ...
+302               (3.0, 38.0)  387.652  ...                          2737           N
+303              (49.0, 56.0)  387.813  ...                          2762           N
+304               (6.0, 10.0)  388.090  ...                          2798           N
+305              (23.0, 53.0)  388.402  ...                          2838           N
+306              (60.0, 19.0)  388.405  ...                          2839           N
+
+[307 rows x 5 columns]
+INFO: Statistics from GTComparison:
+                               Details  ...  Total count
+0                 No. of queries asked  ...  2842.000000
+1    No. of queries answered correctly  ...  2522.000000
+2  No. of queries answered incorrectly  ...   320.000000
+3                             Accuracy  ...     0.887403
+
+[4 rows x 8 columns]
+         Adversarial Examples  Time(s)  Length of Adversarial Examples
+0                (55.0, 25.0)    0.092                               2
+1          (57.0, 58.0, 58.0)    0.176                               3
+2          (47.0, 47.0, 55.0)   45.774                               3
+3        (5.0, 9.0, 5.0, 5.0)   45.807                               4
+4    (60.0, 44.0, 60.0, 44.0)   45.809                               4
+..                        ...      ...                             ...
+302               (3.0, 38.0)  387.652                               2
+303              (49.0, 56.0)  387.813                               2
+304               (6.0, 10.0)  388.090                               2
+305              (23.0, 53.0)  388.402                               2
+306              (60.0, 19.0)  388.405                               2
+
+[307 rows x 3 columns]
